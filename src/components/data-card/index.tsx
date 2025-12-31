@@ -15,7 +15,11 @@ DataCard.Title = function Title({ children }: { children: string }) {
 };
 
 DataCard.Subtitle = function Subtitle({ children }: { children: string }) {
-  return <p className="text-xs text-neutral-400">{children}</p>;
+  return (
+    <span className="text-xs whitespace-nowrap text-neutral-400">
+      {children}
+    </span>
+  );
 };
 
 DataCard.Text = function Text({ children }: { children: string }) {
@@ -24,6 +28,8 @@ DataCard.Text = function Text({ children }: { children: string }) {
 
 DataCard.Context = function Context({ children }: React.PropsWithChildren<{}>) {
   return (
-    <div className="flex flex-row items-center justify-between">{children}</div>
+    <div className="flex flex-row items-center justify-between gap-2">
+      {children}
+    </div>
   );
 };
