@@ -1,7 +1,7 @@
 import { tw } from "@/utils/tailwind";
 import { cva, type VariantProps } from "class-variance-authority";
 
-const base = tw`rounded-full`;
+const base = tw`flex flex-row items-center justify-between gap-1 rounded-full whitespace-nowrap`;
 
 const xs = tw`px-2 py-1 text-xs`;
 const sm = tw`px-4 py-2 text-sm`;
