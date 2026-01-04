@@ -51,7 +51,7 @@ Subtitle.Text = function SubtitleText({
 Subtitle.Divider = function Divider() {
   return (
     <CircleIcon
-      aria-hiddeen="true"
+      aria-hidden="true"
       className="size-1.5 fill-neutral-400 stroke-neutral-400"
     />
   );
