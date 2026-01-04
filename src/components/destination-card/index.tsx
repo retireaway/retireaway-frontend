@@ -3,7 +3,7 @@ import { Chip } from "@/components/chip";
 
 export function DestinationCard({ children }: React.PropsWithChildren<{}>) {
   return (
-    <article className="relative flex h-80 w-68 flex-col gap-2 rounded-xl border-1 border-neutral-100 bg-white p-2 shadow-xl">
+    <article className="relative flex h-80 w-68 flex-col gap-2 rounded-xl border-1 border-neutral-100 bg-white p-2">
       {children}
     </article>
   );
