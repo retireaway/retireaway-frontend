@@ -33,3 +33,26 @@ DataCard.Context = function Context({ children }: React.PropsWithChildren<{}>) {
     </div>
   );
 };
+
+function Table({ children }: React.PropsWithChildren<{}>) {
+  return <ul className="flex flex-col gap-2">{children}</ul>;
+}
+
+function Row({ children }: React.PropsWithChildren<{}>) {
+  return (
+    <li className="flex flex-row items-center justify-between">{children}</li>
+  );
+}
+
+function Key({ children }: React.PropsWithChildren<{}>) {
+  return <span className="text-sm text-neutral-400">{children}</span>;
+}
+
+function Value({ children }: React.PropsWithChildren<{}>) {
+  return <span className="text-sm text-neutral-500">{children}</span>;
+}
+
+Row.Key = Key;
+Row.Value = Value;
+Table.Row = Row;
+DataCard.Table = Table;
