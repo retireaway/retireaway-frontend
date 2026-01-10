@@ -12,17 +12,28 @@ const neutral = tw``;
 const red = tw``;
 const plain = tw``;
 const yellow = tw``;
+const clear = tw``;
 
 const dark = tw``;
 const light = tw``;
 
 const variants = {
-  color: { neutral, yellow, blue, green, plain, red },
+  color: { neutral, yellow, blue, green, plain, red, clear },
   fill: { dark, light },
   size: { xs, sm },
 } as const;
 
 const compoundVariants = [
+  {
+    color: "clear",
+    fill: "dark",
+    className: tw`bg-black/40 text-white`,
+  } as const,
+  {
+    color: "clear",
+    fill: "light",
+    className: tw`text-black`,
+  } as const,
   {
     color: "plain",
     fill: "dark",
