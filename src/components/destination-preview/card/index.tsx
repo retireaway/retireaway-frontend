@@ -1,7 +1,7 @@
 import { CircleIcon } from "lucide-react";
 import { Chip } from "@/components/chip";
 
-export function DestinationCard({ children }: React.PropsWithChildren<{}>) {
+export function Card({ children }: React.PropsWithChildren<{}>) {
   return (
     <article className="relative flex h-80 w-68 flex-col gap-2 rounded-xl border-1 border-neutral-100 bg-white p-2">
       {children}
@@ -21,7 +21,9 @@ function Image({ src, alt }: { src: string; alt: string }) {
   );
 }
 
-DestinationCard.Image = Image;
+function Header({ children }: React.PropsWithChildren<{}>) {
+  return <header className="flex flex-col">{children}</header>;
+}
 
 function Title({ children }: React.PropsWithChildren<{}>) {
   return (
@@ -30,13 +32,6 @@ function Title({ children }: React.PropsWithChildren<{}>) {
     </h2>
   );
 }
-
-function Header({ children }: React.PropsWithChildren<{}>) {
-  return <header className="flex flex-col">{children}</header>;
-}
-DestinationCard.Header = Header;
-
-DestinationCard.Title = Title;
 
 function Subtitle({ children }: React.PropsWithChildren<{}>) {
   return <p className="flex flex-row items-center gap-2">{children}</p>;
@@ -57,13 +52,9 @@ Subtitle.Divider = function Divider() {
   );
 };
 
-DestinationCard.Subtitle = Subtitle;
-
 function Details({ children }: React.PropsWithChildren<{}>) {
-  return <div className="flex flex-col gap-4">{children}</div>;
+  return <div className="flex flex-col gap-4 overflow-hidden">{children}</div>;
 }
-
-DestinationCard.Details = Details;
 
 function ControlBar({ children }: React.PropsWithChildren<{}>) {
   return (
@@ -73,8 +64,6 @@ function ControlBar({ children }: React.PropsWithChildren<{}>) {
   );
 }
 
-DestinationCard.ControlBar = ControlBar;
-
 function MetaData({ children }: React.PropsWithChildren<{}>) {
   return (
     <Chip size="xs" color="neutral" fill="light">
@@ -82,8 +71,6 @@ function MetaData({ children }: React.PropsWithChildren<{}>) {
     </Chip>
   );
 }
-
-DestinationCard.MetaData = MetaData;
 
 function KeyFactors({ children }: React.PropsWithChildren<{}>) {
   return (
@@ -98,4 +85,12 @@ function Item({ children }: React.PropsWithChildren<{}>) {
 }
 
 KeyFactors.Item = Item;
-DestinationCard.KeyFactors = KeyFactors;
+
+Card.Image = Image;
+Card.Header = Header;
+Card.Title = Title;
+Card.Subtitle = Subtitle;
+Card.Details = Details;
+Card.ControlBar = ControlBar;
+Card.MetaData = MetaData;
+Card.KeyFactors = KeyFactors;
