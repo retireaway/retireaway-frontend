@@ -1,5 +1,5 @@
 import { CircleIcon } from "lucide-react";
-import { Chip } from "@/components/chip";
+import { Chip } from "@/components/chip-base";
 
 export function Card({ children }: React.PropsWithChildren<{}>) {
   return (
