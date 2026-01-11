@@ -3,32 +3,38 @@ import { Chip } from "@/components/chip";
 
 export function Card({ children }: React.PropsWithChildren<{}>) {
   return (
-    <article className="relative flex h-80 w-68 flex-col gap-2 rounded-xl border-1 border-neutral-100 bg-white p-2">
+    <article className="relative flex h-104 w-80 flex-col gap-4 overflow-hidden rounded-xl border-1 border-neutral-100 bg-white p-2">
       {children}
     </article>
   );
 }
 
-function Image({ src, alt }: { src: string; alt: string }) {
+function Hero({ children }: React.PropsWithChildren<{}>) {
   return (
-    <figure className="relative grow overflow-hidden rounded-xl border-1 border-neutral-100 bg-neutral-50">
-      <img
-        alt={alt}
-        className="absolute inset-0 h-full w-full rounded-xl object-cover"
-        src={src}
-      />
+    <figure className="relative flex grow flex-col justify-end overflow-hidden rounded-xl border-1 border-neutral-100 bg-neutral-50 p-2">
+      {children}
     </figure>
   );
 }
 
+function Image({ src, alt }: { src: string; alt: string }) {
+  return (
+    <img
+      alt={alt}
+      className="absolute inset-0 h-full w-full rounded-xl object-cover"
+      src={src}
+    />
+  );
+}
+
 function Header({ children }: React.PropsWithChildren<{}>) {
-  return <header className="flex flex-col">{children}</header>;
+  return <header className="z-10 flex flex-col">{children}</header>;
 }
 
 function Title({ children }: React.PropsWithChildren<{}>) {
   return (
     <h2>
-      <span className="text-base font-medium text-neutral-700">{children}</span>
+      <span className="text-xl font-medium text-white">{children}</span>
     </h2>
   );
 }
@@ -40,20 +46,22 @@ function Subtitle({ children }: React.PropsWithChildren<{}>) {
 Subtitle.Text = function SubtitleText({
   children,
 }: React.PropsWithChildren<{}>) {
-  return <span className="text-sm text-neutral-400">{children}</span>;
+  return (
+    <span className="text-sm font-medium text-neutral-200">{children}</span>
+  );
 };
 
 Subtitle.Divider = function Divider() {
   return (
     <CircleIcon
       aria-hidden="true"
-      className="size-1.5 fill-neutral-400 stroke-neutral-400"
+      className="size-1.5 fill-yellow-300 stroke-yellow-300"
     />
   );
 };
 
 function Details({ children }: React.PropsWithChildren<{}>) {
-  return <div className="flex flex-col gap-4 overflow-hidden">{children}</div>;
+  return <div className="flex flex-col gap-2 overflow-hidden">{children}</div>;
 }
 
 function ControlBar({ children }: React.PropsWithChildren<{}>) {
@@ -64,9 +72,13 @@ function ControlBar({ children }: React.PropsWithChildren<{}>) {
   );
 }
 
+function Description({ children }: React.PropsWithChildren<{}>) {
+  return <p className="line-clamp-5 text-sm text-neutral-500">{children}</p>;
+}
+
 function MetaData({ children }: React.PropsWithChildren<{}>) {
   return (
-    <Chip size="xs" color="neutral" fill="light">
+    <Chip size="xs" color="clear" fill="dark">
       {children}
     </Chip>
   );
@@ -83,14 +95,24 @@ function KeyFactors({ children }: React.PropsWithChildren<{}>) {
 function Item({ children }: React.PropsWithChildren<{}>) {
   return <li className="snap-start">{children}</li>;
 }
+function ReadMore() {
+  return (
+    <button className="mt-2 rounded-md bg-blue-600 p-2 text-sm whitespace-nowrap text-white">
+      Read more
+    </button>
+  );
+}
 
 KeyFactors.Item = Item;
 
 Card.Image = Image;
+Card.Hero = Hero;
 Card.Header = Header;
 Card.Title = Title;
 Card.Subtitle = Subtitle;
 Card.Details = Details;
+Card.Description = Description;
 Card.ControlBar = ControlBar;
 Card.MetaData = MetaData;
 Card.KeyFactors = KeyFactors;
+Card.ReadMore = ReadMore;
