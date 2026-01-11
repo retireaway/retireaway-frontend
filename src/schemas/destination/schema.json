@@ -1,0 +1,213 @@
+{
+  "$id": "https://retireaway.jeremiaholatunde.com/schemas/destination.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Destination",
+  "description": "Retireaway Destination Profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "averageLifeExpectancyAt65",
+    "climate",
+    "continent",
+    "corruptionIndex",
+    "costOfLivingIndex",
+    "country",
+    "crimeIndex",
+    "description",
+    "englishProficiencyScore",
+    "expatCommunitySize",
+    "expenses",
+    "fragileStatesIndex",
+    "groceriesIndex",
+    "healthExpenditurePerCapita",
+    "healthcareQualityIndex",
+    "housing",
+    "languages",
+    "officialLanguage",
+    "population",
+    "religions",
+    "restaurantIndex",
+    "safetyIndex",
+    "taxes",
+    "temperature",
+    "visas"
+  ],
+  "properties": {
+    "averageLifeExpectancyAt65": { "type": "number" },
+    "climate": { "type": "string" },
+    "continent": { "type": "string" },
+    "corruptionIndex": { "type": "number" },
+    "costOfLivingIndex": { "type": "number" },
+    "country": { "type": "string" },
+    "crimeIndex": { "type": "number" },
+    "description": { "type": "string" },
+    "englishProficiencyScore": { "type": "integer" },
+    "expatCommunitySize": { "type": "integer" },
+    "expenses": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["single", "family"],
+      "properties": {
+        "single": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["amount", "currency"],
+          "properties": {
+            "amount": { "type": "number" },
+            "currency": { "enum": ["USD"] }
+          }
+        },
+        "family": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["amount", "currency"],
+          "properties": {
+            "amount": { "type": "number" },
+            "currency": { "enum": ["USD"] }
+          }
+        }
+      }
+    },
+    "fragileStatesIndex": { "type": "number" },
+    "groceriesIndex": { "type": "number" },
+    "healthExpenditurePerCapita": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["amount", "currency"],
+      "properties": {
+        "amount": { "type": "number" },
+        "currency": { "enum": ["USD"] }
+      }
+    },
+    "healthcareQualityIndex": { "type": "number" },
+    "housing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rent", "buy"],
+      "properties": {
+        "rent": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["min", "max"],
+          "properties": {
+            "min": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["amount", "currency"],
+              "properties": {
+                "amount": { "type": "number" },
+                "currency": { "enum": ["USD"] }
+              }
+            },
+            "max": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["amount", "currency"],
+              "properties": {
+                "amount": { "type": "number" },
+                "currency": { "enum": ["USD"] }
+              }
+            }
+          }
+        },
+        "buy": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["min", "max"],
+          "properties": {
+            "min": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["amount", "currency"],
+              "properties": {
+                "amount": { "type": "number" },
+                "currency": { "enum": ["USD"] }
+              }
+            },
+            "max": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["amount", "currency"],
+              "properties": {
+                "amount": { "type": "number" },
+                "currency": { "enum": ["USD"] }
+              }
+            }
+          }
+        }
+      }
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "percentage"],
+        "properties": {
+          "name": { "type": "string" },
+          "percentage": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      }
+    },
+    "officialLanguage": { "type": "string" },
+    "population": { "type": "integer" },
+    "religions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "percentage"],
+        "properties": {
+          "name": { "type": "string" },
+          "percentage": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      }
+    },
+    "restaurantIndex": { "type": "number" },
+    "safetyIndex": { "type": "number" },
+    "taxes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "rate"],
+        "properties": {
+          "name": { "type": "string" },
+          "rate": { "type": "string" }
+        }
+      }
+    },
+    "temperature": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["avg", "min", "max"],
+      "properties": {
+        "avg": { "type": "number" },
+        "min": { "type": "number" },
+        "max": { "type": "number" }
+      }
+    },
+    "visas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "duration", "description", "requirements"],
+        "properties": {
+          "name": { "type": "string" },
+          "duration": { "type": "string" },
+          "description": { "type": "string" },
+          "requirements": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}
