@@ -22,6 +22,7 @@
     "healthExpenditurePerCapita",
     "healthcareQualityIndex",
     "housing",
+    "id",
     "languages",
     "officialLanguage",
     "population",
@@ -185,6 +186,7 @@
         }
       }
     },
+    "id": { "type": "string" },
     "temperature": {
       "type": "object",
       "additionalProperties": false,
