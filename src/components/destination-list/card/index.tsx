@@ -3,7 +3,7 @@ import { CircleIcon } from "lucide-react";
 
 export function Card({ children }: React.PropsWithChildren<{}>) {
   return (
-    <article className="relative flex h-120 w-full flex-col gap-4 overflow-hidden rounded-xl border-1 border-neutral-100 bg-white p-2">
+    <article className="relative flex h-124 w-full flex-col gap-4 overflow-hidden rounded-xl border-1 border-neutral-100 bg-white p-2">
       {children}
     </article>
   );
@@ -78,7 +78,7 @@ function Description({ children }: React.PropsWithChildren<{}>) {
 
 function MetaData({ children }: React.PropsWithChildren<{}>) {
   return (
-    <Chip size="xs" color="clear" fill="dark">
+    <Chip size="sm" color="clear" fill="dark">
       {children}
     </Chip>
   );
@@ -97,7 +97,7 @@ function Item({ children }: React.PropsWithChildren<{}>) {
 }
 function ReadMore() {
   return (
-    <button className="mt-2 rounded-md bg-blue-600 p-2 text-sm whitespace-nowrap text-white">
+    <button className="mt-2 rounded-md bg-blue-600 p-3 text-base whitespace-nowrap text-white">
       Read more
     </button>
   );
