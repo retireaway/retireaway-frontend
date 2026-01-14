@@ -129,7 +129,7 @@ export function DestinationCard({
             />
             <List.Card.RatingItem
               rating={[1, 2, 3][Math.floor(Math.random() * 3)] as 1 | 2 | 3}
-              text="Weather"
+              text="Visa Access"
             />
           </List.Card.RatingList>
         </div>
