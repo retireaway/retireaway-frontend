@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "generate:types": "node scripts/generate-types.ts"
+    "generate:types": "node scripts/generate-types.ts",
+    "generate:destinations": "node scripts/generate-destinations.ts"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.8",
