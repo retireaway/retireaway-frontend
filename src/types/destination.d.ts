@@ -75,6 +75,7 @@ export interface Destination {
     readonly rate: string;
   }[];
   readonly id: string;
+  readonly image: string;
   readonly temperature: {
     readonly avg: number;
     readonly min: number;

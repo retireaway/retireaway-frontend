@@ -51,6 +51,7 @@
       }
     },
     "id": "panama",
+    "image": "/images/destinations/panama.jpg",
     "languages": [
       {
         "name": "Spanish",
@@ -202,6 +203,7 @@
       }
     },
     "id": "portugal",
+    "image": "/images/destinations/portugal.jpg",
     "languages": [
       {
         "name": "Portuguese",
@@ -375,6 +377,7 @@
       }
     },
     "id": "costa-rica",
+    "image": "/images/destinations/costa-rica.jpg",
     "languages": [
       {
         "name": "Spanish",
@@ -541,6 +544,7 @@
       }
     },
     "id": "mexico",
+    "image": "/images/destinations/mexico.jpg",
     "languages": [
       {
         "name": "Spanish",
@@ -686,6 +690,7 @@
       }
     },
     "id": "france",
+    "image": "/images/destinations/france.jpg",
     "languages": [
       {
         "name": "French",
@@ -836,6 +841,7 @@
       }
     },
     "id": "spain",
+    "image": "/images/destinations/spain.jpg",
     "languages": [
       {
         "name": "Spanish",
@@ -1012,6 +1018,7 @@
       }
     },
     "id": "malaysia",
+    "image": "/images/destinations/malaysia.jpg",
     "languages": [
       {
         "name": "Malay",
@@ -1166,6 +1173,7 @@
       }
     },
     "id": "greece",
+    "image": "/images/destinations/greece.jpg",
     "languages": [
       {
         "name": "Greek",
@@ -1358,6 +1366,7 @@
       }
     },
     "id": "italy",
+    "image": "/images/destinations/italy.jpg",
     "languages": [
       {
         "name": "Italian",
@@ -1532,6 +1541,7 @@
       }
     },
     "id": "thailand",
+    "image": "/images/destinations/thailand.jpg",
     "languages": [
       {
         "name": "Thai",

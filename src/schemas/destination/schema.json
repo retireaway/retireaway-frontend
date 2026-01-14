@@ -23,6 +23,7 @@
     "healthcareQualityIndex",
     "housing",
     "id",
+    "image",
     "languages",
     "officialLanguage",
     "population",
@@ -187,6 +188,7 @@
       }
     },
     "id": { "type": "string" },
+    "image": { "type": "string" },
     "temperature": {
       "type": "object",
       "additionalProperties": false,
