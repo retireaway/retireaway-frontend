@@ -1,7 +1,7 @@
 import { tw } from "@/utils/tailwind";
 import { cva, type VariantProps } from "class-variance-authority";
 
-const base = tw`flex flex-row items-center justify-center gap-1 rounded-s-full px-2 py-1 text-xs font-medium`;
+const base = tw`flex flex-row items-center justify-center gap-1 rounded-s-full px-2 py-1 text-xs font-medium capitalize`;
 
 const blue = tw`bg-blue-50 text-blue-600`;
 const green = tw`bg-green-50 text-green-600`;
