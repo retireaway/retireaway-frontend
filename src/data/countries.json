@@ -1,0 +1,3290 @@
+[
+  {
+    "id": "spain",
+    "name": "Spain",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "climate": "Mediterranean",
+    "tags": [
+      "Warm Weather",
+      "Large Expat Communities",
+      "Beach Living"
+    ],
+    "image": "/images/destinations/spain/hero.webp",
+    "grade": "C",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 2500
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 3150
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "B",
+        "text": "Moderate"
+      },
+      "economy": {
+        "letter": "B",
+        "text": "Stable"
+      },
+      "healthcareCost": {
+        "letter": "A",
+        "text": "Low"
+      },
+      "healthcareQuality": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "infrastructure": {
+        "letter": "D",
+        "text": "Good"
+      },
+      "personalSafety": {
+        "letter": "B",
+        "text": "Safe"
+      },
+      "politicalStability": {
+        "letter": "B",
+        "text": "Stable"
+      },
+      "taxEnvironment": {
+        "letter": "C",
+        "text": "High Tax"
+      },
+      "visaEase": {
+        "letter": "B",
+        "text": "Moderate"
+      },
+      "weatherComfort": {
+        "letter": "B",
+        "text": "Ideal"
+      }
+    }
+  },
+  {
+    "id": "mexico",
+    "name": "Mexico",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "climate": "Mixed",
+    "tags": [
+      "Low Cost",
+      "Warm Weather",
+      "Safe",
+      "Large Expat Communities",
+      "Beach Living"
+    ],
+    "image": "/images/destinations/mexico/hero.webp",
+    "grade": "C",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 2000
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 2500
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "A",
+        "text": "Low"
+      },
+      "economy": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "healthcareCost": {
+        "letter": "A",
+        "text": "Very Low"
+      },
+      "healthcareQuality": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "infrastructure": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "personalSafety": {
+        "letter": "B",
+        "text": "Safe"
+      },
+      "politicalStability": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "taxEnvironment": {
+        "letter": "C",
+        "text": "Moderate Tax"
+      },
+      "visaEase": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "weatherComfort": {
+        "letter": "A",
+        "text": "Ideal"
+      }
+    }
+  },
+  {
+    "id": "costa-rica",
+    "name": "Costa Rica",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "climate": "Tropical",
+    "tags": [
+      "Low Cost",
+      "Tropical Paradise",
+      "Top Healthcare",
+      "Safe",
+      "Beach Living"
+    ],
+    "image": "/images/destinations/costa-rica/hero.webp",
+    "grade": "B",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 2250
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 2750
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "B",
+        "text": "Moderate"
+      },
+      "economy": {
+        "letter": "B",
+        "text": "Stable"
+      },
+      "healthcareCost": {
+        "letter": "B",
+        "text": "Low"
+      },
+      "healthcareQuality": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "infrastructure": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "personalSafety": {
+        "letter": "B",
+        "text": "Safe"
+      },
+      "politicalStability": {
+        "letter": "B",
+        "text": "Stable"
+      },
+      "taxEnvironment": {
+        "letter": "C",
+        "text": "Moderate Tax"
+      },
+      "visaEase": {
+        "letter": "B",
+        "text": "Easy"
+      },
+      "weatherComfort": {
+        "letter": "A",
+        "text": "Ideal"
+      }
+    }
+  },
+  {
+    "id": "panama",
+    "name": "Panama",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "climate": "Tropical",
+    "tags": [
+      "Low Cost",
+      "Easy Residency",
+      "Tax Friendly",
+      "Warm Weather"
+    ],
+    "image": "/images/destinations/panama/hero.webp",
+    "grade": "B",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 2250
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 3000
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "B",
+        "text": "Moderate"
+      },
+      "economy": {
+        "letter": "B",
+        "text": "Stable"
+      },
+      "healthcareCost": {
+        "letter": "B",
+        "text": "Low"
+      },
+      "healthcareQuality": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "infrastructure": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "personalSafety": {
+        "letter": "B",
+        "text": "Safe"
+      },
+      "politicalStability": {
+        "letter": "B",
+        "text": "Stable"
+      },
+      "taxEnvironment": {
+        "letter": "A",
+        "text": "Very Tax-Friendly"
+      },
+      "visaEase": {
+        "letter": "A",
+        "text": "Very Easy"
+      },
+      "weatherComfort": {
+        "letter": "A",
+        "text": "Ideal"
+      }
+    }
+  },
+  {
+    "id": "malaysia",
+    "name": "Malaysia",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "climate": "Tropical",
+    "tags": [
+      "Low Cost",
+      "Tropical Paradise",
+      "Easy Residency",
+      "Large Expat Communities",
+      "English Spoken"
+    ],
+    "image": "/images/destinations/malaysia/hero.webp",
+    "grade": "B",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 2000
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 2500
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "A",
+        "text": "Low"
+      },
+      "economy": {
+        "letter": "B",
+        "text": "Stable"
+      },
+      "healthcareCost": {
+        "letter": "A",
+        "text": "Very Low"
+      },
+      "healthcareQuality": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "infrastructure": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "personalSafety": {
+        "letter": "B",
+        "text": "Safe"
+      },
+      "politicalStability": {
+        "letter": "B",
+        "text": "Stable"
+      },
+      "taxEnvironment": {
+        "letter": "A",
+        "text": "Very Tax-Friendly"
+      },
+      "visaEase": {
+        "letter": "B",
+        "text": "Easy"
+      },
+      "weatherComfort": {
+        "letter": "B",
+        "text": "Comfortable"
+      }
+    }
+  },
+  {
+    "id": "thailand",
+    "name": "Thailand",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "climate": "Tropical",
+    "tags": [
+      "Low Cost",
+      "Tropical Paradise",
+      "Warm Weather",
+      "Large Expat Communities",
+      "Beach Living"
+    ],
+    "image": "/images/destinations/thailand/hero.webp",
+    "grade": "C",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 2000
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 2500
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "A",
+        "text": "Low"
+      },
+      "economy": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "healthcareCost": {
+        "letter": "A",
+        "text": "Very Low"
+      },
+      "healthcareQuality": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "infrastructure": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "personalSafety": {
+        "letter": "B",
+        "text": "Safe"
+      },
+      "politicalStability": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "taxEnvironment": {
+        "letter": "C",
+        "text": "Moderate Tax"
+      },
+      "visaEase": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "weatherComfort": {
+        "letter": "A",
+        "text": "Ideal"
+      }
+    }
+  },
+  {
+    "id": "greece",
+    "name": "Greece",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "climate": "Mediterranean",
+    "tags": [
+      "Warm Weather",
+      "Safe",
+      "Beach Living",
+      "Large Expat Communities"
+    ],
+    "image": "/images/destinations/greece/hero.webp",
+    "grade": "C",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 2000
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 2550
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "B",
+        "text": "Moderate"
+      },
+      "economy": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "healthcareCost": {
+        "letter": "B",
+        "text": "Low"
+      },
+      "healthcareQuality": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "infrastructure": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "personalSafety": {
+        "letter": "B",
+        "text": "Safe"
+      },
+      "politicalStability": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "taxEnvironment": {
+        "letter": "C",
+        "text": "Moderate Tax"
+      },
+      "visaEase": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "weatherComfort": {
+        "letter": "A",
+        "text": "Ideal"
+      }
+    }
+  },
+  {
+    "id": "italy",
+    "name": "Italy",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "climate": "Mediterranean",
+    "tags": [
+      "Warm Weather",
+      "Safe",
+      "Large Expat Communities",
+      "Top Healthcare"
+    ],
+    "image": "/images/destinations/italy/hero.webp",
+    "grade": "B",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 2500
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 3150
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "B",
+        "text": "Moderate"
+      },
+      "economy": {
+        "letter": "B",
+        "text": "Stable"
+      },
+      "healthcareCost": {
+        "letter": "B",
+        "text": "Low"
+      },
+      "healthcareQuality": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "infrastructure": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "personalSafety": {
+        "letter": "B",
+        "text": "Safe"
+      },
+      "politicalStability": {
+        "letter": "B",
+        "text": "Stable"
+      },
+      "taxEnvironment": {
+        "letter": "C",
+        "text": "Moderate Tax"
+      },
+      "visaEase": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "weatherComfort": {
+        "letter": "A",
+        "text": "Ideal"
+      }
+    }
+  },
+  {
+    "id": "france",
+    "name": "France",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "climate": "Temperate",
+    "tags": [
+      "Top Healthcare",
+      "Warm Weather",
+      "Safe"
+    ],
+    "image": "/images/destinations/france/hero.webp",
+    "grade": "B",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 2850
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 3600
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "C",
+        "text": "High"
+      },
+      "economy": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "healthcareCost": {
+        "letter": "B",
+        "text": "Low"
+      },
+      "healthcareQuality": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "infrastructure": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "personalSafety": {
+        "letter": "A",
+        "text": "Very Safe"
+      },
+      "politicalStability": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "taxEnvironment": {
+        "letter": "D",
+        "text": "High Tax"
+      },
+      "visaEase": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "weatherComfort": {
+        "letter": "A",
+        "text": "Ideal"
+      }
+    }
+  },
+  {
+    "id": "malta",
+    "name": "Malta",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "climate": "Mediterranean",
+    "tags": [
+      "Warm Weather",
+      "Safe",
+      "English Spoken",
+      "Beach Living",
+      "Tax Friendly"
+    ],
+    "image": "/images/destinations/malta/hero.webp",
+    "grade": "A",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 2750
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 3600
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "C",
+        "text": "High"
+      },
+      "economy": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "healthcareCost": {
+        "letter": "B",
+        "text": "Low"
+      },
+      "healthcareQuality": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "infrastructure": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "personalSafety": {
+        "letter": "A",
+        "text": "Very Safe"
+      },
+      "politicalStability": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "taxEnvironment": {
+        "letter": "B",
+        "text": "Tax-Friendly"
+      },
+      "visaEase": {
+        "letter": "B",
+        "text": "Easy"
+      },
+      "weatherComfort": {
+        "letter": "A",
+        "text": "Ideal"
+      }
+    }
+  },
+  {
+    "id": "cyprus",
+    "name": "Cyprus",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "climate": "Mediterranean",
+    "tags": [
+      "Warm Weather",
+      "Safe",
+      "Large Expat Communities",
+      "English Spoken",
+      "Beach Living",
+      "Tax Friendly"
+    ],
+    "image": "/images/destinations/cyprus/hero.webp",
+    "grade": "B",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 2250
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 2850
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "B",
+        "text": "Moderate"
+      },
+      "economy": {
+        "letter": "B",
+        "text": "Stable"
+      },
+      "healthcareCost": {
+        "letter": "B",
+        "text": "Low"
+      },
+      "healthcareQuality": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "infrastructure": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "personalSafety": {
+        "letter": "A",
+        "text": "Very Safe"
+      },
+      "politicalStability": {
+        "letter": "B",
+        "text": "Stable"
+      },
+      "taxEnvironment": {
+        "letter": "B",
+        "text": "Tax-Friendly"
+      },
+      "visaEase": {
+        "letter": "B",
+        "text": "Easy"
+      },
+      "weatherComfort": {
+        "letter": "A",
+        "text": "Ideal"
+      }
+    }
+  },
+  {
+    "id": "croatia",
+    "name": "Croatia",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "climate": "Mediterranean",
+    "tags": [
+      "Warm Weather",
+      "Safe",
+      "Large Expat Communities",
+      "Beach Living"
+    ],
+    "image": "/images/destinations/croatia/hero.webp",
+    "grade": "B",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 2000
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 2500
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "B",
+        "text": "Moderate"
+      },
+      "economy": {
+        "letter": "B",
+        "text": "Stable"
+      },
+      "healthcareCost": {
+        "letter": "B",
+        "text": "Low"
+      },
+      "healthcareQuality": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "infrastructure": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "personalSafety": {
+        "letter": "B",
+        "text": "Safe"
+      },
+      "politicalStability": {
+        "letter": "B",
+        "text": "Stable"
+      },
+      "taxEnvironment": {
+        "letter": "C",
+        "text": "Moderate Tax"
+      },
+      "visaEase": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "weatherComfort": {
+        "letter": "A",
+        "text": "Ideal"
+      }
+    }
+  },
+  {
+    "id": "slovenia",
+    "name": "Slovenia",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "climate": "Temperate",
+    "tags": [
+      "Safe",
+      "Low Crowds"
+    ],
+    "image": "/images/destinations/slovenia/hero.webp",
+    "grade": "B",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 2250
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 2850
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "C",
+        "text": "High"
+      },
+      "economy": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "healthcareCost": {
+        "letter": "B",
+        "text": "Low"
+      },
+      "healthcareQuality": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "infrastructure": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "personalSafety": {
+        "letter": "A",
+        "text": "Very Safe"
+      },
+      "politicalStability": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "taxEnvironment": {
+        "letter": "D",
+        "text": "High Tax"
+      },
+      "visaEase": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "weatherComfort": {
+        "letter": "B",
+        "text": "Comfortable"
+      }
+    }
+  },
+  {
+    "id": "montenegro",
+    "name": "Montenegro",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "climate": "Mediterranean",
+    "tags": [
+      "Low Cost",
+      "Safe",
+      "Warm Weather",
+      "Beach Living"
+    ],
+    "image": "/images/destinations/montenegro/hero.webp",
+    "grade": "B",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 1650
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 2150
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "B",
+        "text": "Moderate"
+      },
+      "economy": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "healthcareCost": {
+        "letter": "B",
+        "text": "Low"
+      },
+      "healthcareQuality": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "infrastructure": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "personalSafety": {
+        "letter": "B",
+        "text": "Safe"
+      },
+      "politicalStability": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "taxEnvironment": {
+        "letter": "B",
+        "text": "Tax-Friendly"
+      },
+      "visaEase": {
+        "letter": "B",
+        "text": "Easy"
+      },
+      "weatherComfort": {
+        "letter": "A",
+        "text": "Ideal"
+      }
+    }
+  },
+  {
+    "id": "turkey",
+    "name": "Turkey",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "climate": "Mixed",
+    "tags": [
+      "Low Cost",
+      "Warm Weather",
+      "Beach Living"
+    ],
+    "image": "/images/destinations/turkey/hero.webp",
+    "grade": "C",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 1400
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 1900
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "A",
+        "text": "Low"
+      },
+      "economy": {
+        "letter": "D",
+        "text": "Unstable"
+      },
+      "healthcareCost": {
+        "letter": "A",
+        "text": "Very Low"
+      },
+      "healthcareQuality": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "infrastructure": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "personalSafety": {
+        "letter": "B",
+        "text": "Safe"
+      },
+      "politicalStability": {
+        "letter": "D",
+        "text": "Unstable"
+      },
+      "taxEnvironment": {
+        "letter": "C",
+        "text": "Moderate Tax"
+      },
+      "visaEase": {
+        "letter": "B",
+        "text": "Easy"
+      },
+      "weatherComfort": {
+        "letter": "B",
+        "text": "Comfortable"
+      }
+    }
+  },
+  {
+    "id": "georgia",
+    "name": "Georgia",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "climate": "Mixed",
+    "tags": [
+      "Low Cost",
+      "Easy Residency",
+      "Tax Friendly"
+    ],
+    "image": "/images/destinations/georgia/hero.webp",
+    "grade": "B",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 1400
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 1900
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "A",
+        "text": "Low"
+      },
+      "economy": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "healthcareCost": {
+        "letter": "A",
+        "text": "Very Low"
+      },
+      "healthcareQuality": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "infrastructure": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "personalSafety": {
+        "letter": "B",
+        "text": "Safe"
+      },
+      "politicalStability": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "taxEnvironment": {
+        "letter": "A",
+        "text": "Very Tax-Friendly"
+      },
+      "visaEase": {
+        "letter": "A",
+        "text": "Very Easy"
+      },
+      "weatherComfort": {
+        "letter": "B",
+        "text": "Comfortable"
+      }
+    }
+  },
+  {
+    "id": "czech-republic",
+    "name": "Czech Republic",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "climate": "Temperate",
+    "tags": [
+      "Safe",
+      "Low Cost"
+    ],
+    "image": "/images/destinations/czech-republic/hero.webp",
+    "grade": "B",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 2250
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 2850
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "B",
+        "text": "Moderate"
+      },
+      "economy": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "healthcareCost": {
+        "letter": "B",
+        "text": "Low"
+      },
+      "healthcareQuality": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "infrastructure": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "personalSafety": {
+        "letter": "A",
+        "text": "Very Safe"
+      },
+      "politicalStability": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "taxEnvironment": {
+        "letter": "D",
+        "text": "High Tax"
+      },
+      "visaEase": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "weatherComfort": {
+        "letter": "B",
+        "text": "Comfortable"
+      }
+    }
+  },
+  {
+    "id": "austria",
+    "name": "Austria",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "climate": "Temperate",
+    "tags": [
+      "Top Healthcare",
+      "Safe",
+      "Premium Cost"
+    ],
+    "image": "/images/destinations/austria/hero.webp",
+    "grade": "C",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 3400
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 4300
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "D",
+        "text": "Very High"
+      },
+      "economy": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "healthcareCost": {
+        "letter": "C",
+        "text": "High"
+      },
+      "healthcareQuality": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "infrastructure": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "personalSafety": {
+        "letter": "A",
+        "text": "Very Safe"
+      },
+      "politicalStability": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "taxEnvironment": {
+        "letter": "D",
+        "text": "High Tax"
+      },
+      "visaEase": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "weatherComfort": {
+        "letter": "B",
+        "text": "Comfortable"
+      }
+    }
+  },
+  {
+    "id": "germany",
+    "name": "Germany",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "climate": "Temperate",
+    "tags": [
+      "Top Healthcare",
+      "Safe"
+    ],
+    "image": "/images/destinations/germany/hero.webp",
+    "grade": "B",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 3150
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 4000
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "C",
+        "text": "High"
+      },
+      "economy": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "healthcareCost": {
+        "letter": "B",
+        "text": "Low"
+      },
+      "healthcareQuality": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "infrastructure": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "personalSafety": {
+        "letter": "A",
+        "text": "Very Safe"
+      },
+      "politicalStability": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "taxEnvironment": {
+        "letter": "D",
+        "text": "High Tax"
+      },
+      "visaEase": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "weatherComfort": {
+        "letter": "B",
+        "text": "Comfortable"
+      }
+    }
+  },
+  {
+    "id": "netherlands",
+    "name": "Netherlands",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "climate": "Temperate",
+    "tags": [
+      "Top Healthcare",
+      "Safe",
+      "English Spoken",
+      "Premium Cost"
+    ],
+    "image": "/images/destinations/netherlands/hero.webp",
+    "grade": "B",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 3600
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 4600
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "D",
+        "text": "Very High"
+      },
+      "economy": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "healthcareCost": {
+        "letter": "C",
+        "text": "High"
+      },
+      "healthcareQuality": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "infrastructure": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "personalSafety": {
+        "letter": "A",
+        "text": "Very Safe"
+      },
+      "politicalStability": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "taxEnvironment": {
+        "letter": "D",
+        "text": "High Tax"
+      },
+      "visaEase": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "weatherComfort": {
+        "letter": "B",
+        "text": "Comfortable"
+      }
+    }
+  },
+  {
+    "id": "denmark",
+    "name": "Denmark",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "climate": "Temperate",
+    "tags": [
+      "Top Healthcare",
+      "Safe",
+      "English Spoken",
+      "Premium Cost"
+    ],
+    "image": "/images/destinations/denmark/hero.webp",
+    "grade": "B",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 3850
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 5000
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "D",
+        "text": "Very High"
+      },
+      "economy": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "healthcareCost": {
+        "letter": "C",
+        "text": "High"
+      },
+      "healthcareQuality": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "infrastructure": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "personalSafety": {
+        "letter": "A",
+        "text": "Very Safe"
+      },
+      "politicalStability": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "taxEnvironment": {
+        "letter": "D",
+        "text": "High Tax"
+      },
+      "visaEase": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "weatherComfort": {
+        "letter": "B",
+        "text": "Comfortable"
+      }
+    }
+  },
+  {
+    "id": "sweden",
+    "name": "Sweden",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "climate": "Cold",
+    "tags": [
+      "Top Healthcare",
+      "Safe",
+      "English Spoken",
+      "Premium Cost"
+    ],
+    "image": "/images/destinations/sweden/hero.webp",
+    "grade": "B",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 3500
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 4500
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "D",
+        "text": "Very High"
+      },
+      "economy": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "healthcareCost": {
+        "letter": "C",
+        "text": "High"
+      },
+      "healthcareQuality": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "infrastructure": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "personalSafety": {
+        "letter": "A",
+        "text": "Very Safe"
+      },
+      "politicalStability": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "taxEnvironment": {
+        "letter": "D",
+        "text": "High Tax"
+      },
+      "visaEase": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "weatherComfort": {
+        "letter": "B",
+        "text": "Comfortable"
+      }
+    }
+  },
+  {
+    "id": "norway",
+    "name": "Norway",
+    "region": "Americas",
+    "subregion": "North America",
+    "climate": "Cold",
+    "tags": [
+      "Top Healthcare",
+      "Safe",
+      "English Spoken",
+      "Premium Cost"
+    ],
+    "image": "/images/destinations/norway/hero.webp",
+    "grade": "B",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 4150
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 5400
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "D",
+        "text": "Very High"
+      },
+      "economy": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "healthcareCost": {
+        "letter": "C",
+        "text": "High"
+      },
+      "healthcareQuality": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "infrastructure": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "personalSafety": {
+        "letter": "A",
+        "text": "Very Safe"
+      },
+      "politicalStability": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "taxEnvironment": {
+        "letter": "D",
+        "text": "High Tax"
+      },
+      "visaEase": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "weatherComfort": {
+        "letter": "B",
+        "text": "Comfortable"
+      }
+    }
+  },
+  {
+    "id": "finland",
+    "name": "Finland",
+    "region": "Americas",
+    "subregion": "North America",
+    "climate": "Cold",
+    "tags": [
+      "Top Healthcare",
+      "Safe",
+      "English Spoken",
+      "Low Crowds",
+      "Premium Cost"
+    ],
+    "image": "/images/destinations/finland/hero.webp",
+    "grade": "C",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 3300
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 4300
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "D",
+        "text": "Very High"
+      },
+      "economy": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "healthcareCost": {
+        "letter": "C",
+        "text": "High"
+      },
+      "healthcareQuality": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "infrastructure": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "personalSafety": {
+        "letter": "A",
+        "text": "Very Safe"
+      },
+      "politicalStability": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "taxEnvironment": {
+        "letter": "D",
+        "text": "High Tax"
+      },
+      "visaEase": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "weatherComfort": {
+        "letter": "D",
+        "text": "Challenging"
+      }
+    }
+  },
+  {
+    "id": "switzerland",
+    "name": "Switzerland",
+    "region": "Americas",
+    "subregion": "North America",
+    "climate": "Temperate",
+    "tags": [
+      "Top Healthcare",
+      "Safe",
+      "Premium Cost",
+      "Mountain Living"
+    ],
+    "image": "/images/destinations/switzerland/hero.webp",
+    "grade": "C",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 5000
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 6250
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "D",
+        "text": "Very High"
+      },
+      "economy": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "healthcareCost": {
+        "letter": "D",
+        "text": "Very High"
+      },
+      "healthcareQuality": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "infrastructure": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "personalSafety": {
+        "letter": "A",
+        "text": "Very Safe"
+      },
+      "politicalStability": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "taxEnvironment": {
+        "letter": "C",
+        "text": "Moderate Tax"
+      },
+      "visaEase": {
+        "letter": "D",
+        "text": "Difficult"
+      },
+      "weatherComfort": {
+        "letter": "B",
+        "text": "Comfortable"
+      }
+    }
+  },
+  {
+    "id": "ireland",
+    "name": "Ireland",
+    "region": "Americas",
+    "subregion": "Central America & Caribbean",
+    "climate": "Temperate",
+    "tags": [
+      "Top Healthcare",
+      "Safe",
+      "English Spoken"
+    ],
+    "image": "/images/destinations/ireland/hero.webp",
+    "grade": "B",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 3300
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 4300
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "D",
+        "text": "Very High"
+      },
+      "economy": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "healthcareCost": {
+        "letter": "C",
+        "text": "High"
+      },
+      "healthcareQuality": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "infrastructure": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "personalSafety": {
+        "letter": "A",
+        "text": "Very Safe"
+      },
+      "politicalStability": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "taxEnvironment": {
+        "letter": "C",
+        "text": "Moderate Tax"
+      },
+      "visaEase": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "weatherComfort": {
+        "letter": "B",
+        "text": "Comfortable"
+      }
+    }
+  },
+  {
+    "id": "united-kingdom",
+    "name": "United Kingdom",
+    "region": "Americas",
+    "subregion": "Central America & Caribbean",
+    "climate": "Temperate",
+    "tags": [
+      "Top Healthcare",
+      "Safe",
+      "English Spoken",
+      "Premium Cost"
+    ],
+    "image": "/images/destinations/united-kingdom/hero.webp",
+    "grade": "C",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 3500
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 4500
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "D",
+        "text": "Very High"
+      },
+      "economy": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "healthcareCost": {
+        "letter": "C",
+        "text": "High"
+      },
+      "healthcareQuality": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "infrastructure": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "personalSafety": {
+        "letter": "B",
+        "text": "Safe"
+      },
+      "politicalStability": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "taxEnvironment": {
+        "letter": "C",
+        "text": "Moderate Tax"
+      },
+      "visaEase": {
+        "letter": "D",
+        "text": "Difficult"
+      },
+      "weatherComfort": {
+        "letter": "B",
+        "text": "Comfortable"
+      }
+    }
+  },
+  {
+    "id": "canada",
+    "name": "Canada",
+    "region": "Americas",
+    "subregion": "Central America & Caribbean",
+    "climate": "Cold",
+    "tags": [
+      "Top Healthcare",
+      "Safe",
+      "English Spoken",
+      "Premium Cost"
+    ],
+    "image": "/images/destinations/canada/hero.webp",
+    "grade": "C",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 3300
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 4300
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "D",
+        "text": "Very High"
+      },
+      "economy": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "healthcareCost": {
+        "letter": "C",
+        "text": "High"
+      },
+      "healthcareQuality": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "infrastructure": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "personalSafety": {
+        "letter": "A",
+        "text": "Very Safe"
+      },
+      "politicalStability": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "taxEnvironment": {
+        "letter": "D",
+        "text": "High Tax"
+      },
+      "visaEase": {
+        "letter": "D",
+        "text": "Difficult"
+      },
+      "weatherComfort": {
+        "letter": "D",
+        "text": "Challenging"
+      }
+    }
+  },
+  {
+    "id": "united-states",
+    "name": "United States",
+    "region": "Americas",
+    "subregion": "Central America & Caribbean",
+    "climate": "Mixed",
+    "tags": [
+      "Top Healthcare",
+      "English Spoken",
+      "Premium Cost"
+    ],
+    "image": "/images/destinations/united-states/hero.webp",
+    "grade": "C",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 4000
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 5250
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "D",
+        "text": "Very High"
+      },
+      "economy": {
+        "letter": "B",
+        "text": "Stable"
+      },
+      "healthcareCost": {
+        "letter": "D",
+        "text": "Very High"
+      },
+      "healthcareQuality": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "infrastructure": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "personalSafety": {
+        "letter": "B",
+        "text": "Safe"
+      },
+      "politicalStability": {
+        "letter": "B",
+        "text": "Stable"
+      },
+      "taxEnvironment": {
+        "letter": "D",
+        "text": "High Tax"
+      },
+      "visaEase": {
+        "letter": "D",
+        "text": "Difficult"
+      },
+      "weatherComfort": {
+        "letter": "B",
+        "text": "Comfortable"
+      }
+    }
+  },
+  {
+    "id": "australia",
+    "name": "Australia",
+    "region": "Americas",
+    "subregion": "South America",
+    "climate": "Temperate",
+    "tags": [
+      "Top Healthcare",
+      "Warm Weather",
+      "Safe",
+      "English Spoken",
+      "Beach Living",
+      "Premium Cost"
+    ],
+    "image": "/images/destinations/australia/hero.webp",
+    "grade": "C",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 3850
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 5000
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "D",
+        "text": "Very High"
+      },
+      "economy": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "healthcareCost": {
+        "letter": "C",
+        "text": "High"
+      },
+      "healthcareQuality": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "infrastructure": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "personalSafety": {
+        "letter": "A",
+        "text": "Very Safe"
+      },
+      "politicalStability": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "taxEnvironment": {
+        "letter": "D",
+        "text": "High Tax"
+      },
+      "visaEase": {
+        "letter": "D",
+        "text": "Difficult"
+      },
+      "weatherComfort": {
+        "letter": "B",
+        "text": "Comfortable"
+      }
+    }
+  },
+  {
+    "id": "new-zealand",
+    "name": "New Zealand",
+    "region": "Americas",
+    "subregion": "South America",
+    "climate": "Temperate",
+    "tags": [
+      "Top Healthcare",
+      "Safe",
+      "English Spoken",
+      "Low Crowds",
+      "Premium Cost"
+    ],
+    "image": "/images/destinations/new-zealand/hero.webp",
+    "grade": "C",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 3300
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 4300
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "D",
+        "text": "Very High"
+      },
+      "economy": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "healthcareCost": {
+        "letter": "C",
+        "text": "High"
+      },
+      "healthcareQuality": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "infrastructure": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "personalSafety": {
+        "letter": "A",
+        "text": "Very Safe"
+      },
+      "politicalStability": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "taxEnvironment": {
+        "letter": "D",
+        "text": "High Tax"
+      },
+      "visaEase": {
+        "letter": "D",
+        "text": "Difficult"
+      },
+      "weatherComfort": {
+        "letter": "B",
+        "text": "Comfortable"
+      }
+    }
+  },
+  {
+    "id": "japan",
+    "name": "Japan",
+    "region": "Americas",
+    "subregion": "South America",
+    "climate": "Temperate",
+    "tags": [
+      "Top Healthcare",
+      "Safe",
+      "Premium Cost",
+      "Limited English"
+    ],
+    "image": "/images/destinations/japan/hero.webp",
+    "grade": "B",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 3150
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 4000
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "D",
+        "text": "Very High"
+      },
+      "economy": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "healthcareCost": {
+        "letter": "B",
+        "text": "Low"
+      },
+      "healthcareQuality": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "infrastructure": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "personalSafety": {
+        "letter": "A",
+        "text": "Very Safe"
+      },
+      "politicalStability": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "taxEnvironment": {
+        "letter": "D",
+        "text": "High Tax"
+      },
+      "visaEase": {
+        "letter": "D",
+        "text": "Difficult"
+      },
+      "weatherComfort": {
+        "letter": "B",
+        "text": "Comfortable"
+      }
+    }
+  },
+  {
+    "id": "south-korea",
+    "name": "South Korea",
+    "region": "Americas",
+    "subregion": "South America",
+    "climate": "Temperate",
+    "tags": [
+      "Top Healthcare",
+      "Safe",
+      "Premium Cost",
+      "Limited English"
+    ],
+    "image": "/images/destinations/south-korea/hero.webp",
+    "grade": "B",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 2850
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 3600
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "C",
+        "text": "High"
+      },
+      "economy": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "healthcareCost": {
+        "letter": "B",
+        "text": "Low"
+      },
+      "healthcareQuality": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "infrastructure": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "personalSafety": {
+        "letter": "A",
+        "text": "Very Safe"
+      },
+      "politicalStability": {
+        "letter": "B",
+        "text": "Stable"
+      },
+      "taxEnvironment": {
+        "letter": "D",
+        "text": "High Tax"
+      },
+      "visaEase": {
+        "letter": "D",
+        "text": "Difficult"
+      },
+      "weatherComfort": {
+        "letter": "B",
+        "text": "Comfortable"
+      }
+    }
+  },
+  {
+    "id": "taiwan",
+    "name": "Taiwan",
+    "region": "Asia",
+    "subregion": "Southeast Asia",
+    "climate": "Subtropical",
+    "tags": [
+      "Top Healthcare",
+      "Safe",
+      "Low Cost",
+      "Limited English"
+    ],
+    "image": "/images/destinations/taiwan/hero.webp",
+    "grade": "B",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 2250
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 2850
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "B",
+        "text": "Moderate"
+      },
+      "economy": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "healthcareCost": {
+        "letter": "B",
+        "text": "Low"
+      },
+      "healthcareQuality": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "infrastructure": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "personalSafety": {
+        "letter": "A",
+        "text": "Very Safe"
+      },
+      "politicalStability": {
+        "letter": "B",
+        "text": "Stable"
+      },
+      "taxEnvironment": {
+        "letter": "C",
+        "text": "Moderate Tax"
+      },
+      "visaEase": {
+        "letter": "D",
+        "text": "Difficult"
+      },
+      "weatherComfort": {
+        "letter": "B",
+        "text": "Comfortable"
+      }
+    }
+  },
+  {
+    "id": "singapore",
+    "name": "Singapore",
+    "region": "Asia",
+    "subregion": "Southeast Asia",
+    "climate": "Tropical",
+    "tags": [
+      "Top Healthcare",
+      "Safe",
+      "Warm Weather",
+      "English Spoken",
+      "Premium Cost",
+      "Tropical Paradise"
+    ],
+    "image": "/images/destinations/singapore/hero.webp",
+    "grade": "B",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 4500
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 5750
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "D",
+        "text": "Very High"
+      },
+      "economy": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "healthcareCost": {
+        "letter": "C",
+        "text": "High"
+      },
+      "healthcareQuality": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "infrastructure": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "personalSafety": {
+        "letter": "A",
+        "text": "Very Safe"
+      },
+      "politicalStability": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "taxEnvironment": {
+        "letter": "A",
+        "text": "Very Tax-Friendly"
+      },
+      "visaEase": {
+        "letter": "D",
+        "text": "Difficult"
+      },
+      "weatherComfort": {
+        "letter": "D",
+        "text": "Challenging"
+      }
+    }
+  },
+  {
+    "id": "vietnam",
+    "name": "Vietnam",
+    "region": "Asia",
+    "subregion": "Southeast Asia",
+    "climate": "Tropical",
+    "tags": [
+      "Low Cost",
+      "Tropical Paradise",
+      "Warm Weather",
+      "Easy Residency",
+      "Beach Living"
+    ],
+    "image": "/images/destinations/vietnam/hero.webp",
+    "grade": "C",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 1650
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 2150
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "A",
+        "text": "Low"
+      },
+      "economy": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "healthcareCost": {
+        "letter": "A",
+        "text": "Very Low"
+      },
+      "healthcareQuality": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "infrastructure": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "personalSafety": {
+        "letter": "B",
+        "text": "Safe"
+      },
+      "politicalStability": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "taxEnvironment": {
+        "letter": "C",
+        "text": "Moderate Tax"
+      },
+      "visaEase": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "weatherComfort": {
+        "letter": "A",
+        "text": "Ideal"
+      }
+    }
+  },
+  {
+    "id": "philippines",
+    "name": "Philippines",
+    "region": "Asia",
+    "subregion": "Southeast Asia",
+    "climate": "Tropical",
+    "tags": [
+      "Low Cost",
+      "Tropical Paradise",
+      "Warm Weather",
+      "Large Expat Communities",
+      "English Spoken",
+      "Beach Living"
+    ],
+    "image": "/images/destinations/philippines/hero.webp",
+    "grade": "B",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 1750
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 2150
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "A",
+        "text": "Low"
+      },
+      "economy": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "healthcareCost": {
+        "letter": "A",
+        "text": "Very Low"
+      },
+      "healthcareQuality": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "infrastructure": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "personalSafety": {
+        "letter": "B",
+        "text": "Safe"
+      },
+      "politicalStability": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "taxEnvironment": {
+        "letter": "B",
+        "text": "Tax-Friendly"
+      },
+      "visaEase": {
+        "letter": "B",
+        "text": "Easy"
+      },
+      "weatherComfort": {
+        "letter": "A",
+        "text": "Ideal"
+      }
+    }
+  },
+  {
+    "id": "indonesia",
+    "name": "Indonesia",
+    "region": "Asia",
+    "subregion": "Southeast Asia",
+    "climate": "Tropical",
+    "tags": [
+      "Low Cost",
+      "Tropical Paradise",
+      "Warm Weather",
+      "Beach Living"
+    ],
+    "image": "/images/destinations/indonesia/hero.webp",
+    "grade": "C",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 1650
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 2150
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "A",
+        "text": "Low"
+      },
+      "economy": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "healthcareCost": {
+        "letter": "A",
+        "text": "Very Low"
+      },
+      "healthcareQuality": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "infrastructure": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "personalSafety": {
+        "letter": "B",
+        "text": "Safe"
+      },
+      "politicalStability": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "taxEnvironment": {
+        "letter": "C",
+        "text": "Moderate Tax"
+      },
+      "visaEase": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "weatherComfort": {
+        "letter": "A",
+        "text": "Ideal"
+      }
+    }
+  },
+  {
+    "id": "sri-lanka",
+    "name": "Sri Lanka",
+    "region": "Asia",
+    "subregion": "Southeast Asia",
+    "climate": "Tropical",
+    "tags": [
+      "Low Cost",
+      "Tropical Paradise",
+      "Warm Weather",
+      "Beach Living"
+    ],
+    "image": "/images/destinations/sri-lanka/hero.webp",
+    "grade": "C",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 1400
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 1900
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "A",
+        "text": "Low"
+      },
+      "economy": {
+        "letter": "D",
+        "text": "Unstable"
+      },
+      "healthcareCost": {
+        "letter": "A",
+        "text": "Very Low"
+      },
+      "healthcareQuality": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "infrastructure": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "personalSafety": {
+        "letter": "B",
+        "text": "Safe"
+      },
+      "politicalStability": {
+        "letter": "D",
+        "text": "Unstable"
+      },
+      "taxEnvironment": {
+        "letter": "C",
+        "text": "Moderate Tax"
+      },
+      "visaEase": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "weatherComfort": {
+        "letter": "A",
+        "text": "Ideal"
+      }
+    }
+  },
+  {
+    "id": "united-arab-emirates",
+    "name": "United Arab Emirates",
+    "region": "Asia",
+    "subregion": "East Asia",
+    "climate": "Arid",
+    "tags": [
+      "Safe",
+      "Warm Weather",
+      "English Spoken",
+      "Tax Friendly",
+      "Premium Cost"
+    ],
+    "image": "/images/destinations/united-arab-emirates/hero.webp",
+    "grade": "B",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 4000
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 5250
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "D",
+        "text": "Very High"
+      },
+      "economy": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "healthcareCost": {
+        "letter": "B",
+        "text": "Low"
+      },
+      "healthcareQuality": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "infrastructure": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "personalSafety": {
+        "letter": "A",
+        "text": "Very Safe"
+      },
+      "politicalStability": {
+        "letter": "B",
+        "text": "Stable"
+      },
+      "taxEnvironment": {
+        "letter": "A",
+        "text": "Very Tax-Friendly"
+      },
+      "visaEase": {
+        "letter": "D",
+        "text": "Difficult"
+      },
+      "weatherComfort": {
+        "letter": "D",
+        "text": "Challenging"
+      }
+    }
+  },
+  {
+    "id": "oman",
+    "name": "Oman",
+    "region": "Asia",
+    "subregion": "East Asia",
+    "climate": "Arid",
+    "tags": [
+      "Safe",
+      "Warm Weather",
+      "English Spoken",
+      "Tax Friendly",
+      "Low Crowds"
+    ],
+    "image": "/images/destinations/oman/hero.webp",
+    "grade": "B",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 2850
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 3600
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "C",
+        "text": "High"
+      },
+      "economy": {
+        "letter": "A",
+        "text": "Very Stable"
+      },
+      "healthcareCost": {
+        "letter": "B",
+        "text": "Low"
+      },
+      "healthcareQuality": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "infrastructure": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "personalSafety": {
+        "letter": "A",
+        "text": "Very Safe"
+      },
+      "politicalStability": {
+        "letter": "B",
+        "text": "Stable"
+      },
+      "taxEnvironment": {
+        "letter": "A",
+        "text": "Very Tax-Friendly"
+      },
+      "visaEase": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "weatherComfort": {
+        "letter": "D",
+        "text": "Challenging"
+      }
+    }
+  },
+  {
+    "id": "uruguay",
+    "name": "Uruguay",
+    "region": "Asia",
+    "subregion": "East Asia",
+    "climate": "Temperate",
+    "tags": [
+      "Low Cost",
+      "Warm Weather",
+      "Safe",
+      "Large Expat Communities",
+      "Beach Living"
+    ],
+    "image": "/images/destinations/uruguay/hero.webp",
+    "grade": "B",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 2500
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 3150
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "C",
+        "text": "High"
+      },
+      "economy": {
+        "letter": "B",
+        "text": "Stable"
+      },
+      "healthcareCost": {
+        "letter": "B",
+        "text": "Low"
+      },
+      "healthcareQuality": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "infrastructure": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "personalSafety": {
+        "letter": "A",
+        "text": "Very Safe"
+      },
+      "politicalStability": {
+        "letter": "B",
+        "text": "Stable"
+      },
+      "taxEnvironment": {
+        "letter": "C",
+        "text": "Moderate Tax"
+      },
+      "visaEase": {
+        "letter": "B",
+        "text": "Easy"
+      },
+      "weatherComfort": {
+        "letter": "B",
+        "text": "Comfortable"
+      }
+    }
+  },
+  {
+    "id": "chile",
+    "name": "Chile",
+    "region": "Asia",
+    "subregion": "South Asia",
+    "climate": "Temperate",
+    "tags": [
+      "Warm Weather",
+      "Safe",
+      "Large Expat Communities"
+    ],
+    "image": "/images/destinations/chile/hero.webp",
+    "grade": "B",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 2500
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 3150
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "C",
+        "text": "High"
+      },
+      "economy": {
+        "letter": "B",
+        "text": "Stable"
+      },
+      "healthcareCost": {
+        "letter": "B",
+        "text": "Low"
+      },
+      "healthcareQuality": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "infrastructure": {
+        "letter": "A",
+        "text": "Very Good"
+      },
+      "personalSafety": {
+        "letter": "B",
+        "text": "Safe"
+      },
+      "politicalStability": {
+        "letter": "B",
+        "text": "Stable"
+      },
+      "taxEnvironment": {
+        "letter": "C",
+        "text": "Moderate Tax"
+      },
+      "visaEase": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "weatherComfort": {
+        "letter": "B",
+        "text": "Comfortable"
+      }
+    }
+  },
+  {
+    "id": "colombia",
+    "name": "Colombia",
+    "region": "Oceania",
+    "subregion": "Pacific",
+    "climate": "Tropical",
+    "tags": [
+      "Low Cost",
+      "Tropical Paradise",
+      "Warm Weather",
+      "Large Expat Communities",
+      "Mountain Living"
+    ],
+    "image": "/images/destinations/colombia/hero.webp",
+    "grade": "C",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 1800
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 2400
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "B",
+        "text": "Moderate"
+      },
+      "economy": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "healthcareCost": {
+        "letter": "A",
+        "text": "Very Low"
+      },
+      "healthcareQuality": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "infrastructure": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "personalSafety": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "politicalStability": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "taxEnvironment": {
+        "letter": "C",
+        "text": "Moderate Tax"
+      },
+      "visaEase": {
+        "letter": "B",
+        "text": "Easy"
+      },
+      "weatherComfort": {
+        "letter": "A",
+        "text": "Ideal"
+      }
+    }
+  },
+  {
+    "id": "ecuador",
+    "name": "Ecuador",
+    "region": "Oceania",
+    "subregion": "Pacific",
+    "climate": "Tropical",
+    "tags": [
+      "Low Cost",
+      "Top Healthcare",
+      "Safe",
+      "Mountain Living"
+    ],
+    "image": "/images/destinations/ecuador/hero.webp",
+    "grade": "C",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 1600
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 2150
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "A",
+        "text": "Low"
+      },
+      "economy": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "healthcareCost": {
+        "letter": "A",
+        "text": "Very Low"
+      },
+      "healthcareQuality": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "infrastructure": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "personalSafety": {
+        "letter": "B",
+        "text": "Safe"
+      },
+      "politicalStability": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "taxEnvironment": {
+        "letter": "C",
+        "text": "Moderate Tax"
+      },
+      "visaEase": {
+        "letter": "B",
+        "text": "Easy"
+      },
+      "weatherComfort": {
+        "letter": "A",
+        "text": "Ideal"
+      }
+    }
+  },
+  {
+    "id": "dominican-republic",
+    "name": "Dominican Republic",
+    "region": "Middle East & North Africa",
+    "subregion": "Middle East",
+    "climate": "Tropical",
+    "tags": [
+      "Low Cost",
+      "Warm Weather",
+      "Large Expat Communities",
+      "Beach Living"
+    ],
+    "image": "/images/destinations/dominican-republic/hero.webp",
+    "grade": "C",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 1800
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 2400
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "B",
+        "text": "Moderate"
+      },
+      "economy": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "healthcareCost": {
+        "letter": "B",
+        "text": "Low"
+      },
+      "healthcareQuality": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "infrastructure": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "personalSafety": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "politicalStability": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "taxEnvironment": {
+        "letter": "C",
+        "text": "Moderate Tax"
+      },
+      "visaEase": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "weatherComfort": {
+        "letter": "A",
+        "text": "Ideal"
+      }
+    }
+  },
+  {
+    "id": "belize",
+    "name": "Belize",
+    "region": "Middle East & North Africa",
+    "subregion": "Middle East",
+    "climate": "Tropical",
+    "tags": [
+      "Low Cost",
+      "Warm Weather",
+      "Safe",
+      "English Spoken",
+      "Beach Living"
+    ],
+    "image": "/images/destinations/belize/hero.webp",
+    "grade": "C",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 2000
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 2500
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "B",
+        "text": "Moderate"
+      },
+      "economy": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "healthcareCost": {
+        "letter": "B",
+        "text": "Low"
+      },
+      "healthcareQuality": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "infrastructure": {
+        "letter": "D",
+        "text": "Adequate"
+      },
+      "personalSafety": {
+        "letter": "B",
+        "text": "Safe"
+      },
+      "politicalStability": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "taxEnvironment": {
+        "letter": "B",
+        "text": "Tax-Friendly"
+      },
+      "visaEase": {
+        "letter": "B",
+        "text": "Easy"
+      },
+      "weatherComfort": {
+        "letter": "A",
+        "text": "Ideal"
+      }
+    }
+  },
+  {
+    "id": "morocco",
+    "name": "Morocco",
+    "region": "Middle East & North Africa",
+    "subregion": "North Africa",
+    "climate": "Arid",
+    "tags": [
+      "Low Cost",
+      "Warm Weather"
+    ],
+    "image": "/images/destinations/morocco/hero.webp",
+    "grade": "B",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 1400
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 1900
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "A",
+        "text": "Low"
+      },
+      "economy": {
+        "letter": "B",
+        "text": "Stable"
+      },
+      "healthcareCost": {
+        "letter": "A",
+        "text": "Very Low"
+      },
+      "healthcareQuality": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "infrastructure": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "personalSafety": {
+        "letter": "B",
+        "text": "Safe"
+      },
+      "politicalStability": {
+        "letter": "B",
+        "text": "Stable"
+      },
+      "taxEnvironment": {
+        "letter": "C",
+        "text": "Moderate Tax"
+      },
+      "visaEase": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "weatherComfort": {
+        "letter": "A",
+        "text": "Ideal"
+      }
+    }
+  },
+  {
+    "id": "tunisia",
+    "name": "Tunisia",
+    "region": "Middle East & North Africa",
+    "subregion": "North Africa",
+    "climate": "Mediterranean",
+    "tags": [
+      "Low Cost",
+      "Warm Weather",
+      "Beach Living",
+      "Low Crowds"
+    ],
+    "image": "/images/destinations/tunisia/hero.webp",
+    "grade": "C",
+    "expenditure": {
+      "single": {
+        "currency": "$",
+        "amount": 1400
+      },
+      "couple": {
+        "currency": "$",
+        "amount": 1900
+      }
+    },
+    "gradings": {
+      "affordability": {
+        "letter": "A",
+        "text": "Low"
+      },
+      "economy": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "healthcareCost": {
+        "letter": "A",
+        "text": "Very Low"
+      },
+      "healthcareQuality": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "infrastructure": {
+        "letter": "B",
+        "text": "Good"
+      },
+      "personalSafety": {
+        "letter": "B",
+        "text": "Safe"
+      },
+      "politicalStability": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "taxEnvironment": {
+        "letter": "C",
+        "text": "Moderate Tax"
+      },
+      "visaEase": {
+        "letter": "C",
+        "text": "Moderate"
+      },
+      "weatherComfort": {
+        "letter": "A",
+        "text": "Ideal"
+      }
+    }
+  }
+]
