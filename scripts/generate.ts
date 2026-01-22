@@ -26,7 +26,7 @@ async function getCountries() {
   const csv = await fs.readFile(source, { encoding: "utf8" });
   const parsed: readonly Row[] = parse(csv, { columns: true });
 
-  const countries = parsed.slice(1).map((row) => {
+  const countries = parsed.map((row) => {
     return {
       id: row["id"],
       name: row["name"],
@@ -72,7 +72,7 @@ async function getLetterGradings() {
   const csv = await fs.readFile(source, { encoding: "utf8" });
   const parsed: readonly Row[] = parse(csv, { columns: true });
 
-  const gradings = parsed.slice(1).map((row) => {
+  const gradings = parsed.map((row) => {
     return {
       id: row["country"],
       affordability: row["affordability"],
@@ -111,7 +111,7 @@ async function getTextGradings() {
   const csv = await fs.readFile(source, { encoding: "utf8" });
   const parsed: readonly Row[] = parse(csv, { columns: true });
 
-  const gradings = parsed.slice(1).map((row) => {
+  const gradings = parsed.map((row) => {
     return {
       id: row["country"],
       affordability: row["affordability"],
