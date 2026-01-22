@@ -1,51 +1,51 @@
 country,affordability,healthcare_quality,personal_safety,political_stability,visa_ease,tax_environment,infrastructure,weather_comfort,healthcare_cost,economy
-portugal,Moderate,Good,Safe,Stable,Easy,Moderate Tax,Good,Ideal,Low,Stable
-spain,Moderate,Good,Safe,Stable,Moderate,High Tax,Good,Ideal,Low,Stable
-mexico,Low,Good,Safe,Moderate,Moderate,Moderate Tax,Good,Ideal,Very Low,Moderate
-costa-rica,Moderate,Good,Safe,Stable,Easy,Moderate Tax,Good,Ideal,Low,Stable
-panama,Moderate,Good,Safe,Stable,Very Easy,Very Tax-Friendly,Good,Ideal,Low,Stable
-malaysia,Low,Good,Safe,Stable,Easy,Very Tax-Friendly,Good,Comfortable,Very Low,Stable
-thailand,Low,Good,Safe,Moderate,Moderate,Moderate Tax,Good,Ideal,Very Low,Moderate
-greece,Moderate,Good,Safe,Moderate,Moderate,Moderate Tax,Good,Ideal,Low,Moderate
-italy,Moderate,Very Good,Safe,Stable,Moderate,Moderate Tax,Very Good,Ideal,Low,Stable
-france,High,Very Good,Very Safe,Very Stable,Moderate,High Tax,Very Good,Ideal,Low,Very Stable
-malta,High,Very Good,Very Safe,Very Stable,Easy,Tax-Friendly,Very Good,Ideal,Low,Very Stable
-cyprus,Moderate,Good,Very Safe,Stable,Easy,Tax-Friendly,Good,Ideal,Low,Stable
-croatia,Moderate,Good,Safe,Stable,Moderate,Moderate Tax,Good,Ideal,Low,Stable
-slovenia,High,Very Good,Very Safe,Very Stable,Moderate,High Tax,Very Good,Comfortable,Low,Very Stable
-montenegro,Moderate,Good,Safe,Moderate,Easy,Tax-Friendly,Good,Ideal,Low,Moderate
-turkey,Low,Good,Safe,Unstable,Easy,Moderate Tax,Good,Comfortable,Very Low,Unstable
-georgia,Low,Good,Safe,Moderate,Very Easy,Very Tax-Friendly,Good,Comfortable,Very Low,Moderate
-czech-republic,Moderate,Very Good,Very Safe,Very Stable,Moderate,High Tax,Very Good,Comfortable,Low,Very Stable
-austria,Very High,Very Good,Very Safe,Very Stable,Moderate,High Tax,Very Good,Comfortable,High,Very Stable
-germany,High,Very Good,Very Safe,Very Stable,Moderate,High Tax,Very Good,Comfortable,Low,Very Stable
-netherlands,Very High,Very Good,Very Safe,Very Stable,Moderate,High Tax,Very Good,Comfortable,High,Very Stable
-denmark,Very High,Very Good,Very Safe,Very Stable,Moderate,High Tax,Very Good,Comfortable,High,Very Stable
-sweden,Very High,Very Good,Very Safe,Very Stable,Moderate,High Tax,Very Good,Comfortable,High,Very Stable
-norway,Very High,Very Good,Very Safe,Very Stable,Moderate,High Tax,Very Good,Comfortable,High,Very Stable
-finland,Very High,Very Good,Very Safe,Very Stable,Moderate,High Tax,Very Good,Challenging,High,Very Stable
-switzerland,Very High,Very Good,Very Safe,Very Stable,Difficult,Moderate Tax,Very Good,Comfortable,Very High,Very Stable
-ireland,Very High,Very Good,Very Safe,Very Stable,Moderate,Moderate Tax,Very Good,Comfortable,High,Very Stable
-united-kingdom,Very High,Very Good,Safe,Very Stable,Difficult,Moderate Tax,Very Good,Comfortable,High,Very Stable
-canada,Very High,Very Good,Very Safe,Very Stable,Difficult,High Tax,Very Good,Challenging,High,Very Stable
-united-states,Very High,Very Good,Safe,Stable,Difficult,High Tax,Very Good,Comfortable,Very High,Stable
 australia,Very High,Very Good,Very Safe,Very Stable,Difficult,High Tax,Very Good,Comfortable,High,Very Stable
-new-zealand,Very High,Very Good,Very Safe,Very Stable,Difficult,High Tax,Very Good,Comfortable,High,Very Stable
-japan,Very High,Very Good,Very Safe,Very Stable,Difficult,High Tax,Very Good,Comfortable,Low,Very Stable
-south-korea,High,Very Good,Very Safe,Stable,Difficult,High Tax,Very Good,Comfortable,Low,Very Stable
-taiwan,Moderate,Very Good,Very Safe,Stable,Difficult,Moderate Tax,Very Good,Comfortable,Low,Very Stable
-singapore,Very High,Very Good,Very Safe,Very Stable,Difficult,Very Tax-Friendly,Very Good,Challenging,High,Very Stable
-vietnam,Low,Good,Safe,Moderate,Moderate,Moderate Tax,Good,Ideal,Very Low,Moderate
-philippines,Low,Good,Safe,Moderate,Easy,Tax-Friendly,Good,Ideal,Very Low,Moderate
-indonesia,Low,Good,Safe,Moderate,Moderate,Moderate Tax,Good,Ideal,Very Low,Moderate
-sri-lanka,Low,Good,Safe,Unstable,Moderate,Moderate Tax,Good,Ideal,Very Low,Unstable
-united-arab-emirates,Very High,Very Good,Very Safe,Stable,Difficult,Very Tax-Friendly,Very Good,Challenging,Low,Very Stable
-oman,High,Very Good,Very Safe,Stable,Moderate,Very Tax-Friendly,Very Good,Challenging,Low,Very Stable
-uruguay,High,Very Good,Very Safe,Stable,Easy,Moderate Tax,Very Good,Comfortable,Low,Stable
+austria,Very High,Very Good,Very Safe,Very Stable,Moderate,High Tax,Very Good,Comfortable,High,Very Stable
+belize,Moderate,Good,Safe,Moderate,Easy,Tax-Friendly,Adequate,Ideal,Low,Moderate
+canada,Very High,Very Good,Very Safe,Very Stable,Difficult,High Tax,Very Good,Challenging,High,Very Stable
 chile,High,Very Good,Safe,Stable,Moderate,Moderate Tax,Very Good,Comfortable,Low,Stable
 colombia,Moderate,Good,Moderate,Moderate,Easy,Moderate Tax,Good,Ideal,Very Low,Moderate
-ecuador,Low,Good,Safe,Moderate,Easy,Moderate Tax,Good,Ideal,Very Low,Moderate
+costa-rica,Moderate,Good,Safe,Stable,Easy,Moderate Tax,Good,Ideal,Low,Stable
+croatia,Moderate,Good,Safe,Stable,Moderate,Moderate Tax,Good,Ideal,Low,Stable
+cyprus,Moderate,Good,Very Safe,Stable,Easy,Tax-Friendly,Good,Ideal,Low,Stable
+czech-republic,Moderate,Very Good,Very Safe,Very Stable,Moderate,High Tax,Very Good,Comfortable,Low,Very Stable
+denmark,Very High,Very Good,Very Safe,Very Stable,Moderate,High Tax,Very Good,Comfortable,High,Very Stable
 dominican-republic,Moderate,Good,Moderate,Moderate,Moderate,Moderate Tax,Good,Ideal,Low,Moderate
-belize,Moderate,Good,Safe,Moderate,Easy,Tax-Friendly,Adequate,Ideal,Low,Moderate
+ecuador,Low,Good,Safe,Moderate,Easy,Moderate Tax,Good,Ideal,Very Low,Moderate
+finland,Very High,Very Good,Very Safe,Very Stable,Moderate,High Tax,Very Good,Challenging,High,Very Stable
+france,High,Very Good,Very Safe,Very Stable,Moderate,High Tax,Very Good,Ideal,Low,Very Stable
+georgia,Low,Good,Safe,Moderate,Very Easy,Very Tax-Friendly,Good,Comfortable,Very Low,Moderate
+germany,High,Very Good,Very Safe,Very Stable,Moderate,High Tax,Very Good,Comfortable,Low,Very Stable
+greece,Moderate,Good,Safe,Moderate,Moderate,Moderate Tax,Good,Ideal,Low,Moderate
+indonesia,Low,Good,Safe,Moderate,Moderate,Moderate Tax,Good,Ideal,Very Low,Moderate
+ireland,Very High,Very Good,Very Safe,Very Stable,Moderate,Moderate Tax,Very Good,Comfortable,High,Very Stable
+italy,Moderate,Very Good,Safe,Stable,Moderate,Moderate Tax,Very Good,Ideal,Low,Stable
+japan,Very High,Very Good,Very Safe,Very Stable,Difficult,High Tax,Very Good,Comfortable,Low,Very Stable
+malaysia,Low,Good,Safe,Stable,Easy,Very Tax-Friendly,Good,Comfortable,Very Low,Stable
+malta,High,Very Good,Very Safe,Very Stable,Easy,Tax-Friendly,Very Good,Ideal,Low,Very Stable
+mexico,Low,Good,Safe,Moderate,Moderate,Moderate Tax,Good,Ideal,Very Low,Moderate
+montenegro,Moderate,Good,Safe,Moderate,Easy,Tax-Friendly,Good,Ideal,Low,Moderate
 morocco,Low,Good,Safe,Stable,Moderate,Moderate Tax,Good,Ideal,Very Low,Stable
+netherlands,Very High,Very Good,Very Safe,Very Stable,Moderate,High Tax,Very Good,Comfortable,High,Very Stable
+new-zealand,Very High,Very Good,Very Safe,Very Stable,Difficult,High Tax,Very Good,Comfortable,High,Very Stable
+norway,Very High,Very Good,Very Safe,Very Stable,Moderate,High Tax,Very Good,Comfortable,High,Very Stable
+oman,High,Very Good,Very Safe,Stable,Moderate,Very Tax-Friendly,Very Good,Challenging,Low,Very Stable
+panama,Moderate,Good,Safe,Stable,Very Easy,Very Tax-Friendly,Good,Ideal,Low,Stable
+philippines,Low,Good,Safe,Moderate,Easy,Tax-Friendly,Good,Ideal,Very Low,Moderate
+portugal,Moderate,Good,Safe,Stable,Easy,Moderate Tax,Good,Ideal,Low,Stable
+singapore,Very High,Very Good,Very Safe,Very Stable,Difficult,Very Tax-Friendly,Very Good,Challenging,High,Very Stable
+slovenia,High,Very Good,Very Safe,Very Stable,Moderate,High Tax,Very Good,Comfortable,Low,Very Stable
+south-korea,High,Very Good,Very Safe,Stable,Difficult,High Tax,Very Good,Comfortable,Low,Very Stable
+spain,Moderate,Good,Safe,Stable,Moderate,High Tax,Good,Ideal,Low,Stable
+sri-lanka,Low,Good,Safe,Unstable,Moderate,Moderate Tax,Good,Ideal,Very Low,Unstable
+sweden,Very High,Very Good,Very Safe,Very Stable,Moderate,High Tax,Very Good,Comfortable,High,Very Stable
+switzerland,Very High,Very Good,Very Safe,Very Stable,Difficult,Moderate Tax,Very Good,Comfortable,Very High,Very Stable
+taiwan,Moderate,Very Good,Very Safe,Stable,Difficult,Moderate Tax,Very Good,Comfortable,Low,Very Stable
+thailand,Low,Good,Safe,Moderate,Moderate,Moderate Tax,Good,Ideal,Very Low,Moderate
 tunisia,Low,Good,Safe,Moderate,Moderate,Moderate Tax,Good,Ideal,Very Low,Moderate
+turkey,Low,Good,Safe,Unstable,Easy,Moderate Tax,Good,Comfortable,Very Low,Unstable
+united-arab-emirates,Very High,Very Good,Very Safe,Stable,Difficult,Very Tax-Friendly,Very Good,Challenging,Low,Very Stable
+united-kingdom,Very High,Very Good,Safe,Very Stable,Difficult,Moderate Tax,Very Good,Comfortable,High,Very Stable
+united-states,Very High,Very Good,Safe,Stable,Difficult,High Tax,Very Good,Comfortable,Very High,Stable
+uruguay,High,Very Good,Very Safe,Stable,Easy,Moderate Tax,Very Good,Comfortable,Low,Stable
+vietnam,Low,Good,Safe,Moderate,Moderate,Moderate Tax,Good,Ideal,Very Low,Moderate
