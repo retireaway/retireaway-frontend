@@ -157,8 +157,8 @@ async function final() {
 
     const entries = [
       ...keys.map((rating) => {
-        const text = ratingGrade[rating];
-        const grade = ratingText[rating];
+        const grade = ratingGrade[rating];
+        const text = ratingText[rating];
         return [rating, { grade, text } as const] as const;
       }),
     ] as const;

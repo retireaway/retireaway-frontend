@@ -27,44 +27,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Very High",
-        "text": "D"
+        "grade": "D",
+        "text": "Very High"
       },
       "economy": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "healthcareCost": {
-        "grade": "High",
-        "text": "C"
+        "grade": "C",
+        "text": "High"
       },
       "healthcareQuality": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "infrastructure": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "personalSafety": {
-        "grade": "Very Safe",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Safe"
       },
       "politicalStability": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "taxEnvironment": {
-        "grade": "High Tax",
-        "text": "D"
+        "grade": "D",
+        "text": "High Tax"
       },
       "visaEase": {
-        "grade": "Difficult",
-        "text": "D"
+        "grade": "D",
+        "text": "Difficult"
       },
       "weatherComfort": {
-        "grade": "Comfortable",
-        "text": "B"
+        "grade": "B",
+        "text": "Comfortable"
       }
     }
   },
@@ -93,44 +93,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Very High",
-        "text": "D"
+        "grade": "D",
+        "text": "Very High"
       },
       "economy": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "healthcareCost": {
-        "grade": "High",
-        "text": "C"
+        "grade": "C",
+        "text": "High"
       },
       "healthcareQuality": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "infrastructure": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "personalSafety": {
-        "grade": "Very Safe",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Safe"
       },
       "politicalStability": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "taxEnvironment": {
-        "grade": "High Tax",
-        "text": "D"
+        "grade": "D",
+        "text": "High Tax"
       },
       "visaEase": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "weatherComfort": {
-        "grade": "Comfortable",
-        "text": "B"
+        "grade": "B",
+        "text": "Comfortable"
       }
     }
   },
@@ -161,44 +161,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Moderate",
-        "text": "B"
+        "grade": "B",
+        "text": "Moderate"
       },
       "economy": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "healthcareCost": {
-        "grade": "Low",
-        "text": "B"
+        "grade": "B",
+        "text": "Low"
       },
       "healthcareQuality": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "infrastructure": {
-        "grade": "Adequate",
-        "text": "D"
+        "grade": "D",
+        "text": "Adequate"
       },
       "personalSafety": {
-        "grade": "Safe",
-        "text": "B"
+        "grade": "B",
+        "text": "Safe"
       },
       "politicalStability": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "taxEnvironment": {
-        "grade": "Tax-Friendly",
-        "text": "B"
+        "grade": "B",
+        "text": "Tax-Friendly"
       },
       "visaEase": {
-        "grade": "Easy",
-        "text": "B"
+        "grade": "B",
+        "text": "Easy"
       },
       "weatherComfort": {
-        "grade": "Ideal",
-        "text": "A"
+        "grade": "A",
+        "text": "Ideal"
       }
     }
   },
@@ -228,44 +228,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Very High",
-        "text": "D"
+        "grade": "D",
+        "text": "Very High"
       },
       "economy": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "healthcareCost": {
-        "grade": "High",
-        "text": "C"
+        "grade": "C",
+        "text": "High"
       },
       "healthcareQuality": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "infrastructure": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "personalSafety": {
-        "grade": "Very Safe",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Safe"
       },
       "politicalStability": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "taxEnvironment": {
-        "grade": "High Tax",
-        "text": "D"
+        "grade": "D",
+        "text": "High Tax"
       },
       "visaEase": {
-        "grade": "Difficult",
-        "text": "D"
+        "grade": "D",
+        "text": "Difficult"
       },
       "weatherComfort": {
-        "grade": "Challenging",
-        "text": "D"
+        "grade": "D",
+        "text": "Challenging"
       }
     }
   },
@@ -294,44 +294,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "High",
-        "text": "C"
+        "grade": "C",
+        "text": "High"
       },
       "economy": {
-        "grade": "Stable",
-        "text": "B"
+        "grade": "B",
+        "text": "Stable"
       },
       "healthcareCost": {
-        "grade": "Low",
-        "text": "B"
+        "grade": "B",
+        "text": "Low"
       },
       "healthcareQuality": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "infrastructure": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "personalSafety": {
-        "grade": "Safe",
-        "text": "B"
+        "grade": "B",
+        "text": "Safe"
       },
       "politicalStability": {
-        "grade": "Stable",
-        "text": "B"
+        "grade": "B",
+        "text": "Stable"
       },
       "taxEnvironment": {
-        "grade": "Moderate Tax",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate Tax"
       },
       "visaEase": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "weatherComfort": {
-        "grade": "Comfortable",
-        "text": "B"
+        "grade": "B",
+        "text": "Comfortable"
       }
     }
   },
@@ -362,44 +362,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Moderate",
-        "text": "B"
+        "grade": "B",
+        "text": "Moderate"
       },
       "economy": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "healthcareCost": {
-        "grade": "Very Low",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Low"
       },
       "healthcareQuality": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "infrastructure": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "personalSafety": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "politicalStability": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "taxEnvironment": {
-        "grade": "Moderate Tax",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate Tax"
       },
       "visaEase": {
-        "grade": "Easy",
-        "text": "B"
+        "grade": "B",
+        "text": "Easy"
       },
       "weatherComfort": {
-        "grade": "Ideal",
-        "text": "A"
+        "grade": "A",
+        "text": "Ideal"
       }
     }
   },
@@ -430,44 +430,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Moderate",
-        "text": "B"
+        "grade": "B",
+        "text": "Moderate"
       },
       "economy": {
-        "grade": "Stable",
-        "text": "B"
+        "grade": "B",
+        "text": "Stable"
       },
       "healthcareCost": {
-        "grade": "Low",
-        "text": "B"
+        "grade": "B",
+        "text": "Low"
       },
       "healthcareQuality": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "infrastructure": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "personalSafety": {
-        "grade": "Safe",
-        "text": "B"
+        "grade": "B",
+        "text": "Safe"
       },
       "politicalStability": {
-        "grade": "Stable",
-        "text": "B"
+        "grade": "B",
+        "text": "Stable"
       },
       "taxEnvironment": {
-        "grade": "Moderate Tax",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate Tax"
       },
       "visaEase": {
-        "grade": "Easy",
-        "text": "B"
+        "grade": "B",
+        "text": "Easy"
       },
       "weatherComfort": {
-        "grade": "Ideal",
-        "text": "A"
+        "grade": "A",
+        "text": "Ideal"
       }
     }
   },
@@ -497,44 +497,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Moderate",
-        "text": "B"
+        "grade": "B",
+        "text": "Moderate"
       },
       "economy": {
-        "grade": "Stable",
-        "text": "B"
+        "grade": "B",
+        "text": "Stable"
       },
       "healthcareCost": {
-        "grade": "Low",
-        "text": "B"
+        "grade": "B",
+        "text": "Low"
       },
       "healthcareQuality": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "infrastructure": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "personalSafety": {
-        "grade": "Safe",
-        "text": "B"
+        "grade": "B",
+        "text": "Safe"
       },
       "politicalStability": {
-        "grade": "Stable",
-        "text": "B"
+        "grade": "B",
+        "text": "Stable"
       },
       "taxEnvironment": {
-        "grade": "Moderate Tax",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate Tax"
       },
       "visaEase": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "weatherComfort": {
-        "grade": "Ideal",
-        "text": "A"
+        "grade": "A",
+        "text": "Ideal"
       }
     }
   },
@@ -566,44 +566,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Moderate",
-        "text": "B"
+        "grade": "B",
+        "text": "Moderate"
       },
       "economy": {
-        "grade": "Stable",
-        "text": "B"
+        "grade": "B",
+        "text": "Stable"
       },
       "healthcareCost": {
-        "grade": "Low",
-        "text": "B"
+        "grade": "B",
+        "text": "Low"
       },
       "healthcareQuality": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "infrastructure": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "personalSafety": {
-        "grade": "Very Safe",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Safe"
       },
       "politicalStability": {
-        "grade": "Stable",
-        "text": "B"
+        "grade": "B",
+        "text": "Stable"
       },
       "taxEnvironment": {
-        "grade": "Tax-Friendly",
-        "text": "B"
+        "grade": "B",
+        "text": "Tax-Friendly"
       },
       "visaEase": {
-        "grade": "Easy",
-        "text": "B"
+        "grade": "B",
+        "text": "Easy"
       },
       "weatherComfort": {
-        "grade": "Ideal",
-        "text": "A"
+        "grade": "A",
+        "text": "Ideal"
       }
     }
   },
@@ -631,44 +631,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Moderate",
-        "text": "B"
+        "grade": "B",
+        "text": "Moderate"
       },
       "economy": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "healthcareCost": {
-        "grade": "Low",
-        "text": "B"
+        "grade": "B",
+        "text": "Low"
       },
       "healthcareQuality": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "infrastructure": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "personalSafety": {
-        "grade": "Very Safe",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Safe"
       },
       "politicalStability": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "taxEnvironment": {
-        "grade": "High Tax",
-        "text": "D"
+        "grade": "D",
+        "text": "High Tax"
       },
       "visaEase": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "weatherComfort": {
-        "grade": "Comfortable",
-        "text": "B"
+        "grade": "B",
+        "text": "Comfortable"
       }
     }
   },
@@ -698,44 +698,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Very High",
-        "text": "D"
+        "grade": "D",
+        "text": "Very High"
       },
       "economy": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "healthcareCost": {
-        "grade": "High",
-        "text": "C"
+        "grade": "C",
+        "text": "High"
       },
       "healthcareQuality": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "infrastructure": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "personalSafety": {
-        "grade": "Very Safe",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Safe"
       },
       "politicalStability": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "taxEnvironment": {
-        "grade": "High Tax",
-        "text": "D"
+        "grade": "D",
+        "text": "High Tax"
       },
       "visaEase": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "weatherComfort": {
-        "grade": "Comfortable",
-        "text": "B"
+        "grade": "B",
+        "text": "Comfortable"
       }
     }
   },
@@ -765,44 +765,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Moderate",
-        "text": "B"
+        "grade": "B",
+        "text": "Moderate"
       },
       "economy": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "healthcareCost": {
-        "grade": "Low",
-        "text": "B"
+        "grade": "B",
+        "text": "Low"
       },
       "healthcareQuality": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "infrastructure": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "personalSafety": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "politicalStability": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "taxEnvironment": {
-        "grade": "Moderate Tax",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate Tax"
       },
       "visaEase": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "weatherComfort": {
-        "grade": "Ideal",
-        "text": "A"
+        "grade": "A",
+        "text": "Ideal"
       }
     }
   },
@@ -832,44 +832,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Low",
-        "text": "A"
+        "grade": "A",
+        "text": "Low"
       },
       "economy": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "healthcareCost": {
-        "grade": "Very Low",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Low"
       },
       "healthcareQuality": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "infrastructure": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "personalSafety": {
-        "grade": "Safe",
-        "text": "B"
+        "grade": "B",
+        "text": "Safe"
       },
       "politicalStability": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "taxEnvironment": {
-        "grade": "Moderate Tax",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate Tax"
       },
       "visaEase": {
-        "grade": "Easy",
-        "text": "B"
+        "grade": "B",
+        "text": "Easy"
       },
       "weatherComfort": {
-        "grade": "Ideal",
-        "text": "A"
+        "grade": "A",
+        "text": "Ideal"
       }
     }
   },
@@ -900,44 +900,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Very High",
-        "text": "D"
+        "grade": "D",
+        "text": "Very High"
       },
       "economy": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "healthcareCost": {
-        "grade": "High",
-        "text": "C"
+        "grade": "C",
+        "text": "High"
       },
       "healthcareQuality": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "infrastructure": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "personalSafety": {
-        "grade": "Very Safe",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Safe"
       },
       "politicalStability": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "taxEnvironment": {
-        "grade": "High Tax",
-        "text": "D"
+        "grade": "D",
+        "text": "High Tax"
       },
       "visaEase": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "weatherComfort": {
-        "grade": "Challenging",
-        "text": "D"
+        "grade": "D",
+        "text": "Challenging"
       }
     }
   },
@@ -966,44 +966,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "High",
-        "text": "C"
+        "grade": "C",
+        "text": "High"
       },
       "economy": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "healthcareCost": {
-        "grade": "Low",
-        "text": "B"
+        "grade": "B",
+        "text": "Low"
       },
       "healthcareQuality": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "infrastructure": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "personalSafety": {
-        "grade": "Very Safe",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Safe"
       },
       "politicalStability": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "taxEnvironment": {
-        "grade": "High Tax",
-        "text": "D"
+        "grade": "D",
+        "text": "High Tax"
       },
       "visaEase": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "weatherComfort": {
-        "grade": "Ideal",
-        "text": "A"
+        "grade": "A",
+        "text": "Ideal"
       }
     }
   },
@@ -1032,44 +1032,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Low",
-        "text": "A"
+        "grade": "A",
+        "text": "Low"
       },
       "economy": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "healthcareCost": {
-        "grade": "Very Low",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Low"
       },
       "healthcareQuality": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "infrastructure": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "personalSafety": {
-        "grade": "Safe",
-        "text": "B"
+        "grade": "B",
+        "text": "Safe"
       },
       "politicalStability": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "taxEnvironment": {
-        "grade": "Very Tax-Friendly",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Tax-Friendly"
       },
       "visaEase": {
-        "grade": "Very Easy",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Easy"
       },
       "weatherComfort": {
-        "grade": "Comfortable",
-        "text": "B"
+        "grade": "B",
+        "text": "Comfortable"
       }
     }
   },
@@ -1097,44 +1097,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "High",
-        "text": "C"
+        "grade": "C",
+        "text": "High"
       },
       "economy": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "healthcareCost": {
-        "grade": "Low",
-        "text": "B"
+        "grade": "B",
+        "text": "Low"
       },
       "healthcareQuality": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "infrastructure": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "personalSafety": {
-        "grade": "Very Safe",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Safe"
       },
       "politicalStability": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "taxEnvironment": {
-        "grade": "High Tax",
-        "text": "D"
+        "grade": "D",
+        "text": "High Tax"
       },
       "visaEase": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "weatherComfort": {
-        "grade": "Comfortable",
-        "text": "B"
+        "grade": "B",
+        "text": "Comfortable"
       }
     }
   },
@@ -1164,44 +1164,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Moderate",
-        "text": "B"
+        "grade": "B",
+        "text": "Moderate"
       },
       "economy": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "healthcareCost": {
-        "grade": "Low",
-        "text": "B"
+        "grade": "B",
+        "text": "Low"
       },
       "healthcareQuality": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "infrastructure": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "personalSafety": {
-        "grade": "Safe",
-        "text": "B"
+        "grade": "B",
+        "text": "Safe"
       },
       "politicalStability": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "taxEnvironment": {
-        "grade": "Moderate Tax",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate Tax"
       },
       "visaEase": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "weatherComfort": {
-        "grade": "Ideal",
-        "text": "A"
+        "grade": "A",
+        "text": "Ideal"
       }
     }
   },
@@ -1231,44 +1231,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Low",
-        "text": "A"
+        "grade": "A",
+        "text": "Low"
       },
       "economy": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "healthcareCost": {
-        "grade": "Very Low",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Low"
       },
       "healthcareQuality": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "infrastructure": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "personalSafety": {
-        "grade": "Safe",
-        "text": "B"
+        "grade": "B",
+        "text": "Safe"
       },
       "politicalStability": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "taxEnvironment": {
-        "grade": "Moderate Tax",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate Tax"
       },
       "visaEase": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "weatherComfort": {
-        "grade": "Ideal",
-        "text": "A"
+        "grade": "A",
+        "text": "Ideal"
       }
     }
   },
@@ -1297,44 +1297,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Very High",
-        "text": "D"
+        "grade": "D",
+        "text": "Very High"
       },
       "economy": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "healthcareCost": {
-        "grade": "High",
-        "text": "C"
+        "grade": "C",
+        "text": "High"
       },
       "healthcareQuality": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "infrastructure": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "personalSafety": {
-        "grade": "Very Safe",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Safe"
       },
       "politicalStability": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "taxEnvironment": {
-        "grade": "Moderate Tax",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate Tax"
       },
       "visaEase": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "weatherComfort": {
-        "grade": "Comfortable",
-        "text": "B"
+        "grade": "B",
+        "text": "Comfortable"
       }
     }
   },
@@ -1364,44 +1364,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Moderate",
-        "text": "B"
+        "grade": "B",
+        "text": "Moderate"
       },
       "economy": {
-        "grade": "Stable",
-        "text": "B"
+        "grade": "B",
+        "text": "Stable"
       },
       "healthcareCost": {
-        "grade": "Low",
-        "text": "B"
+        "grade": "B",
+        "text": "Low"
       },
       "healthcareQuality": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "infrastructure": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "personalSafety": {
-        "grade": "Safe",
-        "text": "B"
+        "grade": "B",
+        "text": "Safe"
       },
       "politicalStability": {
-        "grade": "Stable",
-        "text": "B"
+        "grade": "B",
+        "text": "Stable"
       },
       "taxEnvironment": {
-        "grade": "Moderate Tax",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate Tax"
       },
       "visaEase": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "weatherComfort": {
-        "grade": "Ideal",
-        "text": "A"
+        "grade": "A",
+        "text": "Ideal"
       }
     }
   },
@@ -1431,44 +1431,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Very High",
-        "text": "D"
+        "grade": "D",
+        "text": "Very High"
       },
       "economy": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "healthcareCost": {
-        "grade": "Low",
-        "text": "B"
+        "grade": "B",
+        "text": "Low"
       },
       "healthcareQuality": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "infrastructure": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "personalSafety": {
-        "grade": "Very Safe",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Safe"
       },
       "politicalStability": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "taxEnvironment": {
-        "grade": "High Tax",
-        "text": "D"
+        "grade": "D",
+        "text": "High Tax"
       },
       "visaEase": {
-        "grade": "Difficult",
-        "text": "D"
+        "grade": "D",
+        "text": "Difficult"
       },
       "weatherComfort": {
-        "grade": "Comfortable",
-        "text": "B"
+        "grade": "B",
+        "text": "Comfortable"
       }
     }
   },
@@ -1499,44 +1499,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Low",
-        "text": "A"
+        "grade": "A",
+        "text": "Low"
       },
       "economy": {
-        "grade": "Stable",
-        "text": "B"
+        "grade": "B",
+        "text": "Stable"
       },
       "healthcareCost": {
-        "grade": "Very Low",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Low"
       },
       "healthcareQuality": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "infrastructure": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "personalSafety": {
-        "grade": "Safe",
-        "text": "B"
+        "grade": "B",
+        "text": "Safe"
       },
       "politicalStability": {
-        "grade": "Stable",
-        "text": "B"
+        "grade": "B",
+        "text": "Stable"
       },
       "taxEnvironment": {
-        "grade": "Very Tax-Friendly",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Tax-Friendly"
       },
       "visaEase": {
-        "grade": "Easy",
-        "text": "B"
+        "grade": "B",
+        "text": "Easy"
       },
       "weatherComfort": {
-        "grade": "Comfortable",
-        "text": "B"
+        "grade": "B",
+        "text": "Comfortable"
       }
     }
   },
@@ -1567,44 +1567,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "High",
-        "text": "C"
+        "grade": "C",
+        "text": "High"
       },
       "economy": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "healthcareCost": {
-        "grade": "Low",
-        "text": "B"
+        "grade": "B",
+        "text": "Low"
       },
       "healthcareQuality": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "infrastructure": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "personalSafety": {
-        "grade": "Very Safe",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Safe"
       },
       "politicalStability": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "taxEnvironment": {
-        "grade": "Tax-Friendly",
-        "text": "B"
+        "grade": "B",
+        "text": "Tax-Friendly"
       },
       "visaEase": {
-        "grade": "Easy",
-        "text": "B"
+        "grade": "B",
+        "text": "Easy"
       },
       "weatherComfort": {
-        "grade": "Ideal",
-        "text": "A"
+        "grade": "A",
+        "text": "Ideal"
       }
     }
   },
@@ -1635,44 +1635,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Low",
-        "text": "A"
+        "grade": "A",
+        "text": "Low"
       },
       "economy": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "healthcareCost": {
-        "grade": "Very Low",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Low"
       },
       "healthcareQuality": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "infrastructure": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "personalSafety": {
-        "grade": "Safe",
-        "text": "B"
+        "grade": "B",
+        "text": "Safe"
       },
       "politicalStability": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "taxEnvironment": {
-        "grade": "Moderate Tax",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate Tax"
       },
       "visaEase": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "weatherComfort": {
-        "grade": "Ideal",
-        "text": "A"
+        "grade": "A",
+        "text": "Ideal"
       }
     }
   },
@@ -1702,44 +1702,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Moderate",
-        "text": "B"
+        "grade": "B",
+        "text": "Moderate"
       },
       "economy": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "healthcareCost": {
-        "grade": "Low",
-        "text": "B"
+        "grade": "B",
+        "text": "Low"
       },
       "healthcareQuality": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "infrastructure": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "personalSafety": {
-        "grade": "Safe",
-        "text": "B"
+        "grade": "B",
+        "text": "Safe"
       },
       "politicalStability": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "taxEnvironment": {
-        "grade": "Tax-Friendly",
-        "text": "B"
+        "grade": "B",
+        "text": "Tax-Friendly"
       },
       "visaEase": {
-        "grade": "Easy",
-        "text": "B"
+        "grade": "B",
+        "text": "Easy"
       },
       "weatherComfort": {
-        "grade": "Ideal",
-        "text": "A"
+        "grade": "A",
+        "text": "Ideal"
       }
     }
   },
@@ -1767,44 +1767,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Low",
-        "text": "A"
+        "grade": "A",
+        "text": "Low"
       },
       "economy": {
-        "grade": "Stable",
-        "text": "B"
+        "grade": "B",
+        "text": "Stable"
       },
       "healthcareCost": {
-        "grade": "Very Low",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Low"
       },
       "healthcareQuality": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "infrastructure": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "personalSafety": {
-        "grade": "Safe",
-        "text": "B"
+        "grade": "B",
+        "text": "Safe"
       },
       "politicalStability": {
-        "grade": "Stable",
-        "text": "B"
+        "grade": "B",
+        "text": "Stable"
       },
       "taxEnvironment": {
-        "grade": "Moderate Tax",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate Tax"
       },
       "visaEase": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "weatherComfort": {
-        "grade": "Ideal",
-        "text": "A"
+        "grade": "A",
+        "text": "Ideal"
       }
     }
   },
@@ -1834,44 +1834,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Very High",
-        "text": "D"
+        "grade": "D",
+        "text": "Very High"
       },
       "economy": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "healthcareCost": {
-        "grade": "High",
-        "text": "C"
+        "grade": "C",
+        "text": "High"
       },
       "healthcareQuality": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "infrastructure": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "personalSafety": {
-        "grade": "Very Safe",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Safe"
       },
       "politicalStability": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "taxEnvironment": {
-        "grade": "High Tax",
-        "text": "D"
+        "grade": "D",
+        "text": "High Tax"
       },
       "visaEase": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "weatherComfort": {
-        "grade": "Comfortable",
-        "text": "B"
+        "grade": "B",
+        "text": "Comfortable"
       }
     }
   },
@@ -1902,44 +1902,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Very High",
-        "text": "D"
+        "grade": "D",
+        "text": "Very High"
       },
       "economy": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "healthcareCost": {
-        "grade": "High",
-        "text": "C"
+        "grade": "C",
+        "text": "High"
       },
       "healthcareQuality": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "infrastructure": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "personalSafety": {
-        "grade": "Very Safe",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Safe"
       },
       "politicalStability": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "taxEnvironment": {
-        "grade": "High Tax",
-        "text": "D"
+        "grade": "D",
+        "text": "High Tax"
       },
       "visaEase": {
-        "grade": "Difficult",
-        "text": "D"
+        "grade": "D",
+        "text": "Difficult"
       },
       "weatherComfort": {
-        "grade": "Comfortable",
-        "text": "B"
+        "grade": "B",
+        "text": "Comfortable"
       }
     }
   },
@@ -1969,44 +1969,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Very High",
-        "text": "D"
+        "grade": "D",
+        "text": "Very High"
       },
       "economy": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "healthcareCost": {
-        "grade": "High",
-        "text": "C"
+        "grade": "C",
+        "text": "High"
       },
       "healthcareQuality": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "infrastructure": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "personalSafety": {
-        "grade": "Very Safe",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Safe"
       },
       "politicalStability": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "taxEnvironment": {
-        "grade": "High Tax",
-        "text": "D"
+        "grade": "D",
+        "text": "High Tax"
       },
       "visaEase": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "weatherComfort": {
-        "grade": "Comfortable",
-        "text": "B"
+        "grade": "B",
+        "text": "Comfortable"
       }
     }
   },
@@ -2037,44 +2037,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "High",
-        "text": "C"
+        "grade": "C",
+        "text": "High"
       },
       "economy": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "healthcareCost": {
-        "grade": "Low",
-        "text": "B"
+        "grade": "B",
+        "text": "Low"
       },
       "healthcareQuality": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "infrastructure": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "personalSafety": {
-        "grade": "Very Safe",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Safe"
       },
       "politicalStability": {
-        "grade": "Stable",
-        "text": "B"
+        "grade": "B",
+        "text": "Stable"
       },
       "taxEnvironment": {
-        "grade": "Very Tax-Friendly",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Tax-Friendly"
       },
       "visaEase": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "weatherComfort": {
-        "grade": "Challenging",
-        "text": "D"
+        "grade": "D",
+        "text": "Challenging"
       }
     }
   },
@@ -2104,44 +2104,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Moderate",
-        "text": "B"
+        "grade": "B",
+        "text": "Moderate"
       },
       "economy": {
-        "grade": "Stable",
-        "text": "B"
+        "grade": "B",
+        "text": "Stable"
       },
       "healthcareCost": {
-        "grade": "Low",
-        "text": "B"
+        "grade": "B",
+        "text": "Low"
       },
       "healthcareQuality": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "infrastructure": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "personalSafety": {
-        "grade": "Safe",
-        "text": "B"
+        "grade": "B",
+        "text": "Safe"
       },
       "politicalStability": {
-        "grade": "Stable",
-        "text": "B"
+        "grade": "B",
+        "text": "Stable"
       },
       "taxEnvironment": {
-        "grade": "Very Tax-Friendly",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Tax-Friendly"
       },
       "visaEase": {
-        "grade": "Very Easy",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Easy"
       },
       "weatherComfort": {
-        "grade": "Ideal",
-        "text": "A"
+        "grade": "A",
+        "text": "Ideal"
       }
     }
   },
@@ -2173,44 +2173,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Low",
-        "text": "A"
+        "grade": "A",
+        "text": "Low"
       },
       "economy": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "healthcareCost": {
-        "grade": "Very Low",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Low"
       },
       "healthcareQuality": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "infrastructure": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "personalSafety": {
-        "grade": "Safe",
-        "text": "B"
+        "grade": "B",
+        "text": "Safe"
       },
       "politicalStability": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "taxEnvironment": {
-        "grade": "Tax-Friendly",
-        "text": "B"
+        "grade": "B",
+        "text": "Tax-Friendly"
       },
       "visaEase": {
-        "grade": "Easy",
-        "text": "B"
+        "grade": "B",
+        "text": "Easy"
       },
       "weatherComfort": {
-        "grade": "Ideal",
-        "text": "A"
+        "grade": "A",
+        "text": "Ideal"
       }
     }
   },
@@ -2241,44 +2241,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Moderate",
-        "text": "B"
+        "grade": "B",
+        "text": "Moderate"
       },
       "economy": {
-        "grade": "Stable",
-        "text": "B"
+        "grade": "B",
+        "text": "Stable"
       },
       "healthcareCost": {
-        "grade": "Low",
-        "text": "B"
+        "grade": "B",
+        "text": "Low"
       },
       "healthcareQuality": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "infrastructure": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "personalSafety": {
-        "grade": "Safe",
-        "text": "B"
+        "grade": "B",
+        "text": "Safe"
       },
       "politicalStability": {
-        "grade": "Stable",
-        "text": "B"
+        "grade": "B",
+        "text": "Stable"
       },
       "taxEnvironment": {
-        "grade": "Moderate Tax",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate Tax"
       },
       "visaEase": {
-        "grade": "Easy",
-        "text": "B"
+        "grade": "B",
+        "text": "Easy"
       },
       "weatherComfort": {
-        "grade": "Ideal",
-        "text": "A"
+        "grade": "A",
+        "text": "Ideal"
       }
     }
   },
@@ -2310,44 +2310,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Very High",
-        "text": "D"
+        "grade": "D",
+        "text": "Very High"
       },
       "economy": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "healthcareCost": {
-        "grade": "High",
-        "text": "C"
+        "grade": "C",
+        "text": "High"
       },
       "healthcareQuality": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "infrastructure": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "personalSafety": {
-        "grade": "Very Safe",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Safe"
       },
       "politicalStability": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "taxEnvironment": {
-        "grade": "Very Tax-Friendly",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Tax-Friendly"
       },
       "visaEase": {
-        "grade": "Difficult",
-        "text": "D"
+        "grade": "D",
+        "text": "Difficult"
       },
       "weatherComfort": {
-        "grade": "Challenging",
-        "text": "D"
+        "grade": "D",
+        "text": "Challenging"
       }
     }
   },
@@ -2375,44 +2375,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "High",
-        "text": "C"
+        "grade": "C",
+        "text": "High"
       },
       "economy": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "healthcareCost": {
-        "grade": "Low",
-        "text": "B"
+        "grade": "B",
+        "text": "Low"
       },
       "healthcareQuality": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "infrastructure": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "personalSafety": {
-        "grade": "Very Safe",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Safe"
       },
       "politicalStability": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "taxEnvironment": {
-        "grade": "High Tax",
-        "text": "D"
+        "grade": "D",
+        "text": "High Tax"
       },
       "visaEase": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "weatherComfort": {
-        "grade": "Comfortable",
-        "text": "B"
+        "grade": "B",
+        "text": "Comfortable"
       }
     }
   },
@@ -2442,44 +2442,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "High",
-        "text": "C"
+        "grade": "C",
+        "text": "High"
       },
       "economy": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "healthcareCost": {
-        "grade": "Low",
-        "text": "B"
+        "grade": "B",
+        "text": "Low"
       },
       "healthcareQuality": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "infrastructure": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "personalSafety": {
-        "grade": "Very Safe",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Safe"
       },
       "politicalStability": {
-        "grade": "Stable",
-        "text": "B"
+        "grade": "B",
+        "text": "Stable"
       },
       "taxEnvironment": {
-        "grade": "High Tax",
-        "text": "D"
+        "grade": "D",
+        "text": "High Tax"
       },
       "visaEase": {
-        "grade": "Difficult",
-        "text": "D"
+        "grade": "D",
+        "text": "Difficult"
       },
       "weatherComfort": {
-        "grade": "Comfortable",
-        "text": "B"
+        "grade": "B",
+        "text": "Comfortable"
       }
     }
   },
@@ -2508,44 +2508,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Moderate",
-        "text": "B"
+        "grade": "B",
+        "text": "Moderate"
       },
       "economy": {
-        "grade": "Stable",
-        "text": "B"
+        "grade": "B",
+        "text": "Stable"
       },
       "healthcareCost": {
-        "grade": "Low",
-        "text": "A"
+        "grade": "A",
+        "text": "Low"
       },
       "healthcareQuality": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "infrastructure": {
-        "grade": "Good",
-        "text": "D"
+        "grade": "D",
+        "text": "Good"
       },
       "personalSafety": {
-        "grade": "Safe",
-        "text": "B"
+        "grade": "B",
+        "text": "Safe"
       },
       "politicalStability": {
-        "grade": "Stable",
-        "text": "B"
+        "grade": "B",
+        "text": "Stable"
       },
       "taxEnvironment": {
-        "grade": "High Tax",
-        "text": "C"
+        "grade": "C",
+        "text": "High Tax"
       },
       "visaEase": {
-        "grade": "Moderate",
-        "text": "B"
+        "grade": "B",
+        "text": "Moderate"
       },
       "weatherComfort": {
-        "grade": "Ideal",
-        "text": "B"
+        "grade": "B",
+        "text": "Ideal"
       }
     }
   },
@@ -2575,44 +2575,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Low",
-        "text": "A"
+        "grade": "A",
+        "text": "Low"
       },
       "economy": {
-        "grade": "Unstable",
-        "text": "D"
+        "grade": "D",
+        "text": "Unstable"
       },
       "healthcareCost": {
-        "grade": "Very Low",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Low"
       },
       "healthcareQuality": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "infrastructure": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "personalSafety": {
-        "grade": "Safe",
-        "text": "B"
+        "grade": "B",
+        "text": "Safe"
       },
       "politicalStability": {
-        "grade": "Unstable",
-        "text": "D"
+        "grade": "D",
+        "text": "Unstable"
       },
       "taxEnvironment": {
-        "grade": "Moderate Tax",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate Tax"
       },
       "visaEase": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "weatherComfort": {
-        "grade": "Ideal",
-        "text": "A"
+        "grade": "A",
+        "text": "Ideal"
       }
     }
   },
@@ -2642,44 +2642,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Very High",
-        "text": "D"
+        "grade": "D",
+        "text": "Very High"
       },
       "economy": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "healthcareCost": {
-        "grade": "High",
-        "text": "C"
+        "grade": "C",
+        "text": "High"
       },
       "healthcareQuality": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "infrastructure": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "personalSafety": {
-        "grade": "Very Safe",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Safe"
       },
       "politicalStability": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "taxEnvironment": {
-        "grade": "High Tax",
-        "text": "D"
+        "grade": "D",
+        "text": "High Tax"
       },
       "visaEase": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "weatherComfort": {
-        "grade": "Comfortable",
-        "text": "B"
+        "grade": "B",
+        "text": "Comfortable"
       }
     }
   },
@@ -2709,44 +2709,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Very High",
-        "text": "D"
+        "grade": "D",
+        "text": "Very High"
       },
       "economy": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "healthcareCost": {
-        "grade": "Very High",
-        "text": "D"
+        "grade": "D",
+        "text": "Very High"
       },
       "healthcareQuality": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "infrastructure": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "personalSafety": {
-        "grade": "Very Safe",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Safe"
       },
       "politicalStability": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "taxEnvironment": {
-        "grade": "Moderate Tax",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate Tax"
       },
       "visaEase": {
-        "grade": "Difficult",
-        "text": "D"
+        "grade": "D",
+        "text": "Difficult"
       },
       "weatherComfort": {
-        "grade": "Comfortable",
-        "text": "B"
+        "grade": "B",
+        "text": "Comfortable"
       }
     }
   },
@@ -2776,44 +2776,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Moderate",
-        "text": "B"
+        "grade": "B",
+        "text": "Moderate"
       },
       "economy": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "healthcareCost": {
-        "grade": "Low",
-        "text": "B"
+        "grade": "B",
+        "text": "Low"
       },
       "healthcareQuality": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "infrastructure": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "personalSafety": {
-        "grade": "Very Safe",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Safe"
       },
       "politicalStability": {
-        "grade": "Stable",
-        "text": "B"
+        "grade": "B",
+        "text": "Stable"
       },
       "taxEnvironment": {
-        "grade": "Moderate Tax",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate Tax"
       },
       "visaEase": {
-        "grade": "Difficult",
-        "text": "D"
+        "grade": "D",
+        "text": "Difficult"
       },
       "weatherComfort": {
-        "grade": "Comfortable",
-        "text": "B"
+        "grade": "B",
+        "text": "Comfortable"
       }
     }
   },
@@ -2844,44 +2844,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Low",
-        "text": "A"
+        "grade": "A",
+        "text": "Low"
       },
       "economy": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "healthcareCost": {
-        "grade": "Very Low",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Low"
       },
       "healthcareQuality": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "infrastructure": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "personalSafety": {
-        "grade": "Safe",
-        "text": "B"
+        "grade": "B",
+        "text": "Safe"
       },
       "politicalStability": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "taxEnvironment": {
-        "grade": "Moderate Tax",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate Tax"
       },
       "visaEase": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "weatherComfort": {
-        "grade": "Ideal",
-        "text": "A"
+        "grade": "A",
+        "text": "Ideal"
       }
     }
   },
@@ -2911,44 +2911,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Low",
-        "text": "A"
+        "grade": "A",
+        "text": "Low"
       },
       "economy": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "healthcareCost": {
-        "grade": "Very Low",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Low"
       },
       "healthcareQuality": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "infrastructure": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "personalSafety": {
-        "grade": "Safe",
-        "text": "B"
+        "grade": "B",
+        "text": "Safe"
       },
       "politicalStability": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "taxEnvironment": {
-        "grade": "Moderate Tax",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate Tax"
       },
       "visaEase": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "weatherComfort": {
-        "grade": "Ideal",
-        "text": "A"
+        "grade": "A",
+        "text": "Ideal"
       }
     }
   },
@@ -2977,44 +2977,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Low",
-        "text": "A"
+        "grade": "A",
+        "text": "Low"
       },
       "economy": {
-        "grade": "Unstable",
-        "text": "D"
+        "grade": "D",
+        "text": "Unstable"
       },
       "healthcareCost": {
-        "grade": "Very Low",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Low"
       },
       "healthcareQuality": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "infrastructure": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "personalSafety": {
-        "grade": "Safe",
-        "text": "B"
+        "grade": "B",
+        "text": "Safe"
       },
       "politicalStability": {
-        "grade": "Unstable",
-        "text": "D"
+        "grade": "D",
+        "text": "Unstable"
       },
       "taxEnvironment": {
-        "grade": "Moderate Tax",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate Tax"
       },
       "visaEase": {
-        "grade": "Easy",
-        "text": "B"
+        "grade": "B",
+        "text": "Easy"
       },
       "weatherComfort": {
-        "grade": "Comfortable",
-        "text": "B"
+        "grade": "B",
+        "text": "Comfortable"
       }
     }
   },
@@ -3045,44 +3045,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Very High",
-        "text": "D"
+        "grade": "D",
+        "text": "Very High"
       },
       "economy": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "healthcareCost": {
-        "grade": "Low",
-        "text": "B"
+        "grade": "B",
+        "text": "Low"
       },
       "healthcareQuality": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "infrastructure": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "personalSafety": {
-        "grade": "Very Safe",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Safe"
       },
       "politicalStability": {
-        "grade": "Stable",
-        "text": "B"
+        "grade": "B",
+        "text": "Stable"
       },
       "taxEnvironment": {
-        "grade": "Very Tax-Friendly",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Tax-Friendly"
       },
       "visaEase": {
-        "grade": "Difficult",
-        "text": "D"
+        "grade": "D",
+        "text": "Difficult"
       },
       "weatherComfort": {
-        "grade": "Challenging",
-        "text": "D"
+        "grade": "D",
+        "text": "Challenging"
       }
     }
   },
@@ -3112,44 +3112,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Very High",
-        "text": "D"
+        "grade": "D",
+        "text": "Very High"
       },
       "economy": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "healthcareCost": {
-        "grade": "High",
-        "text": "C"
+        "grade": "C",
+        "text": "High"
       },
       "healthcareQuality": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "infrastructure": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "personalSafety": {
-        "grade": "Safe",
-        "text": "B"
+        "grade": "B",
+        "text": "Safe"
       },
       "politicalStability": {
-        "grade": "Very Stable",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Stable"
       },
       "taxEnvironment": {
-        "grade": "Moderate Tax",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate Tax"
       },
       "visaEase": {
-        "grade": "Difficult",
-        "text": "D"
+        "grade": "D",
+        "text": "Difficult"
       },
       "weatherComfort": {
-        "grade": "Comfortable",
-        "text": "B"
+        "grade": "B",
+        "text": "Comfortable"
       }
     }
   },
@@ -3178,44 +3178,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Very High",
-        "text": "D"
+        "grade": "D",
+        "text": "Very High"
       },
       "economy": {
-        "grade": "Stable",
-        "text": "B"
+        "grade": "B",
+        "text": "Stable"
       },
       "healthcareCost": {
-        "grade": "Very High",
-        "text": "D"
+        "grade": "D",
+        "text": "Very High"
       },
       "healthcareQuality": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "infrastructure": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "personalSafety": {
-        "grade": "Safe",
-        "text": "B"
+        "grade": "B",
+        "text": "Safe"
       },
       "politicalStability": {
-        "grade": "Stable",
-        "text": "B"
+        "grade": "B",
+        "text": "Stable"
       },
       "taxEnvironment": {
-        "grade": "High Tax",
-        "text": "D"
+        "grade": "D",
+        "text": "High Tax"
       },
       "visaEase": {
-        "grade": "Difficult",
-        "text": "D"
+        "grade": "D",
+        "text": "Difficult"
       },
       "weatherComfort": {
-        "grade": "Comfortable",
-        "text": "B"
+        "grade": "B",
+        "text": "Comfortable"
       }
     }
   },
@@ -3246,44 +3246,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "High",
-        "text": "C"
+        "grade": "C",
+        "text": "High"
       },
       "economy": {
-        "grade": "Stable",
-        "text": "B"
+        "grade": "B",
+        "text": "Stable"
       },
       "healthcareCost": {
-        "grade": "Low",
-        "text": "B"
+        "grade": "B",
+        "text": "Low"
       },
       "healthcareQuality": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "infrastructure": {
-        "grade": "Very Good",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Good"
       },
       "personalSafety": {
-        "grade": "Very Safe",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Safe"
       },
       "politicalStability": {
-        "grade": "Stable",
-        "text": "B"
+        "grade": "B",
+        "text": "Stable"
       },
       "taxEnvironment": {
-        "grade": "Moderate Tax",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate Tax"
       },
       "visaEase": {
-        "grade": "Easy",
-        "text": "B"
+        "grade": "B",
+        "text": "Easy"
       },
       "weatherComfort": {
-        "grade": "Comfortable",
-        "text": "B"
+        "grade": "B",
+        "text": "Comfortable"
       }
     }
   },
@@ -3314,44 +3314,44 @@
     },
     "ratings": {
       "affordability": {
-        "grade": "Low",
-        "text": "A"
+        "grade": "A",
+        "text": "Low"
       },
       "economy": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "healthcareCost": {
-        "grade": "Very Low",
-        "text": "A"
+        "grade": "A",
+        "text": "Very Low"
       },
       "healthcareQuality": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "infrastructure": {
-        "grade": "Good",
-        "text": "B"
+        "grade": "B",
+        "text": "Good"
       },
       "personalSafety": {
-        "grade": "Safe",
-        "text": "B"
+        "grade": "B",
+        "text": "Safe"
       },
       "politicalStability": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "taxEnvironment": {
-        "grade": "Moderate Tax",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate Tax"
       },
       "visaEase": {
-        "grade": "Moderate",
-        "text": "C"
+        "grade": "C",
+        "text": "Moderate"
       },
       "weatherComfort": {
-        "grade": "Ideal",
-        "text": "A"
+        "grade": "A",
+        "text": "Ideal"
       }
     }
   }
