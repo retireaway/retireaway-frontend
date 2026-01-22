@@ -48,9 +48,7 @@ export function climateToIcon(climate: string) {
     case "Cold":
       return Lucide.Snowflake;
     case "Mixed":
-      return Lucide.Snowflake;
     case "Arid":
-      return Lucide.Snowflake;
     default:
       return Lucide.Globe;
   }
