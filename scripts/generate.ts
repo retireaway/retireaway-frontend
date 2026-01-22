@@ -52,7 +52,7 @@ async function getCountries() {
   return countries;
 }
 
-async function getLetterGradings() {
+async function getRatingGrade() {
   type Row = Readonly<{
     country: string;
     affordability: string;
@@ -67,12 +67,12 @@ async function getLetterGradings() {
     weather_comfort: string;
   }>;
 
-  const source = path.resolve(root, "./data/csv/grading-letter.csv");
+  const source = path.resolve(root, "./data/csv/rating-grade.csv");
 
   const csv = await fs.readFile(source, { encoding: "utf8" });
   const parsed: readonly Row[] = parse(csv, { columns: true });
 
-  const gradings = parsed.map((row) => {
+  const ratings = parsed.map((row) => {
     return {
       id: row["country"],
       affordability: row["affordability"],
@@ -88,10 +88,10 @@ async function getLetterGradings() {
     } as const;
   });
 
-  return gradings;
+  return ratings;
 }
 
-async function getTextGradings() {
+async function getRatingText() {
   type Row = Readonly<{
     country: string;
     affordability: string;
@@ -106,12 +106,12 @@ async function getTextGradings() {
     weather_comfort: string;
   }>;
 
-  const source = path.resolve(root, "./data/csv/grading-text.csv");
+  const source = path.resolve(root, "./data/csv/rating-text.csv");
 
   const csv = await fs.readFile(source, { encoding: "utf8" });
   const parsed: readonly Row[] = parse(csv, { columns: true });
 
-  const gradings = parsed.map((row) => {
+  const ratings = parsed.map((row) => {
     return {
       id: row["country"],
       affordability: row["affordability"],
@@ -127,17 +127,17 @@ async function getTextGradings() {
     } as const;
   });
 
-  return gradings;
+  return ratings;
 }
 
 async function final() {
   const countries = await getCountries();
-  const letterGradings = await getLetterGradings();
-  const textGradings = await getTextGradings();
+  const ratingsGrade = await getRatingGrade();
+  const ratingsText = await getRatingText();
 
   return countries.map((country, index) => {
-    const textGrading = textGradings[index];
-    const letterGrading = letterGradings[index];
+    const ratingGrade = ratingsGrade[index];
+    const ratingText = ratingsText[index];
 
     const keys = [
       "affordability",
@@ -152,22 +152,22 @@ async function final() {
       "weatherComfort",
     ] as const;
 
-    assert(textGrading);
-    assert(letterGrading);
+    assert(ratingGrade);
+    assert(ratingText);
 
     const entries = [
-      ...keys.map((grading) => {
-        const text = textGrading[grading];
-        const letter = letterGrading[grading];
-        return [grading, { letter, text } as const] as const;
+      ...keys.map((rating) => {
+        const text = ratingGrade[rating];
+        const grade = ratingText[rating];
+        return [rating, { grade, text } as const] as const;
       }),
     ] as const;
 
-    const gradings = Object.fromEntries(entries);
+    const ratings = Object.fromEntries(entries);
 
     return {
       ...country,
-      gradings,
+      ratings: ratings,
     };
   });
 }
