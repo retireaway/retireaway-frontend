@@ -145,6 +145,24 @@ function Regions({ regions }: { regions: readonly string[] }) {
   return (
     <section className="px-4 py-4">
       <ul className="scrollbar-none flex w-full snap-x snap-mandatory snap-always flex-row gap-2 overflow-x-auto">
+        <li className="snap-start">
+          <button
+            type="button"
+            onClick={() => {
+              scrollToTop();
+              params.delete("region");
+              setParams(params, { replace: true });
+            }}
+          >
+            <Chip
+              color={params.get("region") === null ? "blue" : "neutral"}
+              fill={params.get("region") === null ? "dark" : "light"}
+              size="sm"
+            >
+              All
+            </Chip>
+          </button>
+        </li>
         {regions.map((region) => {
           return (
             <li key={region} className="snap-start">
