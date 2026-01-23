@@ -8,6 +8,7 @@ import { Chip } from "@/components/chip";
 import countries from "@/data/countries.json" with { type: "json" };
 import { DestinationCard } from "@/components/destination-card";
 import type { Country } from "@/types/destination";
+import { preferentialSort } from "@/utils/array";
 
 export function Home() {
   const scrollToTop = useScrollToTop();
@@ -18,7 +19,13 @@ export function Home() {
   }, [countries]);
 
   const allRegions: readonly string[] = React.useMemo(() => {
-    return [...new Set(countries.map((country) => country.region))];
+    const regions = [...new Set(countries.map((country) => country.region))];
+    const sorted = preferentialSort(
+      regions,
+      ["Asia", "Europe", "Americas", "Oceania", "Middle East & North Africa"],
+      (a, b) => a === b,
+    );
+    return sorted;
   }, [countries]);
 
   const filtrate: readonly Country[] = React.useMemo(() => {
