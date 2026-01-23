@@ -5,9 +5,9 @@ export function gradeToColor(grade: string) {
   switch (grade) {
     case "A":
       return {
-        color: `blue`,
-        text: tw`text-blue-500`,
-        bg: tw`bg-blue-500`,
+        color: `deep-green`,
+        text: tw`text-green-600`,
+        bg: tw`bg-green-600`,
       } as const;
     case "B":
       return {
@@ -17,16 +17,11 @@ export function gradeToColor(grade: string) {
       } as const;
     case "C":
       return {
-        color: `yellow`,
-        text: tw`text-yellow-500`,
-        bg: tw`bg-yellow-500`,
+        color: `amber`,
+        text: tw`text-amber-500`,
+        bg: tw`bg-amber-500`,
       } as const;
     case "D":
-      return {
-        color: `red`,
-        text: tw`text-red-500`,
-        bg: tw`bg-red-500`,
-      } as const;
     default:
       return {
         color: `neutral`,
