@@ -81,7 +81,11 @@ export function Home() {
       >
         <header>
           <h3 className="text-center text-xs font-medium text-neutral-400">
-            Showing {filtrate.length} destinations
+            {searchResults.length === 0
+              ? "No matching destinations"
+              : searchResults.length === 1
+                ? "Showing 1 destination"
+                : `Showing ${searchResults.length} destinations`}
           </h3>
         </header>
 
