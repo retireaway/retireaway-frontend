@@ -214,7 +214,7 @@ function Tags({ tags }: { tags: readonly string[] }) {
               >
                 <Chip
                   color={params.has("tag", tag) ? "blue" : "neutral"}
-                  fill={params.has("tag", tag) ? "dark" : "light"}
+                  fill={params.has("tag", tag) ? "light" : "light"}
                   size="xs"
                 >
                   {tag}
