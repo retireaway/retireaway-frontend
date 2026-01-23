@@ -32,7 +32,7 @@ export function Home() {
 
     const predTags = (country: Country, tags: string[]): boolean => {
       if (tags.length === 0) return true;
-      return country.tags.some((item) => tags.includes(item));
+      return tags.every((item) => country.tags.includes(item));
     };
 
     return countries.filter((country) => {
