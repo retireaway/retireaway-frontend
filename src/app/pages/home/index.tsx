@@ -11,8 +11,7 @@ import type { Country } from "@/types/destination";
 import { preferentialSort } from "@/utils/array";
 
 export function Home() {
-  const scrollToTop = useScrollToTop();
-  const [params, setParams] = Wouter.useSearchParams();
+  const [params] = Wouter.useSearchParams();
 
   const allTags: readonly string[] = React.useMemo(() => {
     return [...new Set(countries.flatMap((country) => country.tags))];
@@ -67,22 +66,31 @@ export function Home() {
 
   return (
     <section className="flex min-h-svh flex-col">
-      <Hero
-        search={params.get("search") ?? ""}
-        handleChange={(search) => {
-          scrollToTop();
-          setParams([["search", search]], { replace: true });
-        }}
-      />
-      <Regions regions={allRegions} />
-      <div className="h-px bg-neutral-100" />
-      <Tags tags={allTags} />
-      <div className="h-px bg-neutral-100" />
+      <Hero />
 
-      <section
-        id="destination-scroll-container"
-        className="flex h-0 grow flex-col gap-4 overflow-y-scroll bg-neutral-50/50 p-4"
+      <div
+        className="sticky top-0 left-0 z-50 w-full bg-white"
+        id="control-panel"
       >
+        <Divider />
+        <div className="flex h-full flex-row gap-2 p-4">
+          <button onClick={() => {}}>
+            <Chip color="blue" fill="light" size="sm">
+              Search
+              <Lucide.Search className="size-4" />
+            </Chip>
+          </button>
+          <div className="w-0.5 bg-neutral-100" />
+          <Regions regions={allRegions} />
+        </div>
+        <Divider />
+        <div className="flex h-full flex-row gap-2 p-4">
+          <Tags tags={allTags} />
+        </div>
+        <Divider />
+      </div>
+
+      <section className="flex min-h-200 flex-col gap-4 bg-neutral-50/50 p-4">
         <header>
           <h3 className="text-center text-xs font-medium text-neutral-400">
             {searchResults.length === 0
@@ -107,166 +115,144 @@ export function Home() {
   );
 }
 
-function Hero({
-  search,
-  handleChange,
-}: {
-  search: string;
-  handleChange: (search: string) => void;
-}) {
+function Divider() {
+  return <div className="h-0.5 bg-neutral-100" />;
+}
+
+function Hero() {
   return (
-    <section className="flex flex-col gap-8 bg-neutral-500 bg-[url(/images/bg-hero.jpg)] bg-cover bg-center px-4 py-6 pt-12 bg-blend-multiply">
+    <section className="flex flex-col gap-8 px-4 py-6 pt-12">
       <header className="flex flex-col gap-2">
-        <h1 className="text-2xl font-semibold text-white">
+        <h1 className="text-center text-2xl font-semibold text-neutral-700">
           Plan your dream retirement
         </h1>
-        <p className="text-base text-white">
+        <p className="text-center text-base text-neutral-500">
           Compare destinations worldwide. Connect with local experts. Plan your
           move.
         </p>
       </header>
-
-      <div className="flex flex-row gap-2 rounded-full border-2 border-neutral-200 bg-white px-1 py-1 has-focus:border-neutral-400">
-        <input
-          placeholder="Enter destination name..."
-          className="w-0 grow pl-4 text-base text-neutral-600 outline-none"
-          name="search"
-          value={search}
-          onChange={(event) => {
-            handleChange(event.target.value);
-          }}
-        />
-        <button className="flex items-center justify-center gap-2 rounded-full border-1 border-blue-500 bg-blue-500 p-2 px-3">
-          <span className="text-sm text-white">Search</span>
-          <Lucide.Search className="size-4 text-white" />
-        </button>
-      </div>
     </section>
   );
 }
 
 function Regions({ regions }: { regions: readonly string[] }) {
   const [params, setParams] = Wouter.useSearchParams();
-  const scrollToTop = useScrollToTop();
+  const scrollToTop = useScrollControlPanelToTop();
 
   return (
-    <section className="px-4 py-4">
-      <ul className="scrollbar-none flex w-full snap-x snap-mandatory snap-always flex-row gap-2 overflow-x-auto">
-        <li className="snap-start">
-          <button
-            type="button"
-            onClick={() => {
-              scrollToTop();
-              params.delete("region");
-              setParams(params, { replace: true });
-            }}
+    <ul className="scrollbar-none flex w-full snap-x snap-mandatory snap-always flex-row gap-2 overflow-x-auto">
+      <li className="snap-start">
+        <button
+          type="button"
+          onClick={() => {
+            scrollToTop();
+            params.delete("region");
+            setParams(params, { replace: true });
+          }}
+        >
+          <Chip
+            color={params.get("region") === null ? "blue" : "neutral"}
+            fill={params.get("region") === null ? "dark" : "light"}
+            size="sm"
           >
-            <Chip
-              color={params.get("region") === null ? "blue" : "neutral"}
-              fill={params.get("region") === null ? "dark" : "light"}
-              size="sm"
-            >
-              All
-            </Chip>
-          </button>
-        </li>
-        {regions.map((region) => {
-          return (
-            <li key={region} className="snap-start">
-              <button
-                type="button"
-                onClick={() => {
-                  scrollToTop();
+            All
+          </Chip>
+        </button>
+      </li>
+      {regions.map((region) => {
+        return (
+          <li key={region} className="snap-start">
+            <button
+              type="button"
+              onClick={() => {
+                scrollToTop();
 
-                  if (params.has("region", region)) {
-                    params.delete("region");
-                    setParams(params, { replace: true });
-                    return;
-                  }
-
-                  params.set("region", region);
+                if (params.has("region", region)) {
+                  params.delete("region");
                   setParams(params, { replace: true });
-                }}
+                  return;
+                }
+
+                params.set("region", region);
+                setParams(params, { replace: true });
+              }}
+            >
+              <Chip
+                color={params.has("region", region) ? "blue" : "neutral"}
+                fill={params.has("region", region) ? "dark" : "light"}
+                size="sm"
               >
-                <Chip
-                  color={params.has("region", region) ? "blue" : "neutral"}
-                  fill={params.has("region", region) ? "dark" : "light"}
-                  size="sm"
-                >
-                  {region}
-                </Chip>
-              </button>
-            </li>
-          );
-        })}
-      </ul>
-    </section>
+                {region}
+              </Chip>
+            </button>
+          </li>
+        );
+      })}
+    </ul>
   );
 }
 
 function Tags({ tags }: { tags: readonly string[] }) {
   const [params, setParams] = Wouter.useSearchParams();
-  const scrollToTop = useScrollToTop();
+  const scrollToTop = useScrollControlPanelToTop();
 
   return (
-    <section className="p-4">
-      <ul className="scrollbar-none flex w-full snap-x snap-mandatory snap-always flex-row gap-1 overflow-x-auto">
-        {tags.map((tag) => {
-          return (
-            <li key={tag} className="snap-start">
-              <button
-                type="button"
-                onClick={() => {
-                  scrollToTop();
-                  if (params.has("tag", tag)) {
-                    const entries = Array.from(params.entries()).filter(
-                      ([key, value]) => {
-                        if (key !== "tag") {
-                          return true;
-                        }
+    <ul className="scrollbar-none flex w-full snap-x snap-mandatory snap-always flex-row gap-1 overflow-x-auto">
+      {tags.map((tag) => {
+        return (
+          <li key={tag} className="snap-start">
+            <button
+              type="button"
+              onClick={() => {
+                scrollToTop();
+                if (params.has("tag", tag)) {
+                  const entries = Array.from(params.entries()).filter(
+                    ([key, value]) => {
+                      if (key !== "tag") {
+                        return true;
+                      }
 
-                        return value !== tag;
-                      },
-                    );
+                      return value !== tag;
+                    },
+                  );
 
-                    setParams(entries, { replace: true });
-                    return;
-                  }
+                  setParams(entries, { replace: true });
+                  return;
+                }
 
-                  params.append("tag", tag);
-                  setParams(params, { replace: true });
-                }}
+                params.append("tag", tag);
+                setParams(params, { replace: true });
+              }}
+            >
+              <Chip
+                color={params.has("tag", tag) ? "blue" : "neutral"}
+                fill={params.has("tag", tag) ? "light" : "light"}
+                size="xs"
               >
-                <Chip
-                  color={params.has("tag", tag) ? "blue" : "neutral"}
-                  fill={params.has("tag", tag) ? "light" : "light"}
-                  size="xs"
-                >
-                  {tag}
-                </Chip>
-              </button>
-            </li>
-          );
-        })}
-      </ul>
-    </section>
+                {tag}
+              </Chip>
+            </button>
+          </li>
+        );
+      })}
+    </ul>
   );
 }
 
-function useScrollToTop() {
+function useScrollControlPanelToTop() {
   const target = React.useRef<HTMLElement | null>(null);
 
   React.useEffect(() => {
-    const element = document.getElementById("destination-scroll-container");
+    const element = document.getElementById("control-panel");
 
     if (element === null) {
-      console.warn("[element not found]:", "destination-scroll-container");
+      console.warn("[element not found]:", "control-panel");
     }
 
     target.current = element;
   }, []);
 
   return () => {
-    target.current?.scroll({ behavior: "smooth", top: 0 });
+    target.current?.scrollIntoView({ behavior: "smooth" });
   };
 }
