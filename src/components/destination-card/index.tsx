@@ -6,6 +6,24 @@ import { climateToIcon, gradeToColor } from "@/utils/mappings";
 import type { Country } from "@/types/destination";
 import { Chip } from "@/components/chip";
 
+export function DestinationCardList({
+  destinations,
+}: {
+  destinations: readonly Country[];
+}) {
+  return (
+    <ul className="flex flex-col gap-8">
+      {destinations.map((country) => {
+        return (
+          <li key={country.id}>
+            <DestinationCard destination={country} />
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
 export function DestinationCard({ destination }: { destination: Country }) {
   const ClimateIcon = climateToIcon(destination.climate);
 
