@@ -70,7 +70,7 @@ export function Home() {
 
       <ControlPanel tags={allTags} regions={allRegions} />
 
-      <section className="flex min-h-200 flex-col gap-4 bg-neutral-50/50 p-4">
+      <section className="flex min-h-240 flex-col gap-4 bg-neutral-50/50 p-4">
         <header>
           <h3 className="text-center text-xs font-medium text-neutral-400">
             {searchResults.length === 0
@@ -105,7 +105,7 @@ function Hero() {
 
 function useScrollControlPanelToTop() {
   return () => {
-    window.scrollTo({ behavior: "smooth", top: 160 });
+    window.scrollTo({ behavior: "smooth", top: 159 });
   };
 }
 
@@ -116,28 +116,78 @@ function ControlPanel({
   regions: readonly string[];
   tags: readonly string[];
 }) {
+  const [view, setView] = React.useState<"Search" | "Filters">("Filters");
+  const scrollToTop = useScrollControlPanelToTop();
+
+  function toggleView() {
+    setView(view === "Filters" ? "Search" : "Filters");
+    scrollToTop();
+  }
+
   return (
     <section
       className="sticky top-0 left-0 z-50 w-full bg-white"
       id="control-panel"
     >
-      <ControlPanelDivider />
-      <div className="flex h-full flex-row gap-2 p-4">
-        <button onClick={() => {}}>
-          <Chip color="blue" fill="light" size="sm">
-            Search
-            <Lucide.Search className="size-4" />
-          </Chip>
-        </button>
-        <div className="w-0.5 bg-neutral-100" />
-        <Regions regions={regions} />
-      </div>
-      <ControlPanelDivider />
-      <div className="flex h-full flex-row gap-2 p-4">
-        <Tags tags={tags} />
-      </div>
-      <ControlPanelDivider />
+      {view === "Filters" ? (
+        <>
+          <ControlPanelDivider />
+          <div className="flex h-full flex-row gap-2 p-4">
+            <button onClick={toggleView}>
+              <Chip color="blue" fill="light" size="sm">
+                Search
+                <Lucide.Search className="size-4" />
+              </Chip>
+            </button>
+            <div className="w-0.5 bg-neutral-100" />
+            <Regions regions={regions} />
+          </div>
+          <ControlPanelDivider />
+          <div className="flex h-full flex-row gap-2 p-4">
+            <Tags tags={tags} />
+          </div>
+          <ControlPanelDivider />
+        </>
+      ) : (
+        <>
+          <ControlPanelDivider />
+          <div className="flex h-full flex-row gap-2 p-4">
+            <button onClick={toggleView}>
+              <Chip color="blue" fill="light" size="sm">
+                Filters
+                <Lucide.SlidersHorizontal className="size-4" />
+              </Chip>
+            </button>
+            <div className="w-0.5 bg-neutral-100" />
+            <SearchBar />
+          </div>
+          <ControlPanelDivider />
+        </>
+      )}
     </section>
+  );
+}
+
+function SearchBar() {
+  const [params, setParams] = Wouter.useSearchParams();
+
+  return (
+    <input
+      placeholder="Enter destination name..."
+      className="w-0 grow rounded-full border-1 border-neutral-200 bg-neutral-50 pl-4 text-sm text-neutral-600 outline-none focus:border-neutral-400"
+      name="search"
+      value={params.get("search") ?? ""}
+      onChange={(event) => {
+        const search = event.target.value;
+        if (search === "") {
+          params.delete("search");
+        } else {
+          params.set("search", search);
+        }
+
+        setParams(params, { replace: true });
+      }}
+    />
   );
 }
 
