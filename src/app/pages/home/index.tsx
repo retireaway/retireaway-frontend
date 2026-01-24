@@ -6,7 +6,7 @@ import React from "react";
 import { Chip } from "@/components/chip";
 
 import countries from "@/data/countries.json" with { type: "json" };
-import { DestinationCard } from "@/components/destination-card";
+import { DestinationCardList } from "@/components/destination-card";
 import type { Country } from "@/types/destination";
 import { preferentialSort } from "@/utils/array";
 
@@ -68,27 +68,7 @@ export function Home() {
     <section className="flex min-h-svh flex-col">
       <Hero />
 
-      <div
-        className="sticky top-0 left-0 z-50 w-full bg-white"
-        id="control-panel"
-      >
-        <Divider />
-        <div className="flex h-full flex-row gap-2 p-4">
-          <button onClick={() => {}}>
-            <Chip color="blue" fill="light" size="sm">
-              Search
-              <Lucide.Search className="size-4" />
-            </Chip>
-          </button>
-          <div className="w-0.5 bg-neutral-100" />
-          <Regions regions={allRegions} />
-        </div>
-        <Divider />
-        <div className="flex h-full flex-row gap-2 p-4">
-          <Tags tags={allTags} />
-        </div>
-        <Divider />
-      </div>
+      <ControlPanel tags={allTags} regions={allRegions} />
 
       <section className="flex min-h-200 flex-col gap-4 bg-neutral-50/50 p-4">
         <header>
@@ -101,22 +81,10 @@ export function Home() {
           </h3>
         </header>
 
-        <ul className="flex flex-col gap-8">
-          {searchResults.map((country) => {
-            return (
-              <li key={country.id}>
-                <DestinationCard destination={country} />
-              </li>
-            );
-          })}
-        </ul>
+        <DestinationCardList destinations={searchResults} />
       </section>
     </section>
   );
-}
-
-function Divider() {
-  return <div className="h-0.5 bg-neutral-100" />;
 }
 
 function Hero() {
@@ -133,6 +101,48 @@ function Hero() {
       </header>
     </section>
   );
+}
+
+function useScrollControlPanelToTop() {
+  return () => {
+    window.scrollTo({ behavior: "smooth", top: 160 });
+  };
+}
+
+function ControlPanel({
+  regions,
+  tags,
+}: {
+  regions: readonly string[];
+  tags: readonly string[];
+}) {
+  return (
+    <section
+      className="sticky top-0 left-0 z-50 w-full bg-white"
+      id="control-panel"
+    >
+      <ControlPanelDivider />
+      <div className="flex h-full flex-row gap-2 p-4">
+        <button onClick={() => {}}>
+          <Chip color="blue" fill="light" size="sm">
+            Search
+            <Lucide.Search className="size-4" />
+          </Chip>
+        </button>
+        <div className="w-0.5 bg-neutral-100" />
+        <Regions regions={regions} />
+      </div>
+      <ControlPanelDivider />
+      <div className="flex h-full flex-row gap-2 p-4">
+        <Tags tags={tags} />
+      </div>
+      <ControlPanelDivider />
+    </section>
+  );
+}
+
+function ControlPanelDivider() {
+  return <div className="h-0.5 bg-neutral-100" />;
 }
 
 function Regions({ regions }: { regions: readonly string[] }) {
@@ -237,22 +247,4 @@ function Tags({ tags }: { tags: readonly string[] }) {
       })}
     </ul>
   );
-}
-
-function useScrollControlPanelToTop() {
-  const target = React.useRef<HTMLElement | null>(null);
-
-  React.useEffect(() => {
-    const element = document.getElementById("control-panel");
-
-    if (element === null) {
-      console.warn("[element not found]:", "control-panel");
-    }
-
-    target.current = element;
-  }, []);
-
-  return () => {
-    target.current?.scrollIntoView({ behavior: "smooth" });
-  };
 }
