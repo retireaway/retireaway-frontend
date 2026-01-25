@@ -89,7 +89,7 @@ export function Home() {
 
 function Hero() {
   return (
-    <section className="flex flex-col gap-8 px-4 py-6 pt-12">
+    <section id="hero" className="flex flex-col gap-8 px-4 py-6 pt-12">
       <header className="flex flex-col gap-2">
         <h1 className="text-center text-2xl font-semibold text-neutral-700">
           Plan your dream retirement
@@ -104,8 +104,22 @@ function Hero() {
 }
 
 function useScrollControlPanelToTop() {
+  const hero = React.useRef<HTMLElement | null>(null);
+
+  React.useEffect(() => {
+    const target = document.getElementById("hero");
+    hero.current = target;
+  }, []);
+
   return () => {
-    window.scrollTo({ behavior: "smooth", top: 159 });
+    if (hero.current === null) {
+      console.warn("Element with id hero not found");
+      return;
+    }
+
+    const height = hero.current.getBoundingClientRect().height;
+
+    window.scrollTo({ behavior: "smooth", top: height - 1 });
   };
 }
 
@@ -132,7 +146,7 @@ function ControlPanel({
       {view === "Filters" ? (
         <>
           <ControlPanelDivider />
-          <div className="flex h-full flex-row gap-2 p-4">
+          <div className="mx-auto flex h-full max-w-min flex-row gap-2 p-4">
             <button onClick={toggleView}>
               <Chip color="blue" fill="light" size="sm">
                 Search
@@ -143,7 +157,7 @@ function ControlPanel({
             <Regions regions={regions} />
           </div>
           <ControlPanelDivider />
-          <div className="flex h-full flex-row gap-2 p-4">
+          <div className="mx-auto flex h-full max-w-min flex-row gap-2 p-4 lg:max-w-240">
             <Tags tags={tags} />
           </div>
           <ControlPanelDivider />
@@ -257,7 +271,7 @@ function Tags({ tags }: { tags: readonly string[] }) {
   const scrollToTop = useScrollControlPanelToTop();
 
   return (
-    <ul className="scrollbar-none flex w-full snap-x snap-mandatory snap-always flex-row gap-1 overflow-x-auto">
+    <ul className="scrollbar-none flex w-full snap-x snap-mandatory snap-always flex-row gap-1 overflow-x-auto lg:flex-wrap lg:justify-center">
       {tags.map((tag) => {
         return (
           <li key={tag} className="snap-start">

@@ -12,7 +12,7 @@ export function DestinationCardList({
   destinations: readonly Country[];
 }) {
   return (
-    <ul className="flex flex-col gap-8">
+    <ul className="mx-auto grid max-w-300 grid-cols-1 gap-x-2 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
       {destinations.map((country) => {
         return (
           <li key={country.id}>
@@ -36,7 +36,7 @@ export function DestinationCard({ destination }: { destination: Country }) {
   const [imageStatus, setImageStatus] = React.useState<boolean>(false);
 
   return (
-    <article className="rounded-2xl border-1 border-neutral-100 bg-white">
+    <article className="max-w-120 rounded-2xl border-1 border-neutral-100 bg-white">
       <div className="relative h-56 rounded-t-2xl bg-black">
         <img
           src={`/images/destinations/${destination.id}/${destination.id}.webp`}
