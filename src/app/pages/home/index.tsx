@@ -165,7 +165,7 @@ function ControlPanel({
       ) : (
         <>
           <ControlPanelDivider />
-          <div className="flex h-full flex-row gap-2 p-4">
+          <div className="mx-auto flex h-full max-w-min flex-row gap-2 p-4 lg:max-w-200">
             <button onClick={toggleView}>
               <Chip color="blue" fill="light" size="sm">
                 Filters
