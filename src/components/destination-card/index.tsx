@@ -3,13 +3,13 @@ import * as Lucide from "lucide-react";
 
 import { Rating } from "@/components/rating";
 import { climateToIcon, gradeToColor } from "@/utils/mappings";
-import type { Country } from "@/types/destination";
+import type { Destination } from "@/types/destination";
 import { Chip } from "@/components/chip";
 
 export function DestinationCardList({
   destinations,
 }: {
-  destinations: readonly Country[];
+  destinations: readonly Destination[];
 }) {
   return (
     <ul className="mx-auto grid max-w-300 grid-cols-1 gap-x-2 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -24,7 +24,7 @@ export function DestinationCardList({
   );
 }
 
-export function DestinationCard({ destination }: { destination: Country }) {
+export function DestinationCard({ destination }: { destination: Destination }) {
   const ClimateIcon = climateToIcon(destination.climate);
 
   const formatter = new Intl.NumberFormat("en-US", {
@@ -108,8 +108,8 @@ export function DestinationCard({ destination }: { destination: Country }) {
               single
             </span>
             <span className="text-2xl font-bold text-neutral-600 uppercase">
-              {destination.expenditure.single.currency}
-              {formatter.format(destination.expenditure.single.amount)}
+              {destination.expenditure.single.monthly.currency}
+              {formatter.format(destination.expenditure.single.monthly.amount)}
             </span>
             <span className="text-xs font-normal text-neutral-400">/month</span>
           </div>
@@ -118,8 +118,8 @@ export function DestinationCard({ destination }: { destination: Country }) {
               couple
             </span>
             <span className="text-2xl font-bold text-neutral-600 uppercase">
-              {destination.expenditure.couple.currency}
-              {formatter.format(destination.expenditure.couple.amount)}
+              {destination.expenditure.couple.monthly.currency}
+              {formatter.format(destination.expenditure.couple.monthly.amount)}
             </span>
             <span className="text-xs font-normal text-neutral-400">/month</span>
           </div>

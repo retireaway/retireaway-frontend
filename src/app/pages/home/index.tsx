@@ -5,46 +5,56 @@ import React from "react";
 
 import { Chip } from "@/components/chip";
 
-import countries from "@/data/countries.json" with { type: "json" };
+import destinations from "@/data/destinations.json" with { type: "json" };
 import { DestinationCardList } from "@/components/destination-card";
-import type { Country } from "@/types/destination";
+import type { Destination } from "@/types/destination";
 import { preferentialSort } from "@/utils/array";
 
 export function Home() {
   const [params] = Wouter.useSearchParams();
 
   const allTags: readonly string[] = React.useMemo(() => {
-    return [...new Set(countries.flatMap((country) => country.tags))];
-  }, [countries]);
+    return [
+      ...new Set(destinations.flatMap((destination) => destination.tags)),
+    ];
+  }, [destinations]);
 
   const allRegions: readonly string[] = React.useMemo(() => {
-    const regions = [...new Set(countries.map((country) => country.region))];
+    const regions = [
+      ...new Set(destinations.map((destination) => destination.region)),
+    ];
     const sorted = preferentialSort(
       regions,
       ["Asia", "Europe", "Americas", "Oceania", "Middle East & North Africa"],
       (a, b) => a === b,
     );
     return sorted;
-  }, [countries]);
+  }, [destinations]);
 
-  const filtrate: readonly Country[] = React.useMemo(() => {
+  const filtrate: readonly Destination[] = React.useMemo(() => {
     const filterRegion = params.get("region");
     const filterTags = params.getAll("tag");
 
-    const predRegion = (country: Country, region: null | string): boolean => {
+    const predRegion = (
+      destination: Destination,
+      region: null | string,
+    ): boolean => {
       if (region === null) return true;
-      return region === country.region;
+      return region === destination.region;
     };
 
-    const predTags = (country: Country, tags: string[]): boolean => {
+    const predTags = (destination: Destination, tags: string[]): boolean => {
       if (tags.length === 0) return true;
-      return tags.every((item) => country.tags.includes(item));
+      return tags.every((item) => destination.tags.includes(item));
     };
 
-    return countries.filter((country) => {
-      return predRegion(country, filterRegion) && predTags(country, filterTags);
+    return destinations.filter((destination) => {
+      return (
+        predRegion(destination, filterRegion) &&
+        predTags(destination, filterTags)
+      );
     });
-  }, [countries, params.toString()]);
+  }, [destinations, params.toString()]);
 
   const fuse = React.useMemo(() => {
     return new Fuse(filtrate, {
@@ -56,7 +66,7 @@ export function Home() {
 
   const search = params.get("search");
 
-  const searchResults: readonly Country[] = React.useMemo(() => {
+  const searchResults: readonly Destination[] = React.useMemo(() => {
     if (search === null || search === "") {
       return filtrate;
     }

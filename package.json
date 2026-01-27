@@ -9,7 +9,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "generate:countries": "npx node --experimental-strip-types scripts/generate.ts",
+    "generate:destinations": "npx node --experimental-strip-types scripts/generate.ts",
     "predeploy": "npm run build",
     "deploy": "gh-pages --dist dist --cname retireaway.jeremiaholatunde.com"
   },

@@ -1,0 +1,902 @@
+[
+  {
+    "id": "aarhus",
+    "name": "Aarhus",
+    "country": "denmark",
+    "description": "Youthful city with culture and innovation"
+  },
+  {
+    "id": "abu-dhabi",
+    "name": "Abu Dhabi",
+    "country": "united-arab-emirates",
+    "description": "Calm capital with premium services"
+  },
+  {
+    "id": "agadir",
+    "name": "Agadir",
+    "country": "morocco",
+    "description": "Modern beach resort city"
+  },
+  {
+    "id": "alicante",
+    "name": "Alicante",
+    "country": "spain",
+    "description": "Relaxed seaside city with affordable Mediterranean living"
+  },
+  {
+    "id": "ambergris-caye",
+    "name": "Ambergris Caye",
+    "country": "belize",
+    "description": "Island expat hub with diving"
+  },
+  {
+    "id": "amsterdam",
+    "name": "Amsterdam",
+    "country": "netherlands",
+    "description": "International city with culture and healthcare"
+  },
+  {
+    "id": "antalya",
+    "name": "Antalya",
+    "country": "turkey",
+    "description": "Affordable Mediterranean city with private hospitals"
+  },
+  {
+    "id": "atenas",
+    "name": "Atenas",
+    "country": "costa-rica",
+    "description": "Mild climate town known for year-round spring weather"
+  },
+  {
+    "id": "athens",
+    "name": "Athens",
+    "country": "greece",
+    "description": "Historic capital with culture, healthcare, and amenities"
+  },
+  {
+    "id": "auckland",
+    "name": "Auckland",
+    "country": "new-zealand",
+    "description": "Largest city with coastal living"
+  },
+  {
+    "id": "bali",
+    "name": "Bali",
+    "country": "indonesia",
+    "description": "Spiritual island with expat lifestyle"
+  },
+  {
+    "id": "bangkok",
+    "name": "Bangkok",
+    "country": "thailand",
+    "description": "Dynamic capital with top private hospitals"
+  },
+  {
+    "id": "bath",
+    "name": "Bath",
+    "country": "united-kingdom",
+    "description": "Elegant spa town with heritage"
+  },
+  {
+    "id": "batumi",
+    "name": "Batumi",
+    "country": "georgia",
+    "description": "Black Sea resort city with modern development"
+  },
+  {
+    "id": "bergen",
+    "name": "Bergen",
+    "country": "norway",
+    "description": "Rainy coastal city near fjords"
+  },
+  {
+    "id": "bled",
+    "name": "Bled",
+    "country": "slovenia",
+    "description": "Alpine lake town with tranquility and scenery"
+  },
+  {
+    "id": "bogota",
+    "name": "Bogotá",
+    "country": "colombia",
+    "description": "High-altitude capital with culture"
+  },
+  {
+    "id": "boquete",
+    "name": "Boquete",
+    "country": "panama",
+    "description": "Cool-climate mountain town popular with retirees"
+  },
+  {
+    "id": "bordeaux",
+    "name": "Bordeaux",
+    "country": "france",
+    "description": "Elegant wine city with culture and livability"
+  },
+  {
+    "id": "brisbane",
+    "name": "Brisbane",
+    "country": "australia",
+    "description": "Warm climate city with outdoor lifestyle"
+  },
+  {
+    "id": "brno",
+    "name": "Brno",
+    "country": "czech-republic",
+    "description": "University city with lower costs than Prague"
+  },
+  {
+    "id": "budva",
+    "name": "Budva",
+    "country": "montenegro",
+    "description": "Lively beach town with growing expat presence"
+  },
+  {
+    "id": "busan",
+    "name": "Busan",
+    "country": "south-korea",
+    "description": "Coastal city with beaches"
+  },
+  {
+    "id": "cartagena",
+    "name": "Cartagena",
+    "country": "colombia",
+    "description": "Historic Caribbean coastal city"
+  },
+  {
+    "id": "caye-caulker",
+    "name": "Caye Caulker",
+    "country": "belize",
+    "description": "Laid-back island lifestyle"
+  },
+  {
+    "id": "cebu",
+    "name": "Cebu",
+    "country": "philippines",
+    "description": "Island city with expats and healthcare"
+  },
+  {
+    "id": "central-area",
+    "name": "Central Area",
+    "country": "singapore",
+    "description": "Dense urban core with premium services"
+  },
+  {
+    "id": "cesky-krumlov",
+    "name": "Český Krumlov",
+    "country": "czech-republic",
+    "description": "Fairytale town with historic charm"
+  },
+  {
+    "id": "chiang-mai",
+    "name": "Chiang Mai",
+    "country": "thailand",
+    "description": "Cultural northern city with low costs and retirees"
+  },
+  {
+    "id": "colombo",
+    "name": "Colombo",
+    "country": "sri-lanka",
+    "description": "Coastal capital with services"
+  },
+  {
+    "id": "colonia-del-sacramento",
+    "name": "Colonia del Sacramento",
+    "country": "uruguay",
+    "description": "Charming historic town"
+  },
+  {
+    "id": "copenhagen",
+    "name": "Copenhagen",
+    "country": "denmark",
+    "description": "Safe, modern capital with excellent services"
+  },
+  {
+    "id": "cork",
+    "name": "Cork",
+    "country": "ireland",
+    "description": "Friendly city with lower costs"
+  },
+  {
+    "id": "cornwall",
+    "name": "Cornwall",
+    "country": "united-kingdom",
+    "description": "Scenic coastal living with slower pace"
+  },
+  {
+    "id": "coronado",
+    "name": "Coronado",
+    "country": "panama",
+    "description": "Quiet beach community near Panama City"
+  },
+  {
+    "id": "crete",
+    "name": "Crete",
+    "country": "greece",
+    "description": "Large island offering beaches, towns, and affordable living"
+  },
+  {
+    "id": "cuenca",
+    "name": "Cuenca",
+    "country": "ecuador",
+    "description": "Popular expat city with mild climate"
+  },
+  {
+    "id": "da-nang",
+    "name": "Da Nang",
+    "country": "vietnam",
+    "description": "Coastal city with beaches and affordability"
+  },
+  {
+    "id": "davao",
+    "name": "Davao",
+    "country": "philippines",
+    "description": "Affordable southern city with nature"
+  },
+  {
+    "id": "dubai",
+    "name": "Dubai",
+    "country": "united-arab-emirates",
+    "description": "Luxury city with safety and healthcare"
+  },
+  {
+    "id": "dublin",
+    "name": "Dublin",
+    "country": "ireland",
+    "description": "Cultural capital with healthcare access"
+  },
+  {
+    "id": "dubrovnik",
+    "name": "Dubrovnik",
+    "country": "croatia",
+    "description": "Scenic walled city with strong tourism appeal"
+  },
+  {
+    "id": "dumaguete",
+    "name": "Dumaguete",
+    "country": "philippines",
+    "description": "Small university town popular with retirees"
+  },
+  {
+    "id": "east-coast",
+    "name": "East Coast",
+    "country": "singapore",
+    "description": "Residential seaside living"
+  },
+  {
+    "id": "edinburgh",
+    "name": "Edinburgh",
+    "country": "united-kingdom",
+    "description": "Historic capital with strong culture"
+  },
+  {
+    "id": "escazu",
+    "name": "Escazú",
+    "country": "costa-rica",
+    "description": "Upscale suburb near San José with excellent private healthcare"
+  },
+  {
+    "id": "florence",
+    "name": "Florence",
+    "country": "italy",
+    "description": "Cultural city with art, walkability, and healthcare"
+  },
+  {
+    "id": "freiburg",
+    "name": "Freiburg",
+    "country": "germany",
+    "description": "Eco-friendly city near Black Forest"
+  },
+  {
+    "id": "fukuoka",
+    "name": "Fukuoka",
+    "country": "japan",
+    "description": "Affordable city with relaxed pace"
+  },
+  {
+    "id": "galle",
+    "name": "Galle",
+    "country": "sri-lanka",
+    "description": "Historic seaside town"
+  },
+  {
+    "id": "galway",
+    "name": "Galway",
+    "country": "ireland",
+    "description": "Artistic coastal town with charm"
+  },
+  {
+    "id": "geneva",
+    "name": "Geneva",
+    "country": "switzerland",
+    "description": "International city with diplomacy and services"
+  },
+  {
+    "id": "gothenburg",
+    "name": "Gothenburg",
+    "country": "sweden",
+    "description": "Laid-back coastal city with industry"
+  },
+  {
+    "id": "gozo",
+    "name": "Gozo",
+    "country": "malta",
+    "description": "Quiet island offering slower pace and nature"
+  },
+  {
+    "id": "haarlem",
+    "name": "Haarlem",
+    "country": "netherlands",
+    "description": "Charming town near Amsterdam"
+  },
+  {
+    "id": "halifax",
+    "name": "Halifax",
+    "country": "canada",
+    "description": "Affordable maritime city with charm"
+  },
+  {
+    "id": "hamburg",
+    "name": "Hamburg",
+    "country": "germany",
+    "description": "Maritime city with culture and green spaces"
+  },
+  {
+    "id": "hammamet",
+    "name": "Hammamet",
+    "country": "tunisia",
+    "description": "Quiet resort town with beaches"
+  },
+  {
+    "id": "hanoi",
+    "name": "Hanoi",
+    "country": "vietnam",
+    "description": "Historic capital with culture"
+  },
+  {
+    "id": "helsinki",
+    "name": "Helsinki",
+    "country": "finland",
+    "description": "Modern capital with design and safety"
+  },
+  {
+    "id": "ho-chi-minh-city",
+    "name": "Ho Chi Minh City",
+    "country": "vietnam",
+    "description": "Dynamic economic hub"
+  },
+  {
+    "id": "innsbruck",
+    "name": "Innsbruck",
+    "country": "austria",
+    "description": "Mountain city for active, scenic living"
+  },
+  {
+    "id": "istanbul",
+    "name": "Istanbul",
+    "country": "turkey",
+    "description": "Cultural мегacity bridging Europe and Asia"
+  },
+  {
+    "id": "izmir",
+    "name": "Izmir",
+    "country": "turkey",
+    "description": "Liberal coastal city with relaxed lifestyle"
+  },
+  {
+    "id": "jakarta",
+    "name": "Jakarta",
+    "country": "indonesia",
+    "description": "Massive capital with amenities"
+  },
+  {
+    "id": "jeju-island",
+    "name": "Jeju Island",
+    "country": "south-korea",
+    "description": "Volcanic island with mild climate"
+  },
+  {
+    "id": "kandy",
+    "name": "Kandy",
+    "country": "sri-lanka",
+    "description": "Hill city with cooler climate"
+  },
+  {
+    "id": "kaohsiung",
+    "name": "Kaohsiung",
+    "country": "taiwan",
+    "description": "Southern port city with warmth"
+  },
+  {
+    "id": "kotor",
+    "name": "Kotor",
+    "country": "montenegro",
+    "description": "Dramatic bay town with historic old city"
+  },
+  {
+    "id": "kuala-lumpur",
+    "name": "Kuala Lumpur",
+    "country": "malaysia",
+    "description": "Modern capital with world-class amenities and hospitals"
+  },
+  {
+    "id": "kutaisi",
+    "name": "Kutaisi",
+    "country": "georgia",
+    "description": "Quiet historic city with low costs"
+  },
+  {
+    "id": "la-serena",
+    "name": "La Serena",
+    "country": "chile",
+    "description": "Relaxed coastal city"
+  },
+  {
+    "id": "lagos",
+    "name": "Lagos",
+    "country": "portugal",
+    "description": "Relaxed Algarve town with beaches and sunny retirement lifestyle"
+  },
+  {
+    "id": "lake-como",
+    "name": "Lake Como",
+    "country": "italy",
+    "description": "Scenic lakeside living with premium European lifestyle"
+  },
+  {
+    "id": "langkawi",
+    "name": "Langkawi",
+    "country": "malaysia",
+    "description": "Relaxed island living with beaches and low taxes"
+  },
+  {
+    "id": "limassol",
+    "name": "Limassol",
+    "country": "cyprus",
+    "description": "Modern coastal city with healthcare and amenities"
+  },
+  {
+    "id": "lisbon",
+    "name": "Lisbon",
+    "country": "portugal",
+    "description": "Coastal capital with culture, history, healthcare, and strong expat life"
+  },
+  {
+    "id": "ljubljana",
+    "name": "Ljubljana",
+    "country": "slovenia",
+    "description": "Clean, green capital with relaxed pace"
+  },
+  {
+    "id": "loja",
+    "name": "Loja",
+    "country": "ecuador",
+    "description": "Quiet city with low costs"
+  },
+  {
+    "id": "lugano",
+    "name": "Lugano",
+    "country": "switzerland",
+    "description": "Italian-speaking lakeside city"
+  },
+  {
+    "id": "lyon",
+    "name": "Lyon",
+    "country": "france",
+    "description": "Food capital with strong healthcare and transport"
+  },
+  {
+    "id": "malaga",
+    "name": "Málaga",
+    "country": "spain",
+    "description": "Sunny Costa del Sol hub with strong expat community"
+  },
+  {
+    "id": "malmo",
+    "name": "Malmö",
+    "country": "sweden",
+    "description": "Diverse city connected to Europe"
+  },
+  {
+    "id": "marrakech",
+    "name": "Marrakech",
+    "country": "morocco",
+    "description": "Cultural city with markets and history"
+  },
+  {
+    "id": "medellin",
+    "name": "Medellín",
+    "country": "colombia",
+    "description": "Spring-climate city with innovation"
+  },
+  {
+    "id": "melbourne",
+    "name": "Melbourne",
+    "country": "australia",
+    "description": "Cultural city with healthcare excellence"
+  },
+  {
+    "id": "merida",
+    "name": "Mérida",
+    "country": "mexico",
+    "description": "Safe colonial city with low costs and strong expat base"
+  },
+  {
+    "id": "montevideo",
+    "name": "Montevideo",
+    "country": "uruguay",
+    "description": "Calm capital with European feel"
+  },
+  {
+    "id": "munich",
+    "name": "Munich",
+    "country": "germany",
+    "description": "Wealthy city with strong healthcare and services"
+  },
+  {
+    "id": "muscat",
+    "name": "Muscat",
+    "country": "oman",
+    "description": "Clean capital with traditional culture"
+  },
+  {
+    "id": "nice",
+    "name": "Nice",
+    "country": "france",
+    "description": "Mediterranean city with healthcare and coastal lifestyle"
+  },
+  {
+    "id": "nicosia",
+    "name": "Nicosia",
+    "country": "cyprus",
+    "description": "Capital with urban living and services"
+  },
+  {
+    "id": "odense",
+    "name": "Odense",
+    "country": "denmark",
+    "description": "Quiet historic town with lower costs"
+  },
+  {
+    "id": "osaka",
+    "name": "Osaka",
+    "country": "japan",
+    "description": "Lively city with food culture"
+  },
+  {
+    "id": "oslo",
+    "name": "Oslo",
+    "country": "norway",
+    "description": "Wealthy capital with nature access"
+  },
+  {
+    "id": "panama-city",
+    "name": "Panama City",
+    "country": "panama",
+    "description": "Modern capital with skyscrapers, healthcare, and conveniences"
+  },
+  {
+    "id": "paphos",
+    "name": "Paphos",
+    "country": "cyprus",
+    "description": "Popular retiree town with beaches and expat services"
+  },
+  {
+    "id": "penang",
+    "name": "Penang",
+    "country": "malaysia",
+    "description": "Cultural island with excellent food and affordable healthcare"
+  },
+  {
+    "id": "perth",
+    "name": "Perth",
+    "country": "australia",
+    "description": "Isolated city with beaches and sunshine"
+  },
+  {
+    "id": "phuket",
+    "name": "Phuket",
+    "country": "thailand",
+    "description": "Beach island with resorts and large expat population"
+  },
+  {
+    "id": "piran",
+    "name": "Piran",
+    "country": "slovenia",
+    "description": "Small coastal town with Venetian charm"
+  },
+  {
+    "id": "placencia",
+    "name": "Placencia",
+    "country": "belize",
+    "description": "Quiet beach village"
+  },
+  {
+    "id": "porto",
+    "name": "Porto",
+    "country": "portugal",
+    "description": "Charming riverside city with wine culture and lower living costs"
+  },
+  {
+    "id": "prague",
+    "name": "Prague",
+    "country": "czech-republic",
+    "description": "Beautiful capital with culture and healthcare"
+  },
+  {
+    "id": "puerto-plata",
+    "name": "Puerto Plata",
+    "country": "dominican-republic",
+    "description": "Affordable coastal city"
+  },
+  {
+    "id": "puerto-vallarta",
+    "name": "Puerto Vallarta",
+    "country": "mexico",
+    "description": "Popular beach town with healthcare and vibrant expat scene"
+  },
+  {
+    "id": "punta-cana",
+    "name": "Punta Cana",
+    "country": "dominican-republic",
+    "description": "Resort area with expat enclaves"
+  },
+  {
+    "id": "punta-del-este",
+    "name": "Punta del Este",
+    "country": "uruguay",
+    "description": "Resort beach town"
+  },
+  {
+    "id": "quito",
+    "name": "Quito",
+    "country": "ecuador",
+    "description": "Andean capital with historic center"
+  },
+  {
+    "id": "rabat",
+    "name": "Rabat",
+    "country": "morocco",
+    "description": "Calm capital with coastal feel"
+  },
+  {
+    "id": "ras-al-khaimah",
+    "name": "Ras Al Khaimah",
+    "country": "united-arab-emirates",
+    "description": "Quieter emirate with lower costs"
+  },
+  {
+    "id": "rhodes",
+    "name": "Rhodes",
+    "country": "greece",
+    "description": "Sunny island with relaxed pace and history"
+  },
+  {
+    "id": "rome",
+    "name": "Rome",
+    "country": "italy",
+    "description": "Historic capital with top hospitals and vibrant lifestyle"
+  },
+  {
+    "id": "rovinj",
+    "name": "Rovinj",
+    "country": "croatia",
+    "description": "Charming seaside town with Italian flair"
+  },
+  {
+    "id": "salalah",
+    "name": "Salalah",
+    "country": "oman",
+    "description": "Green monsoon city with cooler climate"
+  },
+  {
+    "id": "salzburg",
+    "name": "Salzburg",
+    "country": "austria",
+    "description": "Cultural alpine city with music heritage"
+  },
+  {
+    "id": "san-diego",
+    "name": "San Diego",
+    "country": "united-states",
+    "description": "Coastal city with mild climate"
+  },
+  {
+    "id": "san-miguel-de-allende",
+    "name": "San Miguel de Allende",
+    "country": "mexico",
+    "description": "Charming colonial town with arts and retirees"
+  },
+  {
+    "id": "santiago",
+    "name": "Santiago",
+    "country": "chile",
+    "description": "Modern capital with mountain views"
+  },
+  {
+    "id": "santo-domingo",
+    "name": "Santo Domingo",
+    "country": "dominican-republic",
+    "description": "Historic capital with urban life"
+  },
+  {
+    "id": "sarasota",
+    "name": "Sarasota",
+    "country": "united-states",
+    "description": "Florida retirement hub with beaches"
+  },
+  {
+    "id": "scottsdale",
+    "name": "Scottsdale",
+    "country": "united-states",
+    "description": "Desert city with golf and healthcare"
+  },
+  {
+    "id": "sentosa",
+    "name": "Sentosa",
+    "country": "singapore",
+    "description": "Resort island with luxury living"
+  },
+  {
+    "id": "seoul",
+    "name": "Seoul",
+    "country": "south-korea",
+    "description": "High-tech capital with excellent hospitals"
+  },
+  {
+    "id": "sliema",
+    "name": "Sliema",
+    "country": "malta",
+    "description": "Waterfront expat hub with services and amenities"
+  },
+  {
+    "id": "sohar",
+    "name": "Sohar",
+    "country": "oman",
+    "description": "Industrial coastal city"
+  },
+  {
+    "id": "sousse",
+    "name": "Sousse",
+    "country": "tunisia",
+    "description": "Affordable coastal city"
+  },
+  {
+    "id": "split",
+    "name": "Split",
+    "country": "croatia",
+    "description": "Historic coastal city with island access"
+  },
+  {
+    "id": "st-julians",
+    "name": "St Julian’s",
+    "country": "malta",
+    "description": "Lively coastal area with dining and expats"
+  },
+  {
+    "id": "stockholm",
+    "name": "Stockholm",
+    "country": "sweden",
+    "description": "Scenic capital spread across islands"
+  },
+  {
+    "id": "taichung",
+    "name": "Taichung",
+    "country": "taiwan",
+    "description": "Pleasant city with lower costs"
+  },
+  {
+    "id": "taipei",
+    "name": "Taipei",
+    "country": "taiwan",
+    "description": "Modern capital with outstanding healthcare"
+  },
+  {
+    "id": "tamarindo",
+    "name": "Tamarindo",
+    "country": "costa-rica",
+    "description": "Beach town with expats, surf culture, and relaxed living"
+  },
+  {
+    "id": "tampere",
+    "name": "Tampere",
+    "country": "finland",
+    "description": "Industrial city with lakes and culture"
+  },
+  {
+    "id": "tauranga",
+    "name": "Tauranga",
+    "country": "new-zealand",
+    "description": "Sunny beach city popular with retirees"
+  },
+  {
+    "id": "tbilisi",
+    "name": "Tbilisi",
+    "country": "georgia",
+    "description": "Affordable capital with culture and easy residency"
+  },
+  {
+    "id": "tivat",
+    "name": "Tivat",
+    "country": "montenegro",
+    "description": "Modern marina town with upscale living"
+  },
+  {
+    "id": "tokyo",
+    "name": "Tokyo",
+    "country": "japan",
+    "description": "Ultra-modern megacity with top healthcare"
+  },
+  {
+    "id": "trondheim",
+    "name": "Trondheim",
+    "country": "norway",
+    "description": "Historic university city with relaxed pace"
+  },
+  {
+    "id": "tunis",
+    "name": "Tunis",
+    "country": "tunisia",
+    "description": "Cultural capital with Mediterranean access"
+  },
+  {
+    "id": "turku",
+    "name": "Turku",
+    "country": "finland",
+    "description": "Historic coastal city with archipelago"
+  },
+  {
+    "id": "utrecht",
+    "name": "Utrecht",
+    "country": "netherlands",
+    "description": "Compact historic city with high livability"
+  },
+  {
+    "id": "valencia",
+    "name": "Valencia",
+    "country": "spain",
+    "description": "Affordable coastal city blending beaches, culture, and modern living"
+  },
+  {
+    "id": "valparaiso",
+    "name": "Valparaíso",
+    "country": "chile",
+    "description": "Colorful port city"
+  },
+  {
+    "id": "vancouver",
+    "name": "Vancouver",
+    "country": "canada",
+    "description": "Coastal metropolis with nature access"
+  },
+  {
+    "id": "victoria",
+    "name": "Victoria",
+    "country": "canada",
+    "description": "Mild climate city popular with retirees"
+  },
+  {
+    "id": "vienna",
+    "name": "Vienna",
+    "country": "austria",
+    "description": "Exceptionally livable city with world-class healthcare"
+  },
+  {
+    "id": "wellington",
+    "name": "Wellington",
+    "country": "new-zealand",
+    "description": "Compact capital with culture"
+  },
+  {
+    "id": "yogyakarta",
+    "name": "Yogyakarta",
+    "country": "indonesia",
+    "description": "Cultural city with low costs"
+  },
+  {
+    "id": "zurich",
+    "name": "Zurich",
+    "country": "switzerland",
+    "description": "Financial hub with top healthcare"
+  }
+]

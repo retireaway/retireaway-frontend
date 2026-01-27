@@ -1,62 +1,47 @@
-export type Country = Readonly<{
+export type Destination = Readonly<{
   id: string;
   name: string;
+  description: string;
   region: string;
   subregion: string;
+  topCities: readonly string[];
+  similarDestinations: readonly string[];
   climate: string;
-  tags: readonly string[];
-  image: string;
-  grade: string;
-  expenditure: {
+  expenditure: Readonly<{
     single: Readonly<{
-      currency: string;
-      amount: number;
+      monthly: Cost;
+      thirtyYearWithInflation: Cost;
     }>;
-    couple: Readonly<{
-      currency: string;
-      amount: number;
-    }>;
-  };
-  ratings: {
-    affordability: {
-      grade: string;
-      text: string;
+    couple: {
+      monthly: Cost;
+      thirtyYearWithInflation: Cost;
     };
-    economy: {
-      grade: string;
-      text: string;
-    };
-    healthcareCost: {
-      grade: string;
-      text: string;
-    };
-    healthcareQuality: {
-      grade: string;
-      text: string;
-    };
-    infrastructure: {
-      grade: string;
-      text: string;
-    };
-    personalSafety: {
-      grade: string;
-      text: string;
-    };
-    politicalStability: {
-      grade: string;
-      text: string;
-    };
-    taxEnvironment: {
-      grade: string;
-      text: string;
-    };
-    visaEase: {
-      grade: string;
-      text: string;
-    };
-    weatherComfort: {
-      grade: string;
-      text: string;
-    };
-  };
+  }>;
+  tags: readonly string[];
+  ratings: Readonly<Record<RatingKey, Rating>>;
+  grade: string;
+  pros: readonly string[];
+  cons: readonly string[];
 }>;
+
+export type Cost = Readonly<{
+  amount: number;
+  currency: string;
+}>;
+
+export type Rating = Readonly<{
+  label: string;
+  grade: string;
+}>;
+
+type RatingKey =
+  | "affordability"
+  | "healthcareQuality"
+  | "personalSafety"
+  | "politicalStability"
+  | "visaEase"
+  | "taxEnvironment"
+  | "infrastructure"
+  | "weatherComfort"
+  | "healthcareCost"
+  | "economy";
