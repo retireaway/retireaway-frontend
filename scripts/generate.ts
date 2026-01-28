@@ -24,6 +24,11 @@ async function generateDestinations() {
     | "expenditure_couple_30_year"
     | "expenditure_couple_30_year_with_inflation"
     | "tags"
+    | "life_expectancy"
+    | "population_density"
+    | "retirement_community"
+    | "english_usage"
+    | "crowds"
     | "affordability"
     | "healthcare_quality"
     | "personal_safety"
@@ -36,7 +41,8 @@ async function generateDestinations() {
     | "economy"
     | "grade"
     | "pros"
-    | "cons";
+    | "cons"
+    | "international_living";
 
   type Row = Readonly<Record<ColName, string>>;
 
@@ -71,6 +77,11 @@ async function generateDestinations() {
         },
       },
       tags: row["tags"].split(":"),
+      lifeExpectancy: row["life_expectancy"],
+      populationDensity: row["population_density"],
+      retirementCommunity: row["retirement_community"],
+      englishUsage: row["english_usage"],
+      crowds: row["crowds"],
       ratings: {
         affordability: toRating(row["affordability"]),
         healthcareQuality: toRating(row["healthcare_quality"]),
@@ -86,6 +97,7 @@ async function generateDestinations() {
       grade: row["grade"],
       pros: row["pros"].split(":"),
       cons: row["cons"].split(":"),
+      internationalLiving: row["international_living"] === "TRUE",
     };
   });
 

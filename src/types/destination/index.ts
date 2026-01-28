@@ -18,10 +18,16 @@ export type Destination = Readonly<{
     };
   }>;
   tags: readonly string[];
+  lifeExpectancy: string;
+  populationDensity: string;
+  retirementCommunity: string;
+  englishUsage: string;
+  crowds: string;
   ratings: Readonly<Record<RatingKey, Rating>>;
   grade: string;
   pros: readonly string[];
   cons: readonly string[];
+  internationalLiving: boolean;
 }>;
 
 export type Cost = Readonly<{

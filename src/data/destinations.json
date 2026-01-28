@@ -46,6 +46,11 @@
       "Beach Living",
       "Premium Cost"
     ],
+    "lifeExpectancy": "79",
+    "populationDensity": "Spacious",
+    "retirementCommunity": "Established",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Tourist-Heavy",
     "ratings": {
       "affordability": {
         "label": "Very High",
@@ -97,7 +102,8 @@
     "cons": [
       "high living costs",
       "difficult residency"
-    ]
+    ],
+    "internationalLiving": true
   },
   {
     "id": "austria",
@@ -143,6 +149,11 @@
       "Safe",
       "Premium Cost"
     ],
+    "lifeExpectancy": "80",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Established",
+    "englishUsage": "Commonly Used",
+    "crowds": "Moderate",
     "ratings": {
       "affordability": {
         "label": "Very High",
@@ -194,7 +205,8 @@
     "cons": [
       "very high living costs",
       "high taxes"
-    ]
+    ],
+    "internationalLiving": false
   },
   {
     "id": "belize",
@@ -242,6 +254,11 @@
       "English Spoken",
       "Beach Living"
     ],
+    "lifeExpectancy": "79",
+    "populationDensity": "Comfortable",
+    "retirementCommunity": "Thriving Hub",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Relaxed",
     "ratings": {
       "affordability": {
         "label": "Moderate",
@@ -293,7 +310,8 @@
     "cons": [
       "limited infrastructure",
       "developing healthcare"
-    ]
+    ],
+    "internationalLiving": true
   },
   {
     "id": "canada",
@@ -340,6 +358,11 @@
       "English Spoken",
       "Premium Cost"
     ],
+    "lifeExpectancy": "73",
+    "populationDensity": "Spacious",
+    "retirementCommunity": "Established",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Moderate",
     "ratings": {
       "affordability": {
         "label": "Very High",
@@ -392,7 +415,8 @@
       "cold climate",
       "high taxes",
       "expensive cities"
-    ]
+    ],
+    "internationalLiving": false
   },
   {
     "id": "chile",
@@ -438,6 +462,11 @@
       "Safe",
       "Large Expat Communities"
     ],
+    "lifeExpectancy": "72",
+    "populationDensity": "Comfortable",
+    "retirementCommunity": "Established",
+    "englishUsage": "Commonly Used",
+    "crowds": "Tourist-Heavy",
     "ratings": {
       "affordability": {
         "label": "High",
@@ -489,7 +518,8 @@
     "cons": [
       "earthquake risk",
       "rising costs"
-    ]
+    ],
+    "internationalLiving": true
   },
   {
     "id": "colombia",
@@ -537,6 +567,11 @@
       "Large Expat Communities",
       "Mountain Living"
     ],
+    "lifeExpectancy": "65",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Thriving Hub",
+    "englishUsage": "Minimal",
+    "crowds": "Very Crowded",
     "ratings": {
       "affordability": {
         "label": "Moderate",
@@ -588,7 +623,8 @@
     "cons": [
       "safety varies",
       "crowding in popular cities"
-    ]
+    ],
+    "internationalLiving": true
   },
   {
     "id": "costa-rica",
@@ -636,6 +672,11 @@
       "Safe",
       "Beach Living"
     ],
+    "lifeExpectancy": "73",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Thriving Hub",
+    "englishUsage": "Basic Available",
+    "crowds": "Relaxed",
     "ratings": {
       "affordability": {
         "label": "Moderate",
@@ -687,7 +728,8 @@
     "cons": [
       "costs rising",
       "limited infrastructure outside key areas"
-    ]
+    ],
+    "internationalLiving": true
   },
   {
     "id": "croatia",
@@ -734,6 +776,11 @@
       "Large Expat Communities",
       "Beach Living"
     ],
+    "lifeExpectancy": "79",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Growing Scene",
+    "englishUsage": "Commonly Used",
+    "crowds": "Tourist-Heavy",
     "ratings": {
       "affordability": {
         "label": "Moderate",
@@ -785,7 +832,8 @@
     "cons": [
       "seasonal crowds",
       "limited healthcare outside cities"
-    ]
+    ],
+    "internationalLiving": true
   },
   {
     "id": "cyprus",
@@ -834,6 +882,11 @@
       "Beach Living",
       "Tax Friendly"
     ],
+    "lifeExpectancy": "65",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Growing Scene",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Moderate",
     "ratings": {
       "affordability": {
         "label": "Moderate",
@@ -885,7 +938,8 @@
     "cons": [
       "limited public transport",
       "smaller healthcare system"
-    ]
+    ],
+    "internationalLiving": false
   },
   {
     "id": "czech-republic",
@@ -930,6 +984,11 @@
       "Safe",
       "Low Cost"
     ],
+    "lifeExpectancy": "80",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Established",
+    "englishUsage": "Commonly Used",
+    "crowds": "Moderate",
     "ratings": {
       "affordability": {
         "label": "Moderate",
@@ -982,7 +1041,8 @@
       "high taxes",
       "colder winters",
       "limited coastal lifestyle"
-    ]
+    ],
+    "internationalLiving": true
   },
   {
     "id": "denmark",
@@ -1029,6 +1089,11 @@
       "English Spoken",
       "Premium Cost"
     ],
+    "lifeExpectancy": "68",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Established",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Moderate",
     "ratings": {
       "affordability": {
         "label": "Very High",
@@ -1081,7 +1146,8 @@
       "very high costs",
       "high taxes",
       "limited sunshine"
-    ]
+    ],
+    "internationalLiving": false
   },
   {
     "id": "dominican-republic",
@@ -1128,6 +1194,11 @@
       "Large Expat Communities",
       "Beach Living"
     ],
+    "lifeExpectancy": "69",
+    "populationDensity": "Dense",
+    "retirementCommunity": "Thriving Hub",
+    "englishUsage": "Minimal",
+    "crowds": "Very Crowded",
     "ratings": {
       "affordability": {
         "label": "Moderate",
@@ -1179,7 +1250,8 @@
     "cons": [
       "healthcare concentrated in cities",
       "crowding"
-    ]
+    ],
+    "internationalLiving": true
   },
   {
     "id": "ecuador",
@@ -1226,6 +1298,11 @@
       "Safe",
       "Mountain Living"
     ],
+    "lifeExpectancy": "84",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Growing Scene",
+    "englishUsage": "Minimal",
+    "crowds": "Moderate",
     "ratings": {
       "affordability": {
         "label": "Low",
@@ -1277,7 +1354,8 @@
     "cons": [
       "developing infrastructure",
       "political risk"
-    ]
+    ],
+    "internationalLiving": true
   },
   {
     "id": "finland",
@@ -1325,6 +1403,11 @@
       "Low Crowds",
       "Premium Cost"
     ],
+    "lifeExpectancy": "68",
+    "populationDensity": "Comfortable",
+    "retirementCommunity": "Established",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Tranquil",
     "ratings": {
       "affordability": {
         "label": "Very High",
@@ -1378,7 +1461,8 @@
       "cold climate",
       "high cost",
       "limited lifestyle variety"
-    ]
+    ],
+    "internationalLiving": false
   },
   {
     "id": "france",
@@ -1424,6 +1508,11 @@
       "Warm Weather",
       "Safe"
     ],
+    "lifeExpectancy": "82",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Growing Scene",
+    "englishUsage": "Commonly Used",
+    "crowds": "Tourist-Heavy",
     "ratings": {
       "affordability": {
         "label": "High",
@@ -1475,7 +1564,8 @@
     "cons": [
       "high taxes",
       "higher costs in popular cities"
-    ]
+    ],
+    "internationalLiving": true
   },
   {
     "id": "georgia",
@@ -1521,6 +1611,11 @@
       "Easy Residency",
       "Tax Friendly"
     ],
+    "lifeExpectancy": "69",
+    "populationDensity": "Comfortable",
+    "retirementCommunity": "Growing Scene",
+    "englishUsage": "Commonly Used",
+    "crowds": "Moderate",
     "ratings": {
       "affordability": {
         "label": "Low",
@@ -1572,7 +1667,8 @@
     "cons": [
       "developing healthcare",
       "smaller expat support systems"
-    ]
+    ],
+    "internationalLiving": false
   },
   {
     "id": "germany",
@@ -1617,6 +1713,11 @@
       "Top Healthcare",
       "Safe"
     ],
+    "lifeExpectancy": "69",
+    "populationDensity": "Dense",
+    "retirementCommunity": "Established",
+    "englishUsage": "Commonly Used",
+    "crowds": "Tourist-Heavy",
     "ratings": {
       "affordability": {
         "label": "High",
@@ -1669,7 +1770,8 @@
       "high taxes",
       "dense cities",
       "colder climate"
-    ]
+    ],
+    "internationalLiving": true
   },
   {
     "id": "greece",
@@ -1716,6 +1818,11 @@
       "Beach Living",
       "Large Expat Communities"
     ],
+    "lifeExpectancy": "77",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Growing Scene",
+    "englishUsage": "Commonly Used",
+    "crowds": "Tourist-Heavy",
     "ratings": {
       "affordability": {
         "label": "Moderate",
@@ -1768,7 +1875,8 @@
       "bureaucracy",
       "tourist crowds",
       "uneven public services"
-    ]
+    ],
+    "internationalLiving": true
   },
   {
     "id": "indonesia",
@@ -1815,6 +1923,11 @@
       "Warm Weather",
       "Beach Living"
     ],
+    "lifeExpectancy": "67",
+    "populationDensity": "Dense",
+    "retirementCommunity": "Growing Scene",
+    "englishUsage": "Minimal",
+    "crowds": "Very Crowded",
     "ratings": {
       "affordability": {
         "label": "Low",
@@ -1866,7 +1979,8 @@
     "cons": [
       "congestion",
       "variable healthcare quality"
-    ]
+    ],
+    "internationalLiving": true
   },
   {
     "id": "ireland",
@@ -1912,6 +2026,11 @@
       "Safe",
       "English Spoken"
     ],
+    "lifeExpectancy": "66",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Established",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Tourist-Heavy",
     "ratings": {
       "affordability": {
         "label": "Very High",
@@ -1963,7 +2082,8 @@
     "cons": [
       "high housing costs",
       "weather variability"
-    ]
+    ],
+    "internationalLiving": true
   },
   {
     "id": "italy",
@@ -2010,6 +2130,11 @@
       "Large Expat Communities",
       "Top Healthcare"
     ],
+    "lifeExpectancy": "67",
+    "populationDensity": "Dense",
+    "retirementCommunity": "Growing Scene",
+    "englishUsage": "Minimal",
+    "crowds": "Very Crowded",
     "ratings": {
       "affordability": {
         "label": "Moderate",
@@ -2062,7 +2187,8 @@
       "dense cities",
       "bureaucracy",
       "limited english usage"
-    ]
+    ],
+    "internationalLiving": true
   },
   {
     "id": "japan",
@@ -2109,6 +2235,11 @@
       "Premium Cost",
       "Limited English"
     ],
+    "lifeExpectancy": "79",
+    "populationDensity": "Dense",
+    "retirementCommunity": "Established",
+    "englishUsage": "Minimal",
+    "crowds": "Very Crowded",
     "ratings": {
       "affordability": {
         "label": "Very High",
@@ -2161,7 +2292,8 @@
       "language barrier",
       "dense cities",
       "complex visas"
-    ]
+    ],
+    "internationalLiving": false
   },
   {
     "id": "malaysia",
@@ -2209,6 +2341,11 @@
       "Large Expat Communities",
       "English Spoken"
     ],
+    "lifeExpectancy": "75",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Thriving Hub",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Tourist-Heavy",
     "ratings": {
       "affordability": {
         "label": "Low",
@@ -2260,7 +2397,8 @@
     "cons": [
       "humid climate",
       "long-term visa rules can change"
-    ]
+    ],
+    "internationalLiving": true
   },
   {
     "id": "malta",
@@ -2308,6 +2446,11 @@
       "Beach Living",
       "Tax Friendly"
     ],
+    "lifeExpectancy": "73",
+    "populationDensity": "Very Dense",
+    "retirementCommunity": "Thriving Hub",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Tourist-Heavy",
     "ratings": {
       "affordability": {
         "label": "High",
@@ -2360,7 +2503,8 @@
       "very dense",
       "expensive housing",
       "tourist pressure"
-    ]
+    ],
+    "internationalLiving": true
   },
   {
     "id": "mexico",
@@ -2408,6 +2552,11 @@
       "Large Expat Communities",
       "Beach Living"
     ],
+    "lifeExpectancy": "83",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Thriving Hub",
+    "englishUsage": "Minimal",
+    "crowds": "Tourist-Heavy",
     "ratings": {
       "affordability": {
         "label": "Low",
@@ -2459,7 +2608,8 @@
     "cons": [
       "language barrier outside expat zones",
       "safety varies by region"
-    ]
+    ],
+    "internationalLiving": true
   },
   {
     "id": "montenegro",
@@ -2506,6 +2656,11 @@
       "Warm Weather",
       "Beach Living"
     ],
+    "lifeExpectancy": "78",
+    "populationDensity": "Comfortable",
+    "retirementCommunity": "Limited",
+    "englishUsage": "Commonly Used",
+    "crowds": "Relaxed",
     "ratings": {
       "affordability": {
         "label": "Moderate",
@@ -2557,7 +2712,8 @@
     "cons": [
       "developing healthcare",
       "smaller infrastructure base"
-    ]
+    ],
+    "internationalLiving": false
   },
   {
     "id": "morocco",
@@ -2602,6 +2758,11 @@
       "Low Cost",
       "Warm Weather"
     ],
+    "lifeExpectancy": "84",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Established",
+    "englishUsage": "Commonly Used",
+    "crowds": "Tourist-Heavy",
     "ratings": {
       "affordability": {
         "label": "Low",
@@ -2653,7 +2814,8 @@
     "cons": [
       "language barriers",
       "healthcare uneven outside cities"
-    ]
+    ],
+    "internationalLiving": false
   },
   {
     "id": "netherlands",
@@ -2700,6 +2862,11 @@
       "English Spoken",
       "Premium Cost"
     ],
+    "lifeExpectancy": "69",
+    "populationDensity": "Very Dense",
+    "retirementCommunity": "Established",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Very Crowded",
     "ratings": {
       "affordability": {
         "label": "Very High",
@@ -2751,7 +2918,8 @@
     "cons": [
       "very dense",
       "high housing and tax burden"
-    ]
+    ],
+    "internationalLiving": false
   },
   {
     "id": "new-zealand",
@@ -2799,6 +2967,11 @@
       "Low Crowds",
       "Premium Cost"
     ],
+    "lifeExpectancy": "69",
+    "populationDensity": "Comfortable",
+    "retirementCommunity": "Established",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Tranquil",
     "ratings": {
       "affordability": {
         "label": "Very High",
@@ -2851,7 +3024,8 @@
     "cons": [
       "high cost",
       "geographic isolation"
-    ]
+    ],
+    "internationalLiving": true
   },
   {
     "id": "norway",
@@ -2898,6 +3072,11 @@
       "English Spoken",
       "Premium Cost"
     ],
+    "lifeExpectancy": "67",
+    "populationDensity": "Comfortable",
+    "retirementCommunity": "Established",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Moderate",
     "ratings": {
       "affordability": {
         "label": "Very High",
@@ -2947,7 +3126,8 @@
     ],
     "cons": [
       "among the most expensive countries globally"
-    ]
+    ],
+    "internationalLiving": false
   },
   {
     "id": "oman",
@@ -2995,6 +3175,11 @@
       "Tax Friendly",
       "Low Crowds"
     ],
+    "lifeExpectancy": "78",
+    "populationDensity": "Comfortable",
+    "retirementCommunity": "Established",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Relaxed",
     "ratings": {
       "affordability": {
         "label": "High",
@@ -3047,7 +3232,8 @@
     "cons": [
       "hot weather",
       "limited expat amenities"
-    ]
+    ],
+    "internationalLiving": false
   },
   {
     "id": "panama",
@@ -3094,6 +3280,11 @@
       "Tax Friendly",
       "Warm Weather"
     ],
+    "lifeExpectancy": "65",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Thriving Hub",
+    "englishUsage": "Basic Available",
+    "crowds": "Moderate",
     "ratings": {
       "affordability": {
         "label": "Moderate",
@@ -3145,7 +3336,8 @@
     "cons": [
       "hot climate",
       "healthcare quality uneven outside panama city"
-    ]
+    ],
+    "internationalLiving": true
   },
   {
     "id": "philippines",
@@ -3194,6 +3386,11 @@
       "English Spoken",
       "Beach Living"
     ],
+    "lifeExpectancy": "69",
+    "populationDensity": "Dense",
+    "retirementCommunity": "Thriving Hub",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Tourist-Heavy",
     "ratings": {
       "affordability": {
         "label": "Low",
@@ -3245,7 +3442,8 @@
     "cons": [
       "infrastructure gaps",
       "natural disaster exposure"
-    ]
+    ],
+    "internationalLiving": true
   },
   {
     "id": "portugal",
@@ -3293,6 +3491,11 @@
       "Large Expat Communities",
       "Tax Friendly"
     ],
+    "lifeExpectancy": "69",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Thriving Hub",
+    "englishUsage": "Commonly Used",
+    "crowds": "Moderate",
     "ratings": {
       "affordability": {
         "label": "Moderate",
@@ -3346,7 +3549,8 @@
       "rising housing costs",
       "moderate taxes",
       "popular cities getting crowded"
-    ]
+    ],
+    "internationalLiving": true
   },
   {
     "id": "singapore",
@@ -3395,6 +3599,11 @@
       "Premium Cost",
       "Tropical Paradise"
     ],
+    "lifeExpectancy": "67",
+    "populationDensity": "Very Dense",
+    "retirementCommunity": "Growing Scene",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Very Crowded",
     "ratings": {
       "affordability": {
         "label": "Very High",
@@ -3446,7 +3655,8 @@
     "cons": [
       "extremely high costs",
       "dense living"
-    ]
+    ],
+    "internationalLiving": true
   },
   {
     "id": "slovenia",
@@ -3491,6 +3701,11 @@
       "Safe",
       "Low Crowds"
     ],
+    "lifeExpectancy": "74",
+    "populationDensity": "Comfortable",
+    "retirementCommunity": "Established",
+    "englishUsage": "Commonly Used",
+    "crowds": "Tranquil",
     "ratings": {
       "affordability": {
         "label": "High",
@@ -3543,7 +3758,8 @@
     "cons": [
       "higher taxes",
       "limited expat ecosystem"
-    ]
+    ],
+    "internationalLiving": false
   },
   {
     "id": "south-korea",
@@ -3590,6 +3806,11 @@
       "Premium Cost",
       "Limited English"
     ],
+    "lifeExpectancy": "77",
+    "populationDensity": "Very Dense",
+    "retirementCommunity": "Established",
+    "englishUsage": "Minimal",
+    "crowds": "Very Crowded",
     "ratings": {
       "affordability": {
         "label": "High",
@@ -3641,7 +3862,8 @@
       "dense urban living",
       "limited english",
       "high pressure culture"
-    ]
+    ],
+    "internationalLiving": false
   },
   {
     "id": "spain",
@@ -3687,6 +3909,11 @@
       "Large Expat Communities",
       "Beach Living"
     ],
+    "lifeExpectancy": "73",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Thriving Hub",
+    "englishUsage": "Commonly Used",
+    "crowds": "Tourist-Heavy",
     "ratings": {
       "affordability": {
         "label": "Moderate",
@@ -3739,7 +3966,8 @@
       "high taxes",
       "tourist congestion",
       "bureaucracy in some regions"
-    ]
+    ],
+    "internationalLiving": true
   },
   {
     "id": "sri-lanka",
@@ -3786,6 +4014,11 @@
       "Warm Weather",
       "Beach Living"
     ],
+    "lifeExpectancy": "85",
+    "populationDensity": "Dense",
+    "retirementCommunity": "Established",
+    "englishUsage": "Commonly Used",
+    "crowds": "Moderate",
     "ratings": {
       "affordability": {
         "label": "Low",
@@ -3836,7 +4069,8 @@
     "cons": [
       "political and economic instability",
       "developing infrastructure"
-    ]
+    ],
+    "internationalLiving": false
   },
   {
     "id": "sweden",
@@ -3883,6 +4117,11 @@
       "English Spoken",
       "Premium Cost"
     ],
+    "lifeExpectancy": "71",
+    "populationDensity": "Comfortable",
+    "retirementCommunity": "Established",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Moderate",
     "ratings": {
       "affordability": {
         "label": "Very High",
@@ -3935,7 +4174,8 @@
       "cold climate",
       "high taxes",
       "higher costs"
-    ]
+    ],
+    "internationalLiving": false
   },
   {
     "id": "switzerland",
@@ -3982,6 +4222,11 @@
       "Premium Cost",
       "Mountain Living"
     ],
+    "lifeExpectancy": "76",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Established",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Moderate",
     "ratings": {
       "affordability": {
         "label": "Very High",
@@ -4033,7 +4278,8 @@
     "cons": [
       "extremely high costs",
       "difficult residency"
-    ]
+    ],
+    "internationalLiving": false
   },
   {
     "id": "taiwan",
@@ -4080,6 +4326,11 @@
       "Low Cost",
       "Limited English"
     ],
+    "lifeExpectancy": "83",
+    "populationDensity": "Dense",
+    "retirementCommunity": "Established",
+    "englishUsage": "Minimal",
+    "crowds": "Very Crowded",
     "ratings": {
       "affordability": {
         "label": "Moderate",
@@ -4131,7 +4382,8 @@
     "cons": [
       "crowded cities",
       "visa difficulty"
-    ]
+    ],
+    "internationalLiving": false
   },
   {
     "id": "thailand",
@@ -4179,6 +4431,11 @@
       "Large Expat Communities",
       "Beach Living"
     ],
+    "lifeExpectancy": "65",
+    "populationDensity": "Dense",
+    "retirementCommunity": "Thriving Hub",
+    "englishUsage": "Basic Available",
+    "crowds": "Very Crowded",
     "ratings": {
       "affordability": {
         "label": "Low",
@@ -4231,7 +4488,8 @@
       "crowded hotspots",
       "visa uncertainty",
       "language barrier"
-    ]
+    ],
+    "internationalLiving": true
   },
   {
     "id": "tunisia",
@@ -4278,6 +4536,11 @@
       "Beach Living",
       "Low Crowds"
     ],
+    "lifeExpectancy": "80",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Established",
+    "englishUsage": "Commonly Used",
+    "crowds": "Moderate",
     "ratings": {
       "affordability": {
         "label": "Low",
@@ -4329,7 +4592,8 @@
     "cons": [
       "developing healthcare",
       "moderate political risk"
-    ]
+    ],
+    "internationalLiving": false
   },
   {
     "id": "turkey",
@@ -4375,6 +4639,11 @@
       "Warm Weather",
       "Beach Living"
     ],
+    "lifeExpectancy": "66",
+    "populationDensity": "Dense",
+    "retirementCommunity": "Established",
+    "englishUsage": "Minimal",
+    "crowds": "Very Crowded",
     "ratings": {
       "affordability": {
         "label": "Low",
@@ -4427,7 +4696,8 @@
       "political volatility",
       "crowding",
       "currency instability"
-    ]
+    ],
+    "internationalLiving": false
   },
   {
     "id": "united-arab-emirates",
@@ -4475,6 +4745,11 @@
       "Tax Friendly",
       "Premium Cost"
     ],
+    "lifeExpectancy": "67",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Growing Scene",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Very Crowded",
     "ratings": {
       "affordability": {
         "label": "Very High",
@@ -4527,7 +4802,8 @@
       "hot climate",
       "high costs",
       "residency complexity"
-    ]
+    ],
+    "internationalLiving": false
   },
   {
     "id": "united-kingdom",
@@ -4574,6 +4850,11 @@
       "English Spoken",
       "Premium Cost"
     ],
+    "lifeExpectancy": "71",
+    "populationDensity": "Dense",
+    "retirementCommunity": "Thriving Hub",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Very Crowded",
     "ratings": {
       "affordability": {
         "label": "Very High",
@@ -4626,7 +4907,8 @@
       "high costs",
       "crowded cities",
       "visa complexity"
-    ]
+    ],
+    "internationalLiving": false
   },
   {
     "id": "united-states",
@@ -4672,6 +4954,11 @@
       "English Spoken",
       "Premium Cost"
     ],
+    "lifeExpectancy": "67",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Established",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Very Crowded",
     "ratings": {
       "affordability": {
         "label": "Very High",
@@ -4723,7 +5010,8 @@
       "very high healthcare costs",
       "complex insurance",
       "taxes"
-    ]
+    ],
+    "internationalLiving": false
   },
   {
     "id": "uruguay",
@@ -4771,6 +5059,11 @@
       "Large Expat Communities",
       "Beach Living"
     ],
+    "lifeExpectancy": "72",
+    "populationDensity": "Comfortable",
+    "retirementCommunity": "Established",
+    "englishUsage": "Commonly Used",
+    "crowds": "Relaxed",
     "ratings": {
       "affordability": {
         "label": "High",
@@ -4822,7 +5115,8 @@
     "cons": [
       "higher costs than neighbors",
       "smaller expat scene"
-    ]
+    ],
+    "internationalLiving": true
   },
   {
     "id": "vietnam",
@@ -4870,6 +5164,11 @@
       "Easy Residency",
       "Beach Living"
     ],
+    "lifeExpectancy": "75",
+    "populationDensity": "Dense",
+    "retirementCommunity": "Growing Scene",
+    "englishUsage": "Minimal",
+    "crowds": "Very Crowded",
     "ratings": {
       "affordability": {
         "label": "Low",
@@ -4922,6 +5221,7 @@
       "crowded cities",
       "pollution",
       "evolving healthcare standards"
-    ]
+    ],
+    "internationalLiving": true
   }
 ]
