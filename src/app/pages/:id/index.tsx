@@ -12,39 +12,51 @@ import { DestinationCard } from "@/components/destination-card";
 
 import InternationalLivingLogo from "@/assets/svg/international-living-logo.svg?react";
 
-export function DestinationProfile() {
-  const { id, tab } = Wouter.useParams();
+type Tab = "overview" | "ratings";
 
-  if (id === undefined) {
+function isTab(value: unknown): value is Tab {
+  const isOverview = value === "overview";
+  const isRatings = value === "ratings";
+  return isOverview || isRatings;
+}
+
+export function DestinationProfile() {
+  const params = Wouter.useParams();
+
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, left: 0 });
+  }, []);
+
+  if (params["id"] === undefined) {
     return (
       <section>
         <header>
-          <h1>Missing Parameter ":id"</h1>
+          <h1>Missing Parameter :id</h1>
           <p>Expected paramter ":id" in url "/:id/:tab"</p>
         </header>
       </section>
     );
   }
 
-  if (tab === undefined) {
+  if (!isTab(params["tab"])) {
     return (
       <section>
         <header>
-          <h1>Missing Parameter ":id"</h1>
-          <p>Expected paramter ":tab" in url "/:id/:tab"</p>
+          <h1>Invalid Parameter :tab</h1>
+          <p>Must be one of "overview", "ratings"</p>
         </header>
       </section>
     );
   }
 
-  const destination = destinations.find((d) => d.id === id);
+  const destination = destinations.find((d) => d.id === params["id"]);
 
   if (destination === undefined) {
     return (
       <section>
         <header>
           <h1>Destination Not Found</h1>
-          <p>No destination with id {id}</p>
+          <p>No destination with id {params["id"]}</p>
         </header>
       </section>
     );
@@ -54,10 +66,6 @@ export function DestinationProfile() {
   const topCities: readonly City[] = cities.filter((city) =>
     destination.topCities.includes(city.id),
   );
-
-  React.useEffect(() => {
-    window.scrollTo({ top: 0, left: 0 });
-  }, []);
 
   return (
     <section className="relative">
@@ -157,21 +165,37 @@ export function DestinationProfile() {
       </ul>
 
       <ul className="flex border-b-1 border-neutral-100">
-        <li className="grow p-4 text-center font-medium text-neutral-600">
-          Overview
+        <li className="flex grow justify-center">
+          <Wouter.Link
+            replace={true}
+            href={`/${destination.id}/overview`}
+            className={`p-4 text-center ${params["tab"] === "overview" ? "font-medium text-neutral-600" : "text-neutral-400"} `}
+          >
+            Overview
+          </Wouter.Link>
         </li>
-        <li className="grow p-4 text-center font-normal text-neutral-400">
-          Ratings
+        <li className="flex grow justify-center">
+          <Wouter.Link
+            replace={true}
+            href={`/${destination.id}/ratings`}
+            className={`p-4 text-center ${params["tab"] === "ratings" ? "font-medium text-neutral-600" : "text-neutral-400"} `}
+          >
+            Ratings
+          </Wouter.Link>
         </li>
       </ul>
 
-      <Overview
-        topCities={topCities}
-        destination={destination}
-        similarDestinations={destinations.filter((d) =>
-          destination.similarDestinations.includes(d.id),
-        )}
-      />
+      {params["tab"] === "overview" && (
+        <Overview
+          topCities={topCities}
+          destination={destination}
+          similarDestinations={destinations.filter((d) =>
+            destination.similarDestinations.includes(d.id),
+          )}
+        />
+      )}
+
+      {params["tab"] === "ratings" && <Ratings destination={destination} />}
     </section>
   );
 }
@@ -385,5 +409,89 @@ function Cost({
         </article>
       </li>
     </ul>
+  );
+}
+
+function Ratings({ destination }: { destination: Destination }) {
+  const _ = Object.entries(destination.ratings);
+
+  const __: Record<string, string> = {
+    affordability: "Affordability",
+    healthcareQuality: "Healthcare",
+    personalSafety: "Personal Safety",
+    politicalStability: "Political Stability",
+    visaEase: "Visa Ease",
+    taxEnvironment: "Tax Environment",
+    infrastructure: "Infrastructure",
+    weatherComfort: "Weather Comfort",
+    healthcareCost: "Healthcare Cost",
+    economy: "Economy",
+  };
+
+  return (
+    <section className="flex flex-col gap-8 p-4">
+      <div className="flex flex-col gap-4 p-4">
+        <p className="text-lg font-medium text-neutral-600">
+          Core Quality Factors
+        </p>
+
+        <ul className="flex flex-col gap-2">
+          {_.map(([key, value]) => {
+            if (key === "visaEase" || key === "taxEnvironment") return;
+
+            return (
+              <React.Fragment key={key}>
+                <li className="flex flex-row items-end gap-2 py-2">
+                  <div className="flex grow flex-col items-start justify-between">
+                    <span className="grow text-sm font-normal text-neutral-400">
+                      {__[key]}
+                    </span>
+                    <span className="text-lg font-medium text-neutral-600">
+                      {value.label}
+                    </span>
+                  </div>
+
+                  <span className="text-lg font-semibold text-neutral-600">
+                    {value.grade}
+                  </span>
+                </li>
+                <div className="h-px bg-neutral-100" />
+              </React.Fragment>
+            );
+          })}
+        </ul>
+      </div>
+
+      <div className="flex flex-col gap-4 p-4">
+        <p className="text-lg font-medium text-neutral-600">
+          Practical Considerations
+        </p>
+
+        <ul className="flex flex-col gap-2">
+          {_.map(([key, value]) => {
+            if (!(key === "visaEase" || key === "taxEnvironment")) return;
+
+            return (
+              <React.Fragment key={key}>
+                <li className="flex flex-col gap-2 py-2">
+                  <span className="grow text-sm font-normal text-neutral-400">
+                    {__[key]}
+                  </span>
+                  <div className="flex items-center justify-between">
+                    <span className="text-lg font-medium text-neutral-600">
+                      {value.label}
+                    </span>
+                    <span className="text-lg font-bold text-neutral-600">
+                      {value.grade}
+                    </span>
+                  </div>
+                </li>
+                <div className="h-px bg-neutral-100" />
+              </React.Fragment>
+            );
+          })}
+        </ul>
+      </div>
+    </section>
   );
 }
