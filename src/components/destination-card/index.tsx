@@ -1,3 +1,4 @@
+import * as Wouter from "wouter";
 import React from "react";
 import * as Lucide from "lucide-react";
 
@@ -132,7 +133,7 @@ export function DestinationCard({ destination }: { destination: Destination }) {
             {destination.tags.map((region) => {
               return (
                 <li key={region} className="snap-start">
-                  <Chip color="blue" fill="light" size="sm">
+                  <Chip color="blue" fill="light" size="xs">
                     {region}
                   </Chip>
                 </li>
@@ -140,6 +141,16 @@ export function DestinationCard({ destination }: { destination: Destination }) {
             })}
           </ul>
         </div>
+
+        <div className="h-px bg-neutral-100" />
+
+        <Wouter.Link
+          href={`/${destination.id}/overview`}
+          className="rounded-lg text-center text-sm font-medium text-neutral-700"
+        >
+          View Details
+        </Wouter.Link>
+
         <div />
       </div>
     </article>
