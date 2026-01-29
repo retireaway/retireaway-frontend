@@ -3,7 +3,7 @@ import React from "react";
 import * as Lucide from "lucide-react";
 
 import { Rating } from "@/components/rating";
-import { climateToIcon, gradeToColor } from "@/utils/mappings";
+import { climateToIcon } from "@/utils/mappings";
 import type { Destination } from "@/types/destination";
 import { Chip } from "@/components/chip";
 
@@ -50,14 +50,6 @@ export function DestinationCard({ destination }: { destination: Destination }) {
         />
 
         <div className="absolute inset-0 top-0 left-0 h-full w-full rounded-xl bg-linear-to-b from-black/0 from-30% to-black/60" />
-
-        <div className="absolute top-0 right-0 flex w-full justify-end p-4">
-          <div
-            className={`flex h-10 w-10 items-center justify-center rounded-full border-2 border-white ${gradeToColor(destination.grade).bg} text-xl font-bold text-white`}
-          >
-            {destination.grade}
-          </div>
-        </div>
 
         <div className="absolute bottom-0 w-full p-4">
           <header>
