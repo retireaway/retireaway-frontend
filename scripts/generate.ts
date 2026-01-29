@@ -52,54 +52,56 @@ async function generateDestinations() {
   const csv = await fs.readFile(source, { encoding: "utf8" });
   const parsed: readonly Row[] = parse(csv, { columns: true });
 
-  const destinations = parsed.map((row) => {
-    return {
-      id: row["id"],
-      name: row["name"],
-      description: row["description"],
-      region: row["region"],
-      subregion: row["subregion"],
-      topCities: row["top_cities"].split(":"),
-      similarDestinations: row["similar_destinations"].split(":"),
-      climate: row["climate"],
-      expenditure: {
-        single: {
-          monthly: toMoney(row["expenditure_single"]),
-          thirtyYearWithInflation: toMoney(
-            row["expenditure_single_30_year_with_inflation"],
-          ),
+  const destinations = parsed
+    .map((row) => {
+      return {
+        id: row["id"],
+        name: row["name"],
+        description: row["description"],
+        region: row["region"],
+        subregion: row["subregion"],
+        topCities: row["top_cities"].split(":"),
+        similarDestinations: row["similar_destinations"].split(":"),
+        climate: row["climate"],
+        expenditure: {
+          single: {
+            monthly: toMoney(row["expenditure_single"]),
+            thirtyYearWithInflation: toMoney(
+              row["expenditure_single_30_year_with_inflation"],
+            ),
+          },
+          couple: {
+            monthly: toMoney(row["expenditure_couple"]),
+            thirtyYearWithInflation: toMoney(
+              row["expenditure_couple_30_year_with_inflation"],
+            ),
+          },
         },
-        couple: {
-          monthly: toMoney(row["expenditure_couple"]),
-          thirtyYearWithInflation: toMoney(
-            row["expenditure_couple_30_year_with_inflation"],
-          ),
+        tags: row["tags"].split(":"),
+        lifeExpectancy: row["life_expectancy"],
+        populationDensity: row["population_density"],
+        retirementCommunity: row["retirement_community"],
+        englishUsage: row["english_usage"],
+        crowds: row["crowds"],
+        ratings: {
+          affordability: toRating(row["affordability"]),
+          healthcareQuality: toRating(row["healthcare_quality"]),
+          personalSafety: toRating(row["personal_safety"]),
+          politicalStability: toRating(row["political_stability"]),
+          visaEase: toRating(row["visa_ease"]),
+          taxEnvironment: toRating(row["tax_environment"]),
+          infrastructure: toRating(row["infrastructure"]),
+          weatherComfort: toRating(row["weather_comfort"]),
+          healthcareCost: toRating(row["healthcare_cost"]),
+          economy: toRating(row["economy"]),
         },
-      },
-      tags: row["tags"].split(":"),
-      lifeExpectancy: row["life_expectancy"],
-      populationDensity: row["population_density"],
-      retirementCommunity: row["retirement_community"],
-      englishUsage: row["english_usage"],
-      crowds: row["crowds"],
-      ratings: {
-        affordability: toRating(row["affordability"]),
-        healthcareQuality: toRating(row["healthcare_quality"]),
-        personalSafety: toRating(row["personal_safety"]),
-        politicalStability: toRating(row["political_stability"]),
-        visaEase: toRating(row["visa_ease"]),
-        taxEnvironment: toRating(row["tax_environment"]),
-        infrastructure: toRating(row["infrastructure"]),
-        weatherComfort: toRating(row["weather_comfort"]),
-        healthcareCost: toRating(row["healthcare_cost"]),
-        economy: toRating(row["economy"]),
-      },
-      grade: row["grade"],
-      pros: row["pros"].split(":"),
-      cons: row["cons"].split(":"),
-      internationalLiving: row["international_living"] === "TRUE",
-    };
-  });
+        grade: row["grade"],
+        pros: row["pros"].split(":"),
+        cons: row["cons"].split(":"),
+        internationalLiving: row["international_living"] === "TRUE",
+      };
+    })
+    .filter((d) => d.internationalLiving);
 
   fs.writeFile(sink, JSON.stringify(destinations, null, 2));
 }
