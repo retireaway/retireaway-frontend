@@ -8,7 +8,6 @@ import destinations from "@/data/destinations.json" with { type: "json" };
 import { climateToIcon } from "@/utils/mappings";
 import type { Cost, Destination } from "@/types/destination";
 import type { City } from "@/types/city";
-import { DestinationCard } from "@/components/destination-card";
 
 import InternationalLivingLogo from "@/assets/svg/international-living-logo.svg?react";
 
@@ -24,8 +23,9 @@ export function DestinationProfile() {
   const params = Wouter.useParams();
 
   React.useEffect(() => {
+    console.log("scrolling to top");
     window.scrollTo({ top: 0, left: 0 });
-  }, []);
+  }, [params["id"]]);
 
   if (params["id"] === undefined) {
     return (
@@ -80,7 +80,7 @@ export function DestinationProfile() {
 
         <button
           onClick={() => history.back()}
-          className="absolute top-0 right-0 flex w-full items-center justify-start gap-2 p-4"
+          className="absolute top-0 left-0 flex w-min items-center justify-start gap-2 p-4"
         >
           <Lucide.ArrowLeft className="size-6 text-white" />
         </button>
@@ -209,6 +209,8 @@ function Overview({
   topCities: readonly City[];
   similarDestinations: readonly Destination[];
 }) {
+  const ClimateIcon = climateToIcon(destination.climate);
+
   return (
     <div className="flex flex-col gap-8 py-2">
       <p className="p-4 text-base leading-[1.5] text-neutral-500">
@@ -341,11 +343,48 @@ function Overview({
             Similar Destinations To Consider
           </p>
 
-          <ul className="scrollbar-none flex w-full snap-x snap-mandatory snap-always flex-row gap-2 overflow-x-auto">
+          <ul className="flex flex-col gap-2">
             {similarDestinations.map((destination) => {
               return (
-                <li key={destination.id} className="w-90 snap-start">
-                  <DestinationCard destination={destination} />
+                <li key={destination.id}>
+                  <Wouter.Link href={`/${destination.id}/overview`}>
+                    <article className="max-w-120 rounded-xl border-1 border-neutral-100 bg-white">
+                      <div className="relative h-40 rounded-xl bg-black">
+                        <img
+                          src={`/images/destinations/${destination.id}/${destination.id}.webp`}
+                          className="absolute inset-0 h-full w-full rounded-xl object-cover"
+                          alt={`scenic image of ${destination.name}`}
+                        />
+
+                        <div className="absolute inset-0 top-0 left-0 h-full w-full rounded-xl bg-linear-to-b from-black/0 from-10% to-black/75" />
+
+                        <div className="absolute bottom-0 w-full p-4">
+                          <header>
+                            <div className="grow">
+                              <h1 className="text-2xl font-semibold text-white">
+                                {destination.name}
+                              </h1>
+                              <div className="flex flex-row items-center justify-start gap-2">
+                                <div className="flex flex-row items-center justify-center gap-0.5">
+                                  <Lucide.MapPin className="size-3.5 text-white" />
+                                  <span className="text-sm font-medium text-white">
+                                    {destination.region}
+                                  </span>
+                                </div>
+                                <Lucide.Circle className="size-1.5 fill-yellow-400 stroke-yellow-400" />
+                                <div className="flex flex-row items-center justify-center gap-0.5">
+                                  <ClimateIcon className="size-3.5 text-white" />
+                                  <span className="text-sm font-medium text-white">
+                                    {destination.climate}
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </header>
+                        </div>
+                      </div>
+                    </article>
+                  </Wouter.Link>
                 </li>
               );
             })}
