@@ -257,38 +257,70 @@ function Overview({
         </div>
       </div>
 
-      <section className="flex flex-col gap-8 border-t-1 border-b-1 border-neutral-100 bg-neutral-50/50 px-4 py-8">
-        <header className="flex flex-col gap-2">
-          <h3 className="text-center text-lg font-medium text-neutral-600">
-            30-Year Retirement Cost Estimate
-          </h3>
-          <p className="text-center text-sm text-neutral-500">
-            Total cost for retiring in {destination.name} over 30 years
-          </p>
-        </header>
+      <div>
+        <section className="flex flex-col gap-8 border-t-1 border-b-1 border-neutral-100 bg-neutral-50/50 px-4 py-8">
+          <header className="flex flex-col gap-2">
+            <h3 className="text-center text-lg font-medium text-neutral-600">
+              30-Year Retirement Cost Estimate
+            </h3>
+            <p className="text-center text-sm text-neutral-500">
+              Total cost for retiring in {destination.name} over 30 years
+            </p>
+          </header>
 
-        <div className="flex flex-col gap-2">
-          <ul className="grid grid-cols-2 gap-2">
-            <li className="text-center font-medium text-neutral-600">Single</li>
-            <li className="text-center font-medium text-neutral-600">Couple</li>
-          </ul>
+          <div className="flex flex-col gap-2">
+            <ul className="grid grid-cols-2 gap-2">
+              <li className="text-center font-medium text-neutral-600">
+                Single
+              </li>
+              <li className="text-center font-medium text-neutral-600">
+                Couple
+              </li>
+            </ul>
 
-          <ul className="grid grid-cols-2 gap-2">
-            <Cost
-              monthly={destination.expenditure.single.monthly}
-              thirtyYearWithInflation={
-                destination.expenditure.single.thirtyYearWithInflation
-              }
-            />
-            <Cost
-              monthly={destination.expenditure.couple.monthly}
-              thirtyYearWithInflation={
-                destination.expenditure.couple.thirtyYearWithInflation
-              }
-            />
-          </ul>
-        </div>
-      </section>
+            <ul className="grid grid-cols-2 gap-2">
+              <Cost
+                monthly={destination.expenditure.single.monthly}
+                thirtyYearWithInflation={
+                  destination.expenditure.single.thirtyYearWithInflation
+                }
+              />
+              <Cost
+                monthly={destination.expenditure.couple.monthly}
+                thirtyYearWithInflation={
+                  destination.expenditure.couple.thirtyYearWithInflation
+                }
+              />
+            </ul>
+          </div>
+        </section>
+
+        {destination.internationalLiving && (
+          <div className="flex flex-col items-center gap-4 bg-[#002c4e] px-6 py-12">
+            <InternationalLivingLogo />
+            <h3 className="text-center text-2xl leading-[1.5] font-semibold text-white capitalize">
+              want more in-depth <br /> information on{" "}
+              <span className="font-bold text-[#fbe232]">
+                {destination.name}?
+              </span>
+            </h3>
+            <p className="text-center text-white">
+              Get detailed insights, expat stories, and on-the-ground reports
+              from International Living
+            </p>
+
+            <div />
+
+            <a
+              target="blank"
+              href={`https://internationalliving.com/countries/${destination.id}/`}
+              className="rounded-lg bg-[#fbe232] px-4 py-3 text-sm font-semibold text-[#002c4e]"
+            >
+              Visit International Living
+            </a>
+          </div>
+        )}
+      </div>
 
       <div className="flex flex-col gap-6 p-4">
         <p className="text-lg font-medium text-neutral-600">
@@ -310,32 +342,6 @@ function Overview({
           })}
         </ul>
       </div>
-
-      {destination.internationalLiving && (
-        <div className="flex flex-col items-center gap-4 bg-[#002c4e] px-6 py-12">
-          <InternationalLivingLogo />
-          <h3 className="text-center text-2xl leading-[1.5] font-semibold text-white capitalize">
-            want more in-depth <br /> information on{" "}
-            <span className="font-bold text-[#fbe232]">
-              {destination.name}?
-            </span>
-          </h3>
-          <p className="text-center text-white">
-            Get detailed insights, expat stories, and on-the-ground reports from
-            International Living
-          </p>
-
-          <div />
-
-          <a
-            target="blank"
-            href={`https://internationalliving.com/countries/${destination.id}/`}
-            className="rounded-lg bg-[#fbe232] px-4 py-3 text-sm font-semibold text-[#002c4e]"
-          >
-            Visit International Living
-          </a>
-        </div>
-      )}
 
       {0 !== similarDestinations.length && (
         <div className="flex flex-col gap-6 p-4">
