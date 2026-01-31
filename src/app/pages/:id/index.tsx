@@ -67,7 +67,7 @@ export function DestinationProfile() {
   );
 
   return (
-    <section className="relative flex min-h-svh flex-col xl:flex-row xl:gap-4">
+    <section className="relative m-auto flex min-h-svh max-w-[1700px] flex-col xl:flex-row xl:gap-4">
       <div className="flex basis-3/5 flex-col xl:sticky xl:top-0 xl:left-0 xl:h-svh xl:gap-4 xl:p-8 xl:pr-0">
         <Hero destination={destination} />
         <ul className="grid grid-cols-2 gap-4 border-b-1 border-neutral-100 bg-neutral-50/50 px-4 py-6 xl:grid-cols-4 xl:rounded-xl xl:border-1">
