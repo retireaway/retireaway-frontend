@@ -62,141 +62,174 @@ export function DestinationProfile() {
     );
   }
 
-  const ClimateIcon = climateToIcon(destination.climate);
   const topCities: readonly City[] = cities.filter((city) =>
     destination.topCities.includes(city.id),
   );
 
   return (
-    <section className="relative">
-      <div className="relative h-72 bg-black">
-        <img
-          src={`/images/destinations/${destination.id}/${destination.id}.webp`}
-          className="absolute inset-0 h-full w-full object-cover"
-          alt={`scenic image of ${destination.name}`}
-        />
-
-        <div className="absolute inset-0 top-0 left-0 h-full w-full bg-linear-to-b from-black/0 from-30% to-black/75" />
-
-        <button
-          onClick={() => history.back()}
-          className="absolute top-0 left-0 flex w-min items-center justify-start gap-2 p-4"
-        >
-          <Lucide.ArrowLeft className="size-6 text-white" />
-        </button>
-
-        <div className="absolute bottom-0 w-full p-4">
-          <header>
-            <div className="grow">
-              <h1 className="text-3xl font-semibold text-white">
-                {destination.name}
-              </h1>
-              <div className="flex flex-row items-center justify-start gap-2">
-                <div className="flex flex-row items-center justify-center gap-0.5">
-                  <Lucide.MapPin className="size-4 text-white" />
-                  <span className="text-base font-medium text-white">
-                    {destination.region}
-                  </span>
-                </div>
-                <Lucide.Circle className="size-2 fill-yellow-400 stroke-yellow-400" />
-                <div className="flex flex-row items-center justify-center gap-0.5">
-                  <ClimateIcon className="size-4 text-white" />
-                  <span className="text-base font-medium text-white">
-                    {destination.climate}
-                  </span>
-                </div>
-              </div>
+    <section className="relative flex min-h-svh flex-col xl:flex-row xl:gap-4">
+      <div className="flex basis-3/5 flex-col xl:sticky xl:top-0 xl:left-0 xl:h-svh xl:gap-4 xl:p-8 xl:pr-0">
+        <Hero destination={destination} />
+        <ul className="grid grid-cols-2 gap-4 border-b-1 border-neutral-100 bg-neutral-50/50 px-4 py-6 xl:grid-cols-4 xl:rounded-xl xl:border-1">
+          <li className="">
+            <div className="flex flex-col items-center justify-center gap-1 rounded-xl">
+              <span className="text-xs font-medium text-neutral-400 capitalize">
+                english usage
+              </span>
+              <span className="text-base font-semibold text-neutral-600">
+                {destination.englishUsage}
+              </span>
             </div>
-          </header>
+          </li>
+          <li>
+            <div className="flex flex-col items-center justify-center gap-1 rounded-xl">
+              <span className="text-xs font-medium text-neutral-400 capitalize">
+                retirement community
+              </span>
+              <span className="text-base font-semibold text-neutral-600">
+                {destination.retirementCommunity}
+              </span>
+            </div>
+          </li>
+          <li>
+            <div className="flex flex-col items-center justify-center gap-1 rounded-xl">
+              <span className="text-xs font-medium text-neutral-400 capitalize">
+                population density
+              </span>
+              <span className="text-base font-semibold text-neutral-600">
+                {destination.populationDensity}
+              </span>
+            </div>
+          </li>
+          <li className="xl:hidden">
+            <div className="flex flex-col items-center justify-center gap-1 rounded-xl">
+              <span className="text-xs font-medium text-neutral-400 capitalize">
+                crowds
+              </span>
+              <span className="text-base font-semibold text-neutral-600">
+                {destination.crowds}
+              </span>
+            </div>
+          </li>
+          <li>
+            <div className="flex flex-col items-center justify-center gap-1 rounded-xl">
+              <span className="text-xs font-medium text-neutral-400 capitalize">
+                life expectancy
+              </span>
+              <span className="text-base font-semibold text-neutral-600">
+                {destination.lifeExpectancy} years
+              </span>
+            </div>
+          </li>
+        </ul>
+
+        <div className="hidden flex-row items-center justify-between gap-2 rounded-xl bg-[#002c4e] p-6 xl:flex">
+          <div>
+            <h3 className="text-left text-xl leading-[1.5] font-semibold text-white">
+              Want to know more about{" "}
+              <span className="font-bold text-[#fbe232]">
+                {destination.name}?
+              </span>
+            </h3>
+          </div>
+
+          <div />
+
+          <div>
+            <a
+              target="blank"
+              href={`https://internationalliving.com/countries/${destination.id}/`}
+              className="rounded-lg bg-[#fbe232] px-4 py-3 text-sm font-semibold whitespace-nowrap text-[#002c4e]"
+            >
+              Visit International Living
+            </a>
+          </div>
         </div>
       </div>
 
-      <ul className="grid grid-cols-2 gap-4 border-b-1 border-neutral-100 bg-neutral-50/50 px-4 py-6">
-        <li className="">
-          <div className="flex flex-col items-center justify-center gap-1 rounded-xl">
-            <span className="text-xs font-medium text-neutral-400 capitalize">
-              english usage
-            </span>
-            <span className="text-base font-semibold text-neutral-600">
-              {destination.englishUsage}
-            </span>
-          </div>
-        </li>
-        <li>
-          <div className="flex flex-col items-center justify-center gap-1 rounded-xl">
-            <span className="text-xs font-medium text-neutral-400 capitalize">
-              retirement community
-            </span>
-            <span className="text-base font-semibold text-neutral-600">
-              {destination.retirementCommunity}
-            </span>
-          </div>
-        </li>
-        <li>
-          <div className="flex flex-col items-center justify-center gap-1 rounded-xl">
-            <span className="text-xs font-medium text-neutral-400 capitalize">
-              population density
-            </span>
-            <span className="text-base font-semibold text-neutral-600">
-              {destination.populationDensity}
-            </span>
-          </div>
-        </li>
-        <li>
-          <div className="flex flex-col items-center justify-center gap-1 rounded-xl">
-            <span className="text-xs font-medium text-neutral-400 capitalize">
-              crowds
-            </span>
-            <span className="text-base font-semibold text-neutral-600">
-              {destination.crowds}
-            </span>
-          </div>
-        </li>
-        <li>
-          <div className="flex flex-col items-center justify-center gap-1 rounded-xl">
-            <span className="text-xs font-medium text-neutral-400 capitalize">
-              life expectancy
-            </span>
-            <span className="text-base font-semibold text-neutral-600">
-              {destination.lifeExpectancy} years
-            </span>
-          </div>
-        </li>
-      </ul>
+      <div className="flex basis-2/5 flex-col gap-8 xl:p-8 xl:pl-0">
+        <ul className="flex border-b-1 border-neutral-100">
+          <li className="flex grow justify-center">
+            <Wouter.Link
+              replace={true}
+              href={`/${destination.id}/overview`}
+              className={`p-4 text-center ${params["tab"] === "overview" ? "font-medium text-neutral-600" : "text-neutral-400"} `}
+            >
+              Overview
+            </Wouter.Link>
+          </li>
+          <li className="flex grow justify-center">
+            <Wouter.Link
+              replace={true}
+              href={`/${destination.id}/ratings`}
+              className={`p-4 text-center ${params["tab"] === "ratings" ? "font-medium text-neutral-600" : "text-neutral-400"} `}
+            >
+              Ratings
+            </Wouter.Link>
+          </li>
+        </ul>
 
-      <ul className="flex border-b-1 border-neutral-100">
-        <li className="flex grow justify-center">
-          <Wouter.Link
-            replace={true}
-            href={`/${destination.id}/overview`}
-            className={`p-4 text-center ${params["tab"] === "overview" ? "font-medium text-neutral-600" : "text-neutral-400"} `}
-          >
-            Overview
-          </Wouter.Link>
-        </li>
-        <li className="flex grow justify-center">
-          <Wouter.Link
-            replace={true}
-            href={`/${destination.id}/ratings`}
-            className={`p-4 text-center ${params["tab"] === "ratings" ? "font-medium text-neutral-600" : "text-neutral-400"} `}
-          >
-            Ratings
-          </Wouter.Link>
-        </li>
-      </ul>
+        {params["tab"] === "overview" && (
+          <Overview
+            topCities={topCities}
+            destination={destination}
+            similarDestinations={destinations.filter((d) =>
+              destination.similarDestinations.includes(d.id),
+            )}
+          />
+        )}
 
-      {params["tab"] === "overview" && (
-        <Overview
-          topCities={topCities}
-          destination={destination}
-          similarDestinations={destinations.filter((d) =>
-            destination.similarDestinations.includes(d.id),
-          )}
-        />
-      )}
-
-      {params["tab"] === "ratings" && <Ratings destination={destination} />}
+        {params["tab"] === "ratings" && <Ratings destination={destination} />}
+      </div>
     </section>
+  );
+}
+
+function Hero({ destination }: { destination: Destination }) {
+  const ClimateIcon = climateToIcon(destination.climate);
+
+  return (
+    <div className="relative h-72 bg-black xl:h-100 xl:grow xl:rounded-xl">
+      <img
+        src={`/images/destinations/${destination.id}/${destination.id}.webp`}
+        className="absolute inset-0 h-full w-full object-cover xl:rounded-xl"
+        alt={`scenic image of ${destination.name}`}
+      />
+
+      <div className="absolute inset-0 top-0 left-0 h-full w-full bg-linear-to-b from-black/0 from-30% to-black/75 xl:rounded-xl" />
+
+      <button
+        onClick={() => history.back()}
+        className="absolute top-0 left-0 flex w-min items-center justify-start gap-2 p-4"
+      >
+        <Lucide.ArrowLeft className="size-6 text-white" />
+      </button>
+
+      <div className="absolute bottom-0 w-full p-4">
+        <header>
+          <div className="grow">
+            <h1 className="text-3xl font-semibold text-white">
+              {destination.name}
+            </h1>
+            <div className="flex flex-row items-center justify-start gap-2">
+              <div className="flex flex-row items-center justify-center gap-0.5">
+                <Lucide.MapPin className="size-4 text-white" />
+                <span className="text-base font-medium text-white">
+                  {destination.region}
+                </span>
+              </div>
+              <Lucide.Circle className="size-2 fill-yellow-400 stroke-yellow-400" />
+              <div className="flex flex-row items-center justify-center gap-0.5">
+                <ClimateIcon className="size-4 text-white" />
+                <span className="text-base font-medium text-white">
+                  {destination.climate}
+                </span>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
   );
 }
 
@@ -212,55 +245,53 @@ function Overview({
   const ClimateIcon = climateToIcon(destination.climate);
 
   return (
-    <div className="flex flex-col gap-8 py-2">
-      <p className="p-4 text-base leading-[1.5] text-neutral-500">
+    <div className="flex flex-col gap-10 pb-4 xl:pb-0">
+      <p className="px-4 text-base leading-[1.5] text-neutral-500">
         {destination.description}
       </p>
 
-      <div className="">
-        <div className="flex flex-col gap-4 p-4">
-          <p className="text-lg font-medium text-neutral-600">Pros</p>
-          <ul className="flex flex-col gap-2">
-            {destination.pros.map((pro) => {
-              return (
-                <React.Fragment key={pro}>
-                  <li className="flex flex-row items-center gap-4 py-2">
-                    <Lucide.Check className="size-5 text-green-600" />
-                    <span className="grow text-base text-neutral-500 first-letter:uppercase">
-                      {pro}
-                    </span>
-                  </li>
-                  <div className="h-px bg-neutral-100" />
-                </React.Fragment>
-              );
-            })}
-          </ul>
-        </div>
+      <div className="flex flex-col gap-4 px-4">
+        <p className="text-xl font-medium text-neutral-600">Pros</p>
+        <ul className="flex flex-col gap-2">
+          {destination.pros.map((pro) => {
+            return (
+              <React.Fragment key={pro}>
+                <li className="flex flex-row items-center gap-4 py-2">
+                  <Lucide.Check className="size-5 text-green-600" />
+                  <span className="grow text-base text-neutral-500 first-letter:uppercase">
+                    {pro}
+                  </span>
+                </li>
+                <div className="h-px bg-neutral-100" />
+              </React.Fragment>
+            );
+          })}
+        </ul>
+      </div>
 
-        <div className="flex flex-col gap-4 p-4">
-          <p className="text-lg font-medium text-neutral-600">Cons</p>
-          <ul className="flex flex-col gap-2">
-            {destination.cons.map((con) => {
-              return (
-                <React.Fragment key={con}>
-                  <li className="flex flex-row items-center gap-4 py-2">
-                    <Lucide.X className="size-5 text-red-500" />
-                    <span className="grow text-base text-neutral-500 first-letter:uppercase">
-                      {con}
-                    </span>
-                  </li>
-                  <div className="h-px bg-neutral-100" />
-                </React.Fragment>
-              );
-            })}
-          </ul>
-        </div>
+      <div className="flex flex-col gap-4 px-4">
+        <p className="text-xl font-medium text-neutral-600">Cons</p>
+        <ul className="flex flex-col gap-2">
+          {destination.cons.map((con) => {
+            return (
+              <React.Fragment key={con}>
+                <li className="flex flex-row items-center gap-4 py-2">
+                  <Lucide.X className="size-5 text-red-500" />
+                  <span className="grow text-base text-neutral-500 first-letter:uppercase">
+                    {con}
+                  </span>
+                </li>
+                <div className="h-px bg-neutral-100" />
+              </React.Fragment>
+            );
+          })}
+        </ul>
       </div>
 
       <div>
         <section className="flex flex-col gap-8 border-t-1 border-b-1 border-neutral-100 bg-neutral-50/50 px-4 py-8">
           <header className="flex flex-col gap-2">
-            <h3 className="text-center text-lg font-medium text-neutral-600">
+            <h3 className="text-center text-xl font-medium text-neutral-600">
               30-Year Retirement Cost Estimate
             </h3>
             <p className="text-center text-sm text-neutral-500">
@@ -296,7 +327,7 @@ function Overview({
         </section>
 
         {destination.internationalLiving && (
-          <div className="flex flex-col items-center gap-4 bg-[#002c4e] px-6 py-12">
+          <div className="flex flex-col items-center gap-4 bg-[#002c4e] px-6 py-12 xl:hidden">
             <InternationalLivingLogo />
             <h3 className="text-center text-2xl leading-[1.5] font-semibold text-white capitalize">
               want more in-depth <br /> information on{" "}
@@ -322,8 +353,8 @@ function Overview({
         )}
       </div>
 
-      <div className="flex flex-col gap-6 p-4">
-        <p className="text-lg font-medium text-neutral-600">
+      <div className="flex flex-col gap-6 px-4">
+        <p className="text-xl font-medium text-neutral-600">
           Popular Retirement Cities
         </p>
 
@@ -344,8 +375,8 @@ function Overview({
       </div>
 
       {0 !== similarDestinations.length && (
-        <div className="flex flex-col gap-6 p-4">
-          <p className="text-lg font-medium text-neutral-600">
+        <div className="flex flex-col gap-6 px-4">
+          <p className="text-xl font-medium text-neutral-600">
             Similar Destinations To Consider
           </p>
 
@@ -354,7 +385,7 @@ function Overview({
               return (
                 <li key={destination.id}>
                   <Wouter.Link href={`/${destination.id}/overview`}>
-                    <article className="max-w-120 rounded-xl border-1 border-neutral-100 bg-white">
+                    <article className="rounded-xl border-1 border-neutral-100 bg-white">
                       <div className="relative h-40 rounded-xl bg-black">
                         <img
                           src={`/images/destinations/${destination.id}/${destination.id}.webp`}
@@ -474,9 +505,9 @@ function Ratings({ destination }: { destination: Destination }) {
   };
 
   return (
-    <section className="flex flex-col gap-8 p-4">
-      <div className="flex flex-col gap-4 p-4">
-        <p className="text-lg font-medium text-neutral-600">
+    <section className="xl-pb-0 flex flex-col gap-10 px-4 pb-4">
+      <div className="flex flex-col gap-4 px-4">
+        <p className="text-xl font-medium text-neutral-600">
           Core Quality Factors
         </p>
 
@@ -507,8 +538,8 @@ function Ratings({ destination }: { destination: Destination }) {
         </ul>
       </div>
 
-      <div className="flex flex-col gap-4 p-4">
-        <p className="text-lg font-medium text-neutral-600">
+      <div className="flex flex-col gap-4 px-4">
+        <p className="text-xl font-medium text-neutral-600">
           Practical Considerations
         </p>
 
