@@ -101,16 +101,16 @@ export function DestinationProfile() {
               </span>
             </div>
           </li>
-          <li className="xl:hidden">
-            <div className="flex flex-col items-center justify-center gap-1 rounded-xl">
-              <span className="text-xs font-medium text-neutral-400 capitalize">
-                crowds
-              </span>
-              <span className="text-base font-semibold text-neutral-600">
-                {destination.crowds}
-              </span>
-            </div>
-          </li>
+          {/* <li className="xl:hidden"> */}
+          {/*   <div className="flex flex-col items-center justify-center gap-1 rounded-xl"> */}
+          {/*     <span className="text-xs font-medium text-neutral-400 capitalize"> */}
+          {/*       crowds */}
+          {/*     </span> */}
+          {/*     <span className="text-base font-semibold text-neutral-600"> */}
+          {/*       {destination.crowds} */}
+          {/*     </span> */}
+          {/*   </div> */}
+          {/* </li> */}
           <li>
             <div className="flex flex-col items-center justify-center gap-1 rounded-xl">
               <span className="text-xs font-medium text-neutral-400 capitalize">
@@ -505,7 +505,7 @@ function Ratings({ destination }: { destination: Destination }) {
   };
 
   return (
-    <section className="xl-pb-0 flex flex-col gap-10 px-4 pb-4">
+    <section className="xl-pb-0 xl-pb-0 flex flex-col gap-10 px-4 pb-4">
       <div className="flex flex-col gap-4 px-4">
         <p className="text-xl font-medium text-neutral-600">
           Core Quality Factors
