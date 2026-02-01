@@ -136,12 +136,20 @@ export function DestinationCard({ destination }: { destination: Destination }) {
 
         <div className="h-px bg-neutral-100" />
 
-        <Wouter.Link
-          href={`/${destination.id}/overview`}
-          className="rounded-lg text-center text-sm font-medium text-neutral-700"
-        >
-          View Details
-        </Wouter.Link>
+        <div className="flex flex-row">
+          <Wouter.Link
+            href={`/${destination.id}/overview`}
+            className="basis-1/2 rounded-lg text-center text-sm font-medium text-neutral-700"
+          >
+            View Details
+          </Wouter.Link>
+          <Wouter.Link
+            href={`/${destination.id}/calculator`}
+            className="basis-1/2 rounded-lg text-center text-sm font-medium text-neutral-700"
+          >
+            Calculator
+          </Wouter.Link>
+        </div>
 
         <div />
       </div>
