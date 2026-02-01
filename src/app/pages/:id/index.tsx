@@ -10,8 +10,6 @@ import type { Cost, Destination } from "@/types/destination";
 import type { City } from "@/types/city";
 
 import InternationalLivingLogo from "@/assets/svg/international-living-logo.svg?react";
-import { Input } from "@/components/input";
-import * as Field from "@/components/field";
 
 type Tab = "overview" | "ratings" | "calculator";
 
@@ -587,169 +585,194 @@ function Ratings({ destination }: { destination: Destination }) {
   );
 }
 
-function Calculator({}: { destination: Destination }) {
-  const [step, setStep] = React.useState<"input" | "results">("input");
-
-  switch (step) {
-    case "input":
-      return (
-        <CalculatorForm
-          handleSubmit={(values) => {
-            console.log(values);
-            setStep("results");
-          }}
-        />
-      );
-    case "results":
-      return (
-        <CalculatorResults
-          handleBack={() => {
-            setStep("input");
-          }}
-        />
-      );
-    default:
-      return step satisfies never;
-  }
-}
-
 type FormValues = {
   currentAge: number;
   retirementAge: number;
   retirementDuration: number;
 };
 
-function CalculatorForm({
-  handleSubmit,
-}: {
-  handleSubmit: (values: FormValues) => void;
-}) {
+type RetirementEstimates = Readonly<
+  Record<
+    "single" | "couple",
+    {
+      withInflation: number;
+      withoutInflation: number;
+    }
+  >
+>;
+function Calculator({ destination }: { destination: Destination }) {
+  const [estimates, setEstimates] = React.useState<RetirementEstimates | null>(
+    null,
+  );
+
+  function calculate({ retirementDuration }: FormValues): RetirementEstimates {
+    const costs = {
+      single: {
+        withoutInflation:
+          destination.expenditure.single.monthly.amount *
+          12 *
+          retirementDuration,
+        withInflation:
+          destination.expenditure.single.monthly.amount *
+          12 *
+          retirementDuration *
+          (1 + Math.random() * 0.3),
+      },
+      couple: {
+        withoutInflation:
+          destination.expenditure.couple.monthly.amount *
+          12 *
+          retirementDuration,
+        withInflation:
+          destination.expenditure.couple.monthly.amount *
+          12 *
+          retirementDuration *
+          (1 + Math.random() * 0.3),
+      },
+    } as const;
+
+    return costs;
+  }
+
   return (
     <section className="xl-pb-0 xl-pb-0 flex flex-col gap-10 px-4 pb-4">
-      <form
-        className="flex flex-col gap-6"
-        onSubmit={(event) => {
-          event.preventDefault();
+      <div className="flex flex-col gap-6 px-4">
+        <p className="text-base font-medium text-neutral-600">Details</p>
+        <form
+          onReset={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            window.setTimeout(() => {
+              setEstimates(null);
+            }, 300);
+          }}
+          onSubmit={(event) => {
+            event.preventDefault();
 
-          const { currentAge, retirementAge, retirementDuration } =
-            Object.fromEntries(new FormData(event.currentTarget));
+            const { currentAge, retirementAge, retirementDuration } =
+              Object.fromEntries(new FormData(event.currentTarget));
 
-          handleSubmit({
-            currentAge: parseInt(currentAge as string) as number,
-            retirementAge: parseInt(retirementAge as string) as number,
-            retirementDuration: parseInt(
-              retirementDuration as string,
-            ) as number,
-          });
-        }}
-      >
-        <Field.Root>
-          <Field.Label htmlFor="age">How old are you currently?</Field.Label>
-          <Input
-            id="currentAge"
-            min={0}
-            name="currentAge"
-            placeholder="Enter your age"
-            required
-            type="number"
-          />
-        </Field.Root>
+            const estimate = calculate({
+              currentAge: parseInt(currentAge as string) as number,
+              retirementAge: parseInt(retirementAge as string) as number,
+              retirementDuration: parseInt(
+                retirementDuration as string,
+              ) as number,
+            });
 
-        <Field.Root>
-          <Field.Label htmlFor="retirementAge">
-            What age would you like to retire?
-          </Field.Label>
-          <Input
-            id="retirementAge"
-            min={0}
-            name="retirementAge"
-            placeholder="Enter your retirement age"
-            required
-            type="number"
-          />
-        </Field.Root>
-
-        <Field.Root>
-          <Field.Label htmlFor="retirementDuration">
-            How long will your retirement be?
-          </Field.Label>
-          <Input
-            id="retirementDuration"
-            min={0}
-            name="retirementDuration"
-            placeholder="Enter your retirement duration"
-            required
-            type="number"
-          />
-        </Field.Root>
-
-        <button
-          type="submit"
-          className="rounded-xl border-1 border-neutral-100 bg-neutral-50 py-3 text-base text-neutral-600"
+            setEstimates(estimate);
+            window.requestAnimationFrame(() => {
+              window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: "smooth",
+              });
+            });
+          }}
+          className="flex flex-col gap-2"
         >
-          Calculate Retirement Costs
-        </button>
-      </form>
+          <div className="flex items-center justify-between gap-2 py-2">
+            <span className="text-sm text-neutral-400 capitalize">
+              Inflation rate
+            </span>
+            <span className="font-semibold text-neutral-600">2.5%</span>
+          </div>
+          <div className="h-px bg-neutral-100" />
+          <label
+            htmlFor="currentAge"
+            className="flex items-center justify-between gap-2"
+          >
+            <span className="text-sm text-neutral-400 capitalize">
+              current age
+            </span>
+            <input
+              className="w-12 rounded-xl border-1 border-neutral-100 p-2 text-center text-base font-semibold text-neutral-600 outline-none placeholder:font-normal placeholder:text-neutral-400 user-invalid:border-red-400"
+              id="currentAge"
+              min={0}
+              name="currentAge"
+              required
+              type="number"
+              placeholder="--"
+            />
+          </label>
+          <div className="h-px bg-neutral-100" />
+
+          <label
+            htmlFor="retirementAge"
+            className="flex items-center justify-between gap-2"
+          >
+            <span className="text-sm text-neutral-400 capitalize">
+              retirement age
+            </span>
+            <input
+              className="w-12 rounded-xl border-1 border-neutral-100 p-2 text-center text-base font-semibold text-neutral-600 outline-none placeholder:font-normal placeholder:text-neutral-400 user-invalid:border-red-400"
+              id="retirementAge"
+              min={0}
+              name="retirementAge"
+              required
+              type="number"
+              placeholder="--"
+            />
+          </label>
+          <div className="h-px bg-neutral-100" />
+
+          <label
+            htmlFor="retirementDuration"
+            className="flex items-center justify-between gap-2"
+          >
+            <span className="text-sm text-neutral-400 capitalize">
+              retirement duration
+            </span>
+            <input
+              className="w-12 rounded-xl border-1 border-neutral-100 p-2 text-center text-base font-semibold text-neutral-600 outline-none placeholder:font-normal placeholder:text-neutral-400 user-invalid:border-red-400"
+              id="retirementDuration"
+              min={0}
+              name="retirementDuration"
+              required
+              type="number"
+              placeholder="--"
+            />
+          </label>
+          <div className="h-px bg-neutral-100" />
+
+          <div />
+          <div />
+
+          <div className="flex items-center justify-between">
+            <button
+              type="reset"
+              className="text-sm text-neutral-400 capitalize"
+            >
+              reset
+            </button>
+            <button
+              type="submit"
+              className="text-sm font-medium text-neutral-600 capitalize underline"
+            >
+              calculate retirement costs
+            </button>
+          </div>
+        </form>
+      </div>
+
+      {estimates && (
+        <CalculatorResults estimates={estimates} destination={destination} />
+      )}
     </section>
   );
 }
 
-function CalculatorResults({ handleBack }: { handleBack: () => void }) {
+function CalculatorResults({
+  estimates,
+  destination,
+}: {
+  estimates: RetirementEstimates;
+  destination: Destination;
+}) {
+  const formatter = new Intl.NumberFormat("en-US", {
+    maximumFractionDigits: 0,
+  });
+
   return (
-    <section className="xl-pb-0 xl-pb-0 flex flex-col gap-10 px-4 pb-4">
-      <button
-        onClick={() => handleBack()}
-        type="button"
-        className="flex flex-row items-center justify-end gap-2 px-4"
-      >
-        {/* <Lucide.ArrowLeft className="size-4 text-neutral-500" /> */}
-        <span className="text-right text-sm font-medium text-neutral-600 underline">
-          Back to Calculator
-        </span>
-      </button>
-
-      <div className="flex flex-col gap-6 px-4">
-        <p className="text-base font-medium text-neutral-600">Details</p>
-        <ul className="flex flex-col gap-4">
-          <li>
-            <div className="flex items-center justify-between gap-2">
-              <span className="text-sm text-neutral-400 capitalize">
-                Inflation rate
-              </span>
-              <span className="font-semibold text-neutral-600">2.5%</span>
-            </div>
-          </li>
-          <div className="h-px bg-neutral-100" />
-          <li>
-            <div className="flex items-center justify-between gap-2">
-              <span className="text-sm text-neutral-400 capitalize">
-                current age
-              </span>
-              <span className="font-semibold text-neutral-600">40</span>
-            </div>
-          </li>
-          <div className="h-px bg-neutral-100" />
-          <li>
-            <div className="flex items-center justify-between gap-2">
-              <span className="text-sm text-neutral-400 capitalize">
-                retirement age
-              </span>
-              <span className="font-semibold text-neutral-600">60</span>
-            </div>
-          </li>
-          <div className="h-px bg-neutral-100" />
-          <li>
-            <div className="flex items-center justify-between gap-2">
-              <span className="text-sm text-neutral-400 capitalize">
-                Retirement duration
-              </span>
-              <span className="font-semibold text-neutral-600">30</span>
-            </div>
-          </li>
-          <div className="h-px bg-neutral-100" />
-        </ul>
-      </div>
-
+    <>
       <div className="flex flex-col gap-6 px-4">
         <p className="text-base font-medium text-neutral-600">Single</p>
         <ul className="flex flex-col gap-4">
@@ -758,7 +781,24 @@ function CalculatorResults({ handleBack }: { handleBack: () => void }) {
               <span className="text-sm text-neutral-400 capitalize">
                 Monthly Cost
               </span>
-              <span className="font-semibold text-neutral-600">$2,500</span>
+              <span className="font-semibold text-neutral-600">
+                {destination.expenditure.single.monthly.currency}
+                {formatter.format(
+                  destination.expenditure.single.monthly.amount,
+                )}
+              </span>
+            </div>
+          </li>
+          <div className="h-px bg-neutral-100" />
+          <li>
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-sm text-neutral-400 capitalize">
+                With inflation
+              </span>
+              <span className="font-semibold text-neutral-600">
+                {destination.expenditure.single.monthly.currency}
+                {formatter.format(estimates.single.withInflation)}
+              </span>
             </div>
           </li>
           <div className="h-px bg-neutral-100" />
@@ -767,16 +807,10 @@ function CalculatorResults({ handleBack }: { handleBack: () => void }) {
               <span className="text-sm text-neutral-400 capitalize">
                 Without inflation
               </span>
-              <span className="font-semibold text-neutral-600">$4,258,892</span>
-            </div>
-          </li>
-          <div className="h-px bg-neutral-100" />
-          <li>
-            <div className="flex items-center justify-between gap-2">
-              <span className="text-sm text-neutral-400 capitalize">
-                Without inflation
+              <span className="font-semibold text-neutral-600">
+                {destination.expenditure.single.monthly.currency}
+                {formatter.format(estimates.single.withoutInflation)}
               </span>
-              <span className="font-semibold text-neutral-600">$4,258,892</span>
             </div>
           </li>
           <div className="h-px bg-neutral-100" />
@@ -791,7 +825,12 @@ function CalculatorResults({ handleBack }: { handleBack: () => void }) {
               <span className="text-sm text-neutral-400 capitalize">
                 Monthly Cost
               </span>
-              <span className="font-semibold text-neutral-600">$2,500</span>
+              <span className="font-semibold text-neutral-600">
+                {destination.expenditure.couple.monthly.currency}
+                {formatter.format(
+                  destination.expenditure.couple.monthly.amount,
+                )}
+              </span>
             </div>
           </li>
           <div className="h-px bg-neutral-100" />
@@ -800,7 +839,10 @@ function CalculatorResults({ handleBack }: { handleBack: () => void }) {
               <span className="text-sm text-neutral-400 capitalize">
                 With inflation
               </span>
-              <span className="font-semibold text-neutral-600">$9,398,192</span>
+              <span className="font-semibold text-neutral-600">
+                {destination.expenditure.couple.monthly.currency}
+                {formatter.format(estimates.couple.withInflation)}
+              </span>
             </div>
           </li>
           <div className="h-px bg-neutral-100" />
@@ -809,12 +851,15 @@ function CalculatorResults({ handleBack }: { handleBack: () => void }) {
               <span className="text-sm text-neutral-400 capitalize">
                 Without inflation
               </span>
-              <span className="font-semibold text-neutral-600">$4,258,892</span>
+              <span className="font-semibold text-neutral-600">
+                {destination.expenditure.couple.monthly.currency}
+                {formatter.format(estimates.couple.withoutInflation)}
+              </span>
             </div>
           </li>
           <div className="h-px bg-neutral-100" />
         </ul>
       </div>
-    </section>
+    </>
   );
 }
