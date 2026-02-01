@@ -10,13 +10,16 @@ import type { Cost, Destination } from "@/types/destination";
 import type { City } from "@/types/city";
 
 import InternationalLivingLogo from "@/assets/svg/international-living-logo.svg?react";
+import { Input } from "@/components/input";
+import * as Field from "@/components/field";
 
-type Tab = "overview" | "ratings";
+type Tab = "overview" | "ratings" | "calculator";
 
 function isTab(value: unknown): value is Tab {
   const isOverview = value === "overview";
   const isRatings = value === "ratings";
-  return isOverview || isRatings;
+  const isCalculator = value === "calculator";
+  return isOverview || isRatings || isCalculator;
 }
 
 export function DestinationProfile() {
@@ -148,7 +151,7 @@ export function DestinationProfile() {
       </div>
 
       <div className="flex basis-2/5 flex-col gap-8 xl:p-8 xl:pl-0">
-        <ul className="flex border-b-1 border-neutral-100">
+        <ul className="grid grid-cols-3 border-b-1 border-neutral-100">
           <li className="flex grow justify-center">
             <Wouter.Link
               replace={true}
@@ -167,6 +170,15 @@ export function DestinationProfile() {
               Ratings
             </Wouter.Link>
           </li>
+          <li className="flex grow justify-center">
+            <Wouter.Link
+              replace={true}
+              href={`/${destination.id}/calculator`}
+              className={`p-4 text-center ${params["tab"] === "calculator" ? "font-medium text-neutral-600" : "text-neutral-400"} `}
+            >
+              Calculator
+            </Wouter.Link>
+          </li>
         </ul>
 
         {params["tab"] === "overview" && (
@@ -180,6 +192,9 @@ export function DestinationProfile() {
         )}
 
         {params["tab"] === "ratings" && <Ratings destination={destination} />}
+        {params["tab"] === "calculator" && (
+          <Calculator destination={destination} />
+        )}
       </div>
     </section>
   );
@@ -566,6 +581,238 @@ function Ratings({ destination }: { destination: Destination }) {
               </React.Fragment>
             );
           })}
+        </ul>
+      </div>
+    </section>
+  );
+}
+
+function Calculator({}: { destination: Destination }) {
+  const [step, setStep] = React.useState<"input" | "results">("input");
+
+  switch (step) {
+    case "input":
+      return (
+        <CalculatorForm
+          handleSubmit={(values) => {
+            console.log(values);
+            setStep("results");
+          }}
+        />
+      );
+    case "results":
+      return (
+        <CalculatorResults
+          handleBack={() => {
+            setStep("input");
+          }}
+        />
+      );
+    default:
+      return step satisfies never;
+  }
+}
+
+type FormValues = {
+  currentAge: number;
+  retirementAge: number;
+  retirementDuration: number;
+};
+
+function CalculatorForm({
+  handleSubmit,
+}: {
+  handleSubmit: (values: FormValues) => void;
+}) {
+  return (
+    <section className="xl-pb-0 xl-pb-0 flex flex-col gap-10 px-4 pb-4">
+      <form
+        className="flex flex-col gap-6"
+        onSubmit={(event) => {
+          event.preventDefault();
+
+          const { currentAge, retirementAge, retirementDuration } =
+            Object.fromEntries(new FormData(event.currentTarget));
+
+          handleSubmit({
+            currentAge: parseInt(currentAge as string) as number,
+            retirementAge: parseInt(retirementAge as string) as number,
+            retirementDuration: parseInt(
+              retirementDuration as string,
+            ) as number,
+          });
+        }}
+      >
+        <Field.Root>
+          <Field.Label htmlFor="age">How old are you currently?</Field.Label>
+          <Input
+            id="currentAge"
+            min={0}
+            name="currentAge"
+            placeholder="Enter your age"
+            required
+            type="number"
+          />
+        </Field.Root>
+
+        <Field.Root>
+          <Field.Label htmlFor="retirementAge">
+            What age would you like to retire?
+          </Field.Label>
+          <Input
+            id="retirementAge"
+            min={0}
+            name="retirementAge"
+            placeholder="Enter your retirement age"
+            required
+            type="number"
+          />
+        </Field.Root>
+
+        <Field.Root>
+          <Field.Label htmlFor="retirementDuration">
+            How long will your retirement be?
+          </Field.Label>
+          <Input
+            id="retirementDuration"
+            min={0}
+            name="retirementDuration"
+            placeholder="Enter your retirement duration"
+            required
+            type="number"
+          />
+        </Field.Root>
+
+        <button
+          type="submit"
+          className="rounded-xl border-1 border-neutral-100 bg-neutral-50 py-3 text-base text-neutral-600"
+        >
+          Calculate Retirement Costs
+        </button>
+      </form>
+    </section>
+  );
+}
+
+function CalculatorResults({ handleBack }: { handleBack: () => void }) {
+  return (
+    <section className="xl-pb-0 xl-pb-0 flex flex-col gap-10 px-4 pb-4">
+      <button
+        onClick={() => handleBack()}
+        type="button"
+        className="flex flex-row items-center justify-end gap-2 px-4"
+      >
+        {/* <Lucide.ArrowLeft className="size-4 text-neutral-500" /> */}
+        <span className="text-right text-sm font-medium text-neutral-600 underline">
+          Back to Calculator
+        </span>
+      </button>
+
+      <div className="flex flex-col gap-6 px-4">
+        <p className="text-base font-medium text-neutral-600">Details</p>
+        <ul className="flex flex-col gap-4">
+          <li>
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-sm text-neutral-400 capitalize">
+                Inflation rate
+              </span>
+              <span className="font-semibold text-neutral-600">2.5%</span>
+            </div>
+          </li>
+          <div className="h-px bg-neutral-100" />
+          <li>
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-sm text-neutral-400 capitalize">
+                current age
+              </span>
+              <span className="font-semibold text-neutral-600">40</span>
+            </div>
+          </li>
+          <div className="h-px bg-neutral-100" />
+          <li>
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-sm text-neutral-400 capitalize">
+                retirement age
+              </span>
+              <span className="font-semibold text-neutral-600">60</span>
+            </div>
+          </li>
+          <div className="h-px bg-neutral-100" />
+          <li>
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-sm text-neutral-400 capitalize">
+                Retirement duration
+              </span>
+              <span className="font-semibold text-neutral-600">30</span>
+            </div>
+          </li>
+          <div className="h-px bg-neutral-100" />
+        </ul>
+      </div>
+
+      <div className="flex flex-col gap-6 px-4">
+        <p className="text-base font-medium text-neutral-600">Single</p>
+        <ul className="flex flex-col gap-4">
+          <li>
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-sm text-neutral-400 capitalize">
+                Monthly Cost
+              </span>
+              <span className="font-semibold text-neutral-600">$2,500</span>
+            </div>
+          </li>
+          <div className="h-px bg-neutral-100" />
+          <li>
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-sm text-neutral-400 capitalize">
+                Without inflation
+              </span>
+              <span className="font-semibold text-neutral-600">$4,258,892</span>
+            </div>
+          </li>
+          <div className="h-px bg-neutral-100" />
+          <li>
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-sm text-neutral-400 capitalize">
+                Without inflation
+              </span>
+              <span className="font-semibold text-neutral-600">$4,258,892</span>
+            </div>
+          </li>
+          <div className="h-px bg-neutral-100" />
+        </ul>
+      </div>
+
+      <div className="flex flex-col gap-6 px-4">
+        <p className="text-base font-medium text-neutral-600">Couple</p>
+        <ul className="flex flex-col gap-4">
+          <li>
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-sm text-neutral-400 capitalize">
+                Monthly Cost
+              </span>
+              <span className="font-semibold text-neutral-600">$2,500</span>
+            </div>
+          </li>
+          <div className="h-px bg-neutral-100" />
+          <li>
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-sm text-neutral-400 capitalize">
+                With inflation
+              </span>
+              <span className="font-semibold text-neutral-600">$9,398,192</span>
+            </div>
+          </li>
+          <div className="h-px bg-neutral-100" />
+          <li>
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-sm text-neutral-400 capitalize">
+                Without inflation
+              </span>
+              <span className="font-semibold text-neutral-600">$4,258,892</span>
+            </div>
+          </li>
+          <div className="h-px bg-neutral-100" />
         </ul>
       </div>
     </section>
