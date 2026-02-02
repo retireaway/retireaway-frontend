@@ -455,6 +455,8 @@ function Cost({
   const formatter = new Intl.NumberFormat("en-US", {
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
+    roundingIncrement: 1000,
+    roundingMode: "ceil",
   });
 
   return (
@@ -769,6 +771,8 @@ function CalculatorResults({
 }) {
   const formatter = new Intl.NumberFormat("en-US", {
     maximumFractionDigits: 0,
+    roundingIncrement: 1000,
+    roundingMode: "ceil",
   });
 
   return (
