@@ -18,7 +18,9 @@ export type Destination = Readonly<{
     };
   }>;
   tags: readonly string[];
-  lifeExpectancy: string;
+  inflation: number;
+  lifeExpectancy: number;
+  lifeExpectancyAfter65: number;
   populationDensity: string;
   retirementCommunity: string;
   englishUsage: string;

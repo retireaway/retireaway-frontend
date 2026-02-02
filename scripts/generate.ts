@@ -24,7 +24,9 @@ async function generateDestinations() {
     | "expenditure_couple_30_year"
     | "expenditure_couple_30_year_with_inflation"
     | "tags"
+    | "inflation"
     | "life_expectancy"
+    | "life_expectancy_after_65"
     | "population_density"
     | "retirement_community"
     | "english_usage"
@@ -77,7 +79,9 @@ async function generateDestinations() {
         },
       },
       tags: row["tags"].split(":"),
-      lifeExpectancy: row["life_expectancy"],
+      inflation: parseFloat(row["inflation"]) / 100,
+      lifeExpectancy: parseInt(row["life_expectancy"]),
+      lifeExpectancyAfter65: parseInt(row["life_expectancy_after_65"]),
       populationDensity: row["population_density"],
       retirementCommunity: row["retirement_community"],
       englishUsage: row["english_usage"],
@@ -105,14 +109,10 @@ async function generateDestinations() {
 }
 
 function toMoney(value: string): { currency: string; amount: number } {
-  const [currency, ...strAmount] = value;
+  const currency = "$";
+  const amount = parseInt(value.replaceAll(",", ""));
 
-  assert(currency, `unable to read currency from ${value}`);
-  assert(strAmount, `unable to read amount from ${value}`);
-
-  const amount = parseInt(strAmount.join("").replaceAll(",", ""));
-
-  const message = `unable to parse amonut from ${strAmount}`;
+  const message = `unable to parse amonut from ${value}`;
   assert.notStrictEqual(amount, NaN, message);
 
   return { currency, amount };
