@@ -99,14 +99,17 @@ export function Home() {
 
 function Hero() {
   return (
-    <section id="hero" className="flex flex-col gap-8 px-4 py-6 pt-12">
+    <section
+      id="hero"
+      className="flex h-80 flex-col items-center justify-center gap-8 bg-neutral-400 bg-[url(/images/bg-hero.jpg)] bg-cover bg-center px-4 py-6 pt-12 bg-blend-multiply"
+    >
       <header className="flex flex-col gap-2">
-        <h1 className="text-center text-2xl font-semibold text-neutral-700">
+        <h1 className="text-center text-3xl font-semibold text-white capitalize">
           Plan your dream retirement
         </h1>
-        <p className="text-center text-base text-neutral-500">
-          Compare destinations worldwide. Connect with local experts. Plan your
-          move.
+        <p className="text-center text-base text-white">
+          Compare destinations worldwide. <br />
+          Connect with local experts. Plan your move.
         </p>
       </header>
     </section>
