@@ -124,28 +124,30 @@ export function DestinationProfile() {
           </li>
         </ul>
 
-        <div className="hidden flex-row items-center justify-between gap-2 rounded-xl bg-[#002c4e] p-6 xl:flex">
-          <div>
-            <h3 className="text-left text-xl leading-[1.5] font-semibold text-white">
-              Want to know more about{" "}
-              <span className="font-bold text-[#fbe232]">
-                {destination.name}?
-              </span>
-            </h3>
-          </div>
+        {destination.internationalLiving && (
+          <div className="hidden flex-row items-center justify-between gap-2 rounded-xl bg-[#002c4e] p-6 xl:flex">
+            <div>
+              <h3 className="text-left text-xl leading-[1.5] font-semibold text-white">
+                Want to know more about{" "}
+                <span className="font-bold text-[#fbe232]">
+                  {destination.name}?
+                </span>
+              </h3>
+            </div>
 
-          <div />
+            <div />
 
-          <div>
-            <a
-              target="blank"
-              href={`https://internationalliving.com/countries/${destination.id}/`}
-              className="rounded-lg bg-[#fbe232] px-4 py-3 text-sm font-semibold whitespace-nowrap text-[#002c4e]"
-            >
-              Visit International Living
-            </a>
+            <div>
+              <a
+                target="blank"
+                href={`https://internationalliving.com/countries/${destination.id}/`}
+                className="rounded-lg bg-[#fbe232] px-4 py-3 text-sm font-semibold whitespace-nowrap text-[#002c4e]"
+              >
+                Visit International Living
+              </a>
+            </div>
           </div>
-        </div>
+        )}
       </div>
 
       <div className="flex basis-2/5 flex-col gap-8 xl:p-8 xl:pl-0">

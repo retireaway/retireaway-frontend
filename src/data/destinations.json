@@ -106,6 +106,109 @@
     "internationalLiving": true
   },
   {
+    "id": "austria",
+    "name": "Austria",
+    "description": "Austria delivers exceptional quality of life with world-class healthcare, stunning Alpine scenery, and cultural richness from Vienna to Salzburg. The country is extremely safe with excellent infrastructure, but costs are high, particularly in cities. Residency requires substantial income proof and private health insurance. The bureaucracy is efficient but thorough. German language skills are important outside Vienna. For retirees prioritizing safety, healthcare, and European cultural heritage who can afford premium costs, Austria is ideal.",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "topCities": [
+      "vienna",
+      "salzburg",
+      "innsbruck"
+    ],
+    "similarDestinations": [
+      "switzerland",
+      "germany",
+      "denmark"
+    ],
+    "climate": "Temperate",
+    "expenditure": {
+      "single": {
+        "monthly": {
+          "currency": "$",
+          "amount": 3400
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 2568933
+        }
+      },
+      "couple": {
+        "monthly": {
+          "currency": "$",
+          "amount": 4300
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 3247035
+        }
+      }
+    },
+    "tags": [
+      "Top Healthcare",
+      "Safe",
+      "Premium Cost"
+    ],
+    "lifeExpectancy": "80",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Established",
+    "englishUsage": "Commonly Used",
+    "crowds": "Moderate",
+    "ratings": {
+      "affordability": {
+        "label": "Very High",
+        "grade": "D"
+      },
+      "healthcareQuality": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "personalSafety": {
+        "label": "Very Safe",
+        "grade": "A"
+      },
+      "politicalStability": {
+        "label": "Very Stable",
+        "grade": "A"
+      },
+      "visaEase": {
+        "label": "Moderate",
+        "grade": "C"
+      },
+      "taxEnvironment": {
+        "label": "High Tax",
+        "grade": "D"
+      },
+      "infrastructure": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "weatherComfort": {
+        "label": "Comfortable",
+        "grade": "B"
+      },
+      "healthcareCost": {
+        "label": "High",
+        "grade": "C"
+      },
+      "economy": {
+        "label": "Very Stable",
+        "grade": "A"
+      }
+    },
+    "grade": "C",
+    "pros": [
+      "premium healthcare",
+      "very safe",
+      "stable economy"
+    ],
+    "cons": [
+      "very high living costs",
+      "high taxes"
+    ],
+    "internationalLiving": false
+  },
+  {
     "id": "belize",
     "name": "Belize",
     "description": "Belize offers Caribbean living with English as the official language, making it accessible for American retirees. The Qualified Retired Persons program provides residency benefits. From Ambergris Caye's diving to mainland jungle, the country offers natural beauty. However, healthcare is limited, requiring trips to Mexico or the US for serious treatment. Infrastructure is basic, and costs are higher than other Central American countries. Belize suits those seeking English-speaking Caribbean lifestyle who don't mind limited services and can access healthcare elsewhere.",
@@ -209,6 +312,111 @@
       "developing healthcare"
     ],
     "internationalLiving": true
+  },
+  {
+    "id": "canada",
+    "name": "Canada",
+    "description": "Canada offers universal healthcare, stunning natural beauty, and multicultural cities from Vancouver to Halifax. The country is extremely safe with excellent infrastructure and quality of life. However, costs are very high, particularly for housing in major cities. Long, cold winters challenge many retirees. Residency is difficult without family sponsorship or significant investment. Canada appeals to those seeking North American stability, nature access, and don't mind cold weather, but immigration barriers and costs limit accessibility for many retirees.",
+    "region": "Americas",
+    "subregion": "North America",
+    "topCities": [
+      "victoria",
+      "vancouver",
+      "halifax"
+    ],
+    "similarDestinations": [
+      "united-kingdom",
+      "australia",
+      "new-zealand"
+    ],
+    "climate": "Cold",
+    "expenditure": {
+      "single": {
+        "monthly": {
+          "currency": "$",
+          "amount": 3300
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 2493421
+        }
+      },
+      "couple": {
+        "monthly": {
+          "currency": "$",
+          "amount": 4300
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 3247035
+        }
+      }
+    },
+    "tags": [
+      "Top Healthcare",
+      "Safe",
+      "English Spoken",
+      "Premium Cost"
+    ],
+    "lifeExpectancy": "73",
+    "populationDensity": "Spacious",
+    "retirementCommunity": "Established",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Moderate",
+    "ratings": {
+      "affordability": {
+        "label": "Very High",
+        "grade": "D"
+      },
+      "healthcareQuality": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "personalSafety": {
+        "label": "Very Safe",
+        "grade": "A"
+      },
+      "politicalStability": {
+        "label": "Very Stable",
+        "grade": "A"
+      },
+      "visaEase": {
+        "label": "Difficult",
+        "grade": "D"
+      },
+      "taxEnvironment": {
+        "label": "High Tax",
+        "grade": "D"
+      },
+      "infrastructure": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "weatherComfort": {
+        "label": "Challenging",
+        "grade": "D"
+      },
+      "healthcareCost": {
+        "label": "High",
+        "grade": "C"
+      },
+      "economy": {
+        "label": "Very Stable",
+        "grade": "A"
+      }
+    },
+    "grade": "C",
+    "pros": [
+      "universal healthcare",
+      "safety",
+      "political stability"
+    ],
+    "cons": [
+      "cold climate",
+      "high taxes",
+      "expensive cities"
+    ],
+    "internationalLiving": false
   },
   {
     "id": "chile",
@@ -628,6 +836,112 @@
     "internationalLiving": true
   },
   {
+    "id": "cyprus",
+    "name": "Cyprus",
+    "description": "Cyprus combines Mediterranean climate, English colonial heritage, and EU membership, making it accessible for European retirees. The island offers good healthcare, particularly in cities like Paphos and Limassol, which host large expat communities. Various visa options and favorable tax treatment for foreign pensions attract retirees. While the divided island has political complexities, the southern Republic of Cyprus provides stability, beautiful beaches, and a relaxed pace of life with lower costs than many EU countries.",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "topCities": [
+      "paphos",
+      "limassol",
+      "nicosia"
+    ],
+    "similarDestinations": [
+      "malta",
+      "greece",
+      "portugal"
+    ],
+    "climate": "Mediterranean",
+    "expenditure": {
+      "single": {
+        "monthly": {
+          "currency": "$",
+          "amount": 2250
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 1699030
+        }
+      },
+      "couple": {
+        "monthly": {
+          "currency": "$",
+          "amount": 2850
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 2152104
+        }
+      }
+    },
+    "tags": [
+      "Warm Weather",
+      "Safe",
+      "Large Expat Communities",
+      "English Spoken",
+      "Beach Living",
+      "Tax Friendly"
+    ],
+    "lifeExpectancy": "65",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Growing Scene",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Moderate",
+    "ratings": {
+      "affordability": {
+        "label": "Moderate",
+        "grade": "B"
+      },
+      "healthcareQuality": {
+        "label": "Good",
+        "grade": "B"
+      },
+      "personalSafety": {
+        "label": "Very Safe",
+        "grade": "A"
+      },
+      "politicalStability": {
+        "label": "Stable",
+        "grade": "B"
+      },
+      "visaEase": {
+        "label": "Easy",
+        "grade": "B"
+      },
+      "taxEnvironment": {
+        "label": "Tax-Friendly",
+        "grade": "B"
+      },
+      "infrastructure": {
+        "label": "Good",
+        "grade": "B"
+      },
+      "weatherComfort": {
+        "label": "Ideal",
+        "grade": "A"
+      },
+      "healthcareCost": {
+        "label": "Low",
+        "grade": "B"
+      },
+      "economy": {
+        "label": "Stable",
+        "grade": "B"
+      }
+    },
+    "grade": "B",
+    "pros": [
+      "easy residency",
+      "english widely used",
+      "low crime"
+    ],
+    "cons": [
+      "limited public transport",
+      "smaller healthcare system"
+    ],
+    "internationalLiving": false
+  },
+  {
     "id": "czech-republic",
     "name": "Czech Republic",
     "description": "The Czech Republic offers Central European charm with excellent infrastructure, good healthcare, and reasonable costs compared to Western Europe. Prague is a beautiful capital, while smaller cities like Brno offer authentic experiences. The country's position in the heart of Europe enables easy travel. Beer culture, castles, and a temperate climate add appeal. Residency requires proof of accommodation and income. While the expat community is smaller outside Prague and Czech language helps, the country provides stability and quality of life.",
@@ -729,6 +1043,111 @@
       "limited coastal lifestyle"
     ],
     "internationalLiving": true
+  },
+  {
+    "id": "denmark",
+    "name": "Denmark",
+    "description": "Denmark consistently ranks among the world's happiest countries, offering exceptional healthcare, safety, and quality of life. The hygge lifestyle emphasizes coziness and contentment. Copenhagen and Aarhus provide urban amenities, while smaller towns offer charm. Costs are very high, and taxes are among Europe's highest. English is widely spoken. Residency requires substantial financial resources. The climate is cool and often overcast. Denmark suits retirees seeking world-class services, social stability, and don't mind premium costs or Nordic weather.",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "topCities": [
+      "copenhagen",
+      "aarhus",
+      "odense"
+    ],
+    "similarDestinations": [
+      "sweden",
+      "norway",
+      "netherlands"
+    ],
+    "climate": "Temperate",
+    "expenditure": {
+      "single": {
+        "monthly": {
+          "currency": "$",
+          "amount": 3850
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 2907229
+        }
+      },
+      "couple": {
+        "monthly": {
+          "currency": "$",
+          "amount": 5000
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 3774743
+        }
+      }
+    },
+    "tags": [
+      "Top Healthcare",
+      "Safe",
+      "English Spoken",
+      "Premium Cost"
+    ],
+    "lifeExpectancy": "68",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Established",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Moderate",
+    "ratings": {
+      "affordability": {
+        "label": "Very High",
+        "grade": "D"
+      },
+      "healthcareQuality": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "personalSafety": {
+        "label": "Very Safe",
+        "grade": "A"
+      },
+      "politicalStability": {
+        "label": "Very Stable",
+        "grade": "A"
+      },
+      "visaEase": {
+        "label": "Moderate",
+        "grade": "C"
+      },
+      "taxEnvironment": {
+        "label": "High Tax",
+        "grade": "D"
+      },
+      "infrastructure": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "weatherComfort": {
+        "label": "Comfortable",
+        "grade": "B"
+      },
+      "healthcareCost": {
+        "label": "High",
+        "grade": "C"
+      },
+      "economy": {
+        "label": "Very Stable",
+        "grade": "A"
+      }
+    },
+    "grade": "B",
+    "pros": [
+      "very safe",
+      "top healthcare",
+      "strong governance"
+    ],
+    "cons": [
+      "very high costs",
+      "high taxes",
+      "limited sunshine"
+    ],
+    "internationalLiving": false
   },
   {
     "id": "dominican-republic",
@@ -939,6 +1358,113 @@
     "internationalLiving": true
   },
   {
+    "id": "finland",
+    "name": "Finland",
+    "description": "Finland provides excellent healthcare, safety, and education systems with a unique Nordic culture. The country emphasizes saunas, nature, and design. While English is widely spoken, the Finnish language is challenging. Long, dark winters contrast with beautiful summers. Costs are very high, and the expat community is smaller than in neighboring countries. Residency requires financial proof. Finland appeals to retirees seeking quiet, safe, and highly developed living who embrace Nordic lifestyle and don't mind the extreme seasonal variation.",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "topCities": [
+      "helsinki",
+      "tampere",
+      "turku"
+    ],
+    "similarDestinations": [
+      "sweden",
+      "norway",
+      "denmark"
+    ],
+    "climate": "Cold",
+    "expenditure": {
+      "single": {
+        "monthly": {
+          "currency": "$",
+          "amount": 3300
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 2493421
+        }
+      },
+      "couple": {
+        "monthly": {
+          "currency": "$",
+          "amount": 4300
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 3247035
+        }
+      }
+    },
+    "tags": [
+      "Top Healthcare",
+      "Safe",
+      "English Spoken",
+      "Low Crowds",
+      "Premium Cost"
+    ],
+    "lifeExpectancy": "68",
+    "populationDensity": "Comfortable",
+    "retirementCommunity": "Established",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Tranquil",
+    "ratings": {
+      "affordability": {
+        "label": "Very High",
+        "grade": "D"
+      },
+      "healthcareQuality": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "personalSafety": {
+        "label": "Very Safe",
+        "grade": "A"
+      },
+      "politicalStability": {
+        "label": "Very Stable",
+        "grade": "A"
+      },
+      "visaEase": {
+        "label": "Moderate",
+        "grade": "C"
+      },
+      "taxEnvironment": {
+        "label": "High Tax",
+        "grade": "D"
+      },
+      "infrastructure": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "weatherComfort": {
+        "label": "Challenging",
+        "grade": "D"
+      },
+      "healthcareCost": {
+        "label": "High",
+        "grade": "C"
+      },
+      "economy": {
+        "label": "Very Stable",
+        "grade": "A"
+      }
+    },
+    "grade": "C",
+    "pros": [
+      "quiet",
+      "safe",
+      "low crowds",
+      "strong healthcare"
+    ],
+    "cons": [
+      "cold climate",
+      "high cost",
+      "limited lifestyle variety"
+    ],
+    "internationalLiving": false
+  },
+  {
     "id": "france",
     "name": "France",
     "description": "France provides world-class healthcare, exceptional infrastructure, and unparalleled cultural richness. From the Mediterranean coast to rural villages, retirees enjoy excellent cuisine, wine regions, and easy travel throughout Europe. The cost of living is high, particularly in Paris, but smaller cities like Bordeaux and Lyon offer better value. The Visiteur visa allows retirees with adequate income to settle. While taxes are substantial, the quality of life and healthcare system are among the world's best.",
@@ -1040,6 +1566,109 @@
       "higher costs in popular cities"
     ],
     "internationalLiving": true
+  },
+  {
+    "id": "georgia",
+    "name": "Georgia",
+    "description": "Georgia offers one of the world's easiest residency processes with extremely low costs and a growing digital nomad and expat community. Tbilisi combines old-world charm with modern cafes, while Batumi offers Black Sea beaches. The territorial tax system is very favorable, and the cost of living is among Europe's lowest. Healthcare is adequate but not world-class. Political stability has improved, though regional tensions exist. Georgia suits adventurous retirees seeking value, easy residency, and a unique cultural experience at the Europe-Asia crossroads.",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "topCities": [
+      "tbilisi",
+      "batumi",
+      "kutaisi"
+    ],
+    "similarDestinations": [
+      "turkey",
+      "montenegro",
+      "tunisia"
+    ],
+    "climate": "Mixed",
+    "expenditure": {
+      "single": {
+        "monthly": {
+          "currency": "$",
+          "amount": 1400
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 1057174
+        }
+      },
+      "couple": {
+        "monthly": {
+          "currency": "$",
+          "amount": 1900
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 1434736
+        }
+      }
+    },
+    "tags": [
+      "Low Cost",
+      "Easy Residency",
+      "Tax Friendly"
+    ],
+    "lifeExpectancy": "69",
+    "populationDensity": "Comfortable",
+    "retirementCommunity": "Growing Scene",
+    "englishUsage": "Commonly Used",
+    "crowds": "Moderate",
+    "ratings": {
+      "affordability": {
+        "label": "Low",
+        "grade": "A"
+      },
+      "healthcareQuality": {
+        "label": "Good",
+        "grade": "B"
+      },
+      "personalSafety": {
+        "label": "Safe",
+        "grade": "B"
+      },
+      "politicalStability": {
+        "label": "Moderate",
+        "grade": "C"
+      },
+      "visaEase": {
+        "label": "Very Easy",
+        "grade": "A"
+      },
+      "taxEnvironment": {
+        "label": "Very Tax-Friendly",
+        "grade": "A"
+      },
+      "infrastructure": {
+        "label": "Good",
+        "grade": "B"
+      },
+      "weatherComfort": {
+        "label": "Comfortable",
+        "grade": "B"
+      },
+      "healthcareCost": {
+        "label": "Very Low",
+        "grade": "A"
+      },
+      "economy": {
+        "label": "Moderate",
+        "grade": "C"
+      }
+    },
+    "grade": "B",
+    "pros": [
+      "extremely easy residency",
+      "very low taxes",
+      "low cost"
+    ],
+    "cons": [
+      "developing healthcare",
+      "smaller expat support systems"
+    ],
+    "internationalLiving": false
   },
   {
     "id": "germany",
@@ -1562,6 +2191,111 @@
     "internationalLiving": true
   },
   {
+    "id": "japan",
+    "name": "Japan",
+    "description": "Japan offers the world's highest life expectancy, exceptional safety, and advanced healthcare and infrastructure. From Tokyo's modernity to Kyoto's temples, the country blends tradition and innovation. However, residency is very difficult without work or family ties, costs are high, and English is limited outside major tourist areas. The aging society means excellent elder care. Japan suits those with language skills, cultural interest, or family connections seeking safety and longevity, but significant barriers limit accessibility for most foreign retirees.",
+    "region": "Asia",
+    "subregion": "East Asia",
+    "topCities": [
+      "tokyo",
+      "osaka",
+      "fukuoka"
+    ],
+    "similarDestinations": [
+      "south-korea",
+      "taiwan",
+      "singapore"
+    ],
+    "climate": "Temperate",
+    "expenditure": {
+      "single": {
+        "monthly": {
+          "currency": "$",
+          "amount": 3150
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 2378642
+        }
+      },
+      "couple": {
+        "monthly": {
+          "currency": "$",
+          "amount": 4000
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 3020497
+        }
+      }
+    },
+    "tags": [
+      "Top Healthcare",
+      "Safe",
+      "Premium Cost",
+      "Limited English"
+    ],
+    "lifeExpectancy": "79",
+    "populationDensity": "Dense",
+    "retirementCommunity": "Established",
+    "englishUsage": "Minimal",
+    "crowds": "Very Crowded",
+    "ratings": {
+      "affordability": {
+        "label": "Very High",
+        "grade": "D"
+      },
+      "healthcareQuality": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "personalSafety": {
+        "label": "Very Safe",
+        "grade": "A"
+      },
+      "politicalStability": {
+        "label": "Very Stable",
+        "grade": "A"
+      },
+      "visaEase": {
+        "label": "Difficult",
+        "grade": "D"
+      },
+      "taxEnvironment": {
+        "label": "High Tax",
+        "grade": "D"
+      },
+      "infrastructure": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "weatherComfort": {
+        "label": "Comfortable",
+        "grade": "B"
+      },
+      "healthcareCost": {
+        "label": "Low",
+        "grade": "B"
+      },
+      "economy": {
+        "label": "Very Stable",
+        "grade": "A"
+      }
+    },
+    "grade": "B",
+    "pros": [
+      "world-leading life expectancy",
+      "safety",
+      "healthcare"
+    ],
+    "cons": [
+      "language barrier",
+      "dense cities",
+      "complex visas"
+    ],
+    "internationalLiving": false
+  },
+  {
     "id": "malaysia",
     "name": "Malaysia",
     "description": "Malaysia delivers first-world infrastructure at developing-world prices, making it an exceptional value destination. The MM2H visa program, while recently restructured with higher requirements, still attracts retirees seeking a multicultural environment where English is widely spoken. Penang and Kuala Lumpur offer excellent private healthcare, modern shopping centers, and diverse cuisine blending Malay, Chinese, and Indian influences. The tropical climate and position as a regional travel hub add to its appeal.",
@@ -1878,6 +2612,316 @@
     "internationalLiving": true
   },
   {
+    "id": "montenegro",
+    "name": "Montenegro",
+    "description": "Montenegro provides Adriatic coastline beauty at a fraction of Croatia's cost, with emerging appeal for retirees. The Bay of Kotor offers stunning scenery, while coastal towns like Budva provide beaches and amenities. Residency is relatively straightforward, and the country uses the euro despite not being in the EU. Healthcare is developing, with better options in coastal areas. While infrastructure is improving and the expat community is small but growing, Montenegro suits adventurous retirees seeking value and natural beauty.",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "topCities": [
+      "kotor",
+      "budva",
+      "tivat"
+    ],
+    "similarDestinations": [
+      "croatia",
+      "greece",
+      "turkey"
+    ],
+    "climate": "Mediterranean",
+    "expenditure": {
+      "single": {
+        "monthly": {
+          "currency": "$",
+          "amount": 1650
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 1245955
+        }
+      },
+      "couple": {
+        "monthly": {
+          "currency": "$",
+          "amount": 2150
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 1623517
+        }
+      }
+    },
+    "tags": [
+      "Low Cost",
+      "Safe",
+      "Warm Weather",
+      "Beach Living"
+    ],
+    "lifeExpectancy": "78",
+    "populationDensity": "Comfortable",
+    "retirementCommunity": "Limited",
+    "englishUsage": "Commonly Used",
+    "crowds": "Relaxed",
+    "ratings": {
+      "affordability": {
+        "label": "Moderate",
+        "grade": "B"
+      },
+      "healthcareQuality": {
+        "label": "Good",
+        "grade": "B"
+      },
+      "personalSafety": {
+        "label": "Safe",
+        "grade": "B"
+      },
+      "politicalStability": {
+        "label": "Moderate",
+        "grade": "C"
+      },
+      "visaEase": {
+        "label": "Easy",
+        "grade": "B"
+      },
+      "taxEnvironment": {
+        "label": "Tax-Friendly",
+        "grade": "B"
+      },
+      "infrastructure": {
+        "label": "Good",
+        "grade": "B"
+      },
+      "weatherComfort": {
+        "label": "Ideal",
+        "grade": "A"
+      },
+      "healthcareCost": {
+        "label": "Low",
+        "grade": "B"
+      },
+      "economy": {
+        "label": "Moderate",
+        "grade": "C"
+      }
+    },
+    "grade": "B",
+    "pros": [
+      "low costs",
+      "coastal lifestyle",
+      "easy residency"
+    ],
+    "cons": [
+      "developing healthcare",
+      "smaller infrastructure base"
+    ],
+    "internationalLiving": false
+  },
+  {
+    "id": "morocco",
+    "name": "Morocco",
+    "description": "Morocco offers North African culture with proximity to Europe, low costs, and diverse landscapes from Atlas Mountains to Sahara Desert. Cities like Marrakech and coastal Agadir attract retirees. French is widely spoken alongside Arabic. Healthcare is adequate in cities. Residency is straightforward with proof of income. The culture is more conservative than Europe. Morocco suits adventurous retirees seeking exotic yet accessible living with low costs, rich culture, and easy European access, who can adapt to different cultural norms.",
+    "region": "Middle East & North Africa",
+    "subregion": "North Africa",
+    "topCities": [
+      "marrakech",
+      "rabat",
+      "agadir"
+    ],
+    "similarDestinations": [
+      "tunisia",
+      "turkey",
+      "spain"
+    ],
+    "climate": "Arid",
+    "expenditure": {
+      "single": {
+        "monthly": {
+          "currency": "$",
+          "amount": 1400
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 1057174
+        }
+      },
+      "couple": {
+        "monthly": {
+          "currency": "$",
+          "amount": 1900
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 1434736
+        }
+      }
+    },
+    "tags": [
+      "Low Cost",
+      "Warm Weather"
+    ],
+    "lifeExpectancy": "84",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Established",
+    "englishUsage": "Commonly Used",
+    "crowds": "Tourist-Heavy",
+    "ratings": {
+      "affordability": {
+        "label": "Low",
+        "grade": "A"
+      },
+      "healthcareQuality": {
+        "label": "Good",
+        "grade": "B"
+      },
+      "personalSafety": {
+        "label": "Safe",
+        "grade": "B"
+      },
+      "politicalStability": {
+        "label": "Stable",
+        "grade": "B"
+      },
+      "visaEase": {
+        "label": "Moderate",
+        "grade": "C"
+      },
+      "taxEnvironment": {
+        "label": "Moderate Tax",
+        "grade": "C"
+      },
+      "infrastructure": {
+        "label": "Good",
+        "grade": "B"
+      },
+      "weatherComfort": {
+        "label": "Ideal",
+        "grade": "A"
+      },
+      "healthcareCost": {
+        "label": "Very Low",
+        "grade": "A"
+      },
+      "economy": {
+        "label": "Stable",
+        "grade": "B"
+      }
+    },
+    "grade": "B",
+    "pros": [
+      "very affordable",
+      "close to europe",
+      "rich culture"
+    ],
+    "cons": [
+      "language barriers",
+      "healthcare uneven outside cities"
+    ],
+    "internationalLiving": false
+  },
+  {
+    "id": "netherlands",
+    "name": "Netherlands",
+    "description": "The Netherlands offers exceptional infrastructure, world-class healthcare, and English proficiency throughout the country. Cities like Amsterdam and Utrecht provide culture and amenities, though costs are very high. The flat landscape is bicycle-friendly, and the country's small size makes everything accessible. Residency for non-EU retirees is possible with adequate income proof. While the weather is often gray and rainy, the quality of services, safety, and international connectivity attract retirees who prioritize modern efficiency and don't mind the climate.",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "topCities": [
+      "amsterdam",
+      "utrecht",
+      "haarlem"
+    ],
+    "similarDestinations": [
+      "denmark",
+      "sweden",
+      "germany"
+    ],
+    "climate": "Temperate",
+    "expenditure": {
+      "single": {
+        "monthly": {
+          "currency": "$",
+          "amount": 3600
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 2718448
+        }
+      },
+      "couple": {
+        "monthly": {
+          "currency": "$",
+          "amount": 4600
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 3474430
+        }
+      }
+    },
+    "tags": [
+      "Top Healthcare",
+      "Safe",
+      "English Spoken",
+      "Premium Cost"
+    ],
+    "lifeExpectancy": "69",
+    "populationDensity": "Very Dense",
+    "retirementCommunity": "Established",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Very Crowded",
+    "ratings": {
+      "affordability": {
+        "label": "Very High",
+        "grade": "D"
+      },
+      "healthcareQuality": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "personalSafety": {
+        "label": "Very Safe",
+        "grade": "A"
+      },
+      "politicalStability": {
+        "label": "Very Stable",
+        "grade": "A"
+      },
+      "visaEase": {
+        "label": "Moderate",
+        "grade": "C"
+      },
+      "taxEnvironment": {
+        "label": "High Tax",
+        "grade": "D"
+      },
+      "infrastructure": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "weatherComfort": {
+        "label": "Comfortable",
+        "grade": "B"
+      },
+      "healthcareCost": {
+        "label": "High",
+        "grade": "C"
+      },
+      "economy": {
+        "label": "Very Stable",
+        "grade": "A"
+      }
+    },
+    "grade": "B",
+    "pros": [
+      "english-friendly",
+      "excellent services",
+      "strong healthcare"
+    ],
+    "cons": [
+      "very dense",
+      "high housing and tax burden"
+    ],
+    "internationalLiving": false
+  },
+  {
     "id": "new-zealand",
     "name": "New Zealand",
     "description": "New Zealand offers stunning landscapes, excellent healthcare, and a relaxed pace of life in one of the world's safest countries. From Auckland to Queenstown, the country provides both urban amenities and pristine nature. Costs are high, and residency is challenging without family ties or substantial investment. The remote location means long travel times. New Zealand appeals to those with ties or significant wealth seeking peaceful, safe, and beautiful English-speaking environment, despite high costs and isolation.",
@@ -1982,6 +3026,214 @@
       "geographic isolation"
     ],
     "internationalLiving": true
+  },
+  {
+    "id": "norway",
+    "name": "Norway",
+    "description": "Norway offers breathtaking fjords, excellent healthcare, and one of the world's highest living standards, but at a cost that's among the globe's highest. Cities like Oslo and Bergen combine urban amenities with nature access. English is widely spoken. The climate is surprisingly mild along the coast but features long winter darkness. Residency for non-EU retirees is challenging without family ties. Norway suits wealthy retirees seeking pristine nature, safety, and world-class services who can afford premium pricing.",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "topCities": [
+      "oslo",
+      "bergen",
+      "trondheim"
+    ],
+    "similarDestinations": [
+      "sweden",
+      "denmark",
+      "switzerland"
+    ],
+    "climate": "Cold",
+    "expenditure": {
+      "single": {
+        "monthly": {
+          "currency": "$",
+          "amount": 4150
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 3132666
+        }
+      },
+      "couple": {
+        "monthly": {
+          "currency": "$",
+          "amount": 5400
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 4078328
+        }
+      }
+    },
+    "tags": [
+      "Top Healthcare",
+      "Safe",
+      "English Spoken",
+      "Premium Cost"
+    ],
+    "lifeExpectancy": "67",
+    "populationDensity": "Comfortable",
+    "retirementCommunity": "Established",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Moderate",
+    "ratings": {
+      "affordability": {
+        "label": "Very High",
+        "grade": "D"
+      },
+      "healthcareQuality": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "personalSafety": {
+        "label": "Very Safe",
+        "grade": "A"
+      },
+      "politicalStability": {
+        "label": "Very Stable",
+        "grade": "A"
+      },
+      "visaEase": {
+        "label": "Moderate",
+        "grade": "C"
+      },
+      "taxEnvironment": {
+        "label": "High Tax",
+        "grade": "D"
+      },
+      "infrastructure": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "weatherComfort": {
+        "label": "Comfortable",
+        "grade": "B"
+      },
+      "healthcareCost": {
+        "label": "High",
+        "grade": "C"
+      },
+      "economy": {
+        "label": "Very Stable",
+        "grade": "A"
+      }
+    },
+    "grade": "B",
+    "pros": [
+      "world-class healthcare",
+      "extremely safe"
+    ],
+    "cons": [
+      "among the most expensive countries globally"
+    ],
+    "internationalLiving": false
+  },
+  {
+    "id": "oman",
+    "name": "Oman",
+    "description": "Oman offers a calmer alternative to Dubai with good healthcare, exceptional safety, and stunning landscapes from desert to coast. Muscat provides modern amenities while maintaining traditional culture. Costs are moderate to high, and residency requires property investment or company sponsorship. English is widely spoken. Summer heat is extreme. The smaller expat community is tight-knit. Oman suits those seeking safe Middle Eastern living with traditional culture and natural beauty, without Dubai's intensity and at somewhat lower costs.",
+    "region": "Middle East & North Africa",
+    "subregion": "Middle East",
+    "topCities": [
+      "muscat",
+      "salalah",
+      "sohar"
+    ],
+    "similarDestinations": [
+      "united-arab-emirates",
+      "cyprus",
+      "malta"
+    ],
+    "climate": "Arid",
+    "expenditure": {
+      "single": {
+        "monthly": {
+          "currency": "$",
+          "amount": 2850
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 2152104
+        }
+      },
+      "couple": {
+        "monthly": {
+          "currency": "$",
+          "amount": 3600
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 2718448
+        }
+      }
+    },
+    "tags": [
+      "Safe",
+      "Warm Weather",
+      "English Spoken",
+      "Tax Friendly",
+      "Low Crowds"
+    ],
+    "lifeExpectancy": "78",
+    "populationDensity": "Comfortable",
+    "retirementCommunity": "Established",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Relaxed",
+    "ratings": {
+      "affordability": {
+        "label": "High",
+        "grade": "C"
+      },
+      "healthcareQuality": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "personalSafety": {
+        "label": "Very Safe",
+        "grade": "A"
+      },
+      "politicalStability": {
+        "label": "Stable",
+        "grade": "B"
+      },
+      "visaEase": {
+        "label": "Moderate",
+        "grade": "C"
+      },
+      "taxEnvironment": {
+        "label": "Very Tax-Friendly",
+        "grade": "A"
+      },
+      "infrastructure": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "weatherComfort": {
+        "label": "Challenging",
+        "grade": "D"
+      },
+      "healthcareCost": {
+        "label": "Low",
+        "grade": "B"
+      },
+      "economy": {
+        "label": "Very Stable",
+        "grade": "A"
+      }
+    },
+    "grade": "B",
+    "pros": [
+      "calm",
+      "safe",
+      "tax-friendly",
+      "low crowds"
+    ],
+    "cons": [
+      "hot weather",
+      "limited expat amenities"
+    ],
+    "internationalLiving": false
   },
   {
     "id": "panama",
@@ -2407,6 +3659,213 @@
     "internationalLiving": true
   },
   {
+    "id": "slovenia",
+    "name": "Slovenia",
+    "description": "Slovenia offers Central European quality at reasonable costs, with excellent safety, clean cities, and good healthcare. This small country combines Alpine beauty around Lake Bled with Adriatic coast access. Ljubljana is one of Europe's most livable capitals. While the expat community is smaller than in Mediterranean hotspots, the country's stability, efficient infrastructure, and position at the crossroads of Europe make it appealing for retirees seeking a quieter, highly developed destination.",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "topCities": [
+      "ljubljana",
+      "bled",
+      "piran"
+    ],
+    "similarDestinations": [
+      "austria",
+      "czech-republic",
+      "germany"
+    ],
+    "climate": "Temperate",
+    "expenditure": {
+      "single": {
+        "monthly": {
+          "currency": "$",
+          "amount": 2250
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 1699030
+        }
+      },
+      "couple": {
+        "monthly": {
+          "currency": "$",
+          "amount": 2850
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 2152104
+        }
+      }
+    },
+    "tags": [
+      "Safe",
+      "Low Crowds"
+    ],
+    "lifeExpectancy": "74",
+    "populationDensity": "Comfortable",
+    "retirementCommunity": "Established",
+    "englishUsage": "Commonly Used",
+    "crowds": "Tranquil",
+    "ratings": {
+      "affordability": {
+        "label": "High",
+        "grade": "C"
+      },
+      "healthcareQuality": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "personalSafety": {
+        "label": "Very Safe",
+        "grade": "A"
+      },
+      "politicalStability": {
+        "label": "Very Stable",
+        "grade": "A"
+      },
+      "visaEase": {
+        "label": "Moderate",
+        "grade": "C"
+      },
+      "taxEnvironment": {
+        "label": "High Tax",
+        "grade": "D"
+      },
+      "infrastructure": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "weatherComfort": {
+        "label": "Comfortable",
+        "grade": "B"
+      },
+      "healthcareCost": {
+        "label": "Low",
+        "grade": "B"
+      },
+      "economy": {
+        "label": "Very Stable",
+        "grade": "A"
+      }
+    },
+    "grade": "B",
+    "pros": [
+      "very safe",
+      "clean",
+      "low crowds",
+      "good healthcare"
+    ],
+    "cons": [
+      "higher taxes",
+      "limited expat ecosystem"
+    ],
+    "internationalLiving": false
+  },
+  {
+    "id": "south-korea",
+    "name": "South Korea",
+    "description": "South Korea combines modern cities, excellent healthcare, and advanced infrastructure with rich cultural heritage. Seoul offers cosmopolitan living, while smaller cities provide more traditional experiences. Costs are moderate to high, and residency is challenging without work or family ties. English is limited outside international areas. The country's safety, technology, and cuisine appeal to those interested in East Asian culture, but language barriers, limited retirement visa options, and dense urban living limit appeal for typical retirees.",
+    "region": "Asia",
+    "subregion": "East Asia",
+    "topCities": [
+      "seoul",
+      "busan",
+      "jeju-island"
+    ],
+    "similarDestinations": [
+      "japan",
+      "taiwan",
+      "singapore"
+    ],
+    "climate": "Temperate",
+    "expenditure": {
+      "single": {
+        "monthly": {
+          "currency": "$",
+          "amount": 2850
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 2152104
+        }
+      },
+      "couple": {
+        "monthly": {
+          "currency": "$",
+          "amount": 3600
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 2718448
+        }
+      }
+    },
+    "tags": [
+      "Top Healthcare",
+      "Safe",
+      "Premium Cost",
+      "Limited English"
+    ],
+    "lifeExpectancy": "77",
+    "populationDensity": "Very Dense",
+    "retirementCommunity": "Established",
+    "englishUsage": "Minimal",
+    "crowds": "Very Crowded",
+    "ratings": {
+      "affordability": {
+        "label": "High",
+        "grade": "C"
+      },
+      "healthcareQuality": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "personalSafety": {
+        "label": "Very Safe",
+        "grade": "A"
+      },
+      "politicalStability": {
+        "label": "Stable",
+        "grade": "B"
+      },
+      "visaEase": {
+        "label": "Difficult",
+        "grade": "D"
+      },
+      "taxEnvironment": {
+        "label": "High Tax",
+        "grade": "D"
+      },
+      "infrastructure": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "weatherComfort": {
+        "label": "Comfortable",
+        "grade": "B"
+      },
+      "healthcareCost": {
+        "label": "Low",
+        "grade": "B"
+      },
+      "economy": {
+        "label": "Very Stable",
+        "grade": "A"
+      }
+    },
+    "grade": "B",
+    "pros": [
+      "modern infrastructure",
+      "excellent healthcare"
+    ],
+    "cons": [
+      "dense urban living",
+      "limited english",
+      "high pressure culture"
+    ],
+    "internationalLiving": false
+  },
+  {
     "id": "spain",
     "name": "Spain",
     "description": "Spain offers retirees a vibrant Mediterranean lifestyle with world-class healthcare, rich cultural heritage, and diverse climate zones from coastal beaches to mountain retreats. The country's well-developed infrastructure, strong expat communities particularly along the Costa del Sol and Costa Blanca, and excellent cuisine make it a top choice. While taxes are higher than some alternatives, the quality of life and accessibility throughout Europe provide exceptional value.",
@@ -2509,6 +3968,422 @@
       "bureaucracy in some regions"
     ],
     "internationalLiving": true
+  },
+  {
+    "id": "sri-lanka",
+    "name": "Sri Lanka",
+    "description": "Sri Lanka offers tropical beauty, low costs, and cultural richness from Colombo's coast to Kandy's hills. The retirement visa requires $1,500 monthly income. English is commonly spoken given British colonial heritage. However, the country has faced economic crisis and political instability, with recent shortages and currency issues. Healthcare is adequate in cities. Sri Lanka suits adventurous retirees seeking affordability and culture who can tolerate economic uncertainty and developing infrastructure.",
+    "region": "Asia",
+    "subregion": "South Asia",
+    "topCities": [
+      "colombo",
+      "galle",
+      "kandy"
+    ],
+    "similarDestinations": [
+      "turkey",
+      "tunisia",
+      "indonesia"
+    ],
+    "climate": "Tropical",
+    "expenditure": {
+      "single": {
+        "monthly": {
+          "currency": "$",
+          "amount": 1400
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 1057174
+        }
+      },
+      "couple": {
+        "monthly": {
+          "currency": "$",
+          "amount": 1900
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 1434736
+        }
+      }
+    },
+    "tags": [
+      "Low Cost",
+      "Tropical Paradise",
+      "Warm Weather",
+      "Beach Living"
+    ],
+    "lifeExpectancy": "85",
+    "populationDensity": "Dense",
+    "retirementCommunity": "Established",
+    "englishUsage": "Commonly Used",
+    "crowds": "Moderate",
+    "ratings": {
+      "affordability": {
+        "label": "Low",
+        "grade": "A"
+      },
+      "healthcareQuality": {
+        "label": "Good",
+        "grade": "B"
+      },
+      "personalSafety": {
+        "label": "Safe",
+        "grade": "B"
+      },
+      "politicalStability": {
+        "label": "Unstable",
+        "grade": "D"
+      },
+      "visaEase": {
+        "label": "Moderate",
+        "grade": "C"
+      },
+      "taxEnvironment": {
+        "label": "Moderate Tax",
+        "grade": "C"
+      },
+      "infrastructure": {
+        "label": "Good",
+        "grade": "B"
+      },
+      "weatherComfort": {
+        "label": "Ideal",
+        "grade": "A"
+      },
+      "healthcareCost": {
+        "label": "Very Low",
+        "grade": "A"
+      },
+      "economy": {
+        "label": "Unstable",
+        "grade": "D"
+      }
+    },
+    "grade": "C",
+    "pros": [
+      "very affordable",
+      "natural beauty"
+    ],
+    "cons": [
+      "political and economic instability",
+      "developing infrastructure"
+    ],
+    "internationalLiving": false
+  },
+  {
+    "id": "sweden",
+    "name": "Sweden",
+    "description": "Sweden combines high living standards with stunning natural beauty from Stockholm's archipelago to Lapland's wilderness. The healthcare system is excellent, and English proficiency is nearly universal. Costs and taxes are very high, but the quality of services and infrastructure justify them for many. Long, dark winters are challenging, but summers are beautiful. Residency for non-EU retirees requires financial proof. The country's stability, environmental consciousness, and quality of life appeal to those who can afford it and enjoy Nordic culture.",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "topCities": [
+      "stockholm",
+      "gothenburg",
+      "malmo"
+    ],
+    "similarDestinations": [
+      "norway",
+      "denmark",
+      "finland"
+    ],
+    "climate": "Cold",
+    "expenditure": {
+      "single": {
+        "monthly": {
+          "currency": "$",
+          "amount": 3500
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 2642936
+        }
+      },
+      "couple": {
+        "monthly": {
+          "currency": "$",
+          "amount": 4500
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 3398918
+        }
+      }
+    },
+    "tags": [
+      "Top Healthcare",
+      "Safe",
+      "English Spoken",
+      "Premium Cost"
+    ],
+    "lifeExpectancy": "71",
+    "populationDensity": "Comfortable",
+    "retirementCommunity": "Established",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Moderate",
+    "ratings": {
+      "affordability": {
+        "label": "Very High",
+        "grade": "D"
+      },
+      "healthcareQuality": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "personalSafety": {
+        "label": "Very Safe",
+        "grade": "A"
+      },
+      "politicalStability": {
+        "label": "Very Stable",
+        "grade": "A"
+      },
+      "visaEase": {
+        "label": "Moderate",
+        "grade": "C"
+      },
+      "taxEnvironment": {
+        "label": "High Tax",
+        "grade": "D"
+      },
+      "infrastructure": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "weatherComfort": {
+        "label": "Comfortable",
+        "grade": "B"
+      },
+      "healthcareCost": {
+        "label": "High",
+        "grade": "C"
+      },
+      "economy": {
+        "label": "Very Stable",
+        "grade": "A"
+      }
+    },
+    "grade": "B",
+    "pros": [
+      "excellent public services",
+      "safety",
+      "infrastructure"
+    ],
+    "cons": [
+      "cold climate",
+      "high taxes",
+      "higher costs"
+    ],
+    "internationalLiving": false
+  },
+  {
+    "id": "switzerland",
+    "name": "Switzerland",
+    "description": "Switzerland offers exceptional quality across all metrics: world-class healthcare, stunning Alpine scenery, safety, and infrastructure. The country's stability, cleanliness, and efficiency are unmatched. However, costs are the world's highest, with even modest living requiring substantial resources. Four language regions provide diversity. Residency is extremely difficult without significant wealth or family ties. Switzerland suits wealthy retirees who prioritize absolute quality, safety, and beauty, and can afford premium costs in arguably the world's most expensive country.",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "topCities": [
+      "zurich",
+      "geneva",
+      "lugano"
+    ],
+    "similarDestinations": [
+      "austria",
+      "france",
+      "germany"
+    ],
+    "climate": "Temperate",
+    "expenditure": {
+      "single": {
+        "monthly": {
+          "currency": "$",
+          "amount": 5000
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 3775622
+        }
+      },
+      "couple": {
+        "monthly": {
+          "currency": "$",
+          "amount": 6250
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 4719528
+        }
+      }
+    },
+    "tags": [
+      "Top Healthcare",
+      "Safe",
+      "Premium Cost",
+      "Mountain Living"
+    ],
+    "lifeExpectancy": "76",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Established",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Moderate",
+    "ratings": {
+      "affordability": {
+        "label": "Very High",
+        "grade": "D"
+      },
+      "healthcareQuality": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "personalSafety": {
+        "label": "Very Safe",
+        "grade": "A"
+      },
+      "politicalStability": {
+        "label": "Very Stable",
+        "grade": "A"
+      },
+      "visaEase": {
+        "label": "Difficult",
+        "grade": "D"
+      },
+      "taxEnvironment": {
+        "label": "Moderate Tax",
+        "grade": "C"
+      },
+      "infrastructure": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "weatherComfort": {
+        "label": "Comfortable",
+        "grade": "B"
+      },
+      "healthcareCost": {
+        "label": "Very High",
+        "grade": "D"
+      },
+      "economy": {
+        "label": "Very Stable",
+        "grade": "A"
+      }
+    },
+    "grade": "C",
+    "pros": [
+      "outstanding healthcare",
+      "safety",
+      "quality of life"
+    ],
+    "cons": [
+      "extremely high costs",
+      "difficult residency"
+    ],
+    "internationalLiving": false
+  },
+  {
+    "id": "taiwan",
+    "name": "Taiwan",
+    "description": "Taiwan offers excellent healthcare at affordable prices, very high safety, and friendly people in a democratic society. Taipei provides modern urban living, while smaller cities offer better value. The retirement visa requires $100,000+ in assets. English is limited outside Taipei. The subtropical climate brings hot, humid summers and mild winters. Taiwan suits those seeking safe, affordable Asian living with excellent healthcare and democratic values, though language barriers and limited expat community outside Taipei pose challenges.",
+    "region": "Asia",
+    "subregion": "East Asia",
+    "topCities": [
+      "taipei",
+      "taichung",
+      "kaohsiung"
+    ],
+    "similarDestinations": [
+      "south-korea",
+      "japan",
+      "singapore"
+    ],
+    "climate": "Subtropical",
+    "expenditure": {
+      "single": {
+        "monthly": {
+          "currency": "$",
+          "amount": 2250
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 1699030
+        }
+      },
+      "couple": {
+        "monthly": {
+          "currency": "$",
+          "amount": 2850
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 2152104
+        }
+      }
+    },
+    "tags": [
+      "Top Healthcare",
+      "Safe",
+      "Low Cost",
+      "Limited English"
+    ],
+    "lifeExpectancy": "83",
+    "populationDensity": "Dense",
+    "retirementCommunity": "Established",
+    "englishUsage": "Minimal",
+    "crowds": "Very Crowded",
+    "ratings": {
+      "affordability": {
+        "label": "Moderate",
+        "grade": "B"
+      },
+      "healthcareQuality": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "personalSafety": {
+        "label": "Very Safe",
+        "grade": "A"
+      },
+      "politicalStability": {
+        "label": "Stable",
+        "grade": "B"
+      },
+      "visaEase": {
+        "label": "Difficult",
+        "grade": "D"
+      },
+      "taxEnvironment": {
+        "label": "Moderate Tax",
+        "grade": "C"
+      },
+      "infrastructure": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "weatherComfort": {
+        "label": "Comfortable",
+        "grade": "B"
+      },
+      "healthcareCost": {
+        "label": "Low",
+        "grade": "B"
+      },
+      "economy": {
+        "label": "Very Stable",
+        "grade": "A"
+      }
+    },
+    "grade": "B",
+    "pros": [
+      "outstanding healthcare",
+      "safety",
+      "reasonable costs"
+    ],
+    "cons": [
+      "crowded cities",
+      "visa difficulty"
+    ],
+    "internationalLiving": false
   },
   {
     "id": "thailand",
@@ -2615,6 +4490,528 @@
       "language barrier"
     ],
     "internationalLiving": true
+  },
+  {
+    "id": "tunisia",
+    "name": "Tunisia",
+    "description": "Tunisia offers Mediterranean coastline, Roman ruins, and low costs in a relatively stable North African country. Coastal cities like Sousse and Hammamet provide beach living. Healthcare is adequate but not world-class. French is commonly spoken. Political changes since the Arab Spring have brought challenges. Residency requires proof of income. Tunisia suits budget-conscious retirees seeking Mediterranean climate and culture at low cost with African flavor, who can tolerate developing infrastructure and some political uncertainty.",
+    "region": "Middle East & North Africa",
+    "subregion": "North Africa",
+    "topCities": [
+      "tunis",
+      "sousse",
+      "hammamet"
+    ],
+    "similarDestinations": [
+      "morocco",
+      "turkey",
+      "greece"
+    ],
+    "climate": "Mediterranean",
+    "expenditure": {
+      "single": {
+        "monthly": {
+          "currency": "$",
+          "amount": 1400
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 1057174
+        }
+      },
+      "couple": {
+        "monthly": {
+          "currency": "$",
+          "amount": 1900
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 1434736
+        }
+      }
+    },
+    "tags": [
+      "Low Cost",
+      "Warm Weather",
+      "Beach Living",
+      "Low Crowds"
+    ],
+    "lifeExpectancy": "80",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Established",
+    "englishUsage": "Commonly Used",
+    "crowds": "Moderate",
+    "ratings": {
+      "affordability": {
+        "label": "Low",
+        "grade": "A"
+      },
+      "healthcareQuality": {
+        "label": "Good",
+        "grade": "B"
+      },
+      "personalSafety": {
+        "label": "Safe",
+        "grade": "B"
+      },
+      "politicalStability": {
+        "label": "Moderate",
+        "grade": "C"
+      },
+      "visaEase": {
+        "label": "Moderate",
+        "grade": "C"
+      },
+      "taxEnvironment": {
+        "label": "Moderate Tax",
+        "grade": "C"
+      },
+      "infrastructure": {
+        "label": "Good",
+        "grade": "B"
+      },
+      "weatherComfort": {
+        "label": "Ideal",
+        "grade": "A"
+      },
+      "healthcareCost": {
+        "label": "Very Low",
+        "grade": "A"
+      },
+      "economy": {
+        "label": "Moderate",
+        "grade": "C"
+      }
+    },
+    "grade": "C",
+    "pros": [
+      "low cost",
+      "mediterranean climate",
+      "low crowds"
+    ],
+    "cons": [
+      "developing healthcare",
+      "moderate political risk"
+    ],
+    "internationalLiving": false
+  },
+  {
+    "id": "turkey",
+    "name": "Turkey",
+    "description": "Turkey straddles Europe and Asia, offering diverse landscapes from Mediterranean beaches to cosmopolitan Istanbul. The cost of living is exceptionally low, private healthcare is good in major cities, and residency permits are straightforward. However, significant economic instability with high inflation and currency volatility poses risks. Political changes have also created uncertainty. Cities like Antalya and coastal areas attract retirees, but careful financial planning is essential given the lira's fluctuations and evolving political landscape.",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "topCities": [
+      "antalya",
+      "istanbul",
+      "izmir"
+    ],
+    "similarDestinations": [
+      "tunisia",
+      "morocco",
+      "sri-lanka"
+    ],
+    "climate": "Mixed",
+    "expenditure": {
+      "single": {
+        "monthly": {
+          "currency": "$",
+          "amount": 1400
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 1057174
+        }
+      },
+      "couple": {
+        "monthly": {
+          "currency": "$",
+          "amount": 1900
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 1434736
+        }
+      }
+    },
+    "tags": [
+      "Low Cost",
+      "Warm Weather",
+      "Beach Living"
+    ],
+    "lifeExpectancy": "66",
+    "populationDensity": "Dense",
+    "retirementCommunity": "Established",
+    "englishUsage": "Minimal",
+    "crowds": "Very Crowded",
+    "ratings": {
+      "affordability": {
+        "label": "Low",
+        "grade": "A"
+      },
+      "healthcareQuality": {
+        "label": "Good",
+        "grade": "B"
+      },
+      "personalSafety": {
+        "label": "Safe",
+        "grade": "B"
+      },
+      "politicalStability": {
+        "label": "Unstable",
+        "grade": "D"
+      },
+      "visaEase": {
+        "label": "Easy",
+        "grade": "B"
+      },
+      "taxEnvironment": {
+        "label": "Moderate Tax",
+        "grade": "C"
+      },
+      "infrastructure": {
+        "label": "Good",
+        "grade": "B"
+      },
+      "weatherComfort": {
+        "label": "Comfortable",
+        "grade": "B"
+      },
+      "healthcareCost": {
+        "label": "Very Low",
+        "grade": "A"
+      },
+      "economy": {
+        "label": "Unstable",
+        "grade": "D"
+      }
+    },
+    "grade": "C",
+    "pros": [
+      "very affordable",
+      "good private healthcare",
+      "diverse climates"
+    ],
+    "cons": [
+      "political volatility",
+      "crowding",
+      "currency instability"
+    ],
+    "internationalLiving": false
+  },
+  {
+    "id": "united-arab-emirates",
+    "name": "United Arab Emirates",
+    "description": "The UAE, particularly Dubai and Abu Dhabi, offers modern infrastructure, excellent healthcare, and exceptional safety with year-round sunshine. The multicultural environment includes large expat populations. However, costs are very high, the heat is extreme in summer, and residency requires property investment ($200,000+) or company sponsorship. The culture is conservative compared to Western countries. The UAE suits those seeking modern Middle Eastern luxury with safety and efficiency, who can afford high costs and adapt to cultural norms.",
+    "region": "Middle East & North Africa",
+    "subregion": "Middle East",
+    "topCities": [
+      "dubai",
+      "abu-dhabi",
+      "ras-al-khaimah"
+    ],
+    "similarDestinations": [
+      "singapore",
+      "oman",
+      "switzerland"
+    ],
+    "climate": "Arid",
+    "expenditure": {
+      "single": {
+        "monthly": {
+          "currency": "$",
+          "amount": 4000
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 3020497
+        }
+      },
+      "couple": {
+        "monthly": {
+          "currency": "$",
+          "amount": 5250
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 3964403
+        }
+      }
+    },
+    "tags": [
+      "Safe",
+      "Warm Weather",
+      "English Spoken",
+      "Tax Friendly",
+      "Premium Cost"
+    ],
+    "lifeExpectancy": "67",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Growing Scene",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Very Crowded",
+    "ratings": {
+      "affordability": {
+        "label": "Very High",
+        "grade": "D"
+      },
+      "healthcareQuality": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "personalSafety": {
+        "label": "Very Safe",
+        "grade": "A"
+      },
+      "politicalStability": {
+        "label": "Stable",
+        "grade": "B"
+      },
+      "visaEase": {
+        "label": "Difficult",
+        "grade": "D"
+      },
+      "taxEnvironment": {
+        "label": "Very Tax-Friendly",
+        "grade": "A"
+      },
+      "infrastructure": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "weatherComfort": {
+        "label": "Challenging",
+        "grade": "D"
+      },
+      "healthcareCost": {
+        "label": "Low",
+        "grade": "B"
+      },
+      "economy": {
+        "label": "Very Stable",
+        "grade": "A"
+      }
+    },
+    "grade": "B",
+    "pros": [
+      "extremely safe",
+      "tax-friendly",
+      "premium healthcare"
+    ],
+    "cons": [
+      "hot climate",
+      "high costs",
+      "residency complexity"
+    ],
+    "internationalLiving": false
+  },
+  {
+    "id": "united-kingdom",
+    "name": "United Kingdom",
+    "description": "The UK offers familiar English-speaking environment with world-class healthcare through the NHS, though waiting times can be long. From London's culture to Scottish Highlands' beauty, the country provides diversity. Post-Brexit, residency for non-UK citizens has become more challenging, requiring significant income or investment. Costs are high, particularly in the southeast. The weather is often gray. The UK suits those with existing ties or citizenship seeking familiarity, despite higher costs and more challenging immigration compared to pre-Brexit times.",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "topCities": [
+      "edinburgh",
+      "bath",
+      "cornwall"
+    ],
+    "similarDestinations": [
+      "ireland",
+      "canada",
+      "australia"
+    ],
+    "climate": "Temperate",
+    "expenditure": {
+      "single": {
+        "monthly": {
+          "currency": "$",
+          "amount": 3500
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 2642936
+        }
+      },
+      "couple": {
+        "monthly": {
+          "currency": "$",
+          "amount": 4500
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 3398918
+        }
+      }
+    },
+    "tags": [
+      "Top Healthcare",
+      "Safe",
+      "English Spoken",
+      "Premium Cost"
+    ],
+    "lifeExpectancy": "71",
+    "populationDensity": "Dense",
+    "retirementCommunity": "Thriving Hub",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Very Crowded",
+    "ratings": {
+      "affordability": {
+        "label": "Very High",
+        "grade": "D"
+      },
+      "healthcareQuality": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "personalSafety": {
+        "label": "Safe",
+        "grade": "B"
+      },
+      "politicalStability": {
+        "label": "Very Stable",
+        "grade": "A"
+      },
+      "visaEase": {
+        "label": "Difficult",
+        "grade": "D"
+      },
+      "taxEnvironment": {
+        "label": "Moderate Tax",
+        "grade": "C"
+      },
+      "infrastructure": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "weatherComfort": {
+        "label": "Comfortable",
+        "grade": "B"
+      },
+      "healthcareCost": {
+        "label": "High",
+        "grade": "C"
+      },
+      "economy": {
+        "label": "Very Stable",
+        "grade": "A"
+      }
+    },
+    "grade": "C",
+    "pros": [
+      "familiar system",
+      "strong healthcare",
+      "english language"
+    ],
+    "cons": [
+      "high costs",
+      "crowded cities",
+      "visa complexity"
+    ],
+    "internationalLiving": false
+  },
+  {
+    "id": "united-states",
+    "name": "United States",
+    "description": "The US offers incredible diversity from Florida beaches to Arizona deserts, with world-class healthcare facilities and infrastructure. However, healthcare costs are the world's highest without employer coverage, and the system is complex. Residency without family ties requires substantial investment through EB-5 visas ($800,000+). Costs vary dramatically by region. The US suits those with existing citizenship, family ties, or substantial wealth seeking familiar environment, but prohibitive healthcare costs and immigration barriers limit appeal for foreign retirees.",
+    "region": "Americas",
+    "subregion": "North America",
+    "topCities": [
+      "sarasota",
+      "scottsdale",
+      "san-diego"
+    ],
+    "similarDestinations": [
+      "canada",
+      "australia",
+      "united-kingdom"
+    ],
+    "climate": "Mixed",
+    "expenditure": {
+      "single": {
+        "monthly": {
+          "currency": "$",
+          "amount": 4000
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 3020497
+        }
+      },
+      "couple": {
+        "monthly": {
+          "currency": "$",
+          "amount": 5250
+        },
+        "thirtyYearWithInflation": {
+          "currency": "$",
+          "amount": 3964403
+        }
+      }
+    },
+    "tags": [
+      "Top Healthcare",
+      "English Spoken",
+      "Premium Cost"
+    ],
+    "lifeExpectancy": "67",
+    "populationDensity": "Moderate",
+    "retirementCommunity": "Established",
+    "englishUsage": "Widely Spoken",
+    "crowds": "Very Crowded",
+    "ratings": {
+      "affordability": {
+        "label": "Very High",
+        "grade": "D"
+      },
+      "healthcareQuality": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "personalSafety": {
+        "label": "Safe",
+        "grade": "B"
+      },
+      "politicalStability": {
+        "label": "Stable",
+        "grade": "B"
+      },
+      "visaEase": {
+        "label": "Difficult",
+        "grade": "D"
+      },
+      "taxEnvironment": {
+        "label": "High Tax",
+        "grade": "D"
+      },
+      "infrastructure": {
+        "label": "Very Good",
+        "grade": "A"
+      },
+      "weatherComfort": {
+        "label": "Comfortable",
+        "grade": "B"
+      },
+      "healthcareCost": {
+        "label": "Very High",
+        "grade": "D"
+      },
+      "economy": {
+        "label": "Stable",
+        "grade": "B"
+      }
+    },
+    "grade": "C",
+    "pros": [
+      "top-tier healthcare options",
+      "lifestyle variety"
+    ],
+    "cons": [
+      "very high healthcare costs",
+      "complex insurance",
+      "taxes"
+    ],
+    "internationalLiving": false
   },
   {
     "id": "uruguay",
