@@ -461,6 +461,24 @@ function Cost({
     <ul className="flex flex-col gap-2">
       <li>
         <article className="flex flex-col gap-2 rounded-xl border-1 border-neutral-100 bg-white p-4">
+          <h3 className="text-xs text-neutral-500">Monthly</h3>
+          <p className="text-xl font-semibold text-neutral-600">
+            {monthly.currency}
+            {formatter.format(monthly.amount)}
+          </p>
+        </article>
+      </li>
+      <li>
+        <article className="flex flex-col gap-2 rounded-xl border-1 border-neutral-100 bg-white p-4">
+          <h3 className="text-xs text-neutral-500">Yearly</h3>
+          <p className="text-xl font-semibold text-neutral-600">
+            {monthly.currency}
+            {formatter.format(monthly.amount * 12)}
+          </p>
+        </article>
+      </li>
+      <li>
+        <article className="flex flex-col gap-2 rounded-xl border-1 border-neutral-100 bg-white p-4">
           <h3 className="text-xs text-neutral-500">
             30 Years Without Inflation
           </h3>
@@ -476,24 +494,6 @@ function Cost({
           <p className="text-xl font-semibold text-neutral-600">
             {thirtyYearWithInflation.currency}
             {formatter.format(thirtyYearWithInflation.amount)}
-          </p>
-        </article>
-      </li>
-      <li>
-        <article className="flex flex-col gap-2 rounded-xl border-1 border-neutral-100 bg-white p-4">
-          <h3 className="text-xs text-neutral-500">Monthly Cost</h3>
-          <p className="text-xl font-semibold text-neutral-600">
-            {monthly.currency}
-            {formatter.format(monthly.amount)}
-          </p>
-        </article>
-      </li>
-      <li>
-        <article className="flex flex-col gap-2 rounded-xl border-1 border-neutral-100 bg-white p-4">
-          <h3 className="text-xs text-neutral-500">Yearly Cost</h3>
-          <p className="text-xl font-semibold text-neutral-600">
-            {monthly.currency}
-            {formatter.format(monthly.amount * 12)}
           </p>
         </article>
       </li>
