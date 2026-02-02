@@ -24,7 +24,6 @@ export function DestinationProfile() {
   const params = Wouter.useParams();
 
   React.useEffect(() => {
-    console.log("scrolling to top");
     window.scrollTo({ top: 0, left: 0 });
   }, [params["id"]]);
 
@@ -589,12 +588,6 @@ function Ratings({ destination }: { destination: Destination }) {
   );
 }
 
-type FormValues = {
-  currentAge: number;
-  retirementAge: number;
-  retirementDuration: number;
-};
-
 type RetirementEstimates = Readonly<
   Record<
     "single" | "couple",
@@ -609,33 +602,23 @@ function Calculator({ destination }: { destination: Destination }) {
     null,
   );
 
-  function calculate({ retirementDuration }: FormValues): RetirementEstimates {
-    const costs = {
-      single: {
-        withoutInflation:
-          destination.expenditure.single.monthly.amount *
-          12 *
-          retirementDuration,
-        withInflation:
-          destination.expenditure.single.monthly.amount *
-          12 *
-          retirementDuration *
-          (1 + Math.random() * 0.3),
-      },
-      couple: {
-        withoutInflation:
-          destination.expenditure.couple.monthly.amount *
-          12 *
-          retirementDuration,
-        withInflation:
-          destination.expenditure.couple.monthly.amount *
-          12 *
-          retirementDuration *
-          (1 + Math.random() * 0.3),
-      },
-    } as const;
+  function inflateAnnualCostToTargetRetirementYear(
+    currentAnnualCost: number,
+    inflationRate: number,
+    yearsTillRetirement: number,
+  ): number {
+    return currentAnnualCost * (1 + inflationRate) ** yearsTillRetirement;
+  }
 
-    return costs;
+  function calculateTotalRetirementCost(
+    annualCost: number,
+    inflationRate: number,
+    retirementDuration: number,
+  ): number {
+    return (
+      annualCost *
+      (((1 + inflationRate) ** retirementDuration - 1) / inflationRate)
+    );
   }
 
   return (
@@ -647,23 +630,78 @@ function Calculator({ destination }: { destination: Destination }) {
             window.scrollTo({ top: 0, behavior: "smooth" });
             window.setTimeout(() => {
               setEstimates(null);
-            }, 300);
+            }, 400);
           }}
           onSubmit={(event) => {
             event.preventDefault();
 
-            const { currentAge, retirementAge, retirementDuration } =
-              Object.fromEntries(new FormData(event.currentTarget));
+            function parse() {
+              const { currentAge, retirementAge, retirementDuration } =
+                Object.fromEntries(new FormData(event.currentTarget));
+              return {
+                currentAge: parseInt(currentAge as string) as number,
+                retirementAge: parseInt(retirementAge as string) as number,
+                retirementDuration: parseInt(
+                  retirementDuration as string,
+                ) as number,
+              };
+            }
 
-            const estimate = calculate({
-              currentAge: parseInt(currentAge as string) as number,
-              retirementAge: parseInt(retirementAge as string) as number,
-              retirementDuration: parseInt(
-                retirementDuration as string,
-              ) as number,
-            });
+            const { currentAge, retirementAge, retirementDuration } = parse();
 
-            setEstimates(estimate);
+            function calculateSingleWithInflation() {
+              const annualCostInRetirementYear =
+                inflateAnnualCostToTargetRetirementYear(
+                  destination.expenditure.single.monthly.amount * 12,
+                  destination.inflation,
+                  retirementAge - currentAge,
+                );
+
+              const totalRetirementCost = calculateTotalRetirementCost(
+                annualCostInRetirementYear,
+                destination.inflation,
+                retirementDuration,
+              );
+
+              return totalRetirementCost;
+            }
+
+            function calculateCoupleWithInflation() {
+              const annualCostInRetirementYear =
+                inflateAnnualCostToTargetRetirementYear(
+                  destination.expenditure.couple.monthly.amount * 12,
+                  destination.inflation,
+                  retirementAge - currentAge,
+                );
+
+              const totalRetirementCost = calculateTotalRetirementCost(
+                annualCostInRetirementYear,
+                destination.inflation,
+                retirementDuration,
+              );
+
+              return totalRetirementCost;
+            }
+
+            const estimates: RetirementEstimates = {
+              single: {
+                withInflation: calculateSingleWithInflation(),
+                withoutInflation:
+                  destination.expenditure.single.monthly.amount *
+                  12 *
+                  retirementDuration,
+              },
+              couple: {
+                withInflation: calculateCoupleWithInflation(),
+                withoutInflation:
+                  destination.expenditure.couple.monthly.amount *
+                  12 *
+                  retirementDuration,
+              },
+            };
+
+            setEstimates(estimates);
+
             window.requestAnimationFrame(() => {
               window.scrollTo({
                 top: document.body.scrollHeight,
@@ -677,7 +715,13 @@ function Calculator({ destination }: { destination: Destination }) {
             <span className="text-sm text-neutral-400 capitalize">
               Inflation rate
             </span>
-            <span className="font-semibold text-neutral-600">2.5%</span>
+            <span className="font-semibold text-neutral-600">
+              {new Intl.NumberFormat("en-US", {
+                maximumFractionDigits: 1,
+                minimumFractionDigits: 1,
+              }).format(destination.inflation * 100)}
+              %
+            </span>
           </div>
           <div className="h-px bg-neutral-100" />
           <label
