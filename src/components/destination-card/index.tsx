@@ -125,7 +125,7 @@ export function DestinationCard({ destination }: { destination: Destination }) {
             {destination.tags.map((region) => {
               return (
                 <li key={region} className="snap-start">
-                  <Chip color="blue" fill="light" size="xs">
+                  <Chip color="neutral" fill="light" size="xs">
                     {region}
                   </Chip>
                 </li>
@@ -136,16 +136,16 @@ export function DestinationCard({ destination }: { destination: Destination }) {
 
         <div className="h-px bg-neutral-100" />
 
-        <div className="flex flex-row">
+        <div className="flex flex-row gap-2 px-4">
           <Wouter.Link
             href={`/${destination.id}/overview`}
-            className="basis-1/2 rounded-lg text-center text-sm font-medium text-neutral-700"
+            className="basis-1/2 rounded-lg border-1 border-neutral-600 bg-neutral-600 py-2 text-center text-sm font-medium text-neutral-100"
           >
             View Details
           </Wouter.Link>
           <Wouter.Link
             href={`/${destination.id}/calculator`}
-            className="basis-1/2 rounded-lg text-center text-sm font-medium text-neutral-700"
+            className="basis-1/2 rounded-lg border-2 border-neutral-600 bg-white py-2 text-center text-sm font-medium text-neutral-600"
           >
             Calculator
           </Wouter.Link>
