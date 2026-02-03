@@ -18,24 +18,12 @@
     "climate": "Temperate",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 3850
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2907229
-        }
+        "currency": "$",
+        "amount": 3850
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 5000
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 3774743
-        }
+        "currency": "$",
+        "amount": 5000
       }
     },
     "tags": [
@@ -46,9 +34,9 @@
       "Beach Living",
       "Premium Cost"
     ],
-    "inflation": 0.033,
-    "lifeExpectancy": 71,
-    "lifeExpectancyAfter65": 80,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 76,
+    "lifeExpectancyAfter65": 85,
     "populationDensity": "Spacious",
     "retirementCommunity": "Established",
     "englishUsage": "Widely Spoken",
@@ -97,13 +85,12 @@
     },
     "grade": "C",
     "pros": [
-      "excellent healthcare",
-      "outdoor lifestyle",
-      "safety"
+      "strong-healthcare-access",
+      "high-personal-safety"
     ],
     "cons": [
-      "high living costs",
-      "difficult residency"
+      "high-cost-of-living",
+      "complex-visa-process"
     ],
     "internationalLiving": true
   },
@@ -126,24 +113,12 @@
     "climate": "Temperate",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 3400
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2568933
-        }
+        "currency": "$",
+        "amount": 3400
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 4300
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 3247035
-        }
+        "currency": "$",
+        "amount": 4300
       }
     },
     "tags": [
@@ -151,9 +126,9 @@
       "Safe",
       "Premium Cost"
     ],
-    "inflation": 0.079,
-    "lifeExpectancy": 68,
-    "lifeExpectancyAfter65": 77,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 73,
+    "lifeExpectancyAfter65": 82,
     "populationDensity": "Moderate",
     "retirementCommunity": "Established",
     "englishUsage": "Commonly Used",
@@ -202,13 +177,13 @@
     },
     "grade": "C",
     "pros": [
-      "premium healthcare",
-      "very safe",
-      "stable economy"
+      "strong-healthcare-access",
+      "high-personal-safety",
+      "stable-political-environment"
     ],
     "cons": [
-      "very high living costs",
-      "high taxes"
+      "high-cost-of-living",
+      "high-tax"
     ],
     "internationalLiving": false
   },
@@ -231,24 +206,12 @@
     "climate": "Tropical",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2000
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1510249
-        }
+        "currency": "$",
+        "amount": 2000
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2500
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1887811
-        }
+        "currency": "$",
+        "amount": 2500
       }
     },
     "tags": [
@@ -258,9 +221,9 @@
       "English Spoken",
       "Beach Living"
     ],
-    "inflation": 0.013000000000000001,
-    "lifeExpectancy": 72,
-    "lifeExpectancyAfter65": 81,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 84,
+    "lifeExpectancyAfter65": 93,
     "populationDensity": "Comfortable",
     "retirementCommunity": "Thriving Hub",
     "englishUsage": "Widely Spoken",
@@ -309,13 +272,12 @@
     },
     "grade": "C",
     "pros": [
-      "english-speaking",
-      "relaxed pace",
+      "english-friendly",
       "tax-friendly"
     ],
     "cons": [
-      "limited infrastructure",
-      "developing healthcare"
+      "developing-infrastructure",
+      "varying-healthcare-quality"
     ],
     "internationalLiving": true
   },
@@ -338,24 +300,12 @@
     "climate": "Cold",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 3300
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2493421
-        }
+        "currency": "$",
+        "amount": 3300
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 4300
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 3247035
-        }
+        "currency": "$",
+        "amount": 4300
       }
     },
     "tags": [
@@ -364,9 +314,9 @@
       "English Spoken",
       "Premium Cost"
     ],
-    "inflation": 0.09699999999999999,
-    "lifeExpectancy": 79,
-    "lifeExpectancyAfter65": 88,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 74,
+    "lifeExpectancyAfter65": 83,
     "populationDensity": "Spacious",
     "retirementCommunity": "Established",
     "englishUsage": "Widely Spoken",
@@ -415,14 +365,13 @@
     },
     "grade": "C",
     "pros": [
-      "universal healthcare",
-      "safety",
-      "political stability"
+      "strong-healthcare-access",
+      "high-personal-safety",
+      "stable-political-environment"
     ],
     "cons": [
-      "cold climate",
-      "high taxes",
-      "expensive cities"
+      "challenging-climate",
+      "high-tax"
     ],
     "internationalLiving": false
   },
@@ -445,24 +394,12 @@
     "climate": "Temperate",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2500
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1887811
-        }
+        "currency": "$",
+        "amount": 2500
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 3150
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2378642
-        }
+        "currency": "$",
+        "amount": 3150
       }
     },
     "tags": [
@@ -470,7 +407,7 @@
       "Safe",
       "Large Expat Communities"
     ],
-    "inflation": 0.08800000000000001,
+    "inflationRate": 0.025,
     "lifeExpectancy": 73,
     "lifeExpectancyAfter65": 82,
     "populationDensity": "Comfortable",
@@ -521,13 +458,13 @@
     },
     "grade": "B",
     "pros": [
-      "good healthcare",
-      "safety",
-      "infrastructure"
+      "strong-healthcare-access",
+      "high-personal-safety",
+      "modern-infrastructure"
     ],
     "cons": [
-      "earthquake risk",
-      "rising costs"
+      "volatile-political-climate",
+      "rising-cost"
     ],
     "internationalLiving": true
   },
@@ -550,24 +487,12 @@
     "climate": "Tropical",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 1800
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1359224
-        }
+        "currency": "$",
+        "amount": 1800
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2400
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1812298
-        }
+        "currency": "$",
+        "amount": 2400
       }
     },
     "tags": [
@@ -577,9 +502,9 @@
       "Large Expat Communities",
       "Mountain Living"
     ],
-    "inflation": 0.016,
-    "lifeExpectancy": 70,
-    "lifeExpectancyAfter65": 79,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 74,
+    "lifeExpectancyAfter65": 83,
     "populationDensity": "Moderate",
     "retirementCommunity": "Thriving Hub",
     "englishUsage": "Minimal",
@@ -628,13 +553,12 @@
     },
     "grade": "C",
     "pros": [
-      "affordable",
-      "good climate",
-      "growing expat hubs"
+      "affordable-cost-of-living",
+      "comfortable-climate"
     ],
     "cons": [
-      "safety varies",
-      "crowding in popular cities"
+      "varying-safety",
+      "crowded"
     ],
     "internationalLiving": true
   },
@@ -657,24 +581,12 @@
     "climate": "Tropical",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2250
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1699030
-        }
+        "currency": "$",
+        "amount": 2250
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2750
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2076592
-        }
+        "currency": "$",
+        "amount": 2750
       }
     },
     "tags": [
@@ -684,9 +596,9 @@
       "Safe",
       "Beach Living"
     ],
-    "inflation": 0.065,
-    "lifeExpectancy": 67,
-    "lifeExpectancyAfter65": 76,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 81,
+    "lifeExpectancyAfter65": 90,
     "populationDensity": "Moderate",
     "retirementCommunity": "Thriving Hub",
     "englishUsage": "Basic Available",
@@ -735,13 +647,12 @@
     },
     "grade": "B",
     "pros": [
-      "stable democracy",
-      "good healthcare",
-      "eco-friendly lifestyle"
+      "stable-political-environment",
+      "strong-healthcare-access"
     ],
     "cons": [
-      "costs rising",
-      "limited infrastructure outside key areas"
+      "high-cost-of-living",
+      "developing-infrastructure"
     ],
     "internationalLiving": true
   },
@@ -764,24 +675,12 @@
     "climate": "Mediterranean",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2000
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1510249
-        }
+        "currency": "$",
+        "amount": 2000
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2500
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1887811
-        }
+        "currency": "$",
+        "amount": 2500
       }
     },
     "tags": [
@@ -790,9 +689,9 @@
       "Large Expat Communities",
       "Beach Living"
     ],
-    "inflation": 0.076,
-    "lifeExpectancy": 76,
-    "lifeExpectancyAfter65": 85,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 70,
+    "lifeExpectancyAfter65": 79,
     "populationDensity": "Moderate",
     "retirementCommunity": "Growing Scene",
     "englishUsage": "Commonly Used",
@@ -841,13 +740,12 @@
     },
     "grade": "B",
     "pros": [
-      "scenic coast",
-      "moderate costs",
-      "safe environment"
+      "high-personal-safety",
+      "affordable-cost-of-living"
     ],
     "cons": [
-      "seasonal crowds",
-      "limited healthcare outside cities"
+      "crowded",
+      "varying-healthcare-quality"
     ],
     "internationalLiving": true
   },
@@ -870,24 +768,12 @@
     "climate": "Mediterranean",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2250
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1699030
-        }
+        "currency": "$",
+        "amount": 2250
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2850
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2152104
-        }
+        "currency": "$",
+        "amount": 2850
       }
     },
     "tags": [
@@ -898,9 +784,9 @@
       "Beach Living",
       "Tax Friendly"
     ],
-    "inflation": 0.036000000000000004,
-    "lifeExpectancy": 75,
-    "lifeExpectancyAfter65": 84,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 81,
+    "lifeExpectancyAfter65": 90,
     "populationDensity": "Moderate",
     "retirementCommunity": "Growing Scene",
     "englishUsage": "Widely Spoken",
@@ -949,13 +835,13 @@
     },
     "grade": "B",
     "pros": [
-      "easy residency",
-      "english widely used",
-      "low crime"
+      "easy-visa-access",
+      "english-friendly",
+      "high-personal-safety"
     ],
     "cons": [
-      "limited public transport",
-      "smaller healthcare system"
+      "developing-infrastructure",
+      "small-expat-community"
     ],
     "internationalLiving": false
   },
@@ -978,33 +864,21 @@
     "climate": "Temperate",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2250
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1699030
-        }
+        "currency": "$",
+        "amount": 2250
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2850
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2152104
-        }
+        "currency": "$",
+        "amount": 2850
       }
     },
     "tags": [
       "Safe",
       "Low Cost"
     ],
-    "inflation": 0.05,
-    "lifeExpectancy": 84,
-    "lifeExpectancyAfter65": 93,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 78,
+    "lifeExpectancyAfter65": 87,
     "populationDensity": "Moderate",
     "retirementCommunity": "Established",
     "englishUsage": "Commonly Used",
@@ -1053,14 +927,13 @@
     },
     "grade": "B",
     "pros": [
-      "excellent infrastructure",
-      "strong healthcare",
-      "safe"
+      "strong-healthcare-access",
+      "modern-infrastructure",
+      "high-personal-safety"
     ],
     "cons": [
-      "high taxes",
-      "colder winters",
-      "limited coastal lifestyle"
+      "high-tax",
+      "challenging-climate"
     ],
     "internationalLiving": true
   },
@@ -1083,24 +956,12 @@
     "climate": "Temperate",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 3850
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2907229
-        }
+        "currency": "$",
+        "amount": 3850
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 5000
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 3774743
-        }
+        "currency": "$",
+        "amount": 5000
       }
     },
     "tags": [
@@ -1109,9 +970,9 @@
       "English Spoken",
       "Premium Cost"
     ],
-    "inflation": 0.059000000000000004,
-    "lifeExpectancy": 82,
-    "lifeExpectancyAfter65": 91,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 83,
+    "lifeExpectancyAfter65": 92,
     "populationDensity": "Moderate",
     "retirementCommunity": "Established",
     "englishUsage": "Widely Spoken",
@@ -1160,14 +1021,14 @@
     },
     "grade": "B",
     "pros": [
-      "very safe",
-      "top healthcare",
-      "strong governance"
+      "high-personal-safety",
+      "strong-healthcare-access",
+      "stable-political-environment"
     ],
     "cons": [
-      "very high costs",
-      "high taxes",
-      "limited sunshine"
+      "high-cost-of-living",
+      "high-tax",
+      "challenging-climate"
     ],
     "internationalLiving": false
   },
@@ -1190,24 +1051,12 @@
     "climate": "Tropical",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 1800
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1359224
-        }
+        "currency": "$",
+        "amount": 1800
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2400
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1812298
-        }
+        "currency": "$",
+        "amount": 2400
       }
     },
     "tags": [
@@ -1216,9 +1065,9 @@
       "Large Expat Communities",
       "Beach Living"
     ],
-    "inflation": 0.013000000000000001,
-    "lifeExpectancy": 75,
-    "lifeExpectancyAfter65": 84,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 70,
+    "lifeExpectancyAfter65": 79,
     "populationDensity": "Dense",
     "retirementCommunity": "Thriving Hub",
     "englishUsage": "Minimal",
@@ -1267,13 +1116,12 @@
     },
     "grade": "C",
     "pros": [
-      "caribbean lifestyle",
-      "affordable",
-      "strong expat hubs"
+      "affordable-cost-of-living",
+      "strong-expat-community"
     ],
     "cons": [
-      "healthcare concentrated in cities",
-      "crowding"
+      "varying-healthcare-quality",
+      "crowded"
     ],
     "internationalLiving": true
   },
@@ -1296,24 +1144,12 @@
     "climate": "Tropical",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 1600
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1208199
-        }
+        "currency": "$",
+        "amount": 1600
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2150
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1623517
-        }
+        "currency": "$",
+        "amount": 2150
       }
     },
     "tags": [
@@ -1322,9 +1158,9 @@
       "Safe",
       "Mountain Living"
     ],
-    "inflation": 0.027000000000000003,
-    "lifeExpectancy": 82,
-    "lifeExpectancyAfter65": 91,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 75,
+    "lifeExpectancyAfter65": 84,
     "populationDensity": "Moderate",
     "retirementCommunity": "Growing Scene",
     "englishUsage": "Minimal",
@@ -1373,13 +1209,13 @@
     },
     "grade": "C",
     "pros": [
-      "low cost",
-      "mild highland climate",
-      "expat-friendly"
+      "affordable-cost-of-living",
+      "comfortable-climate",
+      "strong-expat-community"
     ],
     "cons": [
-      "developing infrastructure",
-      "political risk"
+      "developing-infrastructure",
+      "volatile-political-climate"
     ],
     "internationalLiving": true
   },
@@ -1402,24 +1238,12 @@
     "climate": "Cold",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 3300
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2493421
-        }
+        "currency": "$",
+        "amount": 3300
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 4300
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 3247035
-        }
+        "currency": "$",
+        "amount": 4300
       }
     },
     "tags": [
@@ -1429,9 +1253,9 @@
       "Low Crowds",
       "Premium Cost"
     ],
-    "inflation": 0.013999999999999999,
-    "lifeExpectancy": 74,
-    "lifeExpectancyAfter65": 83,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 78,
+    "lifeExpectancyAfter65": 87,
     "populationDensity": "Comfortable",
     "retirementCommunity": "Established",
     "englishUsage": "Widely Spoken",
@@ -1480,15 +1304,12 @@
     },
     "grade": "C",
     "pros": [
-      "quiet",
-      "safe",
-      "low crowds",
-      "strong healthcare"
+      "high-personal-safety",
+      "strong-healthcare-access"
     ],
     "cons": [
-      "cold climate",
-      "high cost",
-      "limited lifestyle variety"
+      "challenging-climate",
+      "high-cost-of-living"
     ],
     "internationalLiving": false
   },
@@ -1511,24 +1332,12 @@
     "climate": "Temperate",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2850
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2152104
-        }
+        "currency": "$",
+        "amount": 2850
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 3600
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2718448
-        }
+        "currency": "$",
+        "amount": 3600
       }
     },
     "tags": [
@@ -1536,7 +1345,7 @@
       "Warm Weather",
       "Safe"
     ],
-    "inflation": 0.1,
+    "inflationRate": 0.025,
     "lifeExpectancy": 66,
     "lifeExpectancyAfter65": 75,
     "populationDensity": "Moderate",
@@ -1587,13 +1396,13 @@
     },
     "grade": "B",
     "pros": [
-      "top-tier healthcare",
-      "strong infrastructure",
-      "safety"
+      "strong-healthcare-access",
+      "modern-infrastructure",
+      "high-personal-safety"
     ],
     "cons": [
-      "high taxes",
-      "higher costs in popular cities"
+      "high-cost-of-living",
+      "high-tax"
     ],
     "internationalLiving": true
   },
@@ -1616,24 +1425,12 @@
     "climate": "Mixed",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 1400
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1057174
-        }
+        "currency": "$",
+        "amount": 1400
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 1900
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1434736
-        }
+        "currency": "$",
+        "amount": 1900
       }
     },
     "tags": [
@@ -1641,9 +1438,9 @@
       "Easy Residency",
       "Tax Friendly"
     ],
-    "inflation": 0.032,
-    "lifeExpectancy": 80,
-    "lifeExpectancyAfter65": 89,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 83,
+    "lifeExpectancyAfter65": 92,
     "populationDensity": "Comfortable",
     "retirementCommunity": "Growing Scene",
     "englishUsage": "Commonly Used",
@@ -1692,13 +1489,13 @@
     },
     "grade": "B",
     "pros": [
-      "extremely easy residency",
-      "very low taxes",
-      "low cost"
+      "easy-visa-access",
+      "tax-friendly",
+      "affordable-cost-of-living"
     ],
     "cons": [
-      "developing healthcare",
-      "smaller expat support systems"
+      "developing-healthcare",
+      "small-expat-community"
     ],
     "internationalLiving": false
   },
@@ -1721,33 +1518,21 @@
     "climate": "Temperate",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 3150
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2378642
-        }
+        "currency": "$",
+        "amount": 3150
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 4000
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 3020497
-        }
+        "currency": "$",
+        "amount": 4000
       }
     },
     "tags": [
       "Top Healthcare",
       "Safe"
     ],
-    "inflation": 0.022000000000000002,
-    "lifeExpectancy": 85,
-    "lifeExpectancyAfter65": 94,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 75,
+    "lifeExpectancyAfter65": 84,
     "populationDensity": "Dense",
     "retirementCommunity": "Established",
     "englishUsage": "Commonly Used",
@@ -1796,14 +1581,13 @@
     },
     "grade": "B",
     "pros": [
-      "strong healthcare",
-      "efficient infrastructure",
-      "stability"
+      "strong-healthcare-access",
+      "modern-infrastructure",
+      "stable-political-environment"
     ],
     "cons": [
-      "high taxes",
-      "dense cities",
-      "colder climate"
+      "high-tax",
+      "challenging-climate"
     ],
     "internationalLiving": true
   },
@@ -1826,24 +1610,12 @@
     "climate": "Mediterranean",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2000
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1510249
-        }
+        "currency": "$",
+        "amount": 2000
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2550
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1925567
-        }
+        "currency": "$",
+        "amount": 2550
       }
     },
     "tags": [
@@ -1852,9 +1624,9 @@
       "Beach Living",
       "Large Expat Communities"
     ],
-    "inflation": 0.01,
-    "lifeExpectancy": 70,
-    "lifeExpectancyAfter65": 79,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 81,
+    "lifeExpectancyAfter65": 90,
     "populationDensity": "Moderate",
     "retirementCommunity": "Growing Scene",
     "englishUsage": "Commonly Used",
@@ -1903,14 +1675,12 @@
     },
     "grade": "C",
     "pros": [
-      "mediterranean lifestyle",
-      "affordable regions",
-      "improving healthcare"
+      "comfortable-climate",
+      "affordable-cost-of-living"
     ],
     "cons": [
-      "bureaucracy",
-      "tourist crowds",
-      "uneven public services"
+      "crowded",
+      "developing-infrastructure"
     ],
     "internationalLiving": true
   },
@@ -1933,24 +1703,12 @@
     "climate": "Tropical",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 1650
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1245955
-        }
+        "currency": "$",
+        "amount": 1650
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2150
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1623517
-        }
+        "currency": "$",
+        "amount": 2150
       }
     },
     "tags": [
@@ -1959,9 +1717,9 @@
       "Warm Weather",
       "Beach Living"
     ],
-    "inflation": 0.03,
-    "lifeExpectancy": 82,
-    "lifeExpectancyAfter65": 91,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 76,
+    "lifeExpectancyAfter65": 85,
     "populationDensity": "Dense",
     "retirementCommunity": "Growing Scene",
     "englishUsage": "Minimal",
@@ -2010,13 +1768,12 @@
     },
     "grade": "C",
     "pros": [
-      "low costs",
-      "resort lifestyles",
-      "cultural richness"
+      "affordable-cost-of-living",
+      "resort-lifestyle"
     ],
     "cons": [
-      "congestion",
-      "variable healthcare quality"
+      "varying-healthcare-quality",
+      "crowded"
     ],
     "internationalLiving": true
   },
@@ -2039,24 +1796,12 @@
     "climate": "Temperate",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 3300
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2493421
-        }
+        "currency": "$",
+        "amount": 3300
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 4300
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 3247035
-        }
+        "currency": "$",
+        "amount": 4300
       }
     },
     "tags": [
@@ -2064,9 +1809,9 @@
       "Safe",
       "English Spoken"
     ],
-    "inflation": 0.064,
-    "lifeExpectancy": 67,
-    "lifeExpectancyAfter65": 76,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 73,
+    "lifeExpectancyAfter65": 82,
     "populationDensity": "Moderate",
     "retirementCommunity": "Established",
     "englishUsage": "Widely Spoken",
@@ -2115,13 +1860,12 @@
     },
     "grade": "B",
     "pros": [
-      "english-speaking",
-      "good healthcare",
-      "stable economy"
+      "english-friendly",
+      "strong-healthcare-access"
     ],
     "cons": [
-      "high housing costs",
-      "weather variability"
+      "high-cost-of-living",
+      "challenging-climate"
     ],
     "internationalLiving": true
   },
@@ -2144,24 +1888,12 @@
     "climate": "Mediterranean",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2500
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1887811
-        }
+        "currency": "$",
+        "amount": 2500
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 3150
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2378642
-        }
+        "currency": "$",
+        "amount": 3150
       }
     },
     "tags": [
@@ -2170,9 +1902,9 @@
       "Large Expat Communities",
       "Top Healthcare"
     ],
-    "inflation": 0.051,
-    "lifeExpectancy": 81,
-    "lifeExpectancyAfter65": 90,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 70,
+    "lifeExpectancyAfter65": 79,
     "populationDensity": "Dense",
     "retirementCommunity": "Growing Scene",
     "englishUsage": "Minimal",
@@ -2221,14 +1953,11 @@
     },
     "grade": "B",
     "pros": [
-      "world-class healthcare",
-      "culture",
-      "cuisine"
+      "strong-healthcare-access"
     ],
     "cons": [
-      "dense cities",
-      "bureaucracy",
-      "limited english usage"
+      "high-cost-of-living",
+      "limited-english"
     ],
     "internationalLiving": true
   },
@@ -2251,24 +1980,12 @@
     "climate": "Temperate",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 3150
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2378642
-        }
+        "currency": "$",
+        "amount": 3150
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 4000
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 3020497
-        }
+        "currency": "$",
+        "amount": 4000
       }
     },
     "tags": [
@@ -2277,9 +1994,9 @@
       "Premium Cost",
       "Limited English"
     ],
-    "inflation": 0.09300000000000001,
-    "lifeExpectancy": 80,
-    "lifeExpectancyAfter65": 89,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 67,
+    "lifeExpectancyAfter65": 76,
     "populationDensity": "Dense",
     "retirementCommunity": "Established",
     "englishUsage": "Minimal",
@@ -2328,14 +2045,12 @@
     },
     "grade": "B",
     "pros": [
-      "world-leading life expectancy",
-      "safety",
-      "healthcare"
+      "strong-healthcare-access",
+      "high-personal-safety"
     ],
     "cons": [
-      "language barrier",
-      "dense cities",
-      "complex visas"
+      "limited-english",
+      "complex-visa-process"
     ],
     "internationalLiving": false
   },
@@ -2358,24 +2073,12 @@
     "climate": "Tropical",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2000
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1510249
-        }
+        "currency": "$",
+        "amount": 2000
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2500
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1887811
-        }
+        "currency": "$",
+        "amount": 2500
       }
     },
     "tags": [
@@ -2385,9 +2088,9 @@
       "Large Expat Communities",
       "English Spoken"
     ],
-    "inflation": 0.044000000000000004,
-    "lifeExpectancy": 81,
-    "lifeExpectancyAfter65": 90,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 66,
+    "lifeExpectancyAfter65": 75,
     "populationDensity": "Moderate",
     "retirementCommunity": "Thriving Hub",
     "englishUsage": "Widely Spoken",
@@ -2436,13 +2139,13 @@
     },
     "grade": "B",
     "pros": [
-      "very affordable",
-      "english widely spoken",
-      "good private healthcare"
+      "affordable-cost-of-living",
+      "english-friendly",
+      "strong-healthcare-access"
     ],
     "cons": [
-      "humid climate",
-      "long-term visa rules can change"
+      "challenging-climate",
+      "complex-visa-process"
     ],
     "internationalLiving": true
   },
@@ -2465,24 +2168,12 @@
     "climate": "Mediterranean",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2750
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2076592
-        }
+        "currency": "$",
+        "amount": 2750
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 3600
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2718448
-        }
+        "currency": "$",
+        "amount": 3600
       }
     },
     "tags": [
@@ -2492,9 +2183,9 @@
       "Beach Living",
       "Tax Friendly"
     ],
-    "inflation": 0.015,
-    "lifeExpectancy": 71,
-    "lifeExpectancyAfter65": 80,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 66,
+    "lifeExpectancyAfter65": 75,
     "populationDensity": "Very Dense",
     "retirementCommunity": "Thriving Hub",
     "englishUsage": "Widely Spoken",
@@ -2543,14 +2234,13 @@
     },
     "grade": "A",
     "pros": [
-      "english-speaking",
-      "strong healthcare",
-      "tax advantages"
+      "english-friendly",
+      "strong-healthcare-access",
+      "tax-friendly"
     ],
     "cons": [
-      "very dense",
-      "expensive housing",
-      "tourist pressure"
+      "high-cost-of-living",
+      "crowded"
     ],
     "internationalLiving": true
   },
@@ -2573,24 +2263,12 @@
     "climate": "Mixed",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2000
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1510249
-        }
+        "currency": "$",
+        "amount": 2000
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2500
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1887811
-        }
+        "currency": "$",
+        "amount": 2500
       }
     },
     "tags": [
@@ -2600,9 +2278,9 @@
       "Large Expat Communities",
       "Beach Living"
     ],
-    "inflation": 0.07400000000000001,
-    "lifeExpectancy": 76,
-    "lifeExpectancyAfter65": 85,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 83,
+    "lifeExpectancyAfter65": 92,
     "populationDensity": "Moderate",
     "retirementCommunity": "Thriving Hub",
     "englishUsage": "Minimal",
@@ -2651,13 +2329,13 @@
     },
     "grade": "C",
     "pros": [
-      "low living costs",
-      "strong expat hubs",
-      "affordable healthcare"
+      "affordable-cost-of-living",
+      "strong-expat-community",
+      "strong-healthcare-access"
     ],
     "cons": [
-      "language barrier outside expat zones",
-      "safety varies by region"
+      "limited-english",
+      "volatile-political-climate"
     ],
     "internationalLiving": true
   },
@@ -2680,24 +2358,12 @@
     "climate": "Mediterranean",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 1650
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1245955
-        }
+        "currency": "$",
+        "amount": 1650
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2150
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1623517
-        }
+        "currency": "$",
+        "amount": 2150
       }
     },
     "tags": [
@@ -2706,9 +2372,9 @@
       "Warm Weather",
       "Beach Living"
     ],
-    "inflation": 0.013999999999999999,
-    "lifeExpectancy": 83,
-    "lifeExpectancyAfter65": 92,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 77,
+    "lifeExpectancyAfter65": 86,
     "populationDensity": "Comfortable",
     "retirementCommunity": "Limited",
     "englishUsage": "Commonly Used",
@@ -2757,13 +2423,12 @@
     },
     "grade": "B",
     "pros": [
-      "low costs",
-      "coastal lifestyle",
-      "easy residency"
+      "affordable-cost-of-living",
+      "easy-visa-access"
     ],
     "cons": [
-      "developing healthcare",
-      "smaller infrastructure base"
+      "developing-infrastructure",
+      "varying-healthcare-quality"
     ],
     "internationalLiving": false
   },
@@ -2786,33 +2451,21 @@
     "climate": "Arid",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 1400
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1057174
-        }
+        "currency": "$",
+        "amount": 1400
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 1900
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1434736
-        }
+        "currency": "$",
+        "amount": 1900
       }
     },
     "tags": [
       "Low Cost",
       "Warm Weather"
     ],
-    "inflation": 0.021,
-    "lifeExpectancy": 79,
-    "lifeExpectancyAfter65": 88,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 77,
+    "lifeExpectancyAfter65": 86,
     "populationDensity": "Moderate",
     "retirementCommunity": "Established",
     "englishUsage": "Commonly Used",
@@ -2861,13 +2514,12 @@
     },
     "grade": "B",
     "pros": [
-      "very affordable",
-      "close to europe",
-      "rich culture"
+      "affordable-cost-of-living",
+      "rich-culture"
     ],
     "cons": [
-      "language barriers",
-      "healthcare uneven outside cities"
+      "limited-english",
+      "varying-healthcare-quality"
     ],
     "internationalLiving": false
   },
@@ -2890,24 +2542,12 @@
     "climate": "Temperate",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 3600
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2718448
-        }
+        "currency": "$",
+        "amount": 3600
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 4600
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 3474430
-        }
+        "currency": "$",
+        "amount": 4600
       }
     },
     "tags": [
@@ -2916,9 +2556,9 @@
       "English Spoken",
       "Premium Cost"
     ],
-    "inflation": 0.023,
-    "lifeExpectancy": 66,
-    "lifeExpectancyAfter65": 75,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 81,
+    "lifeExpectancyAfter65": 90,
     "populationDensity": "Very Dense",
     "retirementCommunity": "Established",
     "englishUsage": "Widely Spoken",
@@ -2968,12 +2608,12 @@
     "grade": "B",
     "pros": [
       "english-friendly",
-      "excellent services",
-      "strong healthcare"
+      "strong-healthcare-access",
+      "modern-infrastructure"
     ],
     "cons": [
-      "very dense",
-      "high housing and tax burden"
+      "high-cost-of-living",
+      "high-tax"
     ],
     "internationalLiving": false
   },
@@ -2996,24 +2636,12 @@
     "climate": "Temperate",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 3300
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2493421
-        }
+        "currency": "$",
+        "amount": 3300
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 4300
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 3247035
-        }
+        "currency": "$",
+        "amount": 4300
       }
     },
     "tags": [
@@ -3023,9 +2651,9 @@
       "Low Crowds",
       "Premium Cost"
     ],
-    "inflation": 0.07400000000000001,
-    "lifeExpectancy": 84,
-    "lifeExpectancyAfter65": 93,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 74,
+    "lifeExpectancyAfter65": 83,
     "populationDensity": "Comfortable",
     "retirementCommunity": "Established",
     "englishUsage": "Widely Spoken",
@@ -3074,14 +2702,12 @@
     },
     "grade": "C",
     "pros": [
-      "safe",
-      "scenic",
-      "relaxed pace",
-      "low crowds"
+      "high-personal-safety",
+      "comfortable-lifestyle"
     ],
     "cons": [
-      "high cost",
-      "geographic isolation"
+      "high-cost-of-living",
+      "geographic-isolation"
     ],
     "internationalLiving": true
   },
@@ -3104,24 +2730,12 @@
     "climate": "Cold",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 4150
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 3132666
-        }
+        "currency": "$",
+        "amount": 4150
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 5400
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 4078328
-        }
+        "currency": "$",
+        "amount": 5400
       }
     },
     "tags": [
@@ -3130,9 +2744,9 @@
       "English Spoken",
       "Premium Cost"
     ],
-    "inflation": 0.078,
-    "lifeExpectancy": 78,
-    "lifeExpectancyAfter65": 87,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 66,
+    "lifeExpectancyAfter65": 75,
     "populationDensity": "Comfortable",
     "retirementCommunity": "Established",
     "englishUsage": "Widely Spoken",
@@ -3181,11 +2795,11 @@
     },
     "grade": "B",
     "pros": [
-      "world-class healthcare",
-      "extremely safe"
+      "strong-healthcare-access",
+      "high-personal-safety"
     ],
     "cons": [
-      "among the most expensive countries globally"
+      "high-cost-of-living"
     ],
     "internationalLiving": false
   },
@@ -3208,24 +2822,12 @@
     "climate": "Arid",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2850
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2152104
-        }
+        "currency": "$",
+        "amount": 2850
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 3600
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2718448
-        }
+        "currency": "$",
+        "amount": 3600
       }
     },
     "tags": [
@@ -3235,9 +2837,9 @@
       "Tax Friendly",
       "Low Crowds"
     ],
-    "inflation": 0.062,
-    "lifeExpectancy": 68,
-    "lifeExpectancyAfter65": 77,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 73,
+    "lifeExpectancyAfter65": 82,
     "populationDensity": "Comfortable",
     "retirementCommunity": "Established",
     "englishUsage": "Widely Spoken",
@@ -3286,14 +2888,12 @@
     },
     "grade": "B",
     "pros": [
-      "calm",
-      "safe",
-      "tax-friendly",
-      "low crowds"
+      "high-personal-safety",
+      "tax-friendly"
     ],
     "cons": [
-      "hot weather",
-      "limited expat amenities"
+      "challenging-climate",
+      "small-expat-community"
     ],
     "internationalLiving": false
   },
@@ -3316,24 +2916,12 @@
     "climate": "Tropical",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2250
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1699030
-        }
+        "currency": "$",
+        "amount": 2250
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 3000
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2265373
-        }
+        "currency": "$",
+        "amount": 3000
       }
     },
     "tags": [
@@ -3342,9 +2930,9 @@
       "Tax Friendly",
       "Warm Weather"
     ],
-    "inflation": 0.053,
-    "lifeExpectancy": 82,
-    "lifeExpectancyAfter65": 91,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 72,
+    "lifeExpectancyAfter65": 81,
     "populationDensity": "Moderate",
     "retirementCommunity": "Thriving Hub",
     "englishUsage": "Basic Available",
@@ -3393,13 +2981,12 @@
     },
     "grade": "B",
     "pros": [
-      "very easy residency",
-      "tax-friendly",
-      "dollarized economy"
+      "easy-visa-access",
+      "tax-friendly"
     ],
     "cons": [
-      "hot climate",
-      "healthcare quality uneven outside panama city"
+      "challenging-climate",
+      "varying-healthcare-quality"
     ],
     "internationalLiving": true
   },
@@ -3422,24 +3009,12 @@
     "climate": "Tropical",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 1750
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1321468
-        }
+        "currency": "$",
+        "amount": 1750
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2150
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1623517
-        }
+        "currency": "$",
+        "amount": 2150
       }
     },
     "tags": [
@@ -3450,9 +3025,9 @@
       "English Spoken",
       "Beach Living"
     ],
-    "inflation": 0.098,
-    "lifeExpectancy": 69,
-    "lifeExpectancyAfter65": 78,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 73,
+    "lifeExpectancyAfter65": 82,
     "populationDensity": "Dense",
     "retirementCommunity": "Thriving Hub",
     "englishUsage": "Widely Spoken",
@@ -3501,13 +3076,13 @@
     },
     "grade": "B",
     "pros": [
-      "english-speaking",
-      "low cost",
-      "retiree-friendly visas"
+      "affordable-cost-of-living",
+      "english-friendly",
+      "easy-visa-access"
     ],
     "cons": [
-      "infrastructure gaps",
-      "natural disaster exposure"
+      "developing-infrastructure",
+      "natural-disaster-exposure"
     ],
     "internationalLiving": true
   },
@@ -3530,24 +3105,12 @@
     "climate": "Mediterranean",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2250
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1699030
-        }
+        "currency": "$",
+        "amount": 2250
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2750
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2076592
-        }
+        "currency": "$",
+        "amount": 2750
       }
     },
     "tags": [
@@ -3557,9 +3120,9 @@
       "Large Expat Communities",
       "Tax Friendly"
     ],
-    "inflation": 0.076,
-    "lifeExpectancy": 66,
-    "lifeExpectancyAfter65": 75,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 76,
+    "lifeExpectancyAfter65": 85,
     "populationDensity": "Moderate",
     "retirementCommunity": "Thriving Hub",
     "englishUsage": "Commonly Used",
@@ -3608,15 +3171,15 @@
     },
     "grade": "B",
     "pros": [
-      "strong healthcare",
-      "mild climate",
-      "large expat base",
-      "good safety"
+      "strong-healthcare-access",
+      "comfortable-climate",
+      "strong-expat-community",
+      "high-personal-safety"
     ],
     "cons": [
-      "rising housing costs",
-      "moderate taxes",
-      "popular cities getting crowded"
+      "high-cost-of-living",
+      "high-tax",
+      "crowded"
     ],
     "internationalLiving": true
   },
@@ -3639,24 +3202,12 @@
     "climate": "Tropical",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 4500
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 3398059
-        }
+        "currency": "$",
+        "amount": 4500
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 5750
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 4341965
-        }
+        "currency": "$",
+        "amount": 5750
       }
     },
     "tags": [
@@ -3667,9 +3218,9 @@
       "Premium Cost",
       "Tropical Paradise"
     ],
-    "inflation": 0.095,
-    "lifeExpectancy": 68,
-    "lifeExpectancyAfter65": 77,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 74,
+    "lifeExpectancyAfter65": 83,
     "populationDensity": "Very Dense",
     "retirementCommunity": "Growing Scene",
     "englishUsage": "Widely Spoken",
@@ -3718,13 +3269,13 @@
     },
     "grade": "B",
     "pros": [
-      "ultra-safe",
-      "english-speaking",
-      "world-class healthcare"
+      "high-personal-safety",
+      "english-friendly",
+      "strong-healthcare-access"
     ],
     "cons": [
-      "extremely high costs",
-      "dense living"
+      "high-cost-of-living",
+      "crowded"
     ],
     "internationalLiving": true
   },
@@ -3747,31 +3298,19 @@
     "climate": "Temperate",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2250
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1699030
-        }
+        "currency": "$",
+        "amount": 2250
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2850
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2152104
-        }
+        "currency": "$",
+        "amount": 2850
       }
     },
     "tags": [
       "Safe",
       "Low Crowds"
     ],
-    "inflation": 0.08900000000000001,
+    "inflationRate": 0.025,
     "lifeExpectancy": 77,
     "lifeExpectancyAfter65": 86,
     "populationDensity": "Comfortable",
@@ -3822,14 +3361,12 @@
     },
     "grade": "B",
     "pros": [
-      "very safe",
-      "clean",
-      "low crowds",
-      "good healthcare"
+      "high-personal-safety",
+      "strong-healthcare-access"
     ],
     "cons": [
-      "higher taxes",
-      "limited expat ecosystem"
+      "high-tax",
+      "small-expat-community"
     ],
     "internationalLiving": false
   },
@@ -3852,24 +3389,12 @@
     "climate": "Temperate",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2850
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2152104
-        }
+        "currency": "$",
+        "amount": 2850
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 3600
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2718448
-        }
+        "currency": "$",
+        "amount": 3600
       }
     },
     "tags": [
@@ -3878,9 +3403,9 @@
       "Premium Cost",
       "Limited English"
     ],
-    "inflation": 0.057999999999999996,
-    "lifeExpectancy": 71,
-    "lifeExpectancyAfter65": 80,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 78,
+    "lifeExpectancyAfter65": 87,
     "populationDensity": "Very Dense",
     "retirementCommunity": "Established",
     "englishUsage": "Minimal",
@@ -3929,13 +3454,12 @@
     },
     "grade": "B",
     "pros": [
-      "modern infrastructure",
-      "excellent healthcare"
+      "modern-infrastructure",
+      "strong-healthcare-access"
     ],
     "cons": [
-      "dense urban living",
-      "limited english",
-      "high pressure culture"
+      "limited-english",
+      "crowded"
     ],
     "internationalLiving": false
   },
@@ -3958,24 +3482,12 @@
     "climate": "Mediterranean",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2500
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1887811
-        }
+        "currency": "$",
+        "amount": 2500
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 3150
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2378642
-        }
+        "currency": "$",
+        "amount": 3150
       }
     },
     "tags": [
@@ -3983,9 +3495,9 @@
       "Large Expat Communities",
       "Beach Living"
     ],
-    "inflation": 0.078,
-    "lifeExpectancy": 75,
-    "lifeExpectancyAfter65": 84,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 67,
+    "lifeExpectancyAfter65": 76,
     "populationDensity": "Moderate",
     "retirementCommunity": "Thriving Hub",
     "englishUsage": "Commonly Used",
@@ -4034,14 +3546,13 @@
     },
     "grade": "C",
     "pros": [
-      "excellent healthcare",
-      "vibrant lifestyle",
-      "mediterranean climate"
+      "strong-healthcare-access",
+      "comfortable-climate",
+      "modern-infrastructure"
     ],
     "cons": [
-      "high taxes",
-      "tourist congestion",
-      "bureaucracy in some regions"
+      "high-tax",
+      "crowded"
     ],
     "internationalLiving": true
   },
@@ -4064,24 +3575,12 @@
     "climate": "Tropical",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 1400
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1057174
-        }
+        "currency": "$",
+        "amount": 1400
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 1900
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1434736
-        }
+        "currency": "$",
+        "amount": 1900
       }
     },
     "tags": [
@@ -4090,9 +3589,9 @@
       "Warm Weather",
       "Beach Living"
     ],
-    "inflation": 0.022000000000000002,
-    "lifeExpectancy": 83,
-    "lifeExpectancyAfter65": 92,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 76,
+    "lifeExpectancyAfter65": 85,
     "populationDensity": "Dense",
     "retirementCommunity": "Established",
     "englishUsage": "Commonly Used",
@@ -4141,12 +3640,11 @@
     },
     "grade": "C",
     "pros": [
-      "very affordable",
-      "natural beauty"
+      "affordable-cost-of-living"
     ],
     "cons": [
-      "political and economic instability",
-      "developing infrastructure"
+      "volatile-political-climate",
+      "developing-infrastructure"
     ],
     "internationalLiving": false
   },
@@ -4169,24 +3667,12 @@
     "climate": "Cold",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 3500
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2642936
-        }
+        "currency": "$",
+        "amount": 3500
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 4500
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 3398918
-        }
+        "currency": "$",
+        "amount": 4500
       }
     },
     "tags": [
@@ -4195,9 +3681,9 @@
       "English Spoken",
       "Premium Cost"
     ],
-    "inflation": 0.063,
-    "lifeExpectancy": 70,
-    "lifeExpectancyAfter65": 79,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 81,
+    "lifeExpectancyAfter65": 90,
     "populationDensity": "Comfortable",
     "retirementCommunity": "Established",
     "englishUsage": "Widely Spoken",
@@ -4246,14 +3732,12 @@
     },
     "grade": "B",
     "pros": [
-      "excellent public services",
-      "safety",
-      "infrastructure"
+      "high-personal-safety",
+      "modern-infrastructure"
     ],
     "cons": [
-      "cold climate",
-      "high taxes",
-      "higher costs"
+      "challenging-climate",
+      "high-tax"
     ],
     "internationalLiving": false
   },
@@ -4276,24 +3760,12 @@
     "climate": "Temperate",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 5000
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 3775622
-        }
+        "currency": "$",
+        "amount": 5000
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 6250
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 4719528
-        }
+        "currency": "$",
+        "amount": 6250
       }
     },
     "tags": [
@@ -4302,9 +3774,9 @@
       "Premium Cost",
       "Mountain Living"
     ],
-    "inflation": 0.038,
-    "lifeExpectancy": 82,
-    "lifeExpectancyAfter65": 91,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 71,
+    "lifeExpectancyAfter65": 80,
     "populationDensity": "Moderate",
     "retirementCommunity": "Established",
     "englishUsage": "Widely Spoken",
@@ -4353,13 +3825,12 @@
     },
     "grade": "C",
     "pros": [
-      "outstanding healthcare",
-      "safety",
-      "quality of life"
+      "strong-healthcare-access",
+      "high-personal-safety"
     ],
     "cons": [
-      "extremely high costs",
-      "difficult residency"
+      "high-cost-of-living",
+      "complex-visa-process"
     ],
     "internationalLiving": false
   },
@@ -4382,24 +3853,12 @@
     "climate": "Subtropical",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2250
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1699030
-        }
+        "currency": "$",
+        "amount": 2250
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2850
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2152104
-        }
+        "currency": "$",
+        "amount": 2850
       }
     },
     "tags": [
@@ -4408,9 +3867,9 @@
       "Low Cost",
       "Limited English"
     ],
-    "inflation": 0.052000000000000005,
-    "lifeExpectancy": 81,
-    "lifeExpectancyAfter65": 90,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 80,
+    "lifeExpectancyAfter65": 89,
     "populationDensity": "Dense",
     "retirementCommunity": "Established",
     "englishUsage": "Minimal",
@@ -4459,13 +3918,13 @@
     },
     "grade": "B",
     "pros": [
-      "outstanding healthcare",
-      "safety",
-      "reasonable costs"
+      "strong-healthcare-access",
+      "high-personal-safety",
+      "affordable-cost-of-living"
     ],
     "cons": [
-      "crowded cities",
-      "visa difficulty"
+      "crowded",
+      "complex-visa-process"
     ],
     "internationalLiving": false
   },
@@ -4488,24 +3947,12 @@
     "climate": "Tropical",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2000
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1510249
-        }
+        "currency": "$",
+        "amount": 2000
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2500
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1887811
-        }
+        "currency": "$",
+        "amount": 2500
       }
     },
     "tags": [
@@ -4515,9 +3962,9 @@
       "Large Expat Communities",
       "Beach Living"
     ],
-    "inflation": 0.047,
-    "lifeExpectancy": 80,
-    "lifeExpectancyAfter65": 89,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 76,
+    "lifeExpectancyAfter65": 85,
     "populationDensity": "Dense",
     "retirementCommunity": "Thriving Hub",
     "englishUsage": "Basic Available",
@@ -4566,14 +4013,13 @@
     },
     "grade": "C",
     "pros": [
-      "low costs",
-      "excellent private healthcare",
-      "strong retiree scene"
+      "affordable-cost-of-living",
+      "strong-healthcare-access",
+      "strong-expat-community"
     ],
     "cons": [
-      "crowded hotspots",
-      "visa uncertainty",
-      "language barrier"
+      "crowded",
+      "complex-visa-process"
     ],
     "internationalLiving": true
   },
@@ -4596,24 +4042,12 @@
     "climate": "Mediterranean",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 1400
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1057174
-        }
+        "currency": "$",
+        "amount": 1400
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 1900
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1434736
-        }
+        "currency": "$",
+        "amount": 1900
       }
     },
     "tags": [
@@ -4622,9 +4056,9 @@
       "Beach Living",
       "Low Crowds"
     ],
-    "inflation": 0.095,
-    "lifeExpectancy": 78,
-    "lifeExpectancyAfter65": 87,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 84,
+    "lifeExpectancyAfter65": 93,
     "populationDensity": "Moderate",
     "retirementCommunity": "Established",
     "englishUsage": "Commonly Used",
@@ -4673,13 +4107,13 @@
     },
     "grade": "C",
     "pros": [
-      "low cost",
-      "mediterranean climate",
-      "low crowds"
+      "affordable-cost-of-living",
+      "comfortable-climate",
+      "low-crowds"
     ],
     "cons": [
-      "developing healthcare",
-      "moderate political risk"
+      "developing-healthcare",
+      "volatile-political-climate"
     ],
     "internationalLiving": false
   },
@@ -4702,24 +4136,12 @@
     "climate": "Mixed",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 1400
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1057174
-        }
+        "currency": "$",
+        "amount": 1400
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 1900
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1434736
-        }
+        "currency": "$",
+        "amount": 1900
       }
     },
     "tags": [
@@ -4727,9 +4149,9 @@
       "Warm Weather",
       "Beach Living"
     ],
-    "inflation": 0.035,
-    "lifeExpectancy": 72,
-    "lifeExpectancyAfter65": 81,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 83,
+    "lifeExpectancyAfter65": 92,
     "populationDensity": "Dense",
     "retirementCommunity": "Established",
     "englishUsage": "Minimal",
@@ -4778,14 +4200,12 @@
     },
     "grade": "C",
     "pros": [
-      "very affordable",
-      "good private healthcare",
-      "diverse climates"
+      "affordable-cost-of-living",
+      "strong-healthcare-access"
     ],
     "cons": [
-      "political volatility",
-      "crowding",
-      "currency instability"
+      "volatile-political-climate",
+      "crowded"
     ],
     "internationalLiving": false
   },
@@ -4808,24 +4228,12 @@
     "climate": "Arid",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 4000
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 3020497
-        }
+        "currency": "$",
+        "amount": 4000
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 5250
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 3964403
-        }
+        "currency": "$",
+        "amount": 5250
       }
     },
     "tags": [
@@ -4835,9 +4243,9 @@
       "Tax Friendly",
       "Premium Cost"
     ],
-    "inflation": 0.023,
-    "lifeExpectancy": 69,
-    "lifeExpectancyAfter65": 78,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 76,
+    "lifeExpectancyAfter65": 85,
     "populationDensity": "Moderate",
     "retirementCommunity": "Growing Scene",
     "englishUsage": "Widely Spoken",
@@ -4886,14 +4294,13 @@
     },
     "grade": "B",
     "pros": [
-      "extremely safe",
+      "high-personal-safety",
       "tax-friendly",
-      "premium healthcare"
+      "strong-healthcare-access"
     ],
     "cons": [
-      "hot climate",
-      "high costs",
-      "residency complexity"
+      "challenging-climate",
+      "high-cost-of-living"
     ],
     "internationalLiving": false
   },
@@ -4916,24 +4323,12 @@
     "climate": "Temperate",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 3500
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2642936
-        }
+        "currency": "$",
+        "amount": 3500
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 4500
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 3398918
-        }
+        "currency": "$",
+        "amount": 4500
       }
     },
     "tags": [
@@ -4942,9 +4337,9 @@
       "English Spoken",
       "Premium Cost"
     ],
-    "inflation": 0.017,
-    "lifeExpectancy": 80,
-    "lifeExpectancyAfter65": 89,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 84,
+    "lifeExpectancyAfter65": 93,
     "populationDensity": "Dense",
     "retirementCommunity": "Thriving Hub",
     "englishUsage": "Widely Spoken",
@@ -4993,14 +4388,12 @@
     },
     "grade": "C",
     "pros": [
-      "familiar system",
-      "strong healthcare",
-      "english language"
+      "english-friendly",
+      "strong-healthcare-access"
     ],
     "cons": [
-      "high costs",
-      "crowded cities",
-      "visa complexity"
+      "high-cost-of-living",
+      "complex-visa-process"
     ],
     "internationalLiving": false
   },
@@ -5023,24 +4416,12 @@
     "climate": "Mixed",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 4000
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 3020497
-        }
+        "currency": "$",
+        "amount": 4000
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 5250
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 3964403
-        }
+        "currency": "$",
+        "amount": 5250
       }
     },
     "tags": [
@@ -5048,9 +4429,9 @@
       "English Spoken",
       "Premium Cost"
     ],
-    "inflation": 0.049,
-    "lifeExpectancy": 75,
-    "lifeExpectancyAfter65": 84,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 66,
+    "lifeExpectancyAfter65": 75,
     "populationDensity": "Moderate",
     "retirementCommunity": "Established",
     "englishUsage": "Widely Spoken",
@@ -5099,13 +4480,12 @@
     },
     "grade": "C",
     "pros": [
-      "top-tier healthcare options",
-      "lifestyle variety"
+      "strong-healthcare-access",
+      "lifestyle-variety"
     ],
     "cons": [
-      "very high healthcare costs",
-      "complex insurance",
-      "taxes"
+      "high-cost-of-living",
+      "high-tax"
     ],
     "internationalLiving": false
   },
@@ -5128,24 +4508,12 @@
     "climate": "Temperate",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2500
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1887811
-        }
+        "currency": "$",
+        "amount": 2500
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 3150
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 2378642
-        }
+        "currency": "$",
+        "amount": 3150
       }
     },
     "tags": [
@@ -5155,9 +4523,9 @@
       "Large Expat Communities",
       "Beach Living"
     ],
-    "inflation": 0.023,
-    "lifeExpectancy": 79,
-    "lifeExpectancyAfter65": 88,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 67,
+    "lifeExpectancyAfter65": 76,
     "populationDensity": "Comfortable",
     "retirementCommunity": "Established",
     "englishUsage": "Commonly Used",
@@ -5206,13 +4574,12 @@
     },
     "grade": "B",
     "pros": [
-      "stable democracy",
-      "strong healthcare",
-      "relaxed pace"
+      "stable-political-environment",
+      "strong-healthcare-access"
     ],
     "cons": [
-      "higher costs than neighbors",
-      "smaller expat scene"
+      "high-cost-of-living",
+      "small-expat-community"
     ],
     "internationalLiving": true
   },
@@ -5235,24 +4602,12 @@
     "climate": "Tropical",
     "expenditure": {
       "single": {
-        "monthly": {
-          "currency": "$",
-          "amount": 1650
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1245955
-        }
+        "currency": "$",
+        "amount": 1650
       },
       "couple": {
-        "monthly": {
-          "currency": "$",
-          "amount": 2150
-        },
-        "thirtyYearWithInflation": {
-          "currency": "$",
-          "amount": 1623517
-        }
+        "currency": "$",
+        "amount": 2150
       }
     },
     "tags": [
@@ -5262,9 +4617,9 @@
       "Easy Residency",
       "Beach Living"
     ],
-    "inflation": 0.017,
-    "lifeExpectancy": 65,
-    "lifeExpectancyAfter65": 74,
+    "inflationRate": 0.025,
+    "lifeExpectancy": 69,
+    "lifeExpectancyAfter65": 78,
     "populationDensity": "Dense",
     "retirementCommunity": "Growing Scene",
     "englishUsage": "Minimal",
@@ -5313,14 +4668,12 @@
     },
     "grade": "C",
     "pros": [
-      "very affordable",
-      "improving healthcare",
-      "vibrant culture"
+      "affordable-cost-of-living",
+      "improving-healthcare"
     ],
     "cons": [
-      "crowded cities",
-      "pollution",
-      "evolving healthcare standards"
+      "developing-healthcare",
+      "polluted-cities"
     ],
     "internationalLiving": true
   }

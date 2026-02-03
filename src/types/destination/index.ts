@@ -7,18 +7,9 @@ export type Destination = Readonly<{
   topCities: readonly string[];
   similarDestinations: readonly string[];
   climate: string;
-  expenditure: Readonly<{
-    single: Readonly<{
-      monthly: Cost;
-      thirtyYearWithInflation: Cost;
-    }>;
-    couple: {
-      monthly: Cost;
-      thirtyYearWithInflation: Cost;
-    };
-  }>;
+  expenditure: Readonly<Record<"single" | "couple", Cost>>;
   tags: readonly string[];
-  inflation: number;
+  inflationRate: number;
   lifeExpectancy: number;
   lifeExpectancyAfter65: number;
   populationDensity: string;

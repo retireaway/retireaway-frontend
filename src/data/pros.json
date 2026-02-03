@@ -1,0 +1,82 @@
+[
+  {
+    "id": "affordable-cost-of-living",
+    "name": "Affordable cost of living",
+    "description": "Everyday expenses remain low relative to income or savings"
+  },
+  {
+    "id": "strong-healthcare-access",
+    "name": "Strong healthcare access",
+    "description": "Good quality healthcare widely available and accessible"
+  },
+  {
+    "id": "high-personal-safety",
+    "name": "High personal safety",
+    "description": "Low crime levels and strong public security"
+  },
+  {
+    "id": "stable-political-environment",
+    "name": "Stable political environment",
+    "description": "Predictable governance with low disruption risk"
+  },
+  {
+    "id": "easy-visa-access",
+    "name": "Easy residency / visa access",
+    "description": "Simple, retiree-friendly residency or visa pathways"
+  },
+  {
+    "id": "tax-friendly",
+    "name": "Tax-friendly environment",
+    "description": "Lower taxes or favorable treatment for retirees"
+  },
+  {
+    "id": "modern-infrastructure",
+    "name": "Modern infrastructure",
+    "description": "Reliable transport, utilities, and digital connectivity"
+  },
+  {
+    "id": "comfortable-climate",
+    "name": "Comfortable climate",
+    "description": "Mild, pleasant weather suitable year-round"
+  },
+  {
+    "id": "strong-expat-community",
+    "name": "Strong expat / retiree community",
+    "description": "Large, established international retiree population"
+  },
+  {
+    "id": "english-friendly",
+    "name": "English-friendly environment",
+    "description": "English commonly used in daily life and services"
+  },
+  {
+    "id": "resort-lifestyle",
+    "name": "Resort lifestyle",
+    "description": "Access to high-end amenities, leisure facilities, and services similar to a vacation setting"
+  },
+  {
+    "id": "rich-culture",
+    "name": "Rich culture",
+    "description": "Abundance of historical sites, local traditions, arts, and deep-rooted heritage to explore"
+  },
+  {
+    "id": "comfortable-lifestyle",
+    "name": "Comfortable lifestyle",
+    "description": "A high standard of living that allows for various hobbies, travel, and social activities"
+  },
+  {
+    "id": "low-crowds",
+    "name": "Low crowds",
+    "description": "Quiet environments with fewer tourists and less congestion in public spaces and attractions"
+  },
+  {
+    "id": "lifestyle-variety",
+    "name": "Lifestyle variety",
+    "description": "A wide range of living options and recreational activities to suit different personal interests"
+  },
+  {
+    "id": "improving-healthcare",
+    "name": "Improving healthcare",
+    "description": "Rapidly modernizing medical services and facilities with increasing investment and standards"
+  }
+]

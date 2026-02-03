@@ -101,8 +101,8 @@ export function DestinationCard({ destination }: { destination: Destination }) {
               single
             </span>
             <span className="text-2xl font-bold text-neutral-600 uppercase">
-              {destination.expenditure.single.monthly.currency}
-              {formatter.format(destination.expenditure.single.monthly.amount)}
+              {destination.expenditure.single.currency}
+              {formatter.format(destination.expenditure.single.amount)}
             </span>
             <span className="text-xs font-normal text-neutral-400">/month</span>
           </div>
@@ -111,8 +111,8 @@ export function DestinationCard({ destination }: { destination: Destination }) {
               couple
             </span>
             <span className="text-2xl font-bold text-neutral-600 uppercase">
-              {destination.expenditure.couple.monthly.currency}
-              {formatter.format(destination.expenditure.couple.monthly.amount)}
+              {destination.expenditure.couple.currency}
+              {formatter.format(destination.expenditure.couple.amount)}
             </span>
             <span className="text-xs font-normal text-neutral-400">/month</span>
           </div>
@@ -139,7 +139,7 @@ export function DestinationCard({ destination }: { destination: Destination }) {
         <div className="flex flex-row gap-2 px-4">
           <Wouter.Link
             href={`/${destination.id}/overview`}
-            className="basis-1/2 rounded-lg border-1 border-neutral-600 bg-neutral-600 py-2 text-center text-sm font-medium text-neutral-100"
+            className="basis-1/2 rounded-lg border-1 border-neutral-800 bg-neutral-800 py-2 text-center text-sm font-medium text-neutral-50"
           >
             View Details
           </Wouter.Link>

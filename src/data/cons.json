@@ -1,0 +1,82 @@
+[
+  {
+    "id": "high-cost-of-living",
+    "name": "Higher cost of living",
+    "description": "Living expenses significantly higher than global averages"
+  },
+  {
+    "id": "high-tax",
+    "name": "Higher tax burden",
+    "description": "High income, wealth, or consumption taxes"
+  },
+  {
+    "id": "crowded",
+    "name": "Crowded / tourist-heavy hotspots",
+    "description": "Popular areas experience heavy tourism and congestion"
+  },
+  {
+    "id": "limited-english",
+    "name": "Limited English outside expat areas",
+    "description": "Local language required beyond main expat zones"
+  },
+  {
+    "id": "developing-infrastructure",
+    "name": "Developing infrastructure",
+    "description": "Transport, utilities, or services still improving"
+  },
+  {
+    "id": "varying-healthcare-quality",
+    "name": "Healthcare quality varies by region",
+    "description": "Healthcare standards uneven outside major cities"
+  },
+  {
+    "id": "volatile-political-climate",
+    "name": "Political / economic volatility risk",
+    "description": "Risk of policy, currency, or economic instability"
+  },
+  {
+    "id": "challenging-climate",
+    "name": "Challenging climate",
+    "description": "Weather extremes reduce year-round comfort"
+  },
+  {
+    "id": "complex-visa-process",
+    "name": "More complex residency / visa process",
+    "description": "Lengthy or restrictive residency requirements"
+  },
+  {
+    "id": "small-expat-community",
+    "name": "Smaller expat / retiree community",
+    "description": "Limited international retiree presence or support networks"
+  },
+  {
+    "id": "rising-cost",
+    "name": "Rising costs",
+    "description": "Increasing inflation or property prices that may outpace fixed retirement incomes"
+  },
+  {
+    "id": "varying-safety",
+    "name": "Safety varies by region",
+    "description": "Significant disparities in security levels between different cities or neighborhoods"
+  },
+  {
+    "id": "developing-healthcare",
+    "name": "Developing healthcare quality",
+    "description": "Medical facilities and specialized care that may not yet meet international standards"
+  },
+  {
+    "id": "geographic-isolation",
+    "name": "Geographic isolation",
+    "description": "Remote locations that result in long travel times and high costs for international trips"
+  },
+  {
+    "id": "natural-disaster-exposure",
+    "name": "Natural disaster exposure",
+    "description": "Higher susceptibility to environmental risks like hurricanes, earthquakes, or seasonal floods"
+  },
+  {
+    "id": "polluted-cities",
+    "name": "Polluted cities",
+    "description": "Poor air quality or environmental degradation in major urban and industrial centers"
+  }
+]

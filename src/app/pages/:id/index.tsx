@@ -2,6 +2,8 @@ import React from "react";
 import * as Wouter from "wouter";
 import * as Lucide from "lucide-react";
 
+import pros from "@/data/pros.json" with { type: "json" };
+import cons from "@/data/cons.json" with { type: "json" };
 import cities from "@/data/cities.json" with { type: "json" };
 import destinations from "@/data/destinations.json" with { type: "json" };
 
@@ -101,16 +103,6 @@ export function DestinationProfile() {
               </span>
             </div>
           </li>
-          {/* <li className="xl:hidden"> */}
-          {/*   <div className="flex flex-col items-center justify-center gap-1 rounded-xl"> */}
-          {/*     <span className="text-xs font-medium text-neutral-400 capitalize"> */}
-          {/*       crowds */}
-          {/*     </span> */}
-          {/*     <span className="text-base font-semibold text-neutral-600"> */}
-          {/*       {destination.crowds} */}
-          {/*     </span> */}
-          {/*   </div> */}
-          {/* </li> */}
           <li>
             <div className="flex flex-col items-center justify-center gap-1 rounded-xl">
               <span className="text-xs font-medium text-neutral-400 capitalize">
@@ -267,40 +259,52 @@ function Overview({
       <div className="flex flex-col gap-4 px-4">
         <p className="text-lg font-medium text-neutral-600">Pros</p>
         <ul className="flex flex-col gap-2">
-          {destination.pros.map((pro) => {
-            return (
-              <React.Fragment key={pro}>
-                <li className="flex flex-row items-center gap-4 py-2">
-                  <Lucide.Check className="size-6 text-green-600" />
-                  <div className="flex flex-col gap-1">
-                    <span className="grow text-base text-neutral-500 first-letter:uppercase">
-                      {pro}
-                    </span>
-                  </div>
-                </li>
-                <div className="h-px bg-neutral-100" />
-              </React.Fragment>
-            );
-          })}
+          {pros
+            .filter((pro) => destination.pros.includes(pro.id))
+            .map((pro) => {
+              return (
+                <React.Fragment key={pro.id}>
+                  <li className="flex flex-row items-start gap-4 py-2">
+                    <Lucide.Check className="size-5 text-green-600" />
+                    <div className="flex flex-col gap-1">
+                      <span className="grow text-base text-neutral-500 first-letter:uppercase">
+                        {pro.name}
+                      </span>
+                      <span className="grow text-sm text-neutral-400 first-letter:uppercase">
+                        {pro.description}
+                      </span>
+                    </div>
+                  </li>
+                  <div className="h-px bg-neutral-100" />
+                </React.Fragment>
+              );
+            })}
         </ul>
       </div>
 
       <div className="flex flex-col gap-4 px-4">
         <p className="text-lg font-medium text-neutral-600">Cons</p>
         <ul className="flex flex-col gap-2">
-          {destination.cons.map((con) => {
-            return (
-              <React.Fragment key={con}>
-                <li className="flex flex-row items-center gap-4 py-2">
-                  <Lucide.X className="size-5 text-red-500" />
-                  <span className="grow text-base text-neutral-500 first-letter:uppercase">
-                    {con}
-                  </span>
-                </li>
-                <div className="h-px bg-neutral-100" />
-              </React.Fragment>
-            );
-          })}
+          {cons
+            .filter((con) => destination.cons.includes(con.id))
+            .map((con) => {
+              return (
+                <React.Fragment key={con.id}>
+                  <li className="flex flex-row items-start gap-4 py-2">
+                    <Lucide.X className="size-5 text-red-600" />
+                    <div className="flex flex-col gap-1">
+                      <span className="grow text-base text-neutral-500 first-letter:uppercase">
+                        {con.name}
+                      </span>
+                      <span className="grow text-sm text-neutral-400 first-letter:uppercase">
+                        {con.description}
+                      </span>
+                    </div>
+                  </li>
+                  <div className="h-px bg-neutral-100" />
+                </React.Fragment>
+              );
+            })}
         </ul>
       </div>
 
@@ -327,16 +331,12 @@ function Overview({
 
             <ul className="grid grid-cols-2 gap-2">
               <Cost
-                monthly={destination.expenditure.single.monthly}
-                thirtyYearWithInflation={
-                  destination.expenditure.single.thirtyYearWithInflation
-                }
+                cost={destination.expenditure.single}
+                inflationRate={destination.inflationRate}
               />
               <Cost
-                monthly={destination.expenditure.couple.monthly}
-                thirtyYearWithInflation={
-                  destination.expenditure.couple.thirtyYearWithInflation
-                }
+                cost={destination.expenditure.couple}
+                inflationRate={destination.inflationRate}
               />
             </ul>
           </div>
@@ -448,19 +448,39 @@ function Overview({
   );
 }
 
-function Cost({
-  monthly,
-  thirtyYearWithInflation,
-}: {
-  monthly: Cost;
-  thirtyYearWithInflation: Cost;
-}) {
+function Cost({ cost, inflationRate }: { cost: Cost; inflationRate: number }) {
   const formatter = new Intl.NumberFormat("en-US", {
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
-    // roundingIncrement: 1000,
-    // roundingMode: "ceil",
   });
+
+  const formatterWithRounding = new Intl.NumberFormat("en-US", {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+    roundingIncrement: 1000,
+    roundingMode: "ceil",
+  });
+
+  function calculateTotalRetirementCost(
+    annualCost: number,
+    inflationRate: number,
+    retirementDuration: number,
+  ): number {
+    return (
+      annualCost *
+      (((1 + inflationRate) ** retirementDuration - 1) / inflationRate)
+    );
+  }
+
+  const currency = cost.currency;
+  const monthly = cost.amount;
+  const yearly = cost.amount * 12;
+  const thirtyYear = cost.amount * 12 * 30;
+  const thirtyYearWithInflation = calculateTotalRetirementCost(
+    yearly,
+    inflationRate,
+    30,
+  );
 
   return (
     <ul className="flex flex-col gap-2">
@@ -468,8 +488,8 @@ function Cost({
         <article className="flex flex-col gap-2 rounded-xl border-1 border-neutral-100 bg-white p-4">
           <h3 className="text-xs text-neutral-500">Monthly</h3>
           <p className="text-xl font-semibold text-neutral-600">
-            {monthly.currency}
-            {formatter.format(monthly.amount)}
+            {currency}
+            {formatter.format(monthly)}
           </p>
         </article>
       </li>
@@ -477,8 +497,8 @@ function Cost({
         <article className="flex flex-col gap-2 rounded-xl border-1 border-neutral-100 bg-white p-4">
           <h3 className="text-xs text-neutral-500">Yearly</h3>
           <p className="text-xl font-semibold text-neutral-600">
-            {monthly.currency}
-            {formatter.format(monthly.amount * 12)}
+            {currency}
+            {formatter.format(yearly)}
           </p>
         </article>
       </li>
@@ -488,8 +508,8 @@ function Cost({
             30 Years Without Inflation
           </h3>
           <p className="text-xl font-semibold text-neutral-600">
-            {monthly.currency}
-            {formatter.format(monthly.amount * 12 * 30)}
+            {currency}
+            {formatter.format(thirtyYear)}
           </p>
         </article>
       </li>
@@ -497,8 +517,8 @@ function Cost({
         <article className="flex flex-col gap-2 rounded-xl border-1 border-neutral-100 bg-white p-4">
           <h3 className="text-xs text-neutral-500">30 Years With Inflation</h3>
           <p className="text-xl font-semibold text-neutral-600">
-            {thirtyYearWithInflation.currency}
-            {formatter.format(thirtyYearWithInflation.amount)}
+            {currency}
+            {formatterWithRounding.format(thirtyYearWithInflation)}
           </p>
         </article>
       </li>
@@ -638,9 +658,14 @@ function Calculator({ destination }: { destination: Destination }) {
             event.preventDefault();
 
             function parse() {
-              const { currentAge, retirementAge, retirementDuration } =
-                Object.fromEntries(new FormData(event.currentTarget));
+              const {
+                inflationRate,
+                currentAge,
+                retirementAge,
+                retirementDuration,
+              } = Object.fromEntries(new FormData(event.currentTarget));
               return {
+                inflationRate: parseInt(inflationRate as string) as number,
                 currentAge: parseInt(currentAge as string) as number,
                 retirementAge: parseInt(retirementAge as string) as number,
                 retirementDuration: parseInt(
@@ -649,19 +674,24 @@ function Calculator({ destination }: { destination: Destination }) {
               };
             }
 
-            const { currentAge, retirementAge, retirementDuration } = parse();
+            const {
+              inflationRate,
+              currentAge,
+              retirementAge,
+              retirementDuration,
+            } = parse();
 
             function calculateSingleWithInflation() {
               const annualCostInRetirementYear =
                 inflateAnnualCostToTargetRetirementYear(
-                  destination.expenditure.single.monthly.amount * 12,
-                  destination.inflation,
+                  destination.expenditure.single.amount * 12,
+                  inflationRate / 100,
                   retirementAge - currentAge,
                 );
 
               const totalRetirementCost = calculateTotalRetirementCost(
                 annualCostInRetirementYear,
-                destination.inflation,
+                inflationRate / 100,
                 retirementDuration,
               );
 
@@ -671,14 +701,14 @@ function Calculator({ destination }: { destination: Destination }) {
             function calculateCoupleWithInflation() {
               const annualCostInRetirementYear =
                 inflateAnnualCostToTargetRetirementYear(
-                  destination.expenditure.couple.monthly.amount * 12,
-                  destination.inflation,
+                  destination.expenditure.couple.amount * 12,
+                  inflationRate / 100,
                   retirementAge - currentAge,
                 );
 
               const totalRetirementCost = calculateTotalRetirementCost(
                 annualCostInRetirementYear,
-                destination.inflation,
+                inflationRate / 100,
                 retirementDuration,
               );
 
@@ -689,14 +719,14 @@ function Calculator({ destination }: { destination: Destination }) {
               single: {
                 withInflation: calculateSingleWithInflation(),
                 withoutInflation:
-                  destination.expenditure.single.monthly.amount *
+                  destination.expenditure.single.amount *
                   12 *
                   retirementDuration,
               },
               couple: {
                 withInflation: calculateCoupleWithInflation(),
                 withoutInflation:
-                  destination.expenditure.couple.monthly.amount *
+                  destination.expenditure.couple.amount *
                   12 *
                   retirementDuration,
               },
@@ -713,18 +743,25 @@ function Calculator({ destination }: { destination: Destination }) {
           }}
           className="flex flex-col gap-2"
         >
-          <div className="flex items-center justify-between gap-2 py-2">
+          <label
+            htmlFor="inflationRate"
+            className="flex items-center justify-between gap-2"
+          >
             <span className="text-sm text-neutral-400 capitalize">
-              Inflation rate
+              Inflation Rate (%)
             </span>
-            <span className="font-semibold text-neutral-600">
-              {new Intl.NumberFormat("en-US", {
-                maximumFractionDigits: 1,
-                minimumFractionDigits: 1,
-              }).format(destination.inflation * 100)}
-              %
-            </span>
-          </div>
+            <input
+              className="w-12 rounded-xl border-1 border-neutral-100 p-2 text-center text-base font-semibold text-neutral-600 outline-none placeholder:font-normal placeholder:text-neutral-400 user-invalid:border-red-400"
+              id="inflationRate"
+              min={0}
+              name="inflationRate"
+              required
+              type="number"
+              step={0.1}
+              placeholder="--"
+              defaultValue={destination.inflationRate * 100}
+            />
+          </label>
           <div className="h-px bg-neutral-100" />
           <label
             htmlFor="currentAge"
@@ -820,8 +857,13 @@ function CalculatorResults({
   const formatter = new Intl.NumberFormat("en-US", {
     maximumFractionDigits: 0,
     minimumFractionDigits: 0,
-    // roundingIncrement: 1000,
-    // roundingMode: "ceil",
+  });
+
+  const formatterWithRounding = new Intl.NumberFormat("en-US", {
+    maximumFractionDigits: 0,
+    minimumFractionDigits: 0,
+    roundingIncrement: 1000,
+    roundingMode: "ceil",
   });
 
   return (
@@ -835,10 +877,8 @@ function CalculatorResults({
                 Monthly
               </span>
               <span className="font-semibold text-neutral-600">
-                {destination.expenditure.single.monthly.currency}
-                {formatter.format(
-                  destination.expenditure.single.monthly.amount,
-                )}
+                {destination.expenditure.single.currency}
+                {formatter.format(destination.expenditure.single.amount)}
               </span>
             </div>
           </li>
@@ -849,7 +889,7 @@ function CalculatorResults({
                 Total Estimate
               </span>
               <span className="font-semibold text-neutral-600">
-                {destination.expenditure.single.monthly.currency}
+                {destination.expenditure.single.currency}
                 {formatter.format(estimates.single.withoutInflation)}
               </span>
             </div>
@@ -861,8 +901,8 @@ function CalculatorResults({
                 Total Estimate &mdash; With inflation
               </span>
               <span className="font-semibold text-neutral-600">
-                {destination.expenditure.single.monthly.currency}
-                {formatter.format(estimates.single.withInflation)}
+                {destination.expenditure.single.currency}
+                {formatterWithRounding.format(estimates.single.withInflation)}
               </span>
             </div>
           </li>
@@ -879,10 +919,8 @@ function CalculatorResults({
                 Monthly
               </span>
               <span className="font-semibold text-neutral-600">
-                {destination.expenditure.couple.monthly.currency}
-                {formatter.format(
-                  destination.expenditure.couple.monthly.amount,
-                )}
+                {destination.expenditure.couple.currency}
+                {formatter.format(destination.expenditure.couple.amount)}
               </span>
             </div>
           </li>
@@ -893,7 +931,7 @@ function CalculatorResults({
                 Total Estimate
               </span>
               <span className="font-semibold text-neutral-600">
-                {destination.expenditure.couple.monthly.currency}
+                {destination.expenditure.couple.currency}
                 {formatter.format(estimates.couple.withoutInflation)}
               </span>
             </div>
@@ -905,8 +943,8 @@ function CalculatorResults({
                 Total Estimate &mdash; With inflation
               </span>
               <span className="font-semibold text-neutral-600">
-                {destination.expenditure.couple.monthly.currency}
-                {formatter.format(estimates.couple.withInflation)}
+                {destination.expenditure.couple.currency}
+                {formatterWithRounding.format(estimates.couple.withInflation)}
               </span>
             </div>
           </li>

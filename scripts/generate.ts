@@ -17,14 +17,10 @@ async function generateDestinations() {
     | "top_cities"
     | "similar_destinations"
     | "climate"
-    | "expenditure_single"
-    | "expenditure_single_30_year"
-    | "expenditure_single_30_year_with_inflation"
-    | "expenditure_couple"
-    | "expenditure_couple_30_year"
-    | "expenditure_couple_30_year_with_inflation"
+    | "monthly_expenditure_single"
+    | "monthly_expenditure_couple"
     | "tags"
-    | "inflation"
+    | "inflation_rate"
     | "life_expectancy"
     | "life_expectancy_after_65"
     | "population_density"
@@ -65,21 +61,11 @@ async function generateDestinations() {
       similarDestinations: row["similar_destinations"].split(":"),
       climate: row["climate"],
       expenditure: {
-        single: {
-          monthly: toMoney(row["expenditure_single"]),
-          thirtyYearWithInflation: toMoney(
-            row["expenditure_single_30_year_with_inflation"],
-          ),
-        },
-        couple: {
-          monthly: toMoney(row["expenditure_couple"]),
-          thirtyYearWithInflation: toMoney(
-            row["expenditure_couple_30_year_with_inflation"],
-          ),
-        },
+        single: toMoney(row["monthly_expenditure_single"]),
+        couple: toMoney(row["monthly_expenditure_couple"]),
       },
       tags: row["tags"].split(":"),
-      inflation: parseFloat(row["inflation"]) / 100,
+      inflationRate: parseFloat(row["inflation_rate"]),
       lifeExpectancy: parseInt(row["life_expectancy"]),
       lifeExpectancyAfter65: parseInt(row["life_expectancy_after_65"]),
       populationDensity: row["population_density"],
@@ -151,5 +137,49 @@ async function generateCities() {
   fs.writeFile(sink, JSON.stringify(cities, null, 2));
 }
 
+async function generatePros() {
+  type ColName = "id" | "name" | "description";
+  type Row = Readonly<Record<ColName, string>>;
+
+  const source = path.resolve(ROOT, "./data/csv/pros.csv");
+  const sink = path.resolve(ROOT, "./src/data/pros.json");
+
+  const csv = await fs.readFile(source, { encoding: "utf8" });
+  const parsed: readonly Row[] = parse(csv, { columns: true });
+
+  const pros = parsed.map((row) => {
+    return {
+      id: row["id"],
+      name: row["name"],
+      description: row["description"],
+    };
+  });
+
+  fs.writeFile(sink, JSON.stringify(pros, null, 2));
+}
+
+async function generateCons() {
+  type ColName = "id" | "name" | "description";
+  type Row = Readonly<Record<ColName, string>>;
+
+  const source = path.resolve(ROOT, "./data/csv/cons.csv");
+  const sink = path.resolve(ROOT, "./src/data/cons.json");
+
+  const csv = await fs.readFile(source, { encoding: "utf8" });
+  const parsed: readonly Row[] = parse(csv, { columns: true });
+
+  const cons = parsed.map((row) => {
+    return {
+      id: row["id"],
+      name: row["name"],
+      description: row["description"],
+    };
+  });
+
+  fs.writeFile(sink, JSON.stringify(cons, null, 2));
+}
+
 generateDestinations();
 generateCities();
+generatePros();
+generateCons();
