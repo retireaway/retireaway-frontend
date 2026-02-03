@@ -265,16 +265,18 @@ function Overview({
       </p>
 
       <div className="flex flex-col gap-4 px-4">
-        <p className="text-xl font-medium text-neutral-600">Pros</p>
+        <p className="text-lg font-medium text-neutral-600">Pros</p>
         <ul className="flex flex-col gap-2">
           {destination.pros.map((pro) => {
             return (
               <React.Fragment key={pro}>
                 <li className="flex flex-row items-center gap-4 py-2">
-                  <Lucide.Check className="size-5 text-green-600" />
-                  <span className="grow text-base text-neutral-500 first-letter:uppercase">
-                    {pro}
-                  </span>
+                  <Lucide.Check className="size-6 text-green-600" />
+                  <div className="flex flex-col gap-1">
+                    <span className="grow text-base text-neutral-500 first-letter:uppercase">
+                      {pro}
+                    </span>
+                  </div>
                 </li>
                 <div className="h-px bg-neutral-100" />
               </React.Fragment>
@@ -284,7 +286,7 @@ function Overview({
       </div>
 
       <div className="flex flex-col gap-4 px-4">
-        <p className="text-xl font-medium text-neutral-600">Cons</p>
+        <p className="text-lg font-medium text-neutral-600">Cons</p>
         <ul className="flex flex-col gap-2">
           {destination.cons.map((con) => {
             return (
@@ -305,7 +307,7 @@ function Overview({
       <div>
         <section className="flex flex-col gap-8 border-t-1 border-b-1 border-neutral-100 bg-neutral-50/50 px-4 py-8">
           <header className="flex flex-col gap-2">
-            <h3 className="text-center text-xl font-medium text-neutral-600">
+            <h3 className="text-center text-lg font-medium text-neutral-600">
               30-Year Retirement Cost Estimate
             </h3>
             <p className="text-center text-sm text-neutral-500">
@@ -368,7 +370,7 @@ function Overview({
       </div>
 
       <div className="flex flex-col gap-6 px-4">
-        <p className="text-xl font-medium text-neutral-600">
+        <p className="text-lg font-medium text-neutral-600">
           Popular Retirement Cities
         </p>
 
@@ -390,7 +392,7 @@ function Overview({
 
       {0 !== similarDestinations.length && (
         <div className="flex flex-col gap-6 px-4">
-          <p className="text-xl font-medium text-neutral-600">
+          <p className="text-lg font-medium text-neutral-600">
             Similar Destinations To Consider
           </p>
 
@@ -456,8 +458,8 @@ function Cost({
   const formatter = new Intl.NumberFormat("en-US", {
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
-    roundingIncrement: 1000,
-    roundingMode: "ceil",
+    // roundingIncrement: 1000,
+    // roundingMode: "ceil",
   });
 
   return (
@@ -523,7 +525,7 @@ function Ratings({ destination }: { destination: Destination }) {
   return (
     <section className="xl-pb-0 xl-pb-0 flex flex-col gap-10 px-4 pb-4">
       <div className="flex flex-col gap-4 px-4">
-        <p className="text-xl font-medium text-neutral-600">
+        <p className="text-lg font-medium text-neutral-600">
           Core Quality Factors
         </p>
 
@@ -555,7 +557,7 @@ function Ratings({ destination }: { destination: Destination }) {
       </div>
 
       <div className="flex flex-col gap-4 px-4">
-        <p className="text-xl font-medium text-neutral-600">
+        <p className="text-lg font-medium text-neutral-600">
           Practical Considerations
         </p>
 
@@ -624,7 +626,7 @@ function Calculator({ destination }: { destination: Destination }) {
   return (
     <section className="xl-pb-0 xl-pb-0 flex flex-col gap-10 px-4 pb-4">
       <div className="flex flex-col gap-6 px-4">
-        <p className="text-base font-medium text-neutral-600">Details</p>
+        <p className="text-lg font-medium text-neutral-600">Details</p>
         <form
           onReset={() => {
             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -817,19 +819,20 @@ function CalculatorResults({
 }) {
   const formatter = new Intl.NumberFormat("en-US", {
     maximumFractionDigits: 0,
-    roundingIncrement: 1000,
-    roundingMode: "ceil",
+    minimumFractionDigits: 0,
+    // roundingIncrement: 1000,
+    // roundingMode: "ceil",
   });
 
   return (
     <>
       <div className="flex flex-col gap-6 px-4">
-        <p className="text-base font-medium text-neutral-600">Single</p>
+        <p className="text-lg font-medium text-neutral-600">Single</p>
         <ul className="flex flex-col gap-4">
           <li>
             <div className="flex items-center justify-between gap-2">
               <span className="text-sm text-neutral-400 capitalize">
-                Monthly Cost
+                Monthly
               </span>
               <span className="font-semibold text-neutral-600">
                 {destination.expenditure.single.monthly.currency}
@@ -843,19 +846,7 @@ function CalculatorResults({
           <li>
             <div className="flex items-center justify-between gap-2">
               <span className="text-sm text-neutral-400 capitalize">
-                With inflation
-              </span>
-              <span className="font-semibold text-neutral-600">
-                {destination.expenditure.single.monthly.currency}
-                {formatter.format(estimates.single.withInflation)}
-              </span>
-            </div>
-          </li>
-          <div className="h-px bg-neutral-100" />
-          <li>
-            <div className="flex items-center justify-between gap-2">
-              <span className="text-sm text-neutral-400 capitalize">
-                Without inflation
+                Total Estimate
               </span>
               <span className="font-semibold text-neutral-600">
                 {destination.expenditure.single.monthly.currency}
@@ -864,16 +855,28 @@ function CalculatorResults({
             </div>
           </li>
           <div className="h-px bg-neutral-100" />
+          <li>
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-sm text-neutral-400 capitalize">
+                Total Estimate &mdash; With inflation
+              </span>
+              <span className="font-semibold text-neutral-600">
+                {destination.expenditure.single.monthly.currency}
+                {formatter.format(estimates.single.withInflation)}
+              </span>
+            </div>
+          </li>
+          <div className="h-px bg-neutral-100" />
         </ul>
       </div>
 
       <div className="flex flex-col gap-6 px-4">
-        <p className="text-base font-medium text-neutral-600">Couple</p>
+        <p className="text-lg font-medium text-neutral-600">Couple</p>
         <ul className="flex flex-col gap-4">
           <li>
             <div className="flex items-center justify-between gap-2">
               <span className="text-sm text-neutral-400 capitalize">
-                Monthly Cost
+                Monthly
               </span>
               <span className="font-semibold text-neutral-600">
                 {destination.expenditure.couple.monthly.currency}
@@ -887,11 +890,11 @@ function CalculatorResults({
           <li>
             <div className="flex items-center justify-between gap-2">
               <span className="text-sm text-neutral-400 capitalize">
-                With inflation
+                Total Estimate
               </span>
               <span className="font-semibold text-neutral-600">
                 {destination.expenditure.couple.monthly.currency}
-                {formatter.format(estimates.couple.withInflation)}
+                {formatter.format(estimates.couple.withoutInflation)}
               </span>
             </div>
           </li>
@@ -899,11 +902,11 @@ function CalculatorResults({
           <li>
             <div className="flex items-center justify-between gap-2">
               <span className="text-sm text-neutral-400 capitalize">
-                Without inflation
+                Total Estimate &mdash; With inflation
               </span>
               <span className="font-semibold text-neutral-600">
                 {destination.expenditure.couple.monthly.currency}
-                {formatter.format(estimates.couple.withoutInflation)}
+                {formatter.format(estimates.couple.withInflation)}
               </span>
             </div>
           </li>
