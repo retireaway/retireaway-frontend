@@ -824,10 +824,7 @@ function Calculator({ destination }: { destination: Destination }) {
           <div />
 
           <div className="flex items-center justify-between">
-            <button
-              type="reset"
-              className="text-sm text-neutral-400 capitalize"
-            >
+            <button type="reset" className="text-sm text-red-400 capitalize">
               reset
             </button>
             <button

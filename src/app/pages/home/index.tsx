@@ -105,11 +105,11 @@ function Hero() {
     >
       <header className="flex flex-col gap-2">
         <h1 className="text-center text-3xl font-semibold text-white capitalize">
-          Plan your dream retirement
+          Find your <br /> retirement haven
         </h1>
         <p className="text-center text-base text-white">
-          Compare destinations worldwide. <br />
-          Connect with local experts. Plan your move.
+          Explore destinations worldwide. <br /> Compare what matters. Get
+          expert guidance.
         </p>
       </header>
     </section>
