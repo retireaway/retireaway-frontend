@@ -161,7 +161,7 @@ function ControlPanel({
           <ControlPanelDivider />
           <div className="mx-auto flex h-full max-w-min flex-row gap-2 p-4">
             <button onClick={toggleView}>
-              <Chip color="blue" fill="light" size="sm">
+              <Chip color="primary" fill="light" size="sm">
                 Search
                 <Lucide.Search className="size-4" />
               </Chip>
@@ -180,7 +180,7 @@ function ControlPanel({
           <ControlPanelDivider />
           <div className="mx-auto flex h-full flex-row gap-2 p-4 lg:max-w-200">
             <button onClick={toggleView}>
-              <Chip color="blue" fill="light" size="sm">
+              <Chip color="primary" fill="light" size="sm">
                 Filters
                 <Lucide.SlidersHorizontal className="size-4" />
               </Chip>
@@ -238,7 +238,7 @@ function Regions({ regions }: { regions: readonly string[] }) {
           }}
         >
           <Chip
-            color={params.get("region") === null ? "blue" : "neutral"}
+            color={params.get("region") === null ? "primary" : "neutral"}
             fill={params.get("region") === null ? "dark" : "light"}
             size="sm"
           >
@@ -265,7 +265,7 @@ function Regions({ regions }: { regions: readonly string[] }) {
               }}
             >
               <Chip
-                color={params.has("region", region) ? "blue" : "neutral"}
+                color={params.has("region", region) ? "primary" : "neutral"}
                 fill={params.has("region", region) ? "dark" : "light"}
                 size="sm"
               >
@@ -312,7 +312,7 @@ function Tags({ tags }: { tags: readonly string[] }) {
               }}
             >
               <Chip
-                color={params.has("tag", tag) ? "blue" : "neutral"}
+                color={params.has("tag", tag) ? "primary" : "neutral"}
                 fill={params.has("tag", tag) ? "light" : "light"}
                 size="xs"
               >

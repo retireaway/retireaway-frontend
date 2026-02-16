@@ -1,5 +1,4 @@
 import * as Wouter from "wouter";
-import React from "react";
 import * as Lucide from "lucide-react";
 
 import { Rating } from "@/components/rating";
@@ -34,19 +33,14 @@ export function DestinationCard({ destination }: { destination: Destination }) {
     maximumFractionDigits: 1,
   });
 
-  const [imageStatus, setImageStatus] = React.useState<boolean>(false);
-
   return (
-    <article className="max-w-120 rounded-2xl border-1 border-neutral-100 bg-white">
+    <article className="max-w-120 rounded-2xl border-1 border-neutral-200 bg-white">
       <div className="relative h-56 rounded-t-2xl bg-black">
         <img
+          loading="lazy"
           src={`/images/destinations/${destination.id}/${destination.id}.webp`}
-          className={`absolute inset-0 h-full w-full rounded-t-2xl object-cover ${imageStatus || "hidden"}`}
+          className={`absolute inset-0 h-full w-full rounded-t-2xl object-cover`}
           alt={`scenic image of ${destination.name}`}
-          onLoad={() => setImageStatus(true)}
-          onError={() => {
-            console.log("image not found:", destination.id);
-          }}
         />
 
         <div className="absolute inset-0 top-0 left-0 h-full w-full rounded-xl bg-linear-to-b from-black/0 from-30% to-black/60" />
@@ -78,7 +72,7 @@ export function DestinationCard({ destination }: { destination: Destination }) {
       </div>
 
       <div className="flex flex-col gap-4">
-        <div className="h-px bg-neutral-100" />
+        <div className="h-px bg-neutral-200" />
 
         <div className="grid grid-cols-4 gap-2 px-4">
           <Rating
@@ -93,32 +87,41 @@ export function DestinationCard({ destination }: { destination: Destination }) {
           <Rating text="Visa" grade={destination.ratings.visaEase.grade} />
         </div>
 
-        <div className="h-px bg-neutral-100" />
+        <div className="h-px bg-neutral-200" />
 
-        <div className="grid grid-cols-2 rounded-xl px-4">
-          <div className="flex flex-col items-center justify-center gap-0.5">
-            <span className="text-xs font-medium text-neutral-400 uppercase">
-              single
+        <div className="flex items-center justify-center">
+          <div className="flex flex-col items-center justify-center gap-2">
+            <span className="text-sm font-medium text-neutral-400 capitalize">
+              living cost range
             </span>
-            <span className="text-2xl font-bold text-neutral-600 uppercase">
-              {destination.expenditure.single.currency}
-              {formatter.format(destination.expenditure.single.amount)}
-            </span>
-            <span className="text-xs font-normal text-neutral-400">/month</span>
+            <div className="flex flex-row items-center justify-center gap-2">
+              <span className="text-3xl font-bold text-neutral-600 uppercase">
+                {destination.expenditure.single.currency}
+                {formatter.format(destination.expenditure.single.amount)}
+              </span>
+              <span className="text-3xl font-bold text-neutral-600">
+                &mdash;
+              </span>
+              <span className="text-3xl font-bold text-neutral-600 uppercase">
+                {destination.expenditure.single.currency}
+                {formatter.format(destination.expenditure.couple.amount)}
+              </span>
+            </div>
+            <span className="text-sm font-normal text-neutral-400">/month</span>
           </div>
-          <div className="flex flex-col items-center justify-center gap-0.5">
-            <span className="text-xs font-medium text-neutral-400 uppercase">
-              couple
-            </span>
-            <span className="text-2xl font-bold text-neutral-600 uppercase">
-              {destination.expenditure.couple.currency}
-              {formatter.format(destination.expenditure.couple.amount)}
-            </span>
-            <span className="text-xs font-normal text-neutral-400">/month</span>
-          </div>
+          {/* <div className="flex flex-col items-center justify-center gap-0.5"> */}
+          {/*   <span className="text-xs font-medium text-neutral-400 uppercase"> */}
+          {/*     couple */}
+          {/*   </span> */}
+          {/*   <span className="text-2xl font-bold text-neutral-600 uppercase"> */}
+          {/*     {destination.expenditure.couple.currency} */}
+          {/*     {formatter.format(destination.expenditure.couple.amount)} */}
+          {/*   </span> */}
+          {/*   <span className="text-xs font-normal text-neutral-400">/month</span> */}
+          {/* </div> */}
         </div>
 
-        <div className="h-px bg-neutral-100" />
+        <div className="h-px bg-neutral-200" />
 
         <div className="px-4">
           <ul className="scrollbar-none flex w-full snap-x snap-mandatory snap-always flex-row gap-2 overflow-x-auto">
@@ -134,18 +137,18 @@ export function DestinationCard({ destination }: { destination: Destination }) {
           </ul>
         </div>
 
-        <div className="h-px bg-neutral-100" />
+        <div className="h-px bg-neutral-200" />
 
         <div className="flex flex-row gap-2 px-4">
           <Wouter.Link
             href={`/${destination.id}/overview`}
-            className="basis-1/2 rounded-lg border-1 border-neutral-800 bg-neutral-800 py-2 text-center text-sm font-medium text-neutral-50"
+            className="basis-1/2 rounded-lg border-1 border-primary bg-primary py-2 text-center text-sm font-medium text-neutral-50"
           >
             View Details
           </Wouter.Link>
           <Wouter.Link
             href={`/${destination.id}/calculator`}
-            className="basis-1/2 rounded-lg border-2 border-neutral-600 bg-white py-2 text-center text-sm font-medium text-neutral-600"
+            className="basis-1/2 rounded-lg border-2 border-primary bg-white py-2 text-center text-sm font-medium text-primary"
           >
             Calculator
           </Wouter.Link>

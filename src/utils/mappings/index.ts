@@ -5,28 +5,28 @@ export function gradeToColor(grade: string) {
   switch (grade) {
     case "A":
       return {
-        color: `deep-green`,
-        text: tw`text-green-600`,
-        bg: tw`bg-green-600`,
+        color: `deep-teal`,
+        text: tw`text-[#005F55]`,
+        bg: tw`bg-[#005F55]`,
       } as const;
     case "B":
       return {
-        color: `green`,
-        text: tw`text-green-500`,
-        bg: tw`bg-green-500`,
+        color: `teal-blue`,
+        text: tw`text-[#0891B2]`,
+        bg: tw`bg-[#0891B2]`,
       } as const;
     case "C":
       return {
         color: `amber`,
-        text: tw`text-amber-500`,
-        bg: tw`bg-amber-500`,
+        text: tw`text-[64748B]`,
+        bg: tw`bg-[64748B]`,
       } as const;
     case "D":
     default:
       return {
         color: `neutral`,
-        text: tw`text-neutral-500`,
-        bg: tw`bg-neutral-500`,
+        text: tw`text-[#94A3B8]`,
+        bg: tw`bg-[##94A3B8]`,
       } as const;
   }
 }

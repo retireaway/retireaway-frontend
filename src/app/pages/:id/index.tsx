@@ -7,7 +7,7 @@ import cons from "@/data/cons.json" with { type: "json" };
 import cities from "@/data/cities.json" with { type: "json" };
 import destinations from "@/data/destinations.json" with { type: "json" };
 
-import { climateToIcon } from "@/utils/mappings";
+import { climateToIcon, gradeToColor } from "@/utils/mappings";
 import type { Cost, Destination } from "@/types/destination";
 import type { City } from "@/types/city";
 
@@ -275,7 +275,7 @@ function Overview({
                       </span>
                     </div>
                   </li>
-                  <div className="h-px bg-neutral-100" />
+                  <div className="h-px bg-neutral-200" />
                 </React.Fragment>
               );
             })}
@@ -301,7 +301,7 @@ function Overview({
                       </span>
                     </div>
                   </li>
-                  <div className="h-px bg-neutral-100" />
+                  <div className="h-px bg-neutral-200" />
                 </React.Fragment>
               );
             })}
@@ -309,9 +309,10 @@ function Overview({
       </div>
 
       <div>
-        <section className="flex flex-col gap-8 border-t-1 border-b-1 border-neutral-100 bg-neutral-50/50 px-4 py-8">
+        <section className="flex flex-col gap-8 border-t-1 border-b-1 border-primary bg-bg px-4 py-8 xl:rounded-2xl xl:border-1">
           <header className="flex flex-col gap-2">
-            <h3 className="text-center text-lg font-medium text-neutral-600">
+            <h3 className="flex flex-row items-center justify-center gap-2 text-center text-lg font-medium text-neutral-600">
+              <Lucide.Calculator className="size-5 stroke-primary" />
               30-Year Retirement Cost Estimate
             </h3>
             <p className="text-center text-sm text-neutral-500">
@@ -343,11 +344,11 @@ function Overview({
         </section>
 
         {destination.internationalLiving && (
-          <div className="flex flex-col items-center gap-4 bg-[#002c4e] px-6 py-12 xl:hidden">
+          <div className="flex flex-col items-center gap-4 bg-il-blue px-6 py-12 xl:hidden">
             <InternationalLivingLogo />
             <h3 className="text-center text-2xl leading-[1.5] font-semibold text-white capitalize">
               want more in-depth <br /> information on{" "}
-              <span className="font-bold text-[#fbe232]">
+              <span className="font-bold text-il-yellow">
                 {destination.name}?
               </span>
             </h3>
@@ -361,7 +362,7 @@ function Overview({
             <a
               target="blank"
               href={`https://internationalliving.com/countries/${destination.id}/`}
-              className="rounded-lg bg-[#fbe232] px-4 py-3 text-sm font-semibold text-[#002c4e]"
+              className="rounded-lg bg-il-yellow px-4 py-3 text-sm font-semibold text-il-blue"
             >
               Visit International Living
             </a>
@@ -378,7 +379,7 @@ function Overview({
           {topCities.map((city) => {
             return (
               <li className="" key={city.id}>
-                <article className="flex flex-col gap-2 rounded-xl border-1 border-neutral-100 p-4">
+                <article className="flex flex-col gap-2 rounded-xl border-1 border-neutral-200 p-4">
                   <h3 className="text-base font-medium text-neutral-600">
                     {city.name}
                   </h3>
@@ -503,20 +504,18 @@ function Cost({ cost, inflationRate }: { cost: Cost; inflationRate: number }) {
         </article>
       </li>
       <li>
-        <article className="flex flex-col gap-2 rounded-xl border-1 border-neutral-100 bg-white p-4">
-          <h3 className="text-xs text-neutral-500">
-            30 Years Without Inflation
-          </h3>
-          <p className="text-xl font-semibold text-neutral-600">
+        <article className="flex flex-col gap-2 rounded-xl border-1 border-primary bg-primary p-4">
+          <h3 className="text-xs text-white">30 Years Without Inflation</h3>
+          <p className="text-xl font-semibold text-white">
             {currency}
             {formatter.format(thirtyYear)}
           </p>
         </article>
       </li>
       <li>
-        <article className="flex flex-col gap-2 rounded-xl border-1 border-neutral-100 bg-white p-4">
-          <h3 className="text-xs text-neutral-500">30 Years With Inflation</h3>
-          <p className="text-xl font-semibold text-neutral-600">
+        <article className="flex flex-col gap-2 rounded-xl border-1 border-primary bg-primary p-4">
+          <h3 className="text-xs text-white">30 Years With Inflation</h3>
+          <p className="text-xl font-semibold text-white">
             {currency}
             {formatterWithRounding.format(thirtyYearWithInflation)}
           </p>
@@ -565,11 +564,13 @@ function Ratings({ destination }: { destination: Destination }) {
                     </span>
                   </div>
 
-                  <span className="text-lg font-semibold text-neutral-600">
+                  <span
+                    className={`text-lg font-semibold ${gradeToColor(value.grade).text}`}
+                  >
                     {value.grade}
                   </span>
                 </li>
-                <div className="h-px bg-neutral-100" />
+                <div className="h-px bg-neutral-200" />
               </React.Fragment>
             );
           })}
@@ -595,12 +596,14 @@ function Ratings({ destination }: { destination: Destination }) {
                     <span className="text-lg font-medium text-neutral-600">
                       {value.label}
                     </span>
-                    <span className="text-lg font-bold text-neutral-600">
+                    <span
+                      className={`text-lg font-semibold ${gradeToColor(value.grade).text}`}
+                    >
                       {value.grade}
                     </span>
                   </div>
                 </li>
-                <div className="h-px bg-neutral-100" />
+                <div className="h-px bg-neutral-200" />
               </React.Fragment>
             );
           })}

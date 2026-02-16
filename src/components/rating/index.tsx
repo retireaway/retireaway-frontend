@@ -1,3 +1,5 @@
+import { gradeToColor } from "@/utils/mappings";
+
 type Props = { text: string; grade: string };
 
 export function Rating({ grade, text }: Props) {
@@ -6,7 +8,9 @@ export function Rating({ grade, text }: Props) {
       <span className="text-xs font-medium text-neutral-400 uppercase">
         {text}
       </span>
-      <span className="text-2xl font-bold text-neutral-600">{grade}</span>
+      <span className={`text-2xl font-bold ${gradeToColor(grade).text}`}>
+        {grade}
+      </span>
     </div>
   );
 }

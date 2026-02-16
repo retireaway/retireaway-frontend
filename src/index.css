@@ -3,6 +3,12 @@
 
 @theme {
   --font-sora: "Sora Variable", sans-serif;
+  --color-primary: #005f55;
+  --color-active: #004a42;
+  --color-accent: #e74c3c;
+  --color-bg: #f7f1ea;
+  --color-il-blue: #002c4e;
+  --color-il-yellow: #fbe232;
 }
 
 body {
