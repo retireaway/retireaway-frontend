@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "generate:destinations": "npx node --experimental-strip-types scripts/generate.ts",
     "predeploy": "npm run build",
-    "deploy": "gh-pages --dist dist --cname retireaway.jeremiaholatunde.com"
+    "deploy": "gh-pages --dist dist --cname retireaway.com"
   },
   "dependencies": {
     "@fontsource-variable/sora": "^5.2.8",
