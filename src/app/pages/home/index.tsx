@@ -104,12 +104,15 @@ function Hero() {
       className="flex h-80 flex-col items-center justify-center gap-8 bg-neutral-400 bg-[url(/images/bg-hero.jpg)] bg-cover bg-center px-4 py-6 pt-12 bg-blend-multiply"
     >
       <header className="flex flex-col gap-2">
-        <h1 className="text-center text-3xl font-semibold text-white capitalize">
-          Find your <br /> retirement haven
+        <h1 className="text-center text-4xl font-semibold text-white capitalize">
+          Retire Where <br />
+          You'll Live <br />
+          Longest
         </h1>
         <p className="text-center text-base text-white">
-          Explore destinations worldwide. <br /> Compare what matters. Get
-          expert guidance.
+          Compare destinations by what matters for your longevity.
+          <br className="hidden md:block" />
+          Connect with trusted experts to make it happen
         </p>
       </header>
     </section>
@@ -312,7 +315,7 @@ function Tags({ tags }: { tags: readonly string[] }) {
               }}
             >
               <Chip
-                color={params.has("tag", tag) ? "primary" : "neutral"}
+                color={params.has("tag", tag) ? "primarybg" : "neutral"}
                 fill={params.has("tag", tag) ? "light" : "light"}
                 size="xs"
               >

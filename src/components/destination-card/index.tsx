@@ -58,7 +58,7 @@ export function DestinationCard({ destination }: { destination: Destination }) {
                     {destination.region}
                   </span>
                 </div>
-                <Lucide.Circle className="size-1.5 fill-yellow-400 stroke-yellow-400" />
+                <Lucide.Circle className="size-1.5 fill-accent stroke-accent" />
                 <div className="flex flex-row items-center justify-center gap-0.5">
                   <ClimateIcon className="size-3.5 text-white" />
                   <span className="text-sm font-medium text-white">

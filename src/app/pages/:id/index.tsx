@@ -754,7 +754,7 @@ function Calculator({ destination }: { destination: Destination }) {
               Inflation Rate (%)
             </span>
             <input
-              className="w-12 rounded-xl border-1 border-neutral-100 p-2 text-center text-base font-semibold text-neutral-600 outline-none placeholder:font-normal placeholder:text-neutral-400 user-invalid:border-red-400"
+              className="w-12 rounded-xl border-1 border-neutral-100 p-2 text-center text-base font-semibold text-neutral-600 outline-none placeholder:font-normal placeholder:text-neutral-400 user-invalid:border-red-400 focus:border-primary"
               id="inflationRate"
               min={0}
               name="inflationRate"
@@ -774,7 +774,7 @@ function Calculator({ destination }: { destination: Destination }) {
               current age
             </span>
             <input
-              className="w-12 rounded-xl border-1 border-neutral-100 p-2 text-center text-base font-semibold text-neutral-600 outline-none placeholder:font-normal placeholder:text-neutral-400 user-invalid:border-red-400"
+              className="w-12 rounded-xl border-1 border-neutral-100 p-2 text-center text-base font-semibold text-neutral-600 outline-none placeholder:font-normal placeholder:text-neutral-400 user-invalid:border-red-400 focus:border-primary"
               id="currentAge"
               min={0}
               name="currentAge"
@@ -793,7 +793,7 @@ function Calculator({ destination }: { destination: Destination }) {
               retirement age
             </span>
             <input
-              className="w-12 rounded-xl border-1 border-neutral-100 p-2 text-center text-base font-semibold text-neutral-600 outline-none placeholder:font-normal placeholder:text-neutral-400 user-invalid:border-red-400"
+              className="w-12 rounded-xl border-1 border-neutral-100 p-2 text-center text-base font-semibold text-neutral-600 outline-none placeholder:font-normal placeholder:text-neutral-400 user-invalid:border-red-400 focus:border-primary"
               id="retirementAge"
               min={0}
               name="retirementAge"
@@ -812,7 +812,7 @@ function Calculator({ destination }: { destination: Destination }) {
               retirement duration
             </span>
             <input
-              className="w-12 rounded-xl border-1 border-neutral-100 p-2 text-center text-base font-semibold text-neutral-600 outline-none placeholder:font-normal placeholder:text-neutral-400 user-invalid:border-red-400"
+              className="w-12 rounded-xl border-1 border-neutral-100 p-2 text-center text-base font-semibold text-neutral-600 outline-none placeholder:font-normal placeholder:text-neutral-400 user-invalid:border-red-400 focus:border-primary"
               id="retirementDuration"
               min={0}
               name="retirementDuration"
@@ -826,15 +826,18 @@ function Calculator({ destination }: { destination: Destination }) {
           <div />
           <div />
 
-          <div className="flex items-center justify-between">
-            <button type="reset" className="text-sm text-red-400 capitalize">
-              reset
-            </button>
+          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <button
               type="submit"
-              className="text-sm font-medium text-neutral-600 capitalize underline"
+              className="w-full rounded-lg bg-primary px-6 py-3 text-sm font-medium whitespace-nowrap text-white capitalize md:w-min"
             >
-              calculate retirement costs
+              calculate my retirement costs
+            </button>
+            <button
+              type="reset"
+              className="text-sm text-accent capitalize md:-order-1"
+            >
+              reset
             </button>
           </div>
         </form>
