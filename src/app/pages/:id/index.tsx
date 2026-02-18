@@ -143,29 +143,29 @@ export function DestinationProfile() {
 
       <div className="flex basis-2/5 flex-col gap-8 xl:p-8 xl:pl-0">
         <ul className="grid grid-cols-3 border-b-1 border-neutral-100">
-          <li className="flex grow justify-center">
+          <li className="flex grow">
             <Wouter.Link
               replace={true}
               href={`/${destination.id}/overview`}
-              className={`p-4 text-center ${params["tab"] === "overview" ? "font-medium text-neutral-600" : "text-neutral-400"} `}
+              className={`w-full border-b-2 p-4 text-center ${params["tab"] === "overview" ? "border-primary text-primary" : "border-transparent text-neutral-400"} `}
             >
               Overview
             </Wouter.Link>
           </li>
-          <li className="flex grow justify-center">
+          <li className="flex grow">
             <Wouter.Link
               replace={true}
               href={`/${destination.id}/ratings`}
-              className={`p-4 text-center ${params["tab"] === "ratings" ? "font-medium text-neutral-600" : "text-neutral-400"} `}
+              className={`w-full border-b-2 p-4 text-center ${params["tab"] === "ratings" ? "border-primary text-primary" : "border-transparent text-neutral-400"} `}
             >
               Ratings
             </Wouter.Link>
           </li>
-          <li className="flex grow justify-center">
+          <li className="flex grow">
             <Wouter.Link
               replace={true}
               href={`/${destination.id}/calculator`}
-              className={`p-4 text-center ${params["tab"] === "calculator" ? "font-medium text-neutral-600" : "text-neutral-400"} `}
+              className={`w-full border-b-2 p-4 text-center ${params["tab"] === "calculator" ? "border-primary text-primary" : "border-transparent text-neutral-400"} `}
             >
               Calculator
             </Wouter.Link>
