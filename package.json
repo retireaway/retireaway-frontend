@@ -48,12 +48,12 @@
   "devEngines": {
     "runtime": {
       "name": "node",
-      "version": "24.3.0",
+      "version": "24",
       "onFail": "error"
     },
     "packageManager": {
       "name": "npm",
-      "version": "11.4.2",
+      "version": "11",
       "onFail": "error"
     }
   }
