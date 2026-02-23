@@ -4,45 +4,65 @@ import * as Wouter from "wouter";
 import destinations from "@/data/destinations.json" with { type: "json" };
 import type { Destination } from "@/types/destination";
 
-import { ControlPanel } from "@/components/_pages/home/control-panel";
 import { DestinationCardList } from "@/components/destination-card";
 import { Hero } from "@/components/_pages/home/hero";
-import { getRegions, getTags, search } from "@/utils/destination";
+import {
+  getClimates,
+  getEnglishUsageRatings,
+  getRegions,
+  getTags,
+  getTaxRatings,
+  getVisaRatings,
+  search,
+} from "@/utils/destination";
+
+import { useFilters } from "@/hooks/filters";
+import { predicates, ranges } from "@/utils/filters";
+import { Searchbar } from "@/components/searchbar";
+import { Filters } from "@/components/_pages/home/filters";
 
 export function Home() {
   const [params] = Wouter.useSearchParams();
 
-  const allTags = React.useMemo(() => getTags(destinations), [destinations]);
+  const dataset = React.useMemo(() => {
+    return {
+      tags: getTags(destinations),
+      regions: getRegions(destinations),
+      climates: getClimates(destinations),
+      visa: getVisaRatings(destinations),
+      tax: getTaxRatings(destinations),
+      english: getEnglishUsageRatings(destinations),
+      single: Object.keys(ranges.single),
+      couple: Object.keys(ranges.couple),
+    };
+  }, [destinations]);
 
-  const allRegions = React.useMemo(
-    () => getRegions(destinations),
-    [destinations],
-  );
+  const filters = useFilters();
 
   const filtrate: readonly Destination[] = React.useMemo(() => {
-    const filterRegion = params.get("region");
-    const filterTags = params.getAll("tag");
-
-    const predRegion = (
-      destination: Destination,
-      region: null | string,
-    ): boolean => {
-      if (region === null) return true;
-      return region === destination.region;
-    };
-
-    const predTags = (destination: Destination, tags: string[]): boolean => {
-      if (tags.length === 0) return true;
-      return tags.every((item) => destination.tags.includes(item));
-    };
-
     return destinations.filter((destination) => {
       return (
-        predRegion(destination, filterRegion) &&
-        predTags(destination, filterTags)
+        predicates.single(
+          destination,
+          ranges.single[filters.single ?? "default"],
+        ) &&
+        predicates.couple(
+          destination,
+          ranges.couple[filters.couple ?? "default"],
+        ) &&
+        predicates.affordability(destination, filters.affordability) &&
+        predicates.climate(destination, filters.climate) &&
+        predicates.english(destination, filters.english) &&
+        predicates.healthcare(destination, filters.healthcare) &&
+        predicates.infrastructure(destination, filters.infrastructure) &&
+        predicates.region(destination, filters.region) &&
+        predicates.safety(destination, filters.safety) &&
+        predicates.tags(destination, filters.tags) &&
+        predicates.tax(destination, filters.tax) &&
+        predicates.visa(destination, filters.visa)
       );
     });
-  }, [destinations, params.toString()]);
+  }, [destinations, filters]);
 
   const searchValue = params.get("search");
 
@@ -54,22 +74,16 @@ export function Home() {
   return (
     <section className="flex min-h-svh flex-col">
       <Hero />
+      <div className="grid grid-cols-1 gap-4 p-4 lg:grid-cols-[300px_auto]">
+        <section className="hidden flex-col gap-2 lg:flex">
+          <Searchbar />
+          <Filters {...dataset} />
+        </section>
 
-      <ControlPanel tags={allTags} regions={allRegions} />
-
-      <section className="flex min-h-240 flex-col gap-4 bg-neutral-50/50 p-4">
-        <header>
-          <h3 className="text-center text-xs font-medium text-neutral-400">
-            {searchResults.length === 0
-              ? "No matching destinations"
-              : searchResults.length === 1
-                ? "Showing 1 destination"
-                : `Showing ${searchResults.length} destinations`}
-          </h3>
-        </header>
-
-        <DestinationCardList destinations={searchResults} />
-      </section>
+        <section className="flex min-h-240 flex-col gap-4 rounded-xl">
+          <DestinationCardList destinations={searchResults} />
+        </section>
+      </div>
     </section>
   );
 }

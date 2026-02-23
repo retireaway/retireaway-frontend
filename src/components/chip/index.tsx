@@ -16,12 +16,14 @@ const yellow = tw``;
 const clear = tw``;
 const primary = tw``;
 const primarybg = tw``;
+const accent = tw``;
 
 const dark = tw``;
 const light = tw``;
 
 const variants = {
   color: {
+    accent,
     neutral,
     primary,
     primarybg,
@@ -56,6 +58,16 @@ const compoundVariants = [
     color: "plain",
     fill: "light",
     className: tw`border-neutral-100 bg-white text-neutral-500`,
+  } as const,
+  {
+    color: "accent",
+    fill: "dark",
+    className: tw`bg-accent text-white`,
+  } as const,
+  {
+    color: "accent",
+    fill: "light",
+    className: tw`border-accent bg-accent/5 text-accent`,
   } as const,
   {
     color: "neutral",
@@ -128,7 +140,7 @@ const compoundVariants = [
   {
     color: "red",
     fill: "light",
-    className: tw`bg-red-100 text-red-600`,
+    className: tw`bg-red-50 text-red-600`,
   } as const,
 ];
 

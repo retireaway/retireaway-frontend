@@ -12,7 +12,7 @@ export function DestinationCardList({
   destinations: readonly Destination[];
 }) {
   return (
-    <ul className="mx-auto grid max-w-300 grid-cols-1 gap-x-2 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+    <ul className="mx-auto grid max-w-300 grid-cols-1 gap-x-2 gap-y-8 sm:grid-cols-2 xl:grid-cols-3">
       {destinations.map((country) => {
         return (
           <li key={country.id}>
@@ -31,6 +31,9 @@ export function DestinationCard({ destination }: { destination: Destination }) {
     notation: "compact",
     compactDisplay: "short",
     maximumFractionDigits: 1,
+    style: "currency",
+    currency: "USD",
+    currencyDisplay: "symbol",
   });
 
   return (
@@ -96,16 +99,22 @@ export function DestinationCard({ destination }: { destination: Destination }) {
             </span>
             <div className="flex flex-row items-center justify-center gap-2">
               <span className="text-3xl font-bold text-neutral-600 uppercase">
-                {destination.expenditure.single.currency}
-                {formatter.format(destination.expenditure.single.amount)}
+                {formatter.formatRange(
+                  destination.expenditure.single.amount,
+                  destination.expenditure.couple.amount,
+                )}
               </span>
-              <span className="text-3xl font-bold text-neutral-600">
-                &mdash;
-              </span>
-              <span className="text-3xl font-bold text-neutral-600 uppercase">
-                {destination.expenditure.single.currency}
-                {formatter.format(destination.expenditure.couple.amount)}
-              </span>
+              {/* <span className="text-3xl font-bold text-neutral-600 uppercase"> */}
+              {/*   {destination.expenditure.single.currency} */}
+              {/*   {formatter.format(destination.expenditure.single.amount)} */}
+              {/* </span> */}
+              {/* <span className="text-3xl font-bold text-neutral-600"> */}
+              {/*   &mdash; */}
+              {/* </span> */}
+              {/* <span className="text-3xl font-bold text-neutral-600 uppercase"> */}
+              {/*   {destination.expenditure.single.currency} */}
+              {/*   {formatter.format(destination.expenditure.couple.amount)} */}
+              {/* </span> */}
             </div>
             <span className="text-sm font-normal text-neutral-400">/month</span>
           </div>

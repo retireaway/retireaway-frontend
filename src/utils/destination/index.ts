@@ -13,14 +13,21 @@ export function getTags(
 export function getRegions(
   destinations: readonly Destination[],
 ): readonly string[] {
-  const region = destinations.map((d) => d.region);
-  const unique = [...new Set(region)];
+  const regions = destinations.map((d) => d.region);
+  const unique = [...new Set(regions)];
   const sorted = preferentialSort(
     unique,
     ["Asia", "Europe", "Americas", "Oceania", "Middle East & North Africa"],
     (a, b) => a === b,
   );
   return sorted;
+}
+
+export function getClimates(
+  destinations: readonly Destination[],
+): readonly string[] {
+  const climates = destinations.map((d) => d.climate);
+  return [...new Set(climates)];
 }
 
 export function search(
@@ -38,4 +45,28 @@ export function search(
   });
 
   return fuse.search(search).map((result) => result.item);
+}
+
+export function getVisaRatings(destinations: readonly Destination[]) {
+  const items = destinations.map((d) => d.ratings.visaEase.label);
+  const unique = [...new Set(items)];
+  return unique;
+}
+
+export function getTaxRatings(destinations: readonly Destination[]) {
+  const items = destinations.map((d) => d.ratings.taxEnvironment.label);
+  const unique = [...new Set(items)];
+  return unique;
+}
+
+export function getEnglishUsageRatings(destinations: readonly Destination[]) {
+  const items = destinations.map((d) => d.englishUsage);
+  const unique = [...new Set(items)];
+  return unique;
+}
+
+export function getWeatherComfortRatings(destinations: readonly Destination[]) {
+  const items = destinations.map((d) => d.ratings.weatherComfort);
+  const unique = [...new Set(items)];
+  return unique;
 }
