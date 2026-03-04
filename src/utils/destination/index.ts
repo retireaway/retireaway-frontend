@@ -70,3 +70,27 @@ export function getWeatherComfortRatings(destinations: readonly Destination[]) {
   const unique = [...new Set(items)];
   return unique;
 }
+
+export function getHealthcareRatings(destinations: readonly Destination[]) {
+  const items = destinations.map((d) => d.ratings.healthcareQuality.label);
+  const unique = [...new Set(items)];
+  return unique;
+}
+
+export function getSafetyRatings(destinations: readonly Destination[]) {
+  const items = destinations.map((d) => d.ratings.personalSafety.label);
+  const unique = [...new Set(items)];
+  return unique;
+}
+
+export function getAffordabilityRatings(destinations: readonly Destination[]) {
+  const items = destinations.map((d) => d.ratings.affordability.label);
+  const unique = [...new Set(items)];
+  return unique;
+}
+
+export function getInfrastructureRatings(destinations: readonly Destination[]) {
+  const items = destinations.map((d) => d.ratings.infrastructure.label);
+  const unique = [...new Set(items)];
+  return unique;
+}

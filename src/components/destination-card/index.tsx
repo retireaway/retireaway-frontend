@@ -11,8 +11,18 @@ export function DestinationCardList({
 }: {
   destinations: readonly Destination[];
 }) {
+  if (destinations.length === 0) {
+    return (
+      <div className="mx flex h-100 flex-col items-center justify-center gap-2">
+        <Lucide.GlobeX className="size-10 stroke-neutral-400" />
+        <span className="text-base font-normal text-neutral-400 capitalize">
+          no matching destinations
+        </span>
+      </div>
+    );
+  }
   return (
-    <ul className="mx-auto grid max-w-300 grid-cols-1 gap-x-2 gap-y-8 sm:grid-cols-2 xl:grid-cols-3">
+    <ul className="mx-auto grid w-full max-w-300 grid-cols-1 gap-x-2 gap-y-8 sm:grid-cols-2 xl:grid-cols-3">
       {destinations.map((country) => {
         return (
           <li key={country.id}>

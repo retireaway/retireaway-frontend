@@ -20,7 +20,7 @@ export const predicates = {
   },
   affordability: function (d: Destination, value: string | null): boolean {
     if (value === null) return true;
-    return value === d.ratings.affordability.grade;
+    return value === d.ratings.affordability.label;
   },
   climate: function (d: Destination, value: string | null): boolean {
     if (value === null) return true;
@@ -32,11 +32,11 @@ export const predicates = {
   },
   healthcare: function (d: Destination, value: string | null): boolean {
     if (value === null) return true;
-    return value === d.ratings.healthcareQuality.grade;
+    return value === d.ratings.healthcareQuality.label;
   },
   infrastructure: function (d: Destination, value: string | null): boolean {
     if (value === null) return true;
-    return value === d.ratings.infrastructure.grade;
+    return value === d.ratings.infrastructure.label;
   },
   region: function (d: Destination, value: string | null): boolean {
     if (value === null) return true;
@@ -44,7 +44,7 @@ export const predicates = {
   },
   safety: function (d: Destination, value: string | null): boolean {
     if (value === null) return true;
-    return value === d.ratings.personalSafety.grade;
+    return value === d.ratings.personalSafety.label;
   },
   tags: function (d: Destination, value: readonly string[]): boolean {
     if (value.length === 0) return true;

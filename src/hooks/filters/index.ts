@@ -1,7 +1,7 @@
 import * as Wouter from "wouter";
 
 export function useFilters() {
-  const [params] = Wouter.useSearchParams();
+  const [params, setParams] = Wouter.useSearchParams();
 
   const affordability = params.get("affordability");
   const climate = params.get("climate");
@@ -16,18 +16,37 @@ export function useFilters() {
   const single = params.get("single");
   const couple = params.get("couple");
 
-  return {
-    affordability,
-    climate,
-    english,
-    healthcare,
-    infrastructure,
-    region,
-    safety,
-    tags,
-    tax,
-    visa,
-    single,
-    couple,
-  } as const;
+  function reset() {
+    params.delete("affordability");
+    params.delete("infrastructure");
+    params.delete("climate");
+    params.delete("couple");
+    params.delete("healthcare");
+    params.delete("region");
+    params.delete("safety");
+    params.delete("single");
+    params.delete("tag");
+    params.delete("tax");
+    params.delete("visa");
+    params.delete("english");
+    setParams(params);
+  }
+
+  return [
+    {
+      affordability,
+      climate,
+      english,
+      healthcare,
+      infrastructure,
+      region,
+      safety,
+      tags,
+      tax,
+      visa,
+      single,
+      couple,
+    } as const,
+    reset,
+  ] as const;
 }

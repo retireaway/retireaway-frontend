@@ -1,30 +1,58 @@
+import * as React from "react";
+import destinations from "@/data/destinations.json" with { type: "json" };
+
 import { FilterGroup } from "./group";
 import { FilterItem } from "./item";
+import {
+  getTags,
+  getRegions,
+  getClimates,
+  getVisaRatings,
+  getTaxRatings,
+  getEnglishUsageRatings,
+  getHealthcareRatings,
+  getSafetyRatings,
+  getAffordabilityRatings,
+  getInfrastructureRatings,
+} from "@/utils/destination";
+import { ranges } from "@/utils/filters";
 
-type FiltersProps = {
-  tags: readonly string[];
-  regions: readonly string[];
-  climates: readonly string[];
-  english: readonly string[];
-  visa: readonly string[];
-  tax: readonly string[];
-  single: readonly string[];
-  couple: readonly string[];
-};
+export function Filters() {
+  const dataset = React.useMemo(() => {
+    return {
+      tags: getTags(destinations),
+      regions: getRegions(destinations),
+      climates: getClimates(destinations),
+      visa: getVisaRatings(destinations),
+      tax: getTaxRatings(destinations),
+      english: getEnglishUsageRatings(destinations),
+      single: Object.keys(ranges.single),
+      couple: Object.keys(ranges.couple),
+      healthcare: getHealthcareRatings(destinations),
+      safety: getSafetyRatings(destinations),
+      affordability: getAffordabilityRatings(destinations),
+      infrastructure: getInfrastructureRatings(destinations),
+    };
+  }, [destinations]);
 
-export function Filters(dataset: FiltersProps) {
   return (
-    <div className="flex h-min flex-col gap-8 rounded-xl border-1 border-neutral-200 p-4">
+    <>
       <FilterGroup title="budget">
-        <FilterItem name="single" items={dataset.single} />
-        <FilterItem name="couple" items={dataset.couple} />
+        <FilterItem
+          name="single"
+          items={dataset.single.filter((item) => item !== "All")}
+        />
+        <FilterItem
+          name="couple"
+          items={dataset.couple.filter((item) => item !== "All")}
+        />
       </FilterGroup>
 
       <FilterGroup title="core factors">
-        <FilterItem name="healthcare" items={["A", "B", "C", "D"]} />
-        <FilterItem name="safety" items={["A", "B", "C", "D"]} />
-        <FilterItem name="affordability" items={["A", "B", "C", "D"]} />
-        <FilterItem name="infrastructure" items={["A", "B", "C", "D"]} />
+        <FilterItem name="healthcare" items={dataset.healthcare} />
+        <FilterItem name="safety" items={dataset.safety} />
+        <FilterItem name="affordability" items={dataset.affordability} />
+        <FilterItem name="infrastructure" items={dataset.infrastructure} />
       </FilterGroup>
 
       <FilterGroup title="lifestyle">
@@ -45,6 +73,6 @@ export function Filters(dataset: FiltersProps) {
       <FilterGroup title="preferences">
         <FilterItem name="tags" param="tag" items={dataset.tags} multiple />
       </FilterGroup>
-    </div>
+    </>
   );
 }

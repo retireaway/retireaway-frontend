@@ -1,15 +1,16 @@
 import * as Wouter from "wouter";
 
-import { Home } from "./pages/home";
-import { DestinationProfile } from "./pages/:id";
 import { NotFound } from "@/components/not-found";
+
+import { Index } from "./pages";
+import { DestinationProfile } from "./pages/:id";
 
 export function App() {
   return (
     <Wouter.Router base="/">
       <Wouter.Switch>
         <Wouter.Route path="/">
-          <Home />
+          <Index />
         </Wouter.Route>
 
         <Wouter.Route path="/:id/:tab">
