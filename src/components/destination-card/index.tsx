@@ -5,6 +5,7 @@ import { Rating } from "@/components/rating";
 import { climateToIcon } from "@/utils/mappings";
 import type { Destination } from "@/types/destination";
 import { Chip } from "@/components/chip";
+import { useComparison } from "@/contexts/comparison";
 
 export function DestinationCardList({
   destinations,
@@ -36,6 +37,8 @@ export function DestinationCardList({
 
 export function DestinationCard({ destination }: { destination: Destination }) {
   const ClimateIcon = climateToIcon(destination.climate);
+  const { toggleDestination, isDestinationSelected } = useComparison();
+  const isSelected = isDestinationSelected(destination.id);
 
   const formatter = new Intl.NumberFormat("en-US", {
     notation: "compact",
@@ -57,6 +60,22 @@ export function DestinationCard({ destination }: { destination: Destination }) {
         />
 
         <div className="absolute inset-0 top-0 left-0 h-full w-full rounded-xl bg-linear-to-b from-black/0 from-30% to-black/60" />
+
+        <button
+          onClick={() => toggleDestination(destination)}
+          className={`absolute top-4 right-4 z-10 flex size-8 items-center justify-center rounded-full border transition-all ${
+            isSelected
+              ? "border-primary bg-primary text-white"
+              : "border-white/20 bg-black/20 text-white backdrop-blur-sm hover:bg-black/40"
+          }`}
+          aria-label={
+            isSelected ? "Remove from comparison" : "Add to comparison"
+          }
+        >
+          <Lucide.Plus
+            className={`size-5 transition-transform ${isSelected ? "rotate-45" : ""}`}
+          />
+        </button>
 
         <div className="absolute bottom-0 w-full p-4">
           <header>

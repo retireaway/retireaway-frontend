@@ -10,6 +10,7 @@ import destinations from "@/data/destinations.json" with { type: "json" };
 import { climateToIcon, gradeToColor } from "@/utils/mappings";
 import type { Cost, Destination } from "@/types/destination";
 import type { City } from "@/types/city";
+import { useComparison } from "@/contexts/comparison";
 
 import InternationalLivingLogo from "@/assets/svg/international-living-logo.svg?react";
 
@@ -193,6 +194,8 @@ export function DestinationProfile() {
 
 function Hero({ destination }: { destination: Destination }) {
   const ClimateIcon = climateToIcon(destination.climate);
+  const { toggleDestination, isDestinationSelected } = useComparison();
+  const isSelected = isDestinationSelected(destination.id);
 
   return (
     <div className="relative h-72 bg-black xl:h-100 xl:grow xl:rounded-xl">
@@ -209,6 +212,22 @@ function Hero({ destination }: { destination: Destination }) {
         className="absolute top-0 left-0 flex w-min items-center justify-start gap-2 p-4"
       >
         <Lucide.ArrowLeft className="size-6 text-white" />
+      </button>
+
+      <button
+        onClick={() => toggleDestination(destination)}
+        className={`absolute top-4 right-4 z-10 flex h-10 items-center justify-center gap-2 rounded-full border-1 px-4 transition-all ${
+          isSelected
+            ? "border-primary bg-primary text-white"
+            : "border-white/20 bg-black/20 text-white hover:bg-black/40 backdrop-blur-sm"
+        }`}
+      >
+        <Lucide.Plus
+          className={`size-5 transition-transform ${isSelected ? "rotate-45" : ""}`}
+        />
+        <span className="text-sm font-medium">
+          {isSelected ? "Comparing" : "Compare"}
+        </span>
       </button>
 
       <div className="absolute bottom-0 w-full p-4">
