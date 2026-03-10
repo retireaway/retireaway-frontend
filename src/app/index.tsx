@@ -6,6 +6,7 @@ import { ComparisonBar } from "@/components/comparison-bar";
 
 import { Index } from "./pages";
 import { DestinationProfile } from "./pages/:id";
+import { ComparisonPage } from "./pages/compare";
 
 export function App() {
   return (
@@ -14,6 +15,10 @@ export function App() {
         <Wouter.Switch>
           <Wouter.Route path="/">
             <Index />
+          </Wouter.Route>
+
+          <Wouter.Route path="/compare">
+            <ComparisonPage />
           </Wouter.Route>
 
           <Wouter.Route path="/:id/:tab">

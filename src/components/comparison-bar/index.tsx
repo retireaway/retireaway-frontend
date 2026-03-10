@@ -1,4 +1,5 @@
 import * as Lucide from "lucide-react";
+import * as Wouter from "wouter";
 import { useComparison } from "@/contexts/comparison";
 
 export function ComparisonBar() {
@@ -51,9 +52,12 @@ export function ComparisonBar() {
         </ul>
 
         {selectedDestinations.length >= 2 && (
-          <button className="mt-2 w-full rounded-xl bg-primary py-2.5 text-sm font-semibold text-white transition-all hover:bg-primary/90">
+          <Wouter.Link
+            href="/compare"
+            className="mt-2 block w-full rounded-xl bg-primary py-2.5 text-center text-sm font-semibold text-white transition-all hover:bg-primary/90"
+          >
             Compare Now
-          </button>
+          </Wouter.Link>
         )}
       </div>
     </div>
