@@ -9,6 +9,26 @@ import { climateToIcon, gradeToColor } from "@/utils/mappings";
 export function ComparisonPage() {
   const { selectedDestinations, toggleDestination } = useComparison();
   const [, setLocation] = Wouter.useLocation();
+  const [activeMobileIndex, setActiveMobileIndex] = React.useState(0);
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  // Handle responsive layout state
+  React.useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  // Ensure activeMobileIndex is within bounds if a destination is removed
+  React.useEffect(() => {
+    if (
+      activeMobileIndex >= selectedDestinations.length &&
+      selectedDestinations.length > 0
+    ) {
+      setActiveMobileIndex(selectedDestinations.length - 1);
+    }
+  }, [selectedDestinations.length, activeMobileIndex]);
 
   if (selectedDestinations.length === 0) {
     return (
@@ -146,10 +166,10 @@ export function ComparisonPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-neutral-50 pb-20">
+    <div className="min-h-screen bg-neutral-50 pb-32 md:pb-20">
       {/* Sticky Header */}
       <header className="sticky top-0 z-40 border-b border-neutral-200 bg-white/80 backdrop-blur-md">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <div className="flex h-20 items-center justify-between">
             <div className="flex items-center gap-4">
               <button
@@ -169,124 +189,126 @@ export function ComparisonPage() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-7xl px-4 pt-8 sm:px-6 lg:px-8">
+      <main className="mx-auto max-w-7xl px-4 pt-8 md:px-6 lg:px-8">
         <div className="overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm">
+          {/* Header Section */}
+          <div className="border-b border-neutral-100 p-8 pb-4">
+            <div className="flex flex-col justify-end gap-1">
+              <h2 className="text-3xl font-bold text-neutral-900">Compare</h2>
+              <p className="text-sm font-medium text-neutral-500">
+                Side-by-side analysis of your top choices.
+              </p>
+            </div>
+          </div>
+
           <div className="overflow-x-auto">
-            <table className="w-full table-fixed border-collapse text-left">
-              <thead>
-                <tr>
-                  <th
-                    colSpan={selectedDestinations.length + 1}
-                    className="border-b border-neutral-100 p-8 pb-4"
+            {/* Grid Container */}
+            <div
+              className="grid min-w-full divide-y divide-neutral-100"
+              style={{
+                gridTemplateColumns: isMobile
+                  ? "1fr 1fr"
+                  : `minmax(180px, 1.2fr) repeat(${selectedDestinations.length}, minmax(240px, 1fr))`,
+              }}
+            >
+              {/* Destination Images Row */}
+              <div className="contents">
+                <div className="hidden bg-white p-6 md:block" />
+                {selectedDestinations.map((destination, index) => (
+                  <div
+                    key={destination.id}
+                    className={`bg-white p-4 md:p-6 ${
+                      index === activeMobileIndex ? "block" : "hidden md:block"
+                    } ${isMobile ? "col-span-2" : "col-span-1"}`}
                   >
-                    <div className="flex flex-col justify-end gap-1">
-                      <h2 className="text-3xl font-bold text-neutral-900">
-                        Compare
-                      </h2>
-                      <p className="text-sm font-medium text-neutral-500">
-                        Side-by-side analysis of your top choices.
-                      </p>
+                    <div className="relative aspect-video overflow-hidden rounded-2xl bg-black">
+                      <img
+                        src={`/images/destinations/${destination.id}/${destination.id}.webp`}
+                        alt={destination.name}
+                        className="h-full w-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-linear-to-b from-black/0 from-30% to-black/60" />
+
+                      <button
+                        onClick={() => toggleDestination(destination)}
+                        className="absolute top-2 right-2 rounded-full bg-accent p-1.5 text-white shadow-sm transition-all hover:bg-black/40"
+                      >
+                        <Lucide.Trash2 className="size-4" />
+                      </button>
+
+                      <div className="absolute bottom-0 w-full p-4 text-left">
+                        <h3 className="text-xl font-bold text-white">
+                          {destination.name}
+                        </h3>
+                      </div>
                     </div>
-                  </th>
-                </tr>
-                <tr>
-                  <th className="w-80 border-b border-neutral-100 p-6"></th>
-                  {selectedDestinations.map((destination) => {
-                    const ClimateIcon = climateToIcon(destination.climate);
-                    return (
-                      <th
-                        key={destination.id}
-                        className="min-w-70 border-b border-neutral-100 p-6"
-                      >
-                        <div className="relative aspect-video overflow-hidden rounded-2xl bg-black">
-                          <img
-                            src={`/images/destinations/${destination.id}/${destination.id}.webp`}
-                            alt={destination.name}
-                            className="h-full w-full object-cover"
-                          />
-                          <div className="absolute inset-0 bg-linear-to-b from-black/0 from-30% to-black/60" />
-
-                          <button
-                            onClick={() => toggleDestination(destination)}
-                            className="absolute top-2 right-2 rounded-full bg-accent p-1.5 text-white shadow-sm transition-all hover:bg-black/40"
-                          >
-                            <Lucide.Trash2 className="size-4" />
-                          </button>
-
-                          <div className="absolute bottom-0 w-full p-4 text-left">
-                            <h3 className="text-xl font-bold text-white">
-                              {destination.name}
-                            </h3>
-                            <div className="mt-1 flex flex-row items-center justify-start gap-2">
-                              <div className="flex flex-row items-center justify-center gap-0.5">
-                                <Lucide.MapPin className="size-3.5 text-white" />
-                                <span className="text-sm font-medium text-white">
-                                  {destination.region}
-                                </span>
-                              </div>
-                              <Lucide.Circle className="size-1.5 fill-accent stroke-accent" />
-                              <div className="flex flex-row items-center justify-center gap-0.5">
-                                <ClimateIcon className="size-3.5 text-white" />
-                                <span className="text-sm font-medium text-white">
-                                  {destination.climate}
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </th>
-                    );
-                  })}
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-neutral-100">
-                <tr>
-                  <td className="px-6 py-4 text-xs font-semibold tracking-wider text-neutral-400 uppercase">
-                    Metrics
-                  </td>
-                  <td
-                    colSpan={selectedDestinations.length}
-                    className="px-6 py-4"
-                  />
-                </tr>
-                {comparisonSections.map((section) => (
-                  <React.Fragment key={section.title}>
-                    <tr className="bg-neutral-50/50">
-                      <td
-                        colSpan={selectedDestinations.length + 1}
-                        className="px-6 py-4"
-                      >
-                        <div className="flex items-center gap-2 text-sm font-bold text-neutral-900">
-                          {section.icon}
-                          {section.title}
-                        </div>
-                      </td>
-                    </tr>
-                    {section.metrics.map((metric) => (
-                      <tr
-                        key={metric.label}
-                        className="group transition-colors hover:bg-neutral-50/30"
-                      >
-                        <td className="px-6 py-5 text-sm font-medium text-neutral-500">
-                          {metric.label}
-                        </td>
-                        {selectedDestinations.map((destination) => (
-                          <td
-                            key={`${destination.id}-${metric.label}`}
-                            className="px-6 py-5 text-sm text-neutral-900"
-                          >
-                            {metric.getValue(destination)}
-                          </td>
-                        ))}
-                      </tr>
-                    ))}
-                  </React.Fragment>
+                  </div>
                 ))}
-              </tbody>
-            </table>
+              </div>
+
+              {/* Comparison Sections */}
+              {comparisonSections.map((section) => (
+                <React.Fragment key={section.title}>
+                  {/* Section Title Row */}
+                  <div
+                    className="bg-neutral-50/50 px-6 py-4"
+                    style={{
+                      gridColumn: `1 / span ${isMobile ? 2 : selectedDestinations.length + 1}`,
+                    }}
+                  >
+                    <div className="flex items-center gap-2 text-sm font-bold text-neutral-900">
+                      {section.icon}
+                      {section.title}
+                    </div>
+                  </div>
+
+                  {/* Metric Rows */}
+                  {section.metrics.map((metric) => (
+                    <div key={metric.label} className="contents group">
+                      <div className="flex items-center px-4 py-4 text-sm font-medium text-neutral-500 transition-colors group-hover:bg-neutral-50/30 md:px-6 md:py-5">
+                        {metric.label}
+                      </div>
+                      {selectedDestinations.map((destination, index) => (
+                        <div
+                          key={`${destination.id}-${metric.label}`}
+                          className={`flex items-center px-4 py-4 text-sm text-neutral-900 transition-colors group-hover:bg-neutral-50/30 md:px-6 md:py-5 ${
+                            index === activeMobileIndex
+                              ? "block"
+                              : "hidden md:block"
+                          }`}
+                        >
+                          {metric.getValue(destination)}
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </React.Fragment>
+              ))}
+            </div>
           </div>
         </div>
       </main>
+
+      {/* Mobile Navigation Bar */}
+      <div className="fixed bottom-6 left-1/2 z-50 w-full max-w-[calc(100%-2rem)] -translate-x-1/2 md:hidden">
+        <div className="flex items-center justify-between rounded-2xl border border-neutral-200 bg-white/90 p-2 shadow-2xl backdrop-blur-md">
+          {selectedDestinations.map((destination, index) => (
+            <button
+              key={destination.id}
+              onClick={() => setActiveMobileIndex(index)}
+              className={`flex flex-1 flex-col items-center gap-1.5 rounded-xl py-2 transition-all ${
+                index === activeMobileIndex
+                  ? "bg-neutral-900 text-white shadow-sm"
+                  : "text-neutral-500 hover:bg-neutral-50"
+              }`}
+            >
+              <span className="px-2 text-xs font-bold whitespace-nowrap">
+                {destination.name}
+              </span>
+            </button>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
