@@ -4,7 +4,7 @@ import * as Wouter from "wouter";
 
 import { useComparison } from "@/contexts/comparison";
 import type { Destination } from "@/types/destination";
-import { gradeToColor } from "@/utils/mappings";
+import { climateToIcon, gradeToColor } from "@/utils/mappings";
 
 export function ComparisonPage() {
   const { selectedDestinations, toggleDestination } = useComparison();
@@ -73,7 +73,8 @@ export function ComparisonPage() {
         },
         {
           label: "Inflation Rate",
-          getValue: (d: Destination) => `${d.inflationRate}%`,
+          getValue: (d: Destination) =>
+            `${(d.inflationRate * 100).toFixed(1)}%`,
         },
       ],
     },
@@ -113,11 +114,6 @@ export function ComparisonPage() {
       icon: <Lucide.Palmtree className="size-5" />,
       metrics: [
         { label: "Climate", getValue: (d: Destination) => d.climate },
-        {
-          label: "Weather Comfort",
-          getValue: (d: Destination) =>
-            renderGrade(d.ratings.weatherComfort.grade),
-        },
         {
           label: "English Usage",
           getValue: (d: Destination) => d.englishUsage,
@@ -163,10 +159,11 @@ export function ComparisonPage() {
                 <Lucide.ArrowLeft className="size-4" />
                 Back
               </button>
-              <h1 className="text-xl font-bold text-neutral-900">Comparison</h1>
             </div>
-            <div className="text-sm font-medium text-neutral-500">
-              {selectedDestinations.length} Destinations Selected
+            <div className="flex flex-row items-center justify-between gap-2">
+              <div className="text-sm font-medium text-neutral-500">
+                {selectedDestinations.length} Destinations Selected
+              </div>
             </div>
           </div>
         </div>
@@ -178,42 +175,80 @@ export function ComparisonPage() {
             <table className="w-full table-fixed border-collapse text-left">
               <thead>
                 <tr>
-                  <th className="w-64 border-b border-neutral-100 p-6 text-sm font-semibold text-neutral-400 uppercase tracking-wider">
-                    Metrics
+                  <th
+                    colSpan={selectedDestinations.length + 1}
+                    className="border-b border-neutral-100 p-8 pb-4"
+                  >
+                    <div className="flex flex-col justify-end gap-1">
+                      <h2 className="text-3xl font-bold text-neutral-900">
+                        Compare
+                      </h2>
+                      <p className="text-sm font-medium text-neutral-500">
+                        Side-by-side analysis of your top choices.
+                      </p>
+                    </div>
                   </th>
-                  {selectedDestinations.map((destination) => (
-                    <th
-                      key={destination.id}
-                      className="border-b border-neutral-100 p-6 min-w-[280px]"
-                    >
-                      <div className="flex flex-col gap-4">
-                        <div className="relative aspect-[16/9] overflow-hidden rounded-2xl">
+                </tr>
+                <tr>
+                  <th className="w-80 border-b border-neutral-100 p-6"></th>
+                  {selectedDestinations.map((destination) => {
+                    const ClimateIcon = climateToIcon(destination.climate);
+                    return (
+                      <th
+                        key={destination.id}
+                        className="min-w-70 border-b border-neutral-100 p-6"
+                      >
+                        <div className="relative aspect-video overflow-hidden rounded-2xl bg-black">
                           <img
                             src={`/images/destinations/${destination.id}/${destination.id}.webp`}
                             alt={destination.name}
                             className="h-full w-full object-cover"
                           />
+                          <div className="absolute inset-0 bg-linear-to-b from-black/0 from-30% to-black/60" />
+
                           <button
                             onClick={() => toggleDestination(destination)}
-                            className="absolute top-2 right-2 rounded-full bg-white/90 p-1.5 text-neutral-500 shadow-sm backdrop-blur-sm transition-all hover:bg-white hover:text-red-500"
+                            className="absolute top-2 right-2 rounded-full bg-accent p-1.5 text-white shadow-sm transition-all hover:bg-black/40"
                           >
-                            <Lucide.X className="size-4" />
+                            <Lucide.Trash2 className="size-4" />
                           </button>
+
+                          <div className="absolute bottom-0 w-full p-4 text-left">
+                            <h3 className="text-xl font-bold text-white">
+                              {destination.name}
+                            </h3>
+                            <div className="mt-1 flex flex-row items-center justify-start gap-2">
+                              <div className="flex flex-row items-center justify-center gap-0.5">
+                                <Lucide.MapPin className="size-3.5 text-white" />
+                                <span className="text-sm font-medium text-white">
+                                  {destination.region}
+                                </span>
+                              </div>
+                              <Lucide.Circle className="size-1.5 fill-accent stroke-accent" />
+                              <div className="flex flex-row items-center justify-center gap-0.5">
+                                <ClimateIcon className="size-3.5 text-white" />
+                                <span className="text-sm font-medium text-white">
+                                  {destination.climate}
+                                </span>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                        <div>
-                          <h3 className="text-lg font-bold text-neutral-900">
-                            {destination.name}
-                          </h3>
-                          <p className="text-sm text-neutral-500">
-                            {destination.region}, {destination.subregion}
-                          </p>
-                        </div>
-                      </div>
-                    </th>
-                  ))}
+                      </th>
+                    );
+                  })}
                 </tr>
               </thead>
               <tbody className="divide-y divide-neutral-100">
+                <tr>
+                  <td className="px-6 py-4 text-xs font-semibold tracking-wider text-neutral-400 uppercase">
+                    Metrics
+                  </td>
+                  <td
+                    colSpan={selectedDestinations.length}
+                    className="px-6 py-4"
+                  />
+                </tr>
                 {comparisonSections.map((section) => (
                   <React.Fragment key={section.title}>
                     <tr className="bg-neutral-50/50">

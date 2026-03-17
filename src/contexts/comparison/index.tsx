@@ -2,6 +2,8 @@ import React, { createContext, useContext, useState, useCallback } from "react";
 import type { Destination } from "@/types/destination";
 
 interface ComparisonContextType {
+  hidden: boolean;
+  toggleHidden: () => void;
   selectedDestinations: Destination[];
   toggleDestination: (destination: Destination) => void;
   clearDestinations: () => void;
@@ -17,6 +19,7 @@ export function ComparisonProvider({
 }: {
   children: React.ReactNode;
 }) {
+  const [hidden, setHidden] = React.useState(false);
   const [selectedDestinations, setSelectedDestinations] = useState<
     Destination[]
   >([]);
@@ -49,9 +52,15 @@ export function ComparisonProvider({
     [selectedDestinations],
   );
 
+  const toggleHidden = useCallback(() => {
+    setHidden((hidden) => !hidden);
+  }, []);
+
   return (
     <ComparisonContext.Provider
       value={{
+        hidden,
+        toggleHidden,
         selectedDestinations,
         toggleDestination,
         clearDestinations,

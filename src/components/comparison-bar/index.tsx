@@ -3,10 +3,11 @@ import * as Wouter from "wouter";
 import { useComparison } from "@/contexts/comparison";
 
 export function ComparisonBar() {
+  const [location] = Wouter.useLocation();
   const { selectedDestinations, clearDestinations, toggleDestination } =
     useComparison();
 
-  if (selectedDestinations.length === 0) {
+  if (selectedDestinations.length === 0 || location === "/compare") {
     return null;
   }
 
