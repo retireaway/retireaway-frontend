@@ -6,18 +6,18 @@ import destinations from "@/data/destinations.json" with { type: "json" };
 import type { Destination } from "@/types/destination";
 
 import { DestinationCardList } from "@/components/destination-card";
-import { Hero } from "@/components/_pages/home/hero";
+import { Hero } from "@/components/_pages/explore/hero";
 import { search } from "@/utils/destination";
 
 import { useFilters } from "@/hooks/filters";
 import { predicates, ranges } from "@/utils/filters";
 import { Searchbar } from "@/components/searchbar";
-import { Filters } from "@/components/_pages/home/filters";
+import { Filters } from "@/components/_pages/explore/filters";
 import { Chip } from "@/components/chip";
 import { FilterChips } from "@/components/filters/filter-chips";
 import { FilterModal } from "@/components/filters/modal";
 
-export function Index() {
+export function Explore() {
   const [params] = Wouter.useSearchParams();
 
   const [filters] = useFilters();

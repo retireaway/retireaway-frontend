@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://retireaway.com/schemas/answers_to_criterion.schema.json",
+  "title": "Answers to Criterion Mapping",
+  "description": "Maps answer slugs to one or more criteria slugs for scoring",
+  "type": "object",
+  "propertyNames": {
+    "pattern": "^[a-z0-9-]+$",
+    "description": "The slug of the answer being mapped"
+  },
+  "additionalProperties": {
+    "type": "array",
+    "items": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "The slug of a criterion associated with this answer"
+    },
+    "description": "A list of criteria slugs that apply when this answer is selected"
+  }
+}

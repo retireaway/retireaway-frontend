@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://retireaway.com/schemas/answer.schema.json",
+  "title": "Answer",
+  "description": "A possible response to a question",
+  "type": "object",
+  "properties": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "A short, URL-friendly unique identifier for the answer"
+    },
+    "title": {
+      "type": "string",
+      "description": "The display text for the answer"
+    }
+  },
+  "required": ["slug", "title"],
+  "additionalProperties": false
+}

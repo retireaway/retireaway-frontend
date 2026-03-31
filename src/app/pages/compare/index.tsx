@@ -4,7 +4,7 @@ import * as Wouter from "wouter";
 
 import { useComparison } from "@/contexts/comparison";
 import type { Destination } from "@/types/destination";
-import { climateToIcon, gradeToColor } from "@/utils/mappings";
+import { gradeToColor } from "@/utils/mappings";
 
 export function ComparisonPage() {
   const { selectedDestinations, toggleDestination } = useComparison();
@@ -264,7 +264,7 @@ export function ComparisonPage() {
 
                   {/* Metric Rows */}
                   {section.metrics.map((metric) => (
-                    <div key={metric.label} className="contents group">
+                    <div key={metric.label} className="group contents">
                       <div className="flex items-center px-4 py-4 text-sm font-medium text-neutral-500 transition-colors group-hover:bg-neutral-50/30 md:px-6 md:py-5">
                         {metric.label}
                       </div>

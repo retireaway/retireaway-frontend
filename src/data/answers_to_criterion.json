@@ -1,0 +1,20 @@
+{
+  "budget-under-2k": ["affordability-high", "healthcare-cost-low"],
+  "budget-2k-3-5k": ["affordability-mid"],
+  "budget-over-3-5k": ["infrastructure-high", "grade-high"],
+  "climate-tropical": ["climate-tropical", "tag-beach-living"],
+  "climate-mediterranean": ["climate-mediterranean", "tag-warm-weather"],
+  "climate-temperate": ["climate-temperate"],
+  "climate-cool": ["climate-cold", "tag-mountain-living"],
+  "healthcare-essential": ["healthcare-quality-high", "pro-healthcare-access"],
+  "healthcare-reliable": ["healthcare-quality-good", "pro-improving-healthcare"],
+  "healthcare-low-priority": [],
+  "english-essential": ["english-widely-spoken", "pro-english-friendly"],
+  "english-somewhat": ["english-commonly-used"],
+  "language-flexible": [],
+  "community-active-expat": ["community-thriving", "pro-expat-community"],
+  "community-local-mix": ["community-established"],
+  "community-solitude": ["crowds-tranquil", "pro-low-crowds"],
+  "visa-simple": ["visa-ease-high", "pro-easy-visa-access"],
+  "visa-flexible": []
+}

@@ -1,4 +1,4 @@
-import { Filters } from "@/components/_pages/home/filters";
+import { Filters } from "@/components/_pages/explore/filters";
 import { Chip } from "@/components/chip";
 import { useFilters } from "@/hooks/filters";
 

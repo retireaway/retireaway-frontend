@@ -4,9 +4,10 @@ import { NotFound } from "@/components/not-found";
 import { ComparisonProvider } from "@/contexts/comparison";
 import { ComparisonBar } from "@/components/comparison-bar";
 
-import { Index } from "./pages";
+import { Explore } from "./pages/explore";
 import { DestinationProfile } from "./pages/:id";
 import { ComparisonPage } from "./pages/compare";
+import { Home } from "./pages/home";
 
 export function App() {
   return (
@@ -14,7 +15,11 @@ export function App() {
       <Wouter.Router base="/">
         <Wouter.Switch>
           <Wouter.Route path="/">
-            <Index />
+            <Home />
+          </Wouter.Route>
+
+          <Wouter.Route path="/explore">
+            <Explore />
           </Wouter.Route>
 
           <Wouter.Route path="/compare">

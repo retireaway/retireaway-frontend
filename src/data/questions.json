@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "monthly-budget",
+    "title": "What is your estimated monthly budget for a couple?",
+    "description": "Understanding your monthly budget is a crucial step in finding your perfect home abroad. This estimate should cover everything from your rent or mortgage and groceries to healthcare premiums and regular leisure activities like dining out or local travel. Knowing your comfort zone helps us identify destinations where your savings will provide the quality of life you desire.",
+    "answers": ["budget-under-2k", "budget-2k-3-5k", "budget-over-3-5k"]
+  },
+  {
+    "slug": "ideal-climate",
+    "title": "Which type of environment makes you feel most at home and active?",
+    "description": "Your daily environment has a significant impact on your overall well-being and lifestyle. Whether you're drawn to the warm, humid air of a tropical beach, the sunny and temperate Mediterranean coast, the clear seasonal changes of a four-season climate, or the crisp, fresh air of a mountain retreat, choosing the right climate ensures you can enjoy your favorite outdoor activities year-round.",
+    "answers": ["climate-tropical", "climate-mediterranean", "climate-temperate", "climate-cool"]
+  },
+  {
+    "slug": "healthcare-priority",
+    "title": "How much weight do you place on having access to top-tier medical facilities and specialists?",
+    "description": "Access to quality medical care is a top consideration for many retirees. Some prefer being within minutes of world-class hospitals and a wide range of medical specialists, while others are comfortable with reliable local clinics for day-to-day needs and traveling for more specialized procedures. Your preference here helps us prioritize destinations with the medical infrastructure that meets your comfort level.",
+    "answers": ["healthcare-essential", "healthcare-reliable", "healthcare-low-priority"]
+  },
+  {
+    "slug": "language-proficiency",
+    "title": "How comfortable are you with navigating daily life in a language other than English?",
+    "description": "Communication is key to feeling integrated and secure in your new community. Consider how much you're willing to step outside your linguistic comfort zone. If having English widely spoken in shops and by healthcare providers is essential for your peace of mind, or if you're excited by the challenge of full immersion and learning a new language, we can narrow down the best locations for your transition.",
+    "answers": ["english-essential", "english-somewhat", "language-flexible"]
+  },
+  {
+    "slug": "social-environment",
+    "title": "What kind of community do you want to be part of in your retirement?",
+    "description": "Retirement is a time for connection and community. Your ideal social setting might be a vibrant expat hub where it's easy to make international friends and join organized events, or a more local, authentic neighborhood where you can truly immerse yourself in the culture. Alternatively, you might be seeking the quiet solitude of a tranquil, low-crowd environment.",
+    "answers": ["community-active-expat", "community-local-mix", "community-solitude"]
+  },
+  {
+    "slug": "residency-process",
+    "title": "How would you describe your ideal path to legal residency?",
+    "description": "Navigating the legalities of moving to a new country can vary greatly in complexity. If you're looking for the simplest and fastest path, such as a straightforward 'Retirement Visa' with clear income requirements, or if you're open to a more involved process or making a financial investment to secure your ideal location, your preference here will help us guide you toward the most compatible residency options.",
+    "answers": ["visa-simple", "visa-flexible"]
+  }
+]

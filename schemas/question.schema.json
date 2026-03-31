@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://retireaway.com/schemas/question.schema.json",
+  "title": "Question",
+  "description": "A question used to determine user retirement preferences",
+  "type": "object",
+  "properties": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "A short, URL-friendly unique identifier for the question"
+    },
+    "title": {
+      "type": "string",
+      "description": "The primary question text"
+    },
+    "description": {
+      "type": "string",
+      "description": "Additional context or clarification for the question"
+    },
+    "answers": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9-]+$"
+      },
+      "description": "A list of answer slugs associated with this question"
+    }
+  },
+  "required": ["slug", "title", "description", "answers"],
+  "additionalProperties": false
+}

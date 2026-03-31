@@ -3,7 +3,7 @@ import * as Lucide from "lucide-react";
 import * as Wouter from "wouter";
 
 import { Chip } from "@/components/chip";
-import { SearchBar } from "@/components/_pages/home/searchbar";
+import { SearchBar } from "../searchbar";
 
 export function ControlPanel({
   regions,

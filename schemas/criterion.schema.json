@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://retireaway.com/schemas/criterion.schema.json",
+  "title": "Criterion",
+  "description": "A rule-based requirement used to score destinations",
+  "type": "object",
+  "properties": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "A short, URL-friendly unique identifier for the criterion"
+    },
+    "description": {
+      "type": "string",
+      "description": "A human-readable explanation of the rule this criterion represents"
+    }
+  },
+  "required": ["slug", "description"],
+  "additionalProperties": false
+}

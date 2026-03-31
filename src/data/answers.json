@@ -1,0 +1,20 @@
+[
+  { "slug": "budget-under-2k", "title": "Under $2,000 / month" },
+  { "slug": "budget-2k-3-5k", "title": "$2,000 – $3,500 / month" },
+  { "slug": "budget-over-3-5k", "title": "Over $3,500 / month" },
+  { "slug": "climate-tropical", "title": "Tropical & Warm" },
+  { "slug": "climate-mediterranean", "title": "Mild & Mediterranean" },
+  { "slug": "climate-temperate", "title": "Temperate & Four Seasons" },
+  { "slug": "climate-cool", "title": "Cooler & Mountainous" },
+  { "slug": "healthcare-essential", "title": "Top Priority" },
+  { "slug": "healthcare-reliable", "title": "Good & Reliable" },
+  { "slug": "healthcare-low-priority", "title": "Not a Major Factor" },
+  { "slug": "english-essential", "title": "English is Essential" },
+  { "slug": "english-somewhat", "title": "I'd Like Some English" },
+  { "slug": "language-flexible", "title": "I'm Happy to Learn" },
+  { "slug": "community-active-expat", "title": "Active Expat Scene" },
+  { "slug": "community-local-mix", "title": "Balanced / Local Mix" },
+  { "slug": "community-solitude", "title": "Quiet & Solitude" },
+  { "slug": "visa-simple", "title": "Simple & Fast" },
+  { "slug": "visa-flexible", "title": "Flexible" }
+]
