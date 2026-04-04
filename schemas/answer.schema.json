@@ -8,11 +8,13 @@
     "slug": {
       "type": "string",
       "pattern": "^[a-z0-9-]+$",
-      "description": "A short, URL-friendly unique identifier for the answer"
+      "description": "A short, URL-friendly unique identifier for the answer",
+      "examples": ["budget-under-2k"]
     },
     "title": {
       "type": "string",
-      "description": "The display text for the answer"
+      "description": "The display text for the answer",
+      "examples": ["Under $2,000 / month"]
     }
   },
   "required": ["slug", "title"],

@@ -8,13 +8,25 @@
     "slug": {
       "type": "string",
       "pattern": "^[a-z0-9-]+$",
-      "description": "A short, URL-friendly unique identifier for the criterion"
+      "description": "A short, URL-friendly unique identifier for the criterion",
+      "examples": ["affordability-high"]
     },
-    "description": {
+    "rule": {
       "type": "string",
-      "description": "A human-readable explanation of the rule this criterion represents"
+      "description": "The logical data rule",
+      "examples": ["destination has affordability A or B"]
+    },
+    "pro": {
+      "type": "string",
+      "description": "User-facing message shown when this criterion IS met",
+      "examples": ["Fits your budget"]
+    },
+    "con": {
+      "type": "string",
+      "description": "User-facing message shown when this criterion is NOT met",
+      "examples": ["May exceed budget"]
     }
   },
-  "required": ["slug", "description"],
+  "required": ["slug", "rule", "pro", "con"],
   "additionalProperties": false
 }

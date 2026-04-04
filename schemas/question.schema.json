@@ -8,15 +8,18 @@
     "slug": {
       "type": "string",
       "pattern": "^[a-z0-9-]+$",
-      "description": "A short, URL-friendly unique identifier for the question"
+      "description": "A short, URL-friendly unique identifier for the question",
+      "examples": ["monthly-budget"]
     },
     "title": {
       "type": "string",
-      "description": "The primary question text"
+      "description": "The primary question text",
+      "examples": ["What is your estimated monthly budget?"]
     },
     "description": {
       "type": "string",
-      "description": "Additional context or clarification for the question"
+      "description": "Additional context or clarification for the question",
+      "examples": ["This should include housing, healthcare, and groceries."]
     },
     "answers": {
       "type": "array",
@@ -24,7 +27,8 @@
         "type": "string",
         "pattern": "^[a-z0-9-]+$"
       },
-      "description": "A list of answer slugs associated with this question"
+      "description": "A list of answer slugs associated with this question",
+      "examples": [["budget-under-2k", "budget-mid-range"]]
     }
   },
   "required": ["slug", "title", "description", "answers"],

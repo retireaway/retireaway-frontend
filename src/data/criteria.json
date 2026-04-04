@@ -1,28 +1,158 @@
 [
-  { "slug": "affordability-high", "description": "destination has an affordability rating of 'A' or 'B'" },
-  { "slug": "healthcare-cost-low", "description": "destination has a healthcare cost rating of 'A' or 'B'" },
-  { "slug": "affordability-mid", "description": "destination has an affordability rating of 'B' or 'C'" },
-  { "slug": "infrastructure-high", "description": "destination has an infrastructure rating of 'A'" },
-  { "slug": "grade-high", "description": "destination has a grade of 'A' or 'B'" },
-  { "slug": "climate-tropical", "description": "destination has a climate of 'Tropical' or 'Subtropical'" },
-  { "slug": "tag-beach-living", "description": "destination has the tag 'Beach Living'" },
-  { "slug": "climate-mediterranean", "description": "destination has a climate of 'Mediterranean'" },
-  { "slug": "tag-warm-weather", "description": "destination has the tag 'Warm Weather'" },
-  { "slug": "climate-temperate", "description": "destination has a climate of 'Temperate'" },
-  { "slug": "climate-cold", "description": "destination has a climate of 'Cold'" },
-  { "slug": "tag-mountain-living", "description": "destination has the tag 'Mountain Living'" },
-  { "slug": "healthcare-quality-high", "description": "destination has a healthcare quality rating of 'A'" },
-  { "slug": "pro-healthcare-access", "description": "destination has the pro 'strong-healthcare-access'" },
-  { "slug": "healthcare-quality-good", "description": "destination has a healthcare quality rating of 'A' or 'B'" },
-  { "slug": "pro-improving-healthcare", "description": "destination has the pro 'improving-healthcare'" },
-  { "slug": "english-widely-spoken", "description": "destination has an english usage of 'Widely Spoken'" },
-  { "slug": "pro-english-friendly", "description": "destination has the pro 'english-friendly'" },
-  { "slug": "english-commonly-used", "description": "destination has an english usage of 'Commonly Used'" },
-  { "slug": "community-thriving", "description": "destination has a retirement community of 'Thriving Hub'" },
-  { "slug": "pro-expat-community", "description": "destination has the pro 'strong-expat-community'" },
-  { "slug": "community-established", "description": "destination has a retirement community of 'Established'" },
-  { "slug": "crowds-tranquil", "description": "destination has crowds of 'Tranquil'" },
-  { "slug": "pro-low-crowds", "description": "destination has the pro 'low-crowds'" },
-  { "slug": "visa-ease-high", "description": "destination has a visa ease rating of 'A' or 'B'" },
-  { "slug": "pro-easy-visa-access", "description": "destination has the pro 'easy-visa-access'" }
+  {
+    "slug": "affordability-high",
+    "rule": "destination has an affordability rating of 'A' or 'B'",
+    "pro": "Fits your budget perfectly",
+    "con": "May be above your target budget"
+  },
+  {
+    "slug": "healthcare-cost-low",
+    "rule": "destination has a healthcare cost rating of 'A' or 'B'",
+    "pro": "Low healthcare costs",
+    "con": "Higher medical expenses"
+  },
+  {
+    "slug": "affordability-mid",
+    "rule": "destination has an affordability rating of 'B' or 'C'",
+    "pro": "Comfortable mid-range costs",
+    "con": "Costs may vary from your target"
+  },
+  {
+    "slug": "infrastructure-high",
+    "rule": "destination has an infrastructure rating of 'A'",
+    "pro": "First-world infrastructure",
+    "con": "Developing infrastructure"
+  },
+  {
+    "slug": "grade-high",
+    "rule": "destination has a grade of 'A' or 'B'",
+    "pro": "Top-tier quality of life",
+    "con": "Modest quality of life"
+  },
+  {
+    "slug": "climate-tropical",
+    "rule": "destination has a climate of 'Tropical' or 'Subtropical'",
+    "pro": "Beautiful tropical weather",
+    "con": "Not a tropical climate"
+  },
+  {
+    "slug": "tag-beach-living",
+    "rule": "destination has the tag 'Beach Living'",
+    "pro": "Stunning coastal lifestyle",
+    "con": "Away from the coast"
+  },
+  {
+    "slug": "climate-mediterranean",
+    "rule": "destination has a climate of 'Mediterranean'",
+    "pro": "Pleasant Mediterranean climate",
+    "con": "Not a Mediterranean climate"
+  },
+  {
+    "slug": "tag-warm-weather",
+    "rule": "destination has the tag 'Warm Weather'",
+    "pro": "Sunny and warm year-round",
+    "con": "Varying temperatures"
+  },
+  {
+    "slug": "climate-temperate",
+    "rule": "destination has a climate of 'Temperate'",
+    "pro": "Clear seasonal changes",
+    "con": "No distinct four seasons"
+  },
+  {
+    "slug": "climate-cold",
+    "rule": "destination has a climate of 'Cold'",
+    "pro": "Crisp, cool mountain air",
+    "con": "Warmer climate"
+  },
+  {
+    "slug": "tag-mountain-living",
+    "rule": "destination has the tag 'Mountain Living'",
+    "pro": "Beautiful mountain scenery",
+    "con": "Flat or coastal terrain"
+  },
+  {
+    "slug": "healthcare-quality-high",
+    "rule": "destination has a healthcare quality rating of 'A'",
+    "pro": "World-class medical facilities",
+    "con": "Basic healthcare facilities"
+  },
+  {
+    "slug": "pro-healthcare-access",
+    "rule": "destination has the pro 'strong-healthcare-access'",
+    "pro": "Easy access to specialists",
+    "con": "Limited medical access"
+  },
+  {
+    "slug": "healthcare-quality-good",
+    "rule": "destination has a healthcare quality rating of 'A' or 'B'",
+    "pro": "Reliable medical care",
+    "con": "Varying healthcare standards"
+  },
+  {
+    "slug": "pro-improving-healthcare",
+    "rule": "destination has the pro 'improving-healthcare'",
+    "pro": "Rapidly modernizing healthcare",
+    "con": "Traditional healthcare systems"
+  },
+  {
+    "slug": "english-widely-spoken",
+    "rule": "destination has an english usage of 'Widely Spoken'",
+    "pro": "English is widely spoken",
+    "con": "English is not common"
+  },
+  {
+    "slug": "pro-english-friendly",
+    "rule": "destination has the pro 'english-friendly'",
+    "pro": "Very easy for English speakers",
+    "con": "Local language skills required"
+  },
+  {
+    "slug": "english-commonly-used",
+    "rule": "destination has an english usage of 'Commonly Used'",
+    "pro": "Common English in expat areas",
+    "con": "Limited English usage"
+  },
+  {
+    "slug": "community-thriving",
+    "rule": "destination has a retirement community of 'Thriving Hub'",
+    "pro": "Vibrant international community",
+    "con": "Small expat presence"
+  },
+  {
+    "slug": "pro-expat-community",
+    "rule": "destination has the pro 'strong-expat-community'",
+    "pro": "Thriving social scene",
+    "con": "Isolated social environment"
+  },
+  {
+    "slug": "community-established",
+    "rule": "destination has a retirement community of 'Established'",
+    "pro": "Well-balanced expat scene",
+    "con": "Emerging expat scene"
+  },
+  {
+    "slug": "crowds-tranquil",
+    "rule": "destination has crowds of 'Tranquil'",
+    "pro": "Peaceful and quiet",
+    "con": "Lively and bustling"
+  },
+  {
+    "slug": "pro-low-crowds",
+    "rule": "destination has the pro 'low-crowds'",
+    "pro": "Low crowds and no traffic",
+    "con": "Can be crowded in peaks"
+  },
+  {
+    "slug": "visa-ease-high",
+    "rule": "destination has a visa ease rating of 'A' or 'B'",
+    "pro": "Straightforward residency",
+    "con": "Complex visa process"
+  },
+  {
+    "slug": "pro-easy-visa-access",
+    "rule": "destination has the pro 'easy-visa-access'",
+    "pro": "Simple retirement visa path",
+    "con": "Stricter residency rules"
+  }
 ]

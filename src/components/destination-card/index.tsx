@@ -23,7 +23,7 @@ export function DestinationCardList({
     );
   }
   return (
-    <ul className="mx-auto grid w-full max-w-300 grid-cols-1 gap-x-2 gap-y-8 sm:grid-cols-2 xl:grid-cols-3">
+    <ul className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-x-2 gap-y-4 sm:grid-cols-2 xl:grid-cols-3">
       {destinations.map((country) => {
         return (
           <li key={country.id}>
@@ -50,7 +50,7 @@ export function DestinationCard({ destination }: { destination: Destination }) {
   });
 
   return (
-    <article className="max-w-120 rounded-2xl border-1 border-neutral-200 bg-white">
+    <article className="max-w-120 overflow-hidden rounded-3xl border border-neutral-200 bg-white">
       <div className="relative h-56 rounded-t-2xl bg-black">
         <img
           loading="lazy"
@@ -133,30 +133,9 @@ export function DestinationCard({ destination }: { destination: Destination }) {
                   destination.expenditure.couple.amount,
                 )}
               </span>
-              {/* <span className="text-3xl font-bold text-neutral-600 uppercase"> */}
-              {/*   {destination.expenditure.single.currency} */}
-              {/*   {formatter.format(destination.expenditure.single.amount)} */}
-              {/* </span> */}
-              {/* <span className="text-3xl font-bold text-neutral-600"> */}
-              {/*   &mdash; */}
-              {/* </span> */}
-              {/* <span className="text-3xl font-bold text-neutral-600 uppercase"> */}
-              {/*   {destination.expenditure.single.currency} */}
-              {/*   {formatter.format(destination.expenditure.couple.amount)} */}
-              {/* </span> */}
             </div>
             <span className="text-sm font-normal text-neutral-400">/month</span>
           </div>
-          {/* <div className="flex flex-col items-center justify-center gap-0.5"> */}
-          {/*   <span className="text-xs font-medium text-neutral-400 uppercase"> */}
-          {/*     couple */}
-          {/*   </span> */}
-          {/*   <span className="text-2xl font-bold text-neutral-600 uppercase"> */}
-          {/*     {destination.expenditure.couple.currency} */}
-          {/*     {formatter.format(destination.expenditure.couple.amount)} */}
-          {/*   </span> */}
-          {/*   <span className="text-xs font-normal text-neutral-400">/month</span> */}
-          {/* </div> */}
         </div>
 
         <div className="h-px bg-neutral-200" />
@@ -180,13 +159,13 @@ export function DestinationCard({ destination }: { destination: Destination }) {
         <div className="flex flex-row gap-2 px-4">
           <Wouter.Link
             href={`/${destination.id}/overview`}
-            className="basis-1/2 rounded-lg border-1 border-primary bg-primary py-2 text-center text-sm font-medium text-neutral-50"
+            className="basis-1/2 rounded-s-full rounded-e-full border border-primary bg-primary py-2 text-center text-sm font-medium text-neutral-50"
           >
             View Details
           </Wouter.Link>
           <Wouter.Link
             href={`/${destination.id}/calculator`}
-            className="basis-1/2 rounded-lg border-2 border-primary bg-white py-2 text-center text-sm font-medium text-primary"
+            className="basis-1/2 rounded-s-full rounded-e-full border border-neutral-200 bg-white py-2 text-center text-sm font-medium text-neutral-500"
           >
             Calculator
           </Wouter.Link>
