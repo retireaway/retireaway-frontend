@@ -9,6 +9,7 @@ import { DestinationProfile } from "./pages/:id";
 import { ComparisonPage } from "./pages/compare";
 import { Home } from "./pages/home";
 import * as Matchmaker from "./pages/matchmaker";
+import { Discover } from "./pages/discover";
 
 export function App() {
   return (
@@ -21,6 +22,10 @@ export function App() {
 
           <Wouter.Route path="/explore">
             <Explore />
+          </Wouter.Route>
+
+          <Wouter.Route path="/discover">
+            <Discover />
           </Wouter.Route>
 
           <Wouter.Route path="/matchmaker">

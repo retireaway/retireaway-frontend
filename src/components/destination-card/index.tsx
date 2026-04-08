@@ -63,7 +63,7 @@ export function DestinationCard({ destination }: { destination: Destination }) {
 
         <button
           onClick={() => toggleDestination(destination)}
-          className={`absolute top-4 right-4 z-10 flex size-8 items-center justify-center rounded-full border transition-all ${
+          className={`absolute top-4 right-4 z-1 flex size-8 items-center justify-center rounded-full border transition-all ${
             isSelected
               ? "border-primary bg-primary text-white"
               : "border-white/20 bg-black/20 text-white backdrop-blur-sm hover:bg-black/40"

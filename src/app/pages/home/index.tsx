@@ -36,15 +36,6 @@ function Hero() {
           </span>
         </p>
 
-        {/* <Wouter.Link href="/matchmaker"> */}
-        {/*   <div className="mx-auto flex w-min flex-row items-center justify-center gap-2 rounded-full border border-neutral-900 bg-primary px-8 py-4 shadow-lg transition-all active:scale-95"> */}
-        {/*     <Lucide.Sparkles className="size-5 text-white" /> */}
-        {/*     <span className="text-lg font-bold whitespace-nowrap text-white"> */}
-        {/*       Start Matchmaker */}
-        {/*     </span> */}
-        {/*   </div> */}
-        {/* </Wouter.Link> */}
-
         <div className="flex flex-row flex-wrap items-center justify-center gap-1 sm:flex-row md:gap-2">
           <Wouter.Link href="/matchmaker">
             <div className="flex items-center justify-center gap-1 rounded-full border border-neutral-900 bg-primary px-6 py-3 text-sm font-bold whitespace-nowrap text-white md:text-lg">

@@ -40,7 +40,7 @@ export function Searchbar() {
         name="search"
         id="search"
         className="w-0 grow py-2 pl-2 text-sm text-neutral-600 outline-none placeholder:text-neutral-400"
-        placeholder="Search destinations..."
+        placeholder="Search..."
         autoComplete="on"
         value={search}
         onChange={(event) => {

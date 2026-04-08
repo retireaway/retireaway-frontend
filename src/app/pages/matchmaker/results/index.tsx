@@ -7,6 +7,7 @@ import criteria from "@/data/criteria.json" with { type: "json" };
 import type { Destination } from "@/types/destination";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { Rating } from "@/components/rating";
 
 export function Results() {
   const matchedDestinations = React.useMemo(() => {
@@ -25,7 +26,7 @@ export function Results() {
           <Hero />
         </aside>
 
-        <main className="flex-1 px-6 py-12 lg:px-12 lg:py-24">
+        <main className="flex-1 px-4 py-12 lg:px-12 lg:py-24">
           <section className="animate-in fade-in slide-in-from-bottom-8 mb-20 duration-1000">
             <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:gap-2">
               {matchedDestinations.map((destination, index) => {
@@ -44,7 +45,7 @@ export function Results() {
 
                 return (
                   <li key={destination.id}>
-                    <Card
+                    <CardX
                       destination={destination}
                       score={Math.max(simulatedScore, 60)}
                       pros={randomPros}
@@ -151,16 +152,16 @@ export function Card({
 
           <div className="flex flex-row gap-1">
             <Wouter.Link href={`/${destination.id}/overview`}>
-              <div className="flex w-min items-center justify-center rounded-full bg-accent px-3 py-2 text-xs font-semibold whitespace-nowrap text-white transition-all hover:bg-accent hover:shadow-lg active:scale-95">
+              <div className="flex w-min items-center justify-center rounded-full bg-primary px-3 py-2 text-xs font-semibold whitespace-nowrap text-white transition-all hover:bg-primary hover:shadow-lg active:scale-95">
                 View Details
               </div>
             </Wouter.Link>
 
-            {/* <Wouter.Link href="/compare"> */}
-            {/*   <div className="flex w-min items-center justify-center rounded-full border border-neutral-900 bg-white px-3 py-2 text-xs font-semibold whitespace-nowrap text-neutral-600 transition-all hover:bg-accent hover:shadow-lg active:scale-95"> */}
-            {/*     Compare */}
-            {/*   </div> */}
-            {/* </Wouter.Link> */}
+            <Wouter.Link href="/compare">
+              <div className="flex w-min items-center justify-center rounded-full border border-neutral-900 bg-white px-3 py-2 text-xs font-semibold whitespace-nowrap text-neutral-600 transition-all hover:bg-accent hover:shadow-lg active:scale-95">
+                Compare
+              </div>
+            </Wouter.Link>
           </div>
         </header>
       </div>
@@ -204,5 +205,112 @@ function Hero() {
         </div>
       </header>
     </section>
+  );
+}
+
+export function CardX({
+  destination,
+  score,
+  pros,
+  cons,
+}: {
+  destination: Destination;
+  score: number;
+  pros: readonly string[];
+  cons: readonly string[];
+}) {
+  return (
+    <article className="relative overflow-hidden rounded-4xl border border-neutral-200 bg-white p-2 transition-all hover:shadow-md">
+      <div className="relative h-64 overflow-hidden rounded-3xl">
+        <img
+          loading="lazy"
+          src={`/images/destinations/${destination.id}/${destination.id}.webp`}
+          className={`absolute top-0 right-0 size-full object-cover object-center`}
+          alt={`scenic image of ${destination.name}`}
+        />
+
+        {/* Match Score Badge */}
+        <div className="absolute top-2 right-2 flex w-full items-center justify-end gap-0.5">
+          <div className="rounded-full border border-white/20 bg-black/20 p-3 backdrop-blur-md">
+            <span className="block text-xs leading-none font-bold text-white">
+              {score}% match
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <header className="px-2 py-4">
+        <div className="flex flex-row flex-wrap items-center justify-start gap-1 gap-y-0.5">
+          <div className="flex flex-row items-center justify-center gap-1 rounded-s-full rounded-e-full bg-neutral-100 px-3 py-1 whitespace-nowrap">
+            <Lucide.MapPinned className="size-3.5 text-neutral-500" />
+            <span className="text-xs font-medium text-neutral-500">
+              {destination.region}
+            </span>
+          </div>
+
+          <div className="flex flex-row items-center justify-center gap-1 rounded-s-full rounded-e-full bg-neutral-100 px-3 py-1 whitespace-nowrap">
+            <Lucide.Snowflake className="size-3.5 text-neutral-500" />
+            <span className="text-xs font-medium text-neutral-500">
+              {destination.climate}
+            </span>
+          </div>
+        </div>
+
+        <h1 className="mt-4 mb-2 text-2xl leading-none font-bold text-neutral-600">
+          {destination.name}
+        </h1>
+
+        <p className="line-clamp-3 text-sm leading-relaxed font-medium text-neutral-500">
+          {destination.description}
+        </p>
+      </header>
+
+      <ul className="flex flex-col items-start gap-2 px-2 pb-6">
+        {pros.slice(0, 2).map((pro, i) => (
+          <li key={i} className="flex items-center gap-1.5">
+            <Lucide.Check className="size-4 text-green-400" strokeWidth={3} />
+            <span className="text-sm font-medium text-neutral-500 first-letter:uppercase">
+              {pro}
+            </span>
+          </li>
+        ))}
+
+        {cons.slice(0, 2).map((con, i) => (
+          <li key={i} className="flex items-center gap-1.5">
+            <Lucide.X className="size-4 text-red-400" strokeWidth={3} />
+            <span className="text-sm font-medium text-neutral-500 first-letter:uppercase">
+              {con}
+            </span>
+          </li>
+        ))}
+      </ul>
+
+      {/* <div className="mx-2 mb-4 grid grid-cols-4 gap-2 rounded-2xl border border-neutral-200 bg-neutral-50 p-2"> */}
+      {/*   <Rating */}
+      {/*     text="Health" */}
+      {/*     grade={destination.ratings.healthcareQuality.grade} */}
+      {/*   /> */}
+      {/*   <Rating */}
+      {/*     text="Safety" */}
+      {/*     grade={destination.ratings.personalSafety.grade} */}
+      {/*   /> */}
+      {/*   <Rating text="Cost" grade={destination.ratings.affordability.grade} /> */}
+      {/*   <Rating text="Visa" grade={destination.ratings.visaEase.grade} /> */}
+      {/* </div> */}
+
+      <div className="grid grid-cols-2 gap-1 p-2">
+        <Wouter.Link href={`/${destination.id}/overview`}>
+          <div className="flex items-center justify-center rounded-full bg-primary p-3 text-sm font-semibold whitespace-nowrap text-white transition-all hover:bg-primary hover:shadow-lg active:scale-95">
+            View Details
+          </div>
+        </Wouter.Link>
+
+        <Wouter.Link href="/compare">
+          <div className="flex items-center justify-center rounded-full border border-neutral-200 bg-white p-3 text-sm font-semibold whitespace-nowrap text-neutral-500 transition-all hover:bg-accent hover:shadow-lg active:scale-95">
+            Compare
+          </div>
+        </Wouter.Link>
+      </div>
+    </article>
   );
 }
