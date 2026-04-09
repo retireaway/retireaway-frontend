@@ -32,7 +32,7 @@ export function ComparisonProvider({
         return prev.filter((d) => d.id !== destination.id);
       }
 
-      if (prev.length === 3) {
+      if (prev.length === 2) {
         const [_, ...rest] = prev;
         return [...rest, destination];
       }

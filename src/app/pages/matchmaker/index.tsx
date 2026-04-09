@@ -5,23 +5,20 @@ import * as Lucide from "lucide-react";
 import questions from "@/data/questions.json" with { type: "json" };
 import answers from "@/data/answers.json" with { type: "json" };
 
+import { useMatchmaker } from "@/contexts/matchmaker";
+
 export { Results } from "./results";
 
 export function Questionnaire() {
   const [, setLocation] = Wouter.useLocation();
   const [currentStep, setCurrentStep] = React.useState(0);
-  const [selectedAnswers, setSelectedAnswers] = React.useState<
-    Record<string, string>
-  >({});
+  const { selectedAnswers, setAnswer } = useMatchmaker();
 
   const question = questions[currentStep]!;
   const progress = ((currentStep + 1) / questions.length) * 100;
 
   const handleAnswerSelect = (answerSlug: string) => {
-    setSelectedAnswers((prev) => ({
-      ...prev,
-      [question.slug]: answerSlug,
-    }));
+    setAnswer(question.slug, answerSlug);
   };
 
   const nextStep = () => {

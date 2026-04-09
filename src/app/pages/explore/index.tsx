@@ -6,7 +6,7 @@ import destinations from "@/data/destinations.json" with { type: "json" };
 import type { Destination } from "@/types/destination";
 
 import { DestinationCardList } from "@/components/destination-card";
-import { Hero } from "@/components/_pages/explore/hero";
+
 import { search } from "@/utils/destination";
 
 import { useFilters } from "@/hooks/filters";
@@ -153,7 +153,7 @@ export function Explore() {
         <section className="hidden flex-col gap-2 lg:flex">
           <Searchbar />
 
-          <div className="flex h-min flex-col gap-8 rounded-xl border-1 border-neutral-200 bg-white p-4">
+          <div className="flex h-min flex-col gap-8 rounded-xl border border-neutral-200 bg-white p-4">
             <Filters />
           </div>
         </section>

@@ -4,17 +4,28 @@ import * as Lucide from "lucide-react";
 
 import destinations from "@/data/destinations.json" with { type: "json" };
 import criteria from "@/data/criteria.json" with { type: "json" };
+import answersToCriterion from "@/data/answers_to_criterion.json" with { type: "json" };
+
 import type { Destination } from "@/types/destination";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { useMatchmaker } from "@/contexts/matchmaker";
+import { rankDestinations } from "@/utils/matchmaker";
 import { useComparison } from "@/contexts/comparison";
 
 export function Results() {
-  const matchedDestinations = React.useMemo(() => {
-    return [...destinations]
-      .sort(() => 0.5 - Math.random())
-      .slice(0, 16) as readonly Destination[];
-  }, []);
+  const { selectedAnswers } = useMatchmaker();
+
+  const results = React.useMemo(() => {
+    return rankDestinations(destinations as any, selectedAnswers);
+  }, [selectedAnswers]);
+
+  const selectedCriteriaSlugs = React.useMemo(() => {
+    return Object.values(selectedAnswers).flatMap(
+      (answerSlug) =>
+        (answersToCriterion as Record<string, string[]>)[answerSlug] || [],
+    );
+  }, [selectedAnswers]);
 
   return (
     <div className="flex min-h-svh flex-col bg-white text-neutral-900">
@@ -29,27 +40,28 @@ export function Results() {
         <main className="flex-1 px-4 py-12 lg:px-12 lg:py-24">
           <section className="animate-in fade-in slide-in-from-bottom-8 mb-20 duration-1000">
             <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:gap-2">
-              {matchedDestinations.map((destination, index) => {
-                const simulatedScore =
-                  98 - index * 3 - Math.floor(Math.random() * 2);
+              {results.slice(0, 16).map((result) => {
+                const { destination, score, matchedCriteria } = result;
 
-                const randomPros = [...criteria]
-                  .sort(() => 0.5 - Math.random())
-                  .slice(0, Math.floor(Math.random() * 3) + 2)
+                const matchedPros = criteria
+                  .filter((c) => matchedCriteria.includes(c.slug))
                   .map((c) => c.pro);
 
-                const randomCons = [...criteria]
-                  .sort(() => 0.5 - Math.random())
-                  .slice(0, Math.floor(Math.random() * 3) + 2)
+                const unmatchedCons = criteria
+                  .filter(
+                    (c) =>
+                      selectedCriteriaSlugs.includes(c.slug) &&
+                      !matchedCriteria.includes(c.slug),
+                  )
                   .map((c) => c.con);
 
                 return (
                   <li key={destination.id}>
                     <CardX
                       destination={destination}
-                      score={Math.max(simulatedScore, 60)}
-                      pros={randomPros}
-                      cons={randomCons}
+                      score={score}
+                      pros={matchedPros}
+                      cons={unmatchedCons}
                     />
                   </li>
                 );
@@ -102,7 +114,6 @@ function Hero() {
 export function CardX({
   destination,
   score,
-  pros,
   cons,
 }: {
   destination: Destination;
@@ -165,11 +176,29 @@ export function CardX({
         </p>
       </header>
 
-      <div className="mx-2 mb-4 rounded-2xl border border-neutral-100 bg-neutral-50">
-        <ul className="flex h-34 flex-col items-start gap-2 p-4">
-          {cons.slice(0, 4).map((con, i) => (
-            <li key={i} className="flex items-center gap-1.5">
-              <Lucide.CircleSmall className="size-2 fill-neutral-400 text-neutral-400" />
+      <div className="mx-2 mb-4 rounded-2xl border-0 border-primary bg-primary/5">
+        <ul className="scrollbar-none flex h-40 flex-col gap-1 overflow-y-auto p-4">
+          <div className="flex items-center justify-between gap-2">
+            <span className="text-sm font-bold text-primary uppercase">
+              Important caveats
+            </span>
+            <Lucide.CircleAlert className="size-4 stroke-primary" />
+          </div>
+          <div />
+          {/* {pros.map((pro, i) => ( */}
+          {/*   <li key={`pro-${i}`} className="flex items-center gap-2"> */}
+          {/*     <Lucide.Check */}
+          {/*       className="size-3.5 shrink-0 text-green-500" */}
+          {/*       strokeWidth={3} */}
+          {/*     /> */}
+          {/*     <span className="text-sm font-medium text-neutral-600 first-letter:uppercase"> */}
+          {/*       {pro} */}
+          {/*     </span> */}
+          {/*   </li> */}
+          {/* ))} */}
+          {cons.map((con, i) => (
+            <li key={`con-${i}`} className="flex items-center gap-2">
+              <Lucide.CircleSmall className="size-3 shrink-0 stroke-primary" />
               <span className="text-sm font-medium text-neutral-500 first-letter:uppercase">
                 {con}
               </span>
