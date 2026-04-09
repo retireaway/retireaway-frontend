@@ -11,15 +11,6 @@ export function Navbar() {
       </Wouter.Link>
 
       <div className="flex items-center gap-4 lg:gap-4">
-        <Wouter.Link href="/explore">
-          <div className="flex items-center gap-1">
-            <Lucide.Telescope className="hidden size-4 stroke-neutral-600 lg:inline" />
-            <div className="text-sm font-bold text-neutral-900 transition-colors hover:text-primary">
-              Explore
-            </div>
-          </div>
-        </Wouter.Link>
-
         <Wouter.Link href="/matchmaker">
           <div className="flex items-center gap-1">
             <Lucide.Sparkles className="hidden size-4 stroke-neutral-900 lg:inline" />
@@ -28,6 +19,7 @@ export function Navbar() {
             </div>
           </div>
         </Wouter.Link>
+        <Lucide.ChartNoAxesGantt className="size-5 stroke-neutral-500" />
       </div>
     </nav>
   );

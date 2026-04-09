@@ -1,14 +1,10 @@
 import * as Wouter from "wouter";
-import * as Lucide from "lucide-react";
 import { Footer } from "@/components/footer";
-import { Navbar } from "@/components/navbar";
 
 export function Home() {
   return (
     <div>
       <div className="flex min-h-svh flex-col">
-        <Navbar />
-
         <Hero />
       </div>
 
@@ -19,15 +15,25 @@ export function Home() {
 
 function Hero() {
   return (
-    <section className="mb-24 flex grow flex-col items-center justify-center">
-      <header className="max-w-3xl p-4">
-        <h1 className="mb-4 text-center text-6xl font-extrabold tracking-tight text-neutral-900 md:text-7xl">
+    <section className="relative flex grow flex-col items-center overflow-hidden bg-[url(/images/3oj4b8ip.jpg)] bg-cover bg-center">
+      <div className="absolute top-0 left-0 z-1 size-full bg-black/35" />
+
+      <div className="z-2 p-4">
+        <Wouter.Link href="/">
+          <div className="text-center text-xl font-bold tracking-tight text-white">
+            Retire<span className="text-primary">Away</span>
+          </div>
+        </Wouter.Link>
+      </div>
+
+      <header className="z-2 flex max-w-3xl grow flex-col items-center justify-center p-4">
+        <h1 className="mb-4 text-center text-6xl font-extrabold tracking-tight text-white md:text-7xl">
           Find your perfect
-          <span className="text-primary"> Retirment</span>
+          <span className="text-white"> Retirment</span>
           <span className="hidden md:inline"> abroad</span>
         </h1>
 
-        <p className="mx-auto mb-8 text-center text-lg leading-tight font-medium text-neutral-500 md:text-xl">
+        <p className="mx-auto mb-8 text-center text-lg leading-tight font-medium text-white/90 md:text-xl">
           <span className="">
             Compare costs, healthcare, safety, life expectancy, and visas.
           </span>
@@ -38,16 +44,10 @@ function Hero() {
 
         <div className="flex flex-row flex-wrap items-center justify-center gap-1 sm:flex-row md:gap-2">
           <Wouter.Link href="/matchmaker">
-            <div className="flex items-center justify-center gap-1 rounded-full border border-neutral-900 bg-primary px-6 py-3 text-sm font-bold whitespace-nowrap text-white md:text-lg">
-              <Lucide.Sparkles className="size-4 stroke-white" />
-              Matchmaker
-            </div>
-          </Wouter.Link>
-
-          <Wouter.Link href="/explore">
-            <div className="flex items-center justify-center gap-1 rounded-full border border-neutral-200 bg-white px-6 py-3 text-sm font-bold text-neutral-500 md:text-lg">
-              <Lucide.Telescope className="size-4 stroke-neutral-400" />
-              Explore
+            <div className="rounded-full border border-neutral-900 bg-primary px-6 py-3">
+              <span className="text-center text-sm font-bold whitespace-nowrap text-white md:text-lg">
+                Find Your Match
+              </span>
             </div>
           </Wouter.Link>
         </div>

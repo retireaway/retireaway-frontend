@@ -14,6 +14,7 @@
     "deploy": "gh-pages --dist dist --cname retireaway.com"
   },
   "dependencies": {
+    "@base-ui/react": "^1.3.0",
     "@fontsource-variable/sora": "^5.2.8",
     "class-variance-authority": "^0.7.1",
     "fuse.js": "^7.1.0",
