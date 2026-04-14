@@ -22,6 +22,7 @@ export function ComparisonBar() {
 
   if (
     selectedDestinations.length === 0 ||
+    location === "/" ||
     location === "/compare" ||
     location === "/matchmaker"
   ) {
@@ -49,12 +50,12 @@ export function ComparisonBar() {
       {/* Modal Overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm animate-in fade-in duration-200"
+          className="animate-in fade-in fixed inset-0 z-100 flex items-center justify-center bg-black/40 p-4 backdrop-blur-sm duration-200"
           onClick={() => setIsOpen(false)}
         >
           {/* Modal Content */}
           <div
-            className="w-full max-w-md overflow-hidden rounded-3xl border border-neutral-200 bg-white p-6 shadow-2xl animate-in zoom-in-95 duration-200"
+            className="animate-in zoom-in-95 w-full max-w-md overflow-hidden rounded-3xl border border-neutral-200 bg-white p-6 shadow-2xl duration-200"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="mb-6 flex items-center justify-between">
@@ -63,7 +64,7 @@ export function ComparisonBar() {
               </h2>
               <button
                 onClick={() => setIsOpen(false)}
-                className="rounded-full p-2 text-neutral-400 hover:bg-neutral-100 hover:text-neutral-600 transition-colors"
+                className="rounded-full p-2 text-neutral-400 transition-colors hover:bg-neutral-100 hover:text-neutral-600"
               >
                 <Lucide.X className="size-5" />
               </button>
@@ -75,7 +76,7 @@ export function ComparisonBar() {
               </span>
               <button
                 onClick={clearDestinations}
-                className="text-xs font-bold uppercase tracking-wider text-accent hover:opacity-80"
+                className="text-xs font-bold tracking-wider text-accent uppercase hover:opacity-80"
               >
                 Clear all
               </button>
@@ -119,10 +120,10 @@ export function ComparisonBar() {
               <Wouter.Link
                 href="/compare"
                 onClick={() => setIsOpen(false)}
-                className={`flex w-full items-center justify-center rounded-2xl py-4 text-sm font-bold text-white transition-all shadow-lg active:scale-[0.98] ${
+                className={`flex w-full items-center justify-center rounded-2xl py-4 text-sm font-bold text-white shadow-lg transition-all active:scale-[0.98] ${
                   selectedDestinations.length >= 2
                     ? "bg-primary hover:bg-primary/90 hover:shadow-primary/20"
-                    : "bg-neutral-300 pointer-events-none"
+                    : "pointer-events-none bg-neutral-300"
                 }`}
               >
                 Compare Now
