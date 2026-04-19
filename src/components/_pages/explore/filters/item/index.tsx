@@ -6,6 +6,7 @@ import { Chip } from "@/components/chip";
 type FilterItemProps = {
   name: string;
   items: readonly string[];
+  defaultValue?: string;
   param?: string;
   preview?: number;
   multiple?: boolean;
@@ -46,19 +47,19 @@ export function FilterItem({
                   onClick={() => {
                     if (params.has(identifier, item)) {
                       params.delete(identifier, item);
-                      setParams(params);
+                      setParams(params, { replace: true });
                       return;
                     }
 
                     if (multiple) {
                       params.append(identifier, item);
-                      setParams(params);
+                      setParams(params, { replace: true });
                       return;
                     }
 
                     params.delete(identifier);
                     params.append(identifier, item);
-                    setParams(params);
+                    setParams(params, { replace: true });
                   }}
                 >
                   <Chip

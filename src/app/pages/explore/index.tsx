@@ -10,7 +10,7 @@ import { DestinationCardList } from "@/components/destination-card";
 import { search } from "@/utils/destination";
 
 import { useFilters } from "@/hooks/filters";
-import { predicates, ranges } from "@/utils/filters";
+import { predicates } from "@/utils/filters";
 import { Searchbar } from "@/components/searchbar";
 import { Filters } from "@/components/_pages/explore/filters";
 import { Chip } from "@/components/chip";
@@ -28,24 +28,17 @@ export function Explore() {
       return p;
     }
 
-    if (typeof v === "string") {
-      return p + 1;
+    if (Array.isArray(v)) {
+      return p + v.length;
     }
 
-    return p + v.length;
+    return p + 1;
   }, 0);
 
   const filtrate: readonly Destination[] = React.useMemo(() => {
     return destinations.filter((destination) => {
       return (
-        predicates.single(
-          destination,
-          ranges.single[filters.single ?? "default"],
-        ) &&
-        predicates.couple(
-          destination,
-          ranges.couple[filters.couple ?? "default"],
-        ) &&
+        predicates.budget(destination, filters.budget) &&
         predicates.affordability(destination, filters.affordability) &&
         predicates.climate(destination, filters.climate) &&
         predicates.english(destination, filters.english) &&

@@ -96,6 +96,18 @@
     "con": "Traditional healthcare systems"
   },
   {
+    "slug": "safety-quality-high",
+    "rule": "destination has a personal safety rating of 'A'",
+    "pro": "Exceptional personal safety",
+    "con": "Standard safety environment"
+  },
+  {
+    "slug": "safety-quality-good",
+    "rule": "destination has a personal safety rating of 'A' or 'B'",
+    "pro": "Very safe and secure",
+    "con": "Higher safety precautions required"
+  },
+  {
     "slug": "english-widely-spoken",
     "rule": "destination has an english usage of 'Widely Spoken'",
     "pro": "English is widely spoken",
@@ -154,5 +166,35 @@
     "rule": "destination has the pro 'easy-visa-access'",
     "pro": "Simple retirement visa path",
     "con": "Stricter residency rules"
+  },
+  {
+    "slug": "region-americas",
+    "rule": "destination is in the Americas",
+    "pro": "Located in the Americas",
+    "con": "Not in the Americas"
+  },
+  {
+    "slug": "region-europe",
+    "rule": "destination is in Europe",
+    "pro": "Located in Europe",
+    "con": "Not in Europe"
+  },
+  {
+    "slug": "region-asia",
+    "rule": "destination is in Asia",
+    "pro": "Located in Asia",
+    "con": "Not in Asia"
+  },
+  {
+    "slug": "region-mena",
+    "rule": "destination is in Middle East & North Africa",
+    "pro": "Located in Middle East & North Africa",
+    "con": "Not in Middle East & North Africa"
+  },
+  {
+    "slug": "region-oceania",
+    "rule": "destination is in Oceania",
+    "pro": "Located in Oceania",
+    "con": "Not in Oceania"
   }
 ]

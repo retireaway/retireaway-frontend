@@ -9,13 +9,32 @@
     "slug": "ideal-climate",
     "title": "Which type of environment makes you feel most at home and active?",
     "description": "Your daily environment has a significant impact on your overall well-being and lifestyle. Whether you're drawn to the warm, humid air of a tropical beach, the sunny and temperate Mediterranean coast, the clear seasonal changes of a four-season climate, or the crisp, fresh air of a mountain retreat, choosing the right climate ensures you can enjoy your favorite outdoor activities year-round.",
-    "answers": ["climate-tropical", "climate-mediterranean", "climate-temperate", "climate-cool"]
+    "answers": [
+      "climate-tropical",
+      "climate-mediterranean",
+      "climate-temperate",
+      "climate-cool"
+    ]
   },
   {
     "slug": "healthcare-priority",
     "title": "How much weight do you place on having access to top-tier medical facilities and specialists?",
     "description": "Access to quality medical care is a top consideration for many retirees. Some prefer being within minutes of world-class hospitals and a wide range of medical specialists, while others are comfortable with reliable local clinics for day-to-day needs and traveling for more specialized procedures. Your preference here helps us prioritize destinations with the medical infrastructure that meets your comfort level.",
-    "answers": ["healthcare-essential", "healthcare-reliable", "healthcare-low-priority"]
+    "answers": [
+      "healthcare-essential",
+      "healthcare-reliable",
+      "healthcare-low-priority"
+    ]
+  },
+  {
+    "slug": "safety-priority",
+    "title": "How much of a priority is personal safety and a low crime rate in your retirement destination?",
+    "description": "Feeling safe and secure is a cornerstone of a relaxed retirement lifestyle. Whether you're seeking a peaceful, low-crime environment where you can walk freely at any hour, or you're comfortable with standard urban safety precautions, your preference here helps us prioritize locations that match your peace of mind.",
+    "answers": [
+      "safety-essential",
+      "safety-important",
+      "safety-low-priority"
+    ]
   },
   {
     "slug": "language-proficiency",
@@ -27,12 +46,30 @@
     "slug": "social-environment",
     "title": "What kind of community do you want to be part of in your retirement?",
     "description": "Retirement is a time for connection and community. Your ideal social setting might be a vibrant expat hub where it's easy to make international friends and join organized events, or a more local, authentic neighborhood where you can truly immerse yourself in the culture. Alternatively, you might be seeking the quiet solitude of a tranquil, low-crowd environment.",
-    "answers": ["community-active-expat", "community-local-mix", "community-solitude"]
+    "answers": [
+      "community-active-expat",
+      "community-local-mix",
+      "community-solitude",
+      "community-flexible"
+    ]
   },
   {
     "slug": "residency-process",
     "title": "How would you describe your ideal path to legal residency?",
     "description": "Navigating the legalities of moving to a new country can vary greatly in complexity. If you're looking for the simplest and fastest path, such as a straightforward 'Retirement Visa' with clear income requirements, or if you're open to a more involved process or making a financial investment to secure your ideal location, your preference here will help us guide you toward the most compatible residency options.",
     "answers": ["visa-simple", "visa-flexible"]
+  },
+  {
+    "slug": "preferred-region",
+    "title": "Is there a specific part of the world that you're particularly drawn to for your retirement?",
+    "description": "While many factors contribute to the perfect retirement, you might already have a preference for a certain region based on proximity to family, cultural interest, or previous travel experiences. If you have a favorite area, we can prioritize destinations there, or if you're open to exploring possibilities across the globe, we'll look for the best matches worldwide.",
+    "answers": [
+      "region-americas",
+      "region-europe",
+      "region-asia",
+      "region-mena",
+      "region-oceania",
+      "region-flexible"
+    ]
   }
 ]

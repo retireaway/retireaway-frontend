@@ -37,6 +37,10 @@ export function evaluateCriterion(destination: Destination, slug: string): boole
       return destination.pros.includes("strong-healthcare-access");
     case "healthcare-quality-good":
       return ["A", "B"].includes(destination.ratings.healthcareQuality.grade);
+    case "safety-quality-high":
+      return destination.ratings.personalSafety.grade === "A";
+    case "safety-quality-good":
+      return ["A", "B"].includes(destination.ratings.personalSafety.grade);
     case "pro-improving-healthcare":
       return destination.pros.includes("improving-healthcare");
     case "english-widely-spoken":
@@ -59,6 +63,16 @@ export function evaluateCriterion(destination: Destination, slug: string): boole
       return ["A", "B"].includes(destination.ratings.visaEase.grade);
     case "pro-easy-visa-access":
       return destination.pros.includes("easy-visa-access");
+    case "region-americas":
+      return destination.region === "Americas";
+    case "region-europe":
+      return destination.region === "Europe";
+    case "region-asia":
+      return destination.region === "Asia";
+    case "region-mena":
+      return destination.region === "Middle East & North Africa";
+    case "region-oceania":
+      return destination.region === "Oceania";
     default:
       return false;
   }

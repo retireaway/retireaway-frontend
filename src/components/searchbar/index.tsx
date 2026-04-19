@@ -11,6 +11,10 @@ export function Searchbar() {
     return params.get("search") ?? "";
   });
 
+  // React.useEffect(() => {
+  //   ref.current?.focus();
+  // }, []);
+
   return (
     <form
       onSubmit={(event) => {
@@ -33,13 +37,13 @@ export function Searchbar() {
         setParams(params);
         ref.current?.blur();
       }}
-      className="flex w-full flex-row items-center gap-2 rounded-s-full rounded-e-full border-1 border-neutral-200 bg-white p-1 px-3 has-focus:border-primary"
+      className="flex w-full flex-row items-center gap-2 rounded-s-full rounded-e-full border-1 border-neutral-200 bg-white px-3 py-1.5 has-focus:border-primary"
     >
       <input
         ref={ref}
         name="search"
         id="search"
-        className="w-0 grow py-2 pl-2 text-sm text-neutral-600 outline-none placeholder:text-neutral-400"
+        className="w-0 grow py-2 pl-2 text-base text-neutral-600 outline-none placeholder:text-neutral-400"
         placeholder="Search..."
         autoComplete="on"
         value={search}

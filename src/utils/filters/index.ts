@@ -1,7 +1,34 @@
 import type { Destination } from "@/types/destination";
 import type { Range } from "@/types/range";
 
+const formatter = new Intl.NumberFormat("en-US", {
+  notation: "compact",
+  compactDisplay: "short",
+  maximumFractionDigits: 1,
+  style: "currency",
+  currency: "USD",
+  currencyDisplay: "symbol",
+});
+
 export const predicates = {
+  budget: function (
+    d: Destination,
+    value: { type: string | null; amount: string | null },
+  ): boolean {
+    if (value.amount === null) return true;
+
+    if (value.type === "Single") {
+      const amount = parseInt(value.amount);
+      return d.expenditure.single.amount < amount;
+    }
+
+    if (value.type === "Couple") {
+      const amount = parseInt(value.amount);
+      return d.expenditure.couple.amount < amount;
+    }
+
+    throw new Error("invalid budget filter type");
+  },
   single: function (d: Destination, value: Range | undefined): boolean {
     if (value === undefined) return true;
 
@@ -59,15 +86,6 @@ export const predicates = {
     return value === d.ratings.visaEase.label;
   },
 };
-
-const formatter = new Intl.NumberFormat("en-US", {
-  notation: "compact",
-  compactDisplay: "short",
-  maximumFractionDigits: 1,
-  style: "currency",
-  currency: "USD",
-  currencyDisplay: "symbol",
-});
 
 export const ranges = {
   single: {

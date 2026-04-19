@@ -9,12 +9,22 @@
   "healthcare-essential": ["healthcare-quality-high", "pro-healthcare-access"],
   "healthcare-reliable": ["healthcare-quality-good", "pro-improving-healthcare"],
   "healthcare-low-priority": [],
+  "safety-essential": ["safety-quality-high"],
+  "safety-important": ["safety-quality-good"],
+  "safety-low-priority": [],
   "english-essential": ["english-widely-spoken", "pro-english-friendly"],
   "english-somewhat": ["english-commonly-used"],
   "language-flexible": [],
   "community-active-expat": ["community-thriving", "pro-expat-community"],
   "community-local-mix": ["community-established"],
   "community-solitude": ["crowds-tranquil", "pro-low-crowds"],
+  "community-flexible": [],
   "visa-simple": ["visa-ease-high", "pro-easy-visa-access"],
-  "visa-flexible": []
+  "visa-flexible": [],
+  "region-americas": ["region-americas"],
+  "region-europe": ["region-europe"],
+  "region-asia": ["region-asia"],
+  "region-mena": ["region-mena"],
+  "region-oceania": ["region-oceania"],
+  "region-flexible": []
 }

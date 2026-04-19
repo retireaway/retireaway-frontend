@@ -19,7 +19,10 @@ export function Navbar() {
             </div>
           </div>
         </Wouter.Link>
-        <Lucide.ChartNoAxesGantt className="size-5 stroke-neutral-500" />
+        {/* <Wouter.Link href="/search"> */}
+        {/*   <Lucide.Search className="size-5 stroke-neutral-500" /> */}
+        {/* </Wouter.Link> */}
+        {/* <Lucide.ChartNoAxesGantt className="size-5 stroke-neutral-500" /> */}
       </div>
     </nav>
   );

@@ -9,12 +9,22 @@
   { "slug": "healthcare-essential", "title": "Top Priority" },
   { "slug": "healthcare-reliable", "title": "Good & Reliable" },
   { "slug": "healthcare-low-priority", "title": "Not a Major Factor" },
+  { "slug": "safety-essential", "title": "Essential" },
+  { "slug": "safety-important", "title": "Important" },
+  { "slug": "safety-low-priority", "title": "Low Priority" },
   { "slug": "english-essential", "title": "English is Essential" },
   { "slug": "english-somewhat", "title": "I'd Like Some English" },
   { "slug": "language-flexible", "title": "I'm Happy to Learn" },
   { "slug": "community-active-expat", "title": "Active Expat Scene" },
   { "slug": "community-local-mix", "title": "Balanced / Local Mix" },
   { "slug": "community-solitude", "title": "Quiet & Solitude" },
+  { "slug": "community-flexible", "title": "I'm Flexible" },
   { "slug": "visa-simple", "title": "Simple & Fast" },
-  { "slug": "visa-flexible", "title": "Flexible" }
+  { "slug": "visa-flexible", "title": "Flexible" },
+  { "slug": "region-americas", "title": "The Americas" },
+  { "slug": "region-europe", "title": "Europe" },
+  { "slug": "region-asia", "title": "Asia" },
+  { "slug": "region-mena", "title": "Middle East & North Africa" },
+  { "slug": "region-oceania", "title": "Oceania" },
+  { "slug": "region-flexible", "title": "I'm Flexible" }
 ]

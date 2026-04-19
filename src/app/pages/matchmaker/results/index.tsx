@@ -80,28 +80,26 @@ function Hero() {
   return (
     <section className="mt-8 flex flex-col items-start justify-center p-6 lg:mt-0 lg:h-full lg:p-6 lg:text-left">
       <header className="w-full">
-        <h1 className="mb-2 text-4xl font-bold tracking-tight text-neutral-900 md:text-5xl lg:text-6xl">
-          Your Perfect <span className="text-primary">Matches</span>
+        <h1 className="mb-4 text-5xl font-extrabold tracking-tight text-neutral-900 md:text-5xl">
+          Your
+          <br /> <span className="text-primary">Matches</span>
         </h1>
 
         <p className="mb-4 text-base leading-relaxed font-medium text-neutral-500 md:text-lg lg:mb-6">
           We've analyzed your lifestyle preferences to find the best
-          destinations for your next chapter.{" "}
-          <span className="lg:inline">
-            Discover places that align with your budget, climate, and community
-            needs.
-          </span>
+          destinations for your next chapter. Discover places that align with
+          your budget, climate, and community needs.
         </p>
 
         <div className="flex flex-row flex-wrap items-start justify-start gap-1 sm:flex-row">
           <Wouter.Link href="/matchmaker">
-            <div className="flex items-center justify-center gap-1 rounded-full border border-neutral-900 bg-primary px-6 py-3 text-sm font-bold whitespace-nowrap text-white">
+            <div className="flex items-center justify-center gap-1 rounded-full border border-transparent bg-primary px-4 py-2 text-xs font-bold whitespace-nowrap text-white">
               Retake Quiz
             </div>
           </Wouter.Link>
 
           <Wouter.Link href="/explore">
-            <div className="flex items-center justify-center gap-1 rounded-full border border-neutral-200 bg-white px-6 py-3 text-sm font-bold text-neutral-500">
+            <div className="flex items-center justify-center gap-1 rounded-full border border-neutral-200 bg-white px-4 py-2 text-xs font-bold text-neutral-500">
               Explore
             </div>
           </Wouter.Link>

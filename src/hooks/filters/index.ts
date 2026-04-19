@@ -15,6 +15,8 @@ export function useFilters() {
   const visa = params.get("visa");
   const single = params.get("single");
   const couple = params.get("couple");
+  const budgetType = params.get("budget-type");
+  const budgetAmount = params.get("budget-amount");
 
   function reset() {
     params.delete("affordability");
@@ -29,6 +31,8 @@ export function useFilters() {
     params.delete("tax");
     params.delete("visa");
     params.delete("english");
+    params.delete("budget-type");
+    params.delete("budget-amount");
     setParams(params);
   }
 
@@ -46,6 +50,7 @@ export function useFilters() {
       visa,
       single,
       couple,
+      budget: { type: budgetType, amount: budgetAmount },
     } as const,
     reset,
   ] as const;
