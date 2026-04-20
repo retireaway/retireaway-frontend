@@ -1,5 +1,5 @@
 import type { Destination } from "@/types/destination";
-import answersToCriterion from "@/data/answers_to_criterion.json" with { type: "json" };
+import answersToCriterion from "@/data/answers_to_criterion.json";
 
 /**
  * Evaluates if a destination meets a specific criterion slug.
@@ -85,6 +85,11 @@ export interface MatchResult {
   totalCriteria: number;
 }
 
+interface AnswerConfig {
+  criteria: string[];
+  weight: number;
+}
+
 /**
  * Ranks destinations based on user answers.
  */
@@ -92,35 +97,44 @@ export function rankDestinations(
   destinations: readonly Destination[],
   selectedAnswers: Record<string, string>
 ): MatchResult[] {
-  // 1. Get all corresponding criteria slugs from answers
-  const selectedCriteriaSlugs = Object.values(selectedAnswers).flatMap(
-    (answerSlug) => (answersToCriterion as Record<string, string[]>)[answerSlug] || []
-  );
+  // 1. Get configurations for selected answers
+  const answerConfigs = Object.values(selectedAnswers)
+    .map((slug) => (answersToCriterion as Record<string, AnswerConfig>)[slug])
+    .filter((config): config is AnswerConfig => config !== undefined);
 
-  const totalCriteria = selectedCriteriaSlugs.length;
+  const totalPossibleWeight = answerConfigs.reduce((sum, config) => sum + config.weight, 0);
 
   // 2. Map over destinations and calculate scores
   const results: MatchResult[] = destinations.map((destination) => {
     const matchedCriteria: string[] = [];
+    let matchedWeight = 0;
 
-    selectedCriteriaSlugs.forEach((slug) => {
-      if (evaluateCriterion(destination, slug)) {
-        matchedCriteria.push(slug);
+    answerConfigs.forEach((config) => {
+      // For each answer choice, check if destination meets ALL associated criteria
+      const isMatch = config.criteria.length > 0 && config.criteria.every((slug) => {
+        const met = evaluateCriterion(destination, slug);
+        if (met) matchedCriteria.push(slug);
+        return met;
+      });
+
+      if (isMatch) {
+        matchedWeight += config.weight;
       }
     });
 
-    const score = totalCriteria > 0 
-      ? Math.round((matchedCriteria.length / totalCriteria) * 100) 
+    const score = totalPossibleWeight > 0 
+      ? Math.round((matchedWeight / totalPossibleWeight) * 100) 
       : 0;
 
     return {
       destination,
       score,
       matchedCriteria,
-      totalCriteria,
+      totalCriteria: matchedCriteria.length,
     };
   });
 
   // 3. Sort by score descending
   return results.sort((a, b) => b.score - a.score);
 }
+

@@ -23,7 +23,12 @@ export function Results() {
   const selectedCriteriaSlugs = React.useMemo(() => {
     return Object.values(selectedAnswers).flatMap(
       (answerSlug) =>
-        (answersToCriterion as Record<string, string[]>)[answerSlug] || [],
+        (
+          answersToCriterion as Record<
+            string,
+            { criteria: string[]; weight: number }
+          >
+        )[answerSlug] || [],
     );
   }, [selectedAnswers]);
 
@@ -50,11 +55,11 @@ export function Results() {
                 const unmatchedCons = criteria
                   .filter(
                     (c) =>
-                      selectedCriteriaSlugs.includes(c.slug) &&
-                      !matchedCriteria.includes(c.slug),
+                      selectedCriteriaSlugs.some((_) =>
+                        _.criteria.includes(c.slug),
+                      ) && !matchedCriteria.includes(c.slug),
                   )
                   .map((c) => c.con);
-
                 return (
                   <li key={destination.id}>
                     <CardX
@@ -175,7 +180,7 @@ export function CardX({
       </header>
 
       <div className="mx-2 mb-4 rounded-2xl border-0 border-primary bg-primary/5">
-        <ul className="scrollbar-none flex h-40 flex-col gap-1 overflow-y-auto p-4">
+        <ul className="scrollbar-none flex h-48 flex-col gap-1 overflow-y-auto p-4">
           <div className="flex items-center justify-between gap-2">
             <span className="text-sm font-bold text-primary uppercase">
               Important caveats
@@ -183,17 +188,6 @@ export function CardX({
             <Lucide.CircleAlert className="size-4 stroke-primary" />
           </div>
           <div />
-          {/* {pros.map((pro, i) => ( */}
-          {/*   <li key={`pro-${i}`} className="flex items-center gap-2"> */}
-          {/*     <Lucide.Check */}
-          {/*       className="size-3.5 shrink-0 text-green-500" */}
-          {/*       strokeWidth={3} */}
-          {/*     /> */}
-          {/*     <span className="text-sm font-medium text-neutral-600 first-letter:uppercase"> */}
-          {/*       {pro} */}
-          {/*     </span> */}
-          {/*   </li> */}
-          {/* ))} */}
           {cons.map((con, i) => (
             <li key={`con-${i}`} className="flex items-center gap-2">
               <Lucide.CircleSmall className="size-3 shrink-0 stroke-primary" />
