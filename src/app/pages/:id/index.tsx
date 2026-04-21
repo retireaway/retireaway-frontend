@@ -219,7 +219,7 @@ function Hero({ destination }: { destination: Destination }) {
         className={`absolute top-4 right-4 z-10 flex h-10 items-center justify-center gap-2 rounded-full border-1 px-4 transition-all ${
           isSelected
             ? "border-primary bg-primary text-white"
-            : "border-white/20 bg-black/20 text-white hover:bg-black/40 backdrop-blur-sm"
+            : "border-white/20 bg-black/20 text-white backdrop-blur-sm hover:bg-black/40"
         }`}
       >
         <Lucide.Plus
@@ -274,6 +274,91 @@ function Overview({
       <p className="px-4 text-base leading-[1.5] text-neutral-500">
         {destination.description}
       </p>
+
+      <div className="flex flex-col gap-4 px-4">
+        {/* <p className="text-lg font-medium text-neutral-600">Ratings</p> */}
+        <section className="grid grid-cols-2 gap-x-8 gap-y-4 rounded-3xl border-0 border-primary bg-primary/5 p-5">
+          {Object.entries(destination.ratings).map(([key, value]) => {
+            const config: Record<
+              string,
+              { label: string; icon: React.ReactNode }
+            > = {
+              affordability: {
+                label: "Cost",
+                icon: <Lucide.Tag className="size-3.5 text-neutral-400" />,
+              },
+              healthcareQuality: {
+                label: "Health",
+                icon: (
+                  <Lucide.HeartPulse className="size-3.5 text-neutral-400" />
+                ),
+              },
+              personalSafety: {
+                label: "Safety",
+                icon: (
+                  <Lucide.ShieldCheck className="size-3.5 text-neutral-400" />
+                ),
+              },
+              politicalStability: {
+                label: "Stability",
+                icon: <Lucide.Globe className="size-3.5 text-neutral-400" />,
+              },
+              visaEase: {
+                label: "Visa Ease",
+                icon: <Lucide.FileText className="size-3.5 text-neutral-400" />,
+              },
+              taxEnvironment: {
+                label: "Taxes",
+                icon: (
+                  <Lucide.HandCoins className="size-3.5 text-neutral-400" />
+                ),
+              },
+              infrastructure: {
+                label: "Infrastructure",
+                icon: <Lucide.HardHat className="size-3.5 text-neutral-400" />,
+              },
+              weatherComfort: {
+                label: "Weather",
+                icon: <Lucide.CloudSun className="size-3.5 text-neutral-400" />,
+              },
+              healthcareCost: {
+                label: "Health Cost",
+                icon: (
+                  <Lucide.CircleDollarSign className="size-3.5 text-neutral-400" />
+                ),
+              },
+              economy: {
+                label: "Economy",
+                icon: (
+                  <Lucide.TrendingUp className="size-3.5 text-neutral-400" />
+                ),
+              },
+            };
+
+            const item = config[key];
+            if (!item) return null;
+
+            return (
+              <div
+                key={key}
+                className="flex items-center justify-between gap-2"
+              >
+                <div className="flex items-center gap-2">
+                  {item.icon}
+                  <span className="text-[10px] font-bold tracking-widest text-primary uppercase">
+                    {item.label}
+                  </span>
+                </div>
+                <span
+                  className={`text-sm font-black ${gradeToColor(value.grade).text}`}
+                >
+                  {value.grade}
+                </span>
+              </div>
+            );
+          })}
+        </section>
+      </div>
 
       <div className="flex flex-col gap-4 px-4">
         <p className="text-lg font-medium text-neutral-600">Pros</p>
