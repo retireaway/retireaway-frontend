@@ -6,6 +6,7 @@ import pros from "@/data/pros.json" with { type: "json" };
 import cons from "@/data/cons.json" with { type: "json" };
 import cities from "@/data/cities.json" with { type: "json" };
 import destinations from "@/data/destinations.json" with { type: "json" };
+import resources from "@/data/resources.json" with { type: "json" };
 
 import { climateToIcon, gradeToColor } from "@/utils/mappings";
 import type { Cost, Destination } from "@/types/destination";
@@ -14,13 +15,13 @@ import { useComparison } from "@/contexts/comparison";
 
 import InternationalLivingLogo from "@/assets/svg/international-living-logo.svg?react";
 
-type Tab = "overview" | "ratings" | "calculator";
+type Tab = "overview" | "resources" | "calculator";
 
 function isTab(value: unknown): value is Tab {
   const isOverview = value === "overview";
-  const isRatings = value === "ratings";
+  const isResources = value === "resources";
   const isCalculator = value === "calculator";
-  return isOverview || isRatings || isCalculator;
+  return isOverview || isResources || isCalculator;
 }
 
 export function DestinationProfile() {
@@ -46,7 +47,7 @@ export function DestinationProfile() {
       <section>
         <header>
           <h1>Invalid Parameter :tab</h1>
-          <p>Must be one of "overview", "ratings"</p>
+          <p>Must be one of "overview", "resources"</p>
         </header>
       </section>
     );
@@ -156,10 +157,10 @@ export function DestinationProfile() {
           <li className="flex grow">
             <Wouter.Link
               replace={true}
-              href={`/${destination.id}/ratings`}
-              className={`w-full border-b-2 p-4 text-center ${params["tab"] === "ratings" ? "border-primary text-primary" : "border-transparent text-neutral-400"} `}
+              href={`/${destination.id}/resources`}
+              className={`w-full border-b-2 p-4 text-center ${params["tab"] === "resources" ? "border-primary text-primary" : "border-transparent text-neutral-400"} `}
             >
-              Ratings
+              Resources
             </Wouter.Link>
           </li>
           <li className="flex grow">
@@ -183,7 +184,9 @@ export function DestinationProfile() {
           />
         )}
 
-        {params["tab"] === "ratings" && <Ratings destination={destination} />}
+        {params["tab"] === "resources" && (
+          <Resources destination={destination} />
+        )}
         {params["tab"] === "calculator" && (
           <Calculator destination={destination} />
         )}
@@ -629,90 +632,70 @@ function Cost({ cost, inflationRate }: { cost: Cost; inflationRate: number }) {
   );
 }
 
-function Ratings({ destination }: { destination: Destination }) {
-  const _ = Object.entries(destination.ratings);
-
-  const __: Record<string, string> = {
-    affordability: "Affordability",
-    healthcareQuality: "Healthcare",
-    personalSafety: "Personal Safety",
-    politicalStability: "Political Stability",
-    visaEase: "Visa Ease",
-    taxEnvironment: "Tax Environment",
-    infrastructure: "Infrastructure",
-    weatherComfort: "Weather Comfort",
-    healthcareCost: "Healthcare Cost",
-    economy: "Economy",
-  };
+function Resources({ destination }: { destination: Destination }) {
+  const destinationResources = resources.filter(
+    (r) => r.destination === destination.id,
+  );
 
   return (
-    <section className="xl-pb-0 xl-pb-0 flex flex-col gap-10 px-4 pb-4">
-      <div className="flex flex-col gap-4 px-4">
-        <p className="text-lg font-medium text-neutral-600">
-          Core Quality Factors
-        </p>
+    <section className="flex flex-col gap-10 px-4 pb-4 xl:pb-0">
+      {destinationResources.length === 0 ? (
+        <div className="flex flex-col items-center justify-center gap-4 py-20">
+          <Lucide.Library className="size-12 text-neutral-200" />
+          <p className="text-lg font-medium text-neutral-400">
+            No resources found for {destination.name}
+          </p>
+        </div>
+      ) : (
+        <ul className="flex flex-col gap-6">
+          {destinationResources.map((resource, index) => (
+            <li key={`${resource.url}-${index}`}>
+              <a
+                href={resource.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col gap-3 rounded-2xl border border-neutral-100 bg-white p-6 transition-all hover:border-primary/20 hover:shadow-md"
+              >
+                <header className="flex items-start justify-between gap-4">
+                  <div className="flex flex-col gap-2">
+                    <div className="flex items-center gap-2">
+                      <span className="text-[10px] font-bold tracking-widest text-primary uppercase">
+                        {resource.platform}
+                      </span>
+                    </div>
 
-        <ul className="flex flex-col gap-2">
-          {_.map(([key, value]) => {
-            if (key === "visaEase" || key === "taxEnvironment") return;
+                    <h3 className="text-lg font-semibold text-neutral-700 transition-colors group-hover:text-primary">
+                      {resource.title}
+                    </h3>
 
-            return (
-              <React.Fragment key={key}>
-                <li className="flex flex-row items-end gap-2 py-2">
-                  <div className="flex grow flex-col items-start justify-between">
-                    <span className="grow text-sm font-normal text-neutral-400">
-                      {__[key]}
-                    </span>
-                    <span className="text-lg font-medium text-neutral-600">
-                      {value.label}
-                    </span>
+                    <p className="text-xs font-semibold text-neutral-500 capitalize">
+                      {resource.author}
+                    </p>
                   </div>
+                  <Lucide.ExternalLink className="size-5 shrink-0 text-neutral-300 transition-colors group-hover:text-primary" />
+                </header>
 
-                  <span
-                    className={`text-lg font-semibold ${gradeToColor(value.grade).text}`}
-                  >
-                    {value.grade}
-                  </span>
-                </li>
-                <div className="h-px bg-neutral-200" />
-              </React.Fragment>
-            );
-          })}
-        </ul>
-      </div>
+                <p className="line-clamp-10 text-sm leading-relaxed text-neutral-500">
+                  {resource.description}
+                </p>
 
-      <div className="flex flex-col gap-4 px-4">
-        <p className="text-lg font-medium text-neutral-600">
-          Practical Considerations
-        </p>
-
-        <ul className="flex flex-col gap-2">
-          {_.map(([key, value]) => {
-            if (!(key === "visaEase" || key === "taxEnvironment")) return;
-
-            return (
-              <React.Fragment key={key}>
-                <li className="flex flex-col gap-2 py-2">
-                  <span className="grow text-sm font-normal text-neutral-400">
-                    {__[key]}
-                  </span>
-                  <div className="flex items-center justify-between">
-                    <span className="text-lg font-medium text-neutral-600">
-                      {value.label}
-                    </span>
-                    <span
-                      className={`text-lg font-semibold ${gradeToColor(value.grade).text}`}
-                    >
-                      {value.grade}
-                    </span>
+                <footer className="mt-2 flex-col items-start justify-between">
+                  <div className="flex flex-wrap gap-2">
+                    {resource.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full bg-neutral-100 px-2.5 py-0.5 text-xs font-medium text-neutral-500 capitalize"
+                      >
+                        {tag}
+                      </span>
+                    ))}
                   </div>
-                </li>
-                <div className="h-px bg-neutral-200" />
-              </React.Fragment>
-            );
-          })}
+                </footer>
+              </a>
+            </li>
+          ))}
         </ul>
-      </div>
+      )}
     </section>
   );
 }
