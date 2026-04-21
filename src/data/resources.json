@@ -1,0 +1,142 @@
+[
+  {
+    "destination": "greece",
+    "title": "International Living: Greece",
+    "description": "This website provides a comprehensive guide to living in Greece, emphasizing its appeal as an affordable and culturally rich destination for expats. It details practical logistics such as the low cost of housing and healthcare while highlighting the Mediterranean lifestyle centered on hospitality and fresh cuisine. The content also offers a regional breakdown of popular locations like Athens and Crete to help newcomers find the right environment. Finally, it addresses the realities of moving there, including advice on navigating local bureaucracy and the importance of having an independent income.",
+    "url": "https://internationalliving.com/countries/greece/",
+    "author": "International Living",
+    "platform": "International Living",
+    "date": "2025-01-01",
+    "tags": ["lifestyle", "overview"]
+  },
+  {
+    "destination": "greece",
+    "title": "Numbeo: Cost of Living in Greece",
+    "description": "This website serves as a real-time data hub for the cost of living in Greece, using crowdsourced figures to provide a granular look at daily expenses. It breaks down costs into specific categories like groceries, restaurant prices, and transportation, allowing for a side-by-side comparison with other countries. The site also provides detailed housing data, including average rent for different apartment sizes and the price per square foot for real estate. Beyond basic survival costs, it includes lifestyle metrics such as the price of a gym membership, a cinema ticket, and even local purchasing power.",
+    "url": "https://www.numbeo.com/cost-of-living/country_result.jsp?country=Greece",
+    "author": "Numbeo",
+    "platform": "Numbeo",
+    "date": "2026-04-17",
+    "tags": ["cost of living", "finance"]
+  },
+  {
+    "destination": "greece",
+    "title": "IARC: Greece Health Factsheet",
+    "description": "The technical factsheet identifies that Greece's health expenditure per capita is approximately $2,246, representing roughly 9.2% of its national GDP. These funds support the infrastructure for breast and cervical cancer screening programs, including the use of mammography and cytology across the country. This data provides a benchmark for health professionals to evaluate the efficiency of the Greek medical system in comparison to other international healthcare models.",
+    "url": "https://canscreen5.iarc.fr/?page=countryfactsheet&q=GRC",
+    "author": "International Agency for Research on Cancer",
+    "platform": "IARC",
+    "date": "2025-01-01",
+    "tags": ["healthcare"]
+  },
+  {
+    "destination": "greece",
+    "title": "Move to Greece from the US | Helpful Tips for Beginners",
+    "description": "This video provides a balanced overview of the advantages and challenges of retiring in Greece, focusing on lifestyle and logistics. It highlights the country's appealing Mediterranean climate, fresh cuisine, and lower cost of living for essentials like rent and utilities compared to much of Western Europe. The content also emphasizes the cultural benefits, such as the slower pace of life and the legendary Greek hospitality. On the other hand, the video outlines significant hurdles, including a notoriously slow and complex bureaucracy and potential language barriers in more rural regions. It notes that while public healthcare is affordable, wait times can be long, often making private insurance a better option for expats. Finally, it touches on practical considerations like varying infrastructure quality in remote areas and the impact of heavy tourist crowds in popular island destinations.",
+    "url": "https://www.youtube.com/watch?v=c60IERi7OdA",
+    "author": "She Hit Refresh",
+    "platform": "YouTube",
+    "date": "2023-10-24",
+    "tags": ["lifestyle", "logistics", "moving"]
+  },
+  {
+    "destination": "greece",
+    "title": "Pros & Cons of Living in Greece | Things to Consider Before You Move to Greece",
+    "description": "This video outlines the primary visa pathways for Americans moving to Greece, including the Digital Nomad, Golden, and retirement visas. It highlights the country's affordable housing and private healthcare, while noting that utility costs can be high. The guide also contrasts the high-energy lifestyle of Athens with quieter mountainous regions, advising viewers on navigating Greek bureaucracy and the transition to a slower pace of life.",
+    "url": "https://www.youtube.com/watch?v=OzTtWOyhTgo",
+    "author": "Global Citizen Solutions",
+    "platform": "YouTube",
+    "date": "2023-10-26",
+    "tags": ["lifestyle", "healthcare", "visa"]
+  },
+  {
+    "destination": "greece",
+    "title": "International Living: Greece Visa and Residency",
+    "description": "This guide details the primary residency pathways for moving to Greece, specifically the Financially Independent Person (FIP) permit, the Digital Nomad Visa, and the Golden Visa property investment program. It outlines the specific income thresholds and investment minimums required for each, alongside the transition from an initial entry visa to a multi-year residence permit. The page also highlights the long-term benefits of residency, such as Schengen Area access and a seven-year path to citizenship, while offering practical advice on managing the application costs and administrative requirements.",
+    "url": "https://internationalliving.com/countries/greece/greece-visa-and-residency/",
+    "author": "International Living",
+    "platform": "International Living",
+    "date": "2025-03-14",
+    "tags": ["visa", "residency"]
+  },
+  {
+    "destination": "greece",
+    "title": "Ministry of Foreign Affairs: Greece Visas",
+    "description": "This official government portal provides the primary administrative framework for foreigners entering Greece, categorizing requirements into Schengen Visas for short-term visits and National Visas for long-term residency. It serves as the authoritative source for legal guidelines, procedural information, and specialized programs like the Digital Nomad and Golden Visas. The site also links to essential consular services and administrative resources to help travelers and prospective residents navigate the country’s official immigration processes.",
+    "url": "https://www.mfa.gr/en/service-category/visas/",
+    "author": "Ministry of Foreign Affairs of the Hellenic Republic",
+    "platform": "Official",
+    "date": "2026-01-01",
+    "tags": ["visa", "official"]
+  },
+  {
+    "destination": "panama",
+    "title": "International Living: Panama",
+    "description": "This website provides an extensive guide to living and retiring in Panama, highlighting its reputation as a top-tier expat destination due to its modern infrastructure and tropical climate. It features a diverse range of locations, from the urban sophistication of Panama City to the lush highlands of Boquete and the serene Pacific beaches. The content places significant emphasis on the world-renowned Pensionado program, which grants retirees substantial government-mandated discounts on healthcare, utilities, and daily travel. Practical advantages such as the high standard of affordable medical care, the use of the U.S. dollar, and stable residency laws are explored in detail.",
+    "url": "https://internationalliving.com/countries/panama/",
+    "author": "International Living",
+    "platform": "International Living",
+    "date": "2026-01-01",
+    "tags": ["lifestyle", "overview"]
+  },
+  {
+    "destination": "panama",
+    "title": "Numbeo: Cost of Living in Panama",
+    "description": "This webpage provides a detailed breakdown of the cost of living in Panama, utilizing crowdsourced data to estimate average monthly expenses for individuals and families. It categorizes costs into sections such as groceries, restaurant prices, and transportation, while highlighting regional price differences between Panama City and more rural areas. The site also includes housing metrics, detailing average rent and real estate prices to help prospective expats build realistic budgets. Beyond basic necessities, it tracks lifestyle costs like gym memberships and leisure activities to provide a complete picture of local purchasing power.",
+    "url": "https://www.numbeo.com/cost-of-living/country_result.jsp?country=Panama",
+    "author": "Numbeo",
+    "platform": "Numbeo",
+    "date": "2026-04-17",
+    "tags": ["cost of living", "finance"]
+  },
+  {
+    "destination": "panama",
+    "title": "IARC: Panama Health Factsheet",
+    "description": "The factsheet reports that Panama’s total health expenditure per capita is approximately $1,155, which accounts for 7.3% of the country’s GDP. These funds support national screening initiatives for breast and cervical cancers, primarily utilizing mammography and cytology to serve targeted age groups within the population. The data serves as a technical benchmark for health professionals to assess the effectiveness of Panama’s public health infrastructure and cancer detection strategies.",
+    "url": "https://canscreen5.iarc.fr/?page=countryfactsheet&q=PAN",
+    "author": "International Agency for Research on Cancer",
+    "platform": "IARC",
+    "date": "2025-01-01",
+    "tags": ["healthcare"]
+  },
+  {
+    "destination": "panama",
+    "title": "7 Years in Panama: The REAL Pros & Cons Nobody Talks About",
+    "description": "This video provides a firsthand look at living in Panama, emphasizing its high quality of life, robust safety, and modern infrastructure. Key advantages include the territorial tax system, which exempts foreign-sourced income from local taxes, and a healthcare system with US-trained, English-speaking doctors. Conversely, it outlines challenges like the cultural \"mañana\" attitude toward punctuality and the necessity of learning Spanish for full integration. It also notes that while banking is robust, residents must navigate heavy bureaucracy and strict documentation requirements for compliance.",
+    "url": "https://www.youtube.com/watch?v=u5CxDGx6Rf4",
+    "author": "Expat Money",
+    "platform": "YouTube",
+    "date": "2024-07-03",
+    "tags": ["lifestyle", "logistics", "pros-cons"]
+  },
+  {
+    "destination": "panama",
+    "title": "Pros and cons When Moving and Living in Panama",
+    "description": "This video highlights the lifestyle benefits of moving to Panama, including a significantly lower cost of living and a tax system with zero tax on foreign-earned income. It describes the country as exceptionally safe with high-quality medical facilities and robust infrastructure compared to its regional neighbors. However, it notes drawbacks such as a slow bureaucratic pace for government tasks and the necessity of learning Spanish for full integration. Additionally, it identifies Panama City's heavy traffic and the time-consuming process of opening bank accounts as significant daily hurdles for expats.",
+    "url": "https://www.youtube.com/watch?v=1b7tpTcN7y8",
+    "author": "Grupo Los Pueblos",
+    "platform": "YouTube",
+    "date": "2026-04-03",
+    "tags": ["lifestyle", "finance", "pros-cons"]
+  },
+  {
+    "destination": "panama",
+    "title": "International Living: Panama Visa Information",
+    "description": "This page outlines Panama's diverse residency pathways, emphasizing the world-renowned Pensionado program for retirees with a lifetime pension of at least $1,000 monthly. It also highlights the \"Friendly Nations\" visa for citizens from over 50 countries and the \"Qualified Investor\" program, which offers immediate permanent residency through real estate or business investments. Additionally, the guide details specific requirements such as criminal background checks and health certificates, while noting that most paths can eventually lead to citizenship after five years. Processing times vary by visa type, typically ranging from a few weeks to six months, and often require the assistance of a local attorney.",
+    "url": "https://internationalliving.com/countries/panama/visa/",
+    "author": "International Living",
+    "platform": "International Living",
+    "date": "2024-09-05",
+    "tags": ["visa", "residency"]
+  },
+  {
+    "destination": "panama",
+    "title": "Embassy of Panama: Visa Options",
+    "description": "The Pensionado program remains the premier choice for expats, offering immediate permanent residency to anyone with a lifetime monthly pension of at least $1,000. This visa provides a comprehensive suite of government-mandated benefits, including 25% off utility bills, 50% off movie tickets, and significant discounts on healthcare and domestic flights. For those not yet retired, the Friendly Nations visa offers a path to residency for citizens of 50 designated countries through employment or real estate investment. Each of these pathways is designed to facilitate long-term integration, providing a stable legal framework for foreigners to live and invest in the country.",
+    "url": "https://www.embassyofpanama.org/visas-1",
+    "author": "Embassy of Panama",
+    "platform": "Official",
+    "date": "2024-10-28",
+    "tags": ["visa", "official"]
+  }
+]

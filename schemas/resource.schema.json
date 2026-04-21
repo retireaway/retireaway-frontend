@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://retireaway.com/schemas/resource.schema.json",
+  "title": "Resource",
+  "description": "An external resource for retirement-related information, such as articles, videos, or official government portals.",
+  "type": "object",
+  "properties": {
+    "destination": {
+      "type": "string",
+      "description": "The id of the destination this resource pertains to.",
+      "examples": ["greece", "panama", "costa-rica"]
+    },
+    "title": {
+      "type": "string",
+      "description": "The title of the resource.",
+      "examples": [
+        "Greece Country Guide - Pros and Cons of Living in Greece 2025",
+        "Cost of Living in Greece"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "description": "A concise summary of what the resource provides and its relevance to the user.",
+      "examples": [
+        "This website provides a comprehensive guide to living in Greece, emphasizing its appeal as an affordable and culturally rich destination for expats."
+      ]
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "The direct URL to the resource.",
+      "examples": ["https://internationalliving.com/countries/greece/"]
+    },
+    "author": {
+      "type": "string",
+      "description": "The person or organization that created the resource.",
+      "examples": ["International Living", "Numbeo", "IARC"]
+    },
+    "platform": {
+      "type": "string",
+      "description": "The platform or site hosting the resource.",
+      "examples": ["YouTube", "Numbeo", "Official"]
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "The publication or last updated date of the resource in YYYY-MM-DD format.",
+      "examples": ["2024-01-15"]
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Categories or keywords associated with the resource to facilitate filtering.",
+      "examples": [["healthcare", "cost of living", "visa", "lifestyle"]]
+    }
+  },
+  "required": [
+    "author",
+    "destination",
+    "date",
+    "description",
+    "platform",
+    "tags",
+    "title",
+    "url"
+  ],
+  "additionalProperties": false
+}
