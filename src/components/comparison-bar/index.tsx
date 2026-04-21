@@ -1,10 +1,11 @@
 import * as React from "react";
 import * as Lucide from "lucide-react";
 import * as Wouter from "wouter";
+import * as WouterHash from "wouter/use-hash-location";
 import { useComparison } from "@/contexts/comparison";
 
 export function ComparisonBar() {
-  const [location] = Wouter.useLocation();
+  const [location] = WouterHash.useHashLocation();
   const { selectedDestinations, clearDestinations, toggleDestination } =
     useComparison();
   const [isOpen, setIsOpen] = React.useState(false);

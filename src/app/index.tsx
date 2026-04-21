@@ -1,4 +1,5 @@
 import * as Wouter from "wouter";
+import { useHashLocation } from "wouter/use-hash-location";
 
 import { NotFound } from "@/components/not-found";
 import { ComparisonProvider } from "@/contexts/comparison";
@@ -16,7 +17,7 @@ export function App() {
   return (
     <ComparisonProvider>
       <MatchmakerProvider>
-        <Wouter.Router base="/">
+        <Wouter.Router base="/" hook={useHashLocation}>
           <Wouter.Switch>
             <Wouter.Route path="/">
               <Home />
@@ -50,9 +51,9 @@ export function App() {
               <NotFound />
             </Wouter.Route>
           </Wouter.Switch>
-        </Wouter.Router>
 
-        <ComparisonBar />
+          <ComparisonBar />
+        </Wouter.Router>
       </MatchmakerProvider>
     </ComparisonProvider>
   );
