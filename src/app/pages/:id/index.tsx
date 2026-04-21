@@ -363,6 +363,32 @@ function Overview({
         </section>
       </div>
 
+      {(() => {
+        const firstYoutubeResource = resources.find(
+          (r) => r.destination === destination.id && r.platform === "YouTube",
+        );
+        if (!firstYoutubeResource) return null;
+
+        const videoId = new URL(firstYoutubeResource.url).searchParams.get("v");
+        if (!videoId) return null;
+
+        return (
+          <div className="px-4">
+            <div className="aspect-video w-full overflow-hidden rounded-2xl border border-neutral-100 shadow-sm">
+              <iframe
+                width="100%"
+                height="100%"
+                src={`https://www.youtube.com/embed/${videoId}`}
+                title={firstYoutubeResource.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        );
+      })()}
+
       <div className="flex flex-col gap-4 px-4">
         <p className="text-lg font-medium text-neutral-600">Pros</p>
         <ul className="flex flex-col gap-2">
