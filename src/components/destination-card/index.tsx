@@ -37,7 +37,7 @@ export function DestinationCardList({
   );
 }
 
-export function _DestinationCard({
+export function deprecated_DestinationCard({
   destination,
 }: {
   destination: Destination;
@@ -202,13 +202,29 @@ export function DestinationCard({ destination }: { destination: Destination }) {
           className={`absolute top-0 right-0 size-full object-cover object-center`}
           alt={`scenic image of ${destination.name}`}
         />
-
-        {/* <div className="absolute top-2 right-2 flex flex-row items-center justify-center gap-1.5"> */}
+        {/**/}
+        {/* <div className="absolute top-2 left-2 flex flex-row items-center justify-center gap-1.5"> */}
         {/*   <button className="flex flex-row items-center gap-1 rounded-s-full rounded-e-full border border-neutral-400 bg-white px-3 py-2"> */}
-        {/*     <Lucide.Scale className="size-4.5 stroke-neutral-700" /> */}
-        {/*     <span className="text-xs font-bold text-neutral-700">Compare</span> */}
+        {/*     <Lucide.User className="size-3.5 stroke-neutral-700" /> */}
+        {/*     <span className="text-xs leading-none font-bold text-neutral-700"> */}
+        {/*       $3,300 */}
+        {/*     </span> */}
+        {/*     <div className="mx-1 h-4 w-px bg-neutral-200" /> */}
+        {/*     <Lucide.Users className="size-3.5 stroke-neutral-700" /> */}
+        {/*     <span className="text-xs leading-none font-bold text-neutral-700"> */}
+        {/*       $5,300 */}
+        {/*     </span> */}
         {/*   </button> */}
         {/* </div> */}
+
+        <div className="absolute top-2 right-2 flex flex-row items-center justify-center gap-1.5">
+          <button className="flex flex-row items-center gap-1 rounded-s-full rounded-e-full border border-neutral-400 bg-white px-3 py-2">
+            <Icons.Compare className="size-3.5 stroke-neutral-700" />
+            <span className="text-xs leading-none font-bold text-neutral-700">
+              Compare
+            </span>
+          </button>
+        </div>
       </div>
 
       <header className="px-2 py-4">
@@ -228,42 +244,82 @@ export function DestinationCard({ destination }: { destination: Destination }) {
         {/*   </div> */}
         {/* </div> */}
 
-        <div className="mb-2 flex flex-row items-center justify-between gap-2">
+        <div className="mb-1 flex flex-row items-center justify-between gap-2">
           <h2 className="text-2xl leading-none font-bold text-neutral-800">
             {destination.name}
           </h2>
-
-          <button
-            type="button"
-            onClick={() => {}}
-            className="flex flex-row items-center gap-1 rounded-s-full rounded-e-full border border-neutral-200 bg-white px-2 py-1"
-          >
-            <Icons.Compare className="size-4 fill-white stroke-neutral-600 stroke-2" />
-            <span className="text-xs leading-none font-medium text-neutral-600">
-              Compare
-            </span>
-          </button>
+          {/**/}
+          {/* <button */}
+          {/*   type="button" */}
+          {/*   onClick={() => {}} */}
+          {/*   className="flex flex-row items-center gap-1 rounded-s-full rounded-e-full border border-neutral-200 bg-white px-2 py-1" */}
+          {/* > */}
+          {/*   <Icons.Compare className="size-4 fill-white stroke-neutral-600 stroke-2" /> */}
+          {/*   <span className="text-xs leading-none font-medium text-neutral-600"> */}
+          {/*     Compare */}
+          {/*   </span> */}
+          {/* </button> */}
         </div>
 
-        <div className="mb-4 flex flex-row flex-wrap items-center justify-start gap-2">
+        <div className="mb-2 flex flex-row flex-wrap items-center justify-start gap-1">
           <div className="flex flex-row items-center justify-center gap-1 rounded-s-full rounded-e-full border-0 border-neutral-200 whitespace-nowrap">
-            <Lucide.MapPinned className="size-4 text-neutral-700" />
-            <span className="text-sm font-semibold text-neutral-700">
+            {/* <Lucide.MapPinned className="size-4 text-neutral-700" /> */}
+            <span className="text-sm font-semibold text-neutral-800">
               {destination.region}
             </span>
           </div>
 
+          <Lucide.CircleSmall className="size-3 text-neutral-700" />
+
           <div className="flex flex-row items-center justify-center gap-1 rounded-s-full rounded-e-full border-0 border-neutral-200 whitespace-nowrap">
-            <Lucide.Snowflake className="size-4 text-neutral-700" />
+            {/* <Lucide.Snowflake className="size-4 text-neutral-700" /> */}
             <span className="text-sm font-semibold text-neutral-700">
               {destination.climate}
             </span>
           </div>
         </div>
 
-        <p className="mb-4 line-clamp-4 text-sm leading-relaxed font-medium text-neutral-600">
+        <p className="mb-4 line-clamp-3 text-sm leading-relaxed font-medium text-neutral-600">
           {destination.description}
         </p>
+
+        <div className="mb-4 flex flex-row items-center justify-between gap-4 rounded-xl border border-neutral-200 p-3">
+          <div className="flex flex-col gap-0.5">
+            <div className="flex items-center gap-1.5 text-neutral-400">
+              <Lucide.User className="size-3.5" />
+              <span className="text-[10px] font-bold tracking-wider uppercase">
+                Single
+              </span>
+            </div>
+            <span className="text-lg font-bold text-neutral-700">
+              {new Intl.NumberFormat("en-US", {
+                style: "currency",
+                currency: "USD",
+                maximumFractionDigits: 0,
+              }).format(destination.expenditure.single.amount)}
+              <span className="text-xs font-medium text-neutral-400">/mo</span>
+            </span>
+          </div>
+
+          <div className="h-8 w-px bg-neutral-200" />
+
+          <div className="flex flex-col gap-0.5">
+            <div className="flex items-center gap-1.5 text-neutral-400">
+              <Lucide.Users className="size-3.5" />
+              <span className="text-[10px] font-bold tracking-wider uppercase">
+                Couple
+              </span>
+            </div>
+            <span className="text-lg font-bold text-neutral-700">
+              {new Intl.NumberFormat("en-US", {
+                style: "currency",
+                currency: "USD",
+                maximumFractionDigits: 0,
+              }).format(destination.expenditure.couple.amount)}
+              <span className="text-xs font-medium text-neutral-400">/mo</span>
+            </span>
+          </div>
+        </div>
 
         {/* <ul className="flex flex-col gap-1 px-2"> */}
         {/*   {destination.tags.slice(0, 4).map((tag) => { */}
