@@ -129,13 +129,13 @@ export function CardX({
 
   return (
     <article
-      className={`relative overflow-hidden rounded-4xl border p-2 outline-2 transition-all hover:shadow-md ${
+      className={`relative overflow-hidden rounded-xl border p-2 outline-2 transition-all hover:shadow-md ${
         isSelected
           ? "border-accent outline-accent"
           : "border-neutral-200 bg-white outline-transparent"
       }`}
     >
-      <div className="relative h-64 overflow-hidden rounded-3xl">
+      <div className="relative h-64 overflow-hidden rounded-xl">
         <img
           loading="lazy"
           src={`/images/destinations/${destination.id}/${destination.id}.webp`}
@@ -143,55 +143,56 @@ export function CardX({
           alt={`scenic image of ${destination.name}`}
         />
 
-        {/* Match Score Badge */}
-        <div className="absolute top-2 right-2 flex w-full items-center justify-end gap-0.5">
-          <div className="rounded-full border border-white/20 bg-black/20 p-3 backdrop-blur-md">
-            <span className="block text-xs leading-none font-bold text-white">
-              {score}% match
-            </span>
-          </div>
+        <div className="absolute top-2 right-2 flex flex-row items-center justify-center gap-1.5">
+          <a
+            href="#gallery"
+            className="flex flex-row items-center gap-1 rounded-s-full rounded-e-full border border-neutral-400 bg-white px-3 py-2"
+          >
+            <span className="text-xs font-bold text-neutral-700">{score}%</span>
+            <span className="text-xs font-bold text-neutral-700">match</span>
+          </a>
         </div>
       </div>
 
       <header className="px-2 py-4">
         <div className="flex flex-row flex-wrap items-center justify-start gap-1 gap-y-0.5">
-          <div className="flex flex-row items-center justify-center gap-1 rounded-s-full rounded-e-full bg-neutral-100 px-3 py-1 whitespace-nowrap">
-            <Lucide.MapPinned className="size-3.5 text-neutral-500" />
-            <span className="text-xs font-medium text-neutral-500">
+          <div className="flex flex-row items-center justify-center gap-1 rounded-s-full rounded-e-full border border-neutral-200 px-3 py-1.5 whitespace-nowrap">
+            <Lucide.MapPinned className="size-3.5 text-neutral-700" />
+            <span className="text-xs font-semibold text-neutral-700">
               {destination.region}
             </span>
           </div>
 
-          <div className="flex flex-row items-center justify-center gap-1 rounded-s-full rounded-e-full bg-neutral-100 px-3 py-1 whitespace-nowrap">
-            <Lucide.Snowflake className="size-3.5 text-neutral-500" />
-            <span className="text-xs font-medium text-neutral-500">
+          <div className="flex flex-row items-center justify-center gap-1 rounded-s-full rounded-e-full border border-neutral-200 px-3 py-1.5 whitespace-nowrap">
+            <Lucide.Snowflake className="size-3.5 text-neutral-700" />
+            <span className="text-xs font-semibold text-neutral-700">
               {destination.climate}
             </span>
           </div>
         </div>
 
-        <h1 className="mt-4 mb-2 text-2xl leading-none font-bold text-neutral-600">
+        <h1 className="mt-4 mb-2 text-2xl leading-none font-bold text-neutral-800">
           {destination.name}
         </h1>
 
-        <p className="line-clamp-3 text-sm leading-relaxed font-medium text-neutral-500">
+        <p className="line-clamp-3 text-sm leading-relaxed font-medium text-neutral-600">
           {destination.description}
         </p>
       </header>
 
-      <div className="mx-2 mb-4 rounded-2xl border-0 border-primary bg-primary/5">
+      <div className="mx-2 mb-4 rounded-xl border border-neutral-100 bg-neutral-50">
         <ul className="scrollbar-none flex h-48 flex-col gap-1 overflow-y-auto p-4">
           <div className="flex items-center justify-between gap-2">
-            <span className="text-sm font-bold text-primary uppercase">
+            <span className="text-sm font-bold text-neutral-800 uppercase">
               Important caveats
             </span>
-            <Lucide.CircleAlert className="size-4 stroke-primary" />
+            <Lucide.CircleAlert className="size-4 stroke-neutral-800" />
           </div>
           <div />
           {cons.map((con, i) => (
             <li key={`con-${i}`} className="flex items-center gap-2">
-              <Lucide.CircleSmall className="size-3 shrink-0 stroke-primary" />
-              <span className="text-sm font-medium text-neutral-500 first-letter:uppercase">
+              <Lucide.CircleSmall className="size-3 shrink-0 stroke-neutral-800" />
+              <span className="text-sm font-medium text-neutral-600 first-letter:uppercase">
                 {con}
               </span>
             </li>
@@ -201,7 +202,7 @@ export function CardX({
 
       <div className="grid grid-cols-2 gap-1 p-2">
         <Wouter.Link href={`/${destination.id}/overview`}>
-          <div className="flex items-center justify-center rounded-full bg-primary p-3 text-sm font-semibold whitespace-nowrap text-white transition-all hover:bg-primary hover:shadow-lg active:scale-95">
+          <div className="flex items-center justify-center rounded-full bg-black p-3 text-sm font-semibold whitespace-nowrap text-white transition-all hover:bg-primary hover:shadow-lg active:scale-95">
             View Details
           </div>
         </Wouter.Link>
@@ -211,7 +212,7 @@ export function CardX({
           className={`flex items-center justify-center rounded-full border p-3 text-sm font-semibold whitespace-nowrap transition-all hover:shadow-lg active:scale-95 ${
             isSelected
               ? "border-accent bg-accent text-white"
-              : "border-neutral-200 bg-white text-neutral-500 hover:bg-accent"
+              : "border-neutral-200 bg-white text-neutral-600 hover:bg-accent"
           }`}
         >
           {isSelected ? "Selected" : "Compare"}

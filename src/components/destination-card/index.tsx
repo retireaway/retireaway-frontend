@@ -2,10 +2,12 @@ import * as Wouter from "wouter";
 import * as Lucide from "lucide-react";
 
 import { Rating } from "@/components/rating";
-import { climateToIcon } from "@/utils/mappings";
+import { climateToIcon, gradeToColor } from "@/utils/mappings";
 import type { Destination } from "@/types/destination";
 import { Chip } from "@/components/chip";
 import { useComparison } from "@/contexts/comparison";
+
+import * as Icons from "@/assets/icons";
 
 export function DestinationCardList({
   destinations,
@@ -35,7 +37,11 @@ export function DestinationCardList({
   );
 }
 
-export function DestinationCard({ destination }: { destination: Destination }) {
+export function _DestinationCard({
+  destination,
+}: {
+  destination: Destination;
+}) {
   const ClimateIcon = climateToIcon(destination.climate);
   const { toggleDestination, isDestinationSelected } = useComparison();
   const isSelected = isDestinationSelected(destination.id);
@@ -172,6 +178,233 @@ export function DestinationCard({ destination }: { destination: Destination }) {
         </div>
 
         <div />
+      </div>
+    </article>
+  );
+}
+
+export function DestinationCard({ destination }: { destination: Destination }) {
+  const { toggleDestination, isDestinationSelected } = useComparison();
+  const isSelected = isDestinationSelected(destination.id);
+
+  return (
+    <article
+      className={`relative overflow-hidden rounded-xl border p-2 outline-2 transition-all hover:shadow-md ${
+        isSelected
+          ? "border-accent outline-accent"
+          : "border-neutral-200 bg-white outline-transparent"
+      }`}
+    >
+      <div className="relative h-64 overflow-hidden rounded-xl">
+        <img
+          loading="lazy"
+          src={`/images/destinations/${destination.id}/${destination.id}.webp`}
+          className={`absolute top-0 right-0 size-full object-cover object-center`}
+          alt={`scenic image of ${destination.name}`}
+        />
+
+        {/* <div className="absolute top-2 right-2 flex flex-row items-center justify-center gap-1.5"> */}
+        {/*   <button className="flex flex-row items-center gap-1 rounded-s-full rounded-e-full border border-neutral-400 bg-white px-3 py-2"> */}
+        {/*     <Lucide.Scale className="size-4.5 stroke-neutral-700" /> */}
+        {/*     <span className="text-xs font-bold text-neutral-700">Compare</span> */}
+        {/*   </button> */}
+        {/* </div> */}
+      </div>
+
+      <header className="px-2 py-4">
+        {/* <div className="mb-2 flex flex-row flex-wrap items-center justify-start gap-1 gap-y-0.5"> */}
+        {/*   <div className="flex flex-row items-center justify-center gap-1 rounded-s-full rounded-e-full border border-neutral-200 px-3 py-1 whitespace-nowrap"> */}
+        {/*     <Lucide.MapPinned className="size-3.5 text-neutral-700" /> */}
+        {/*     <span className="text-xs font-semibold text-neutral-700"> */}
+        {/*       {destination.region} */}
+        {/*     </span> */}
+        {/*   </div> */}
+        {/**/}
+        {/*   <div className="flex flex-row items-center justify-center gap-1 rounded-s-full rounded-e-full border border-neutral-200 px-3 py-1 whitespace-nowrap"> */}
+        {/*     <Lucide.Snowflake className="size-3.5 text-neutral-700" /> */}
+        {/*     <span className="text-xs font-semibold text-neutral-700"> */}
+        {/*       {destination.climate} */}
+        {/*     </span> */}
+        {/*   </div> */}
+        {/* </div> */}
+
+        <div className="mb-2 flex flex-row items-center justify-between gap-2">
+          <h2 className="text-2xl leading-none font-bold text-neutral-800">
+            {destination.name}
+          </h2>
+
+          <button
+            type="button"
+            onClick={() => {}}
+            className="flex flex-row items-center gap-1 rounded-s-full rounded-e-full border border-neutral-200 bg-white px-2 py-1"
+          >
+            <Icons.Compare className="size-4 fill-white stroke-neutral-600 stroke-2" />
+            <span className="text-xs leading-none font-medium text-neutral-600">
+              Compare
+            </span>
+          </button>
+        </div>
+
+        <div className="mb-4 flex flex-row flex-wrap items-center justify-start gap-2">
+          <div className="flex flex-row items-center justify-center gap-1 rounded-s-full rounded-e-full border-0 border-neutral-200 whitespace-nowrap">
+            <Lucide.MapPinned className="size-4 text-neutral-700" />
+            <span className="text-sm font-semibold text-neutral-700">
+              {destination.region}
+            </span>
+          </div>
+
+          <div className="flex flex-row items-center justify-center gap-1 rounded-s-full rounded-e-full border-0 border-neutral-200 whitespace-nowrap">
+            <Lucide.Snowflake className="size-4 text-neutral-700" />
+            <span className="text-sm font-semibold text-neutral-700">
+              {destination.climate}
+            </span>
+          </div>
+        </div>
+
+        <p className="mb-4 line-clamp-4 text-sm leading-relaxed font-medium text-neutral-600">
+          {destination.description}
+        </p>
+
+        {/* <ul className="flex flex-col gap-1 px-2"> */}
+        {/*   {destination.tags.slice(0, 4).map((tag) => { */}
+        {/*     return ( */}
+        {/*       <li key={tag} className="flex items-center gap-2"> */}
+        {/*         <Lucide.Check className="size-4 shrink-0 stroke-neutral-800" /> */}
+        {/*         <span className="text-sm font-medium text-neutral-600 first-letter:uppercase"> */}
+        {/*           {tag} */}
+        {/*         </span> */}
+        {/*       </li> */}
+        {/*     ); */}
+        {/*   })} */}
+        {/* </ul> */}
+        {/**/}
+
+        {/* <ul className="flex flex-row flex-wrap gap-x-1 gap-y-2"> */}
+        {/*   {destination.tags.slice(0, 4).map((tag) => { */}
+        {/*     return ( */}
+        {/*       <li key={tag}> */}
+        {/*         <div className="flex flex-row items-center justify-center gap-1 rounded-s-full rounded-e-full border border-neutral-700 bg-white px-2 py-1.5"> */}
+        {/* <Lucide.Check className="size-4 stroke-neutral-600" /> */}
+        {/*           <span className="text-xs font-bold text-neutral-600"> */}
+        {/*             {tag} */}
+        {/*           </span> */}
+        {/*         </div> */}
+        {/*       </li> */}
+        {/*     ); */}
+        {/*   })} */}
+        {/* </ul> */}
+
+        {/* <div className="bg-neutral h-48 rounded-xl border border-neutral-200 bg-neutral-50"></div> */}
+
+        <div className="bg-neutral grid grid-cols-2 gap-x-8 gap-y-4 rounded-xl border border-neutral-200 bg-neutral-50 p-4">
+          {Object.entries(destination.ratings).map(([key, value]) => {
+            const _ = [
+              "healthcareQuality",
+              "personalSafety",
+              "visaEase",
+              "infrastructure",
+              "politicalStability",
+              "taxEnvironment",
+            ];
+
+            if (!_.includes(key)) {
+              return undefined;
+            }
+
+            const config: Record<
+              string,
+              { label: string; icon: React.ReactNode }
+            > = {
+              affordability: {
+                label: "Cost",
+                icon: <Lucide.Tag className="size-3.5 text-neutral-400" />,
+              },
+              healthcareQuality: {
+                label: "Health",
+                icon: (
+                  <Lucide.HeartPulse className="size-3.5 text-neutral-400" />
+                ),
+              },
+              personalSafety: {
+                label: "Safety",
+                icon: (
+                  <Lucide.ShieldCheck className="size-3.5 text-neutral-400" />
+                ),
+              },
+              politicalStability: {
+                label: "Stability",
+                icon: <Lucide.Globe className="size-3.5 text-neutral-400" />,
+              },
+              visaEase: {
+                label: "Visa Ease",
+                icon: <Lucide.FileText className="size-3.5 text-neutral-400" />,
+              },
+              taxEnvironment: {
+                label: "Taxes",
+                icon: (
+                  <Lucide.HandCoins className="size-3.5 text-neutral-400" />
+                ),
+              },
+              infrastructure: {
+                label: "Infrastructure",
+                icon: <Lucide.HardHat className="size-3.5 text-neutral-400" />,
+              },
+              weatherComfort: {
+                label: "Weather",
+                icon: <Lucide.CloudSun className="size-3.5 text-neutral-400" />,
+              },
+              healthcareCost: {
+                label: "Health Cost",
+                icon: (
+                  <Lucide.CircleDollarSign className="size-3.5 text-neutral-400" />
+                ),
+              },
+              economy: {
+                label: "Economy",
+                icon: (
+                  <Lucide.TrendingUp className="size-3.5 text-neutral-400" />
+                ),
+              },
+            };
+
+            const item = config[key];
+            if (!item) return null;
+
+            return (
+              <div
+                key={key}
+                className="flex items-center justify-between gap-2"
+              >
+                <div className="flex items-center gap-2">
+                  {item.icon}
+                  <span className="text-xs font-semibold text-neutral-600">
+                    {item.label}
+                  </span>
+                </div>
+                <span
+                  className={`text-sm font-black ${gradeToColor(value.grade).text}`}
+                >
+                  {value.grade}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </header>
+
+      <div className="grid grid-cols-2 gap-1 p-2">
+        <Wouter.Link href={`/${destination.id}/overview`}>
+          <div className="flex items-center justify-center rounded-full bg-black p-3 text-sm font-semibold whitespace-nowrap text-white transition-all hover:bg-primary hover:shadow-lg active:scale-95">
+            View Details
+          </div>
+        </Wouter.Link>
+
+        <Wouter.Link
+          href={`/${destination.id}/calculator`}
+          className="flex items-center justify-center rounded-full border border-neutral-200 bg-white p-3 text-sm font-semibold whitespace-nowrap text-neutral-600"
+        >
+          Calculator
+        </Wouter.Link>
       </div>
     </article>
   );
