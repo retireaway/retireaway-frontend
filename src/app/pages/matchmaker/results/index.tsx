@@ -6,12 +6,15 @@ import destinations from "@/data/destinations.json" with { type: "json" };
 import criteria from "@/data/criteria.json" with { type: "json" };
 import answersToCriterion from "@/data/answers_to_criterion.json" with { type: "json" };
 
+import * as Icons from "@/assets/icons";
+
 import type { Destination } from "@/types/destination";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { useMatchmaker } from "@/contexts/matchmaker";
 import { rankDestinations } from "@/utils/matchmaker";
 import { useComparison } from "@/contexts/comparison";
+import { climateToIcon } from "@/utils/mappings";
 
 export function Results() {
   const { selectedAnswers } = useMatchmaker();
@@ -127,6 +130,8 @@ export function CardX({
   const { toggleDestination, isDestinationSelected } = useComparison();
   const isSelected = isDestinationSelected(destination.id);
 
+  const ClimateIcon = climateToIcon(destination.climate);
+
   return (
     <article
       className={`relative overflow-hidden rounded-xl border p-2 outline-2 transition-all hover:shadow-md ${
@@ -142,81 +147,161 @@ export function CardX({
           className={`absolute top-0 right-0 size-full object-cover object-center`}
           alt={`scenic image of ${destination.name}`}
         />
+        <div className="absolute top-2 right-2 flex flex-row items-center justify-center gap-0.5">
+          {isSelected ? (
+            <button
+              onClick={() => toggleDestination(destination)}
+              className="flex flex-row items-center gap-1 rounded-s-full rounded-e-full border border-accent bg-accent px-3 py-2 transition-all active:scale-95"
+            >
+              <Lucide.Check className="size-3.5 stroke-white" />
+              <span className="text-xs leading-none font-bold text-white">
+                Compare
+              </span>
+            </button>
+          ) : (
+            <button
+              onClick={() => toggleDestination(destination)}
+              className="flex flex-row items-center gap-1 rounded-s-full rounded-e-full border border-neutral-400 bg-white px-3 py-2 transition-all hover:bg-neutral-50 active:scale-95"
+            >
+              <Icons.Compare className="size-3.5 fill-neutral-700 stroke-neutral-700" />
+              <span className="text-xs leading-none font-bold text-neutral-700">
+                Compare
+              </span>
+            </button>
+          )}
 
-        <div className="absolute top-2 right-2 flex flex-row items-center justify-center gap-1.5">
-          <a
-            href="#gallery"
-            className="flex flex-row items-center gap-1 rounded-s-full rounded-e-full border border-neutral-400 bg-white px-3 py-2"
+          <button
+            onClick={() => {}}
+            className="px- flex size-8 flex-row items-center justify-center gap-1 rounded-s-full rounded-e-full border border-neutral-400 bg-white transition-all hover:bg-neutral-50 active:scale-95"
           >
-            <span className="text-xs font-bold text-neutral-700">{score}%</span>
-            <span className="text-xs font-bold text-neutral-700">match</span>
-          </a>
+            <Lucide.Heart className="size-5 fill-red-500 stroke-neutral-700" />
+          </button>
         </div>
       </div>
 
       <header className="px-2 py-4">
-        <div className="flex flex-row flex-wrap items-center justify-start gap-1 gap-y-0.5">
-          <div className="flex flex-row items-center justify-center gap-1 rounded-s-full rounded-e-full border border-neutral-200 px-3 py-1.5 whitespace-nowrap">
-            <Lucide.MapPinned className="size-3.5 text-neutral-700" />
-            <span className="text-xs font-semibold text-neutral-700">
+        <div className="mb-1 flex flex-row items-center justify-between gap-2">
+          <h2 className="text-2xl leading-none font-bold text-neutral-800">
+            {destination.name}
+          </h2>
+        </div>
+
+        <div className="mb-2 flex flex-row flex-wrap items-center justify-start gap-2">
+          <div className="flex flex-row items-center justify-center gap-0.5 rounded-s-full rounded-e-full border-0 border-neutral-200 whitespace-nowrap">
+            <Lucide.Globe className="size-4 text-neutral-700" />
+            <span className="text-sm font-semibold text-neutral-800">
               {destination.region}
             </span>
           </div>
 
-          <div className="flex flex-row items-center justify-center gap-1 rounded-s-full rounded-e-full border border-neutral-200 px-3 py-1.5 whitespace-nowrap">
-            <Lucide.Snowflake className="size-3.5 text-neutral-700" />
-            <span className="text-xs font-semibold text-neutral-700">
+          <Lucide.CircleSmall className="size-2 text-neutral-700" />
+
+          <div className="flex flex-row items-center justify-center gap-0.5 rounded-s-full rounded-e-full border-0 border-neutral-200 whitespace-nowrap">
+            <ClimateIcon className="size-4 text-neutral-700" />
+            <span className="text-sm font-semibold text-neutral-700">
               {destination.climate}
             </span>
           </div>
         </div>
 
-        <h1 className="mt-4 mb-2 text-2xl leading-none font-bold text-neutral-800">
-          {destination.name}
-        </h1>
-
-        <p className="line-clamp-3 text-sm leading-relaxed font-medium text-neutral-600">
+        <p className="mb-4 line-clamp-3 text-sm leading-relaxed font-normal text-neutral-600">
           {destination.description}
         </p>
+
+        {/* <div className="group/calculator relative mb-4 flex flex-col gap-3 rounded-xl border border-neutral-200 p-3 transition-all hover:border-primary/30 hover:bg-primary/5"> */}
+        {/*   <Wouter.Link */}
+        {/*     href={`/${destination.id}/calculator`} */}
+        {/*     className="absolute inset-0 z-10" */}
+        {/*   /> */}
+        {/*   <div className="flex flex-row items-center justify-between gap-4"> */}
+        {/*     <div className="flex flex-col gap-0.5"> */}
+        {/*       <div className="flex items-center gap-1 text-neutral-400"> */}
+        {/*         <Lucide.UserRound className="size-3.5" /> */}
+        {/*         <span className="text-[10px] font-bold tracking-wider uppercase"> */}
+        {/*           Single */}
+        {/*         </span> */}
+        {/*       </div> */}
+        {/*       <span className="text-lg font-bold text-neutral-800"> */}
+        {/*         {new Intl.NumberFormat("en-US", { */}
+        {/*           style: "currency", */}
+        {/*           currency: "USD", */}
+        {/*           maximumFractionDigits: 0, */}
+        {/*         }).format(destination.expenditure.single.amount)} */}
+        {/*         <span className="text-xs font-medium text-neutral-400"> */}
+        {/*           /mo */}
+        {/*         </span> */}
+        {/*       </span> */}
+        {/*     </div> */}
+        {/**/}
+        {/*     <div className="h-8 w-px bg-neutral-200" /> */}
+        {/**/}
+        {/*     <div className="flex flex-col gap-0.5"> */}
+        {/*       <div className="flex items-center gap-1 text-neutral-400"> */}
+        {/*         <Lucide.UsersRound className="size-3.5" /> */}
+        {/*         <span className="text-[10px] font-bold tracking-wider uppercase"> */}
+        {/*           Couple */}
+        {/*         </span> */}
+        {/*       </div> */}
+        {/*       <span className="text-lg font-bold text-neutral-800"> */}
+        {/*         {new Intl.NumberFormat("en-US", { */}
+        {/*           style: "currency", */}
+        {/*           currency: "USD", */}
+        {/*           maximumFractionDigits: 0, */}
+        {/*         }).format(destination.expenditure.couple.amount)} */}
+        {/*         <span className="text-xs font-medium text-neutral-400"> */}
+        {/*           /mo */}
+        {/*         </span> */}
+        {/*       </span> */}
+        {/*     </div> */}
+        {/*   </div> */}
+        {/**/}
+        {/*   <div className="flex items-center justify-center gap-1.5 border-t border-neutral-200/60 pt-2"> */}
+        {/*     <Lucide.Calculator className="size-3.5" /> */}
+        {/*     <span className="text-xs font-medium text-neutral-800"> */}
+        {/*       Find your retirement costs */}
+        {/*     </span> */}
+        {/*     <Lucide.MoveRight className="ml-auto size-4 opacity-100" /> */}
+        {/*   </div> */}
+        {/* </div> */}
+
+        <div className="mb-4 rounded-xl border border-neutral-100 bg-neutral-50">
+          <ul className="scrollbar-none flex h-48 flex-col gap-1 overflow-y-auto p-4">
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-sm font-bold text-neutral-800 uppercase">
+                Important caveats
+              </span>
+              <Lucide.CircleAlert className="size-4 stroke-neutral-800" />
+            </div>
+            <div />
+            {cons.map((con, i) => (
+              <li key={`con-${i}`} className="flex items-center gap-2">
+                <Lucide.CircleSmall className="size-3 shrink-0 stroke-neutral-800" />
+                <span className="text-sm font-medium text-neutral-600 first-letter:uppercase">
+                  {con}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </header>
 
-      <div className="mx-2 mb-4 rounded-xl border border-neutral-100 bg-neutral-50">
-        <ul className="scrollbar-none flex h-48 flex-col gap-1 overflow-y-auto p-4">
-          <div className="flex items-center justify-between gap-2">
-            <span className="text-sm font-bold text-neutral-800 uppercase">
-              Important caveats
-            </span>
-            <Lucide.CircleAlert className="size-4 stroke-neutral-800" />
-          </div>
-          <div />
-          {cons.map((con, i) => (
-            <li key={`con-${i}`} className="flex items-center gap-2">
-              <Lucide.CircleSmall className="size-3 shrink-0 stroke-neutral-800" />
-              <span className="text-sm font-medium text-neutral-600 first-letter:uppercase">
-                {con}
-              </span>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="grid grid-cols-2 gap-1 p-2">
+      <div className="grid grid-cols-1 gap-1 p-2">
         <Wouter.Link href={`/${destination.id}/overview`}>
           <div className="flex items-center justify-center rounded-full bg-black p-3 text-sm font-semibold whitespace-nowrap text-white transition-all hover:bg-primary hover:shadow-lg active:scale-95">
             View Details
           </div>
         </Wouter.Link>
 
-        <button
-          onClick={() => toggleDestination(destination)}
-          className={`flex items-center justify-center rounded-full border p-3 text-sm font-semibold whitespace-nowrap transition-all hover:shadow-lg active:scale-95 ${
-            isSelected
-              ? "border-accent bg-accent text-white"
-              : "border-neutral-200 bg-white text-neutral-600 hover:bg-accent"
-          }`}
-        >
-          {isSelected ? "Selected" : "Compare"}
-        </button>
+        {/* <button */}
+        {/*   onClick={() => toggleDestination(destination)} */}
+        {/*   className={`flex items-center justify-center rounded-full border p-3 text-sm font-semibold whitespace-nowrap transition-all hover:shadow-lg active:scale-95 ${ */}
+        {/*     isSelected */}
+        {/*       ? "border-accent bg-accent text-white" */}
+        {/*       : "border-neutral-200 bg-white text-neutral-600 hover:bg-accent" */}
+        {/*   }`} */}
+        {/* > */}
+        {/*   {isSelected ? "Selected" : "Compare"} */}
+        {/* </button> */}
       </div>
     </article>
   );

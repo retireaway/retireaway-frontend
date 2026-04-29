@@ -1,10 +1,9 @@
+import React from "react";
 import * as Wouter from "wouter";
 import * as Lucide from "lucide-react";
 
-import { Rating } from "@/components/rating";
 import { climateToIcon, gradeToColor } from "@/utils/mappings";
 import type { Destination } from "@/types/destination";
-import { Chip } from "@/components/chip";
 import { useComparison } from "@/contexts/comparison";
 
 import * as Icons from "@/assets/icons";
@@ -37,155 +36,39 @@ export function DestinationCardList({
   );
 }
 
-export function deprecated_DestinationCard({
-  destination,
-}: {
-  destination: Destination;
-}) {
-  const ClimateIcon = climateToIcon(destination.climate);
-  const { toggleDestination, isDestinationSelected } = useComparison();
-  const isSelected = isDestinationSelected(destination.id);
-
-  const formatter = new Intl.NumberFormat("en-US", {
-    notation: "compact",
-    compactDisplay: "short",
-    maximumFractionDigits: 1,
-    style: "currency",
-    currency: "USD",
-    currencyDisplay: "symbol",
-  });
-
-  return (
-    <article className="max-w-120 overflow-hidden rounded-3xl border border-neutral-200 bg-white">
-      <div className="relative h-56 rounded-t-2xl bg-black">
-        <img
-          loading="lazy"
-          src={`/images/destinations/${destination.id}/${destination.id}.webp`}
-          className={`absolute inset-0 h-full w-full rounded-t-2xl object-cover`}
-          alt={`scenic image of ${destination.name}`}
-        />
-
-        <div className="absolute inset-0 top-0 left-0 h-full w-full rounded-xl bg-linear-to-b from-black/0 from-30% to-black/60" />
-
-        <button
-          onClick={() => toggleDestination(destination)}
-          className={`absolute top-4 right-4 z-1 flex size-8 items-center justify-center rounded-full border transition-all ${
-            isSelected
-              ? "border-primary bg-primary text-white"
-              : "border-white/20 bg-black/20 text-white backdrop-blur-sm hover:bg-black/40"
-          }`}
-          aria-label={
-            isSelected ? "Remove from comparison" : "Add to comparison"
-          }
-        >
-          <Lucide.Plus
-            className={`size-5 transition-transform ${isSelected ? "rotate-45" : ""}`}
-          />
-        </button>
-
-        <div className="absolute bottom-0 w-full p-4">
-          <header>
-            <div className="grow">
-              <h1 className="text-2xl font-semibold text-white">
-                {destination.name}
-              </h1>
-              <div className="flex flex-row items-center justify-start gap-2">
-                <div className="flex flex-row items-center justify-center gap-0.5">
-                  <Lucide.MapPin className="size-3.5 text-white" />
-                  <span className="text-sm font-medium text-white">
-                    {destination.region}
-                  </span>
-                </div>
-                <Lucide.Circle className="size-1.5 fill-accent stroke-accent" />
-                <div className="flex flex-row items-center justify-center gap-0.5">
-                  <ClimateIcon className="size-3.5 text-white" />
-                  <span className="text-sm font-medium text-white">
-                    {destination.climate}
-                  </span>
-                </div>
-              </div>
-            </div>
-          </header>
-        </div>
-      </div>
-
-      <div className="flex flex-col gap-4">
-        <div className="h-px bg-neutral-200" />
-
-        <div className="grid grid-cols-4 gap-2 px-4">
-          <Rating
-            text="Health"
-            grade={destination.ratings.healthcareQuality.grade}
-          />
-          <Rating
-            text="Safety"
-            grade={destination.ratings.personalSafety.grade}
-          />
-          <Rating text="Cost" grade={destination.ratings.affordability.grade} />
-          <Rating text="Visa" grade={destination.ratings.visaEase.grade} />
-        </div>
-
-        <div className="h-px bg-neutral-200" />
-
-        <div className="flex items-center justify-center">
-          <div className="flex flex-col items-center justify-center gap-2">
-            <span className="text-sm font-medium text-neutral-400 capitalize">
-              living cost range
-            </span>
-            <div className="flex flex-row items-center justify-center gap-2">
-              <span className="text-3xl font-bold text-neutral-600 uppercase">
-                {formatter.formatRange(
-                  destination.expenditure.single.amount,
-                  destination.expenditure.couple.amount,
-                )}
-              </span>
-            </div>
-            <span className="text-sm font-normal text-neutral-400">/month</span>
-          </div>
-        </div>
-
-        <div className="h-px bg-neutral-200" />
-
-        <div className="px-4">
-          <ul className="scrollbar-none flex w-full snap-x snap-mandatory snap-always flex-row gap-2 overflow-x-auto">
-            {destination.tags.map((region) => {
-              return (
-                <li key={region} className="snap-start">
-                  <Chip color="neutral" fill="light" size="xs">
-                    {region}
-                  </Chip>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-
-        <div className="h-px bg-neutral-200" />
-
-        <div className="flex flex-row gap-2 px-4">
-          <Wouter.Link
-            href={`/${destination.id}/overview`}
-            className="basis-1/2 rounded-s-full rounded-e-full border border-primary bg-primary py-2 text-center text-sm font-medium text-neutral-50"
-          >
-            View Details
-          </Wouter.Link>
-          <Wouter.Link
-            href={`/${destination.id}/calculator`}
-            className="basis-1/2 rounded-s-full rounded-e-full border border-neutral-200 bg-white py-2 text-center text-sm font-medium text-neutral-500"
-          >
-            Calculator
-          </Wouter.Link>
-        </div>
-
-        <div />
-      </div>
-    </article>
-  );
-}
-
 export function DestinationCard({ destination }: { destination: Destination }) {
   const { toggleDestination, isDestinationSelected } = useComparison();
   const isSelected = isDestinationSelected(destination.id);
+
+  const [isSaved, setIsSaved] = React.useState(() => {
+    try {
+      const saved = JSON.parse(
+        localStorage.getItem("saved_destinations") || "[]",
+      );
+      return Array.isArray(saved) && saved.includes(destination.id);
+    } catch {
+      return false;
+    }
+  });
+
+  const toggleSave = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    try {
+      const savedRaw = localStorage.getItem("saved_destinations");
+      const saved = JSON.parse(savedRaw || "[]");
+      const nextSaved = isSaved
+        ? saved.filter((id: string) => id !== destination.id)
+        : [...(Array.isArray(saved) ? saved : []), destination.id];
+
+      localStorage.setItem("saved_destinations", JSON.stringify(nextSaved));
+      setIsSaved(!isSaved);
+    } catch (err) {
+      console.error("Failed to save destination", err);
+    }
+  };
+
+  const ClimateIcon = climateToIcon(destination.climate);
 
   return (
     <article
@@ -202,155 +85,130 @@ export function DestinationCard({ destination }: { destination: Destination }) {
           className={`absolute top-0 right-0 size-full object-cover object-center`}
           alt={`scenic image of ${destination.name}`}
         />
-        {/**/}
-        {/* <div className="absolute top-2 left-2 flex flex-row items-center justify-center gap-1.5"> */}
-        {/*   <button className="flex flex-row items-center gap-1 rounded-s-full rounded-e-full border border-neutral-400 bg-white px-3 py-2"> */}
-        {/*     <Lucide.User className="size-3.5 stroke-neutral-700" /> */}
-        {/*     <span className="text-xs leading-none font-bold text-neutral-700"> */}
-        {/*       $3,300 */}
-        {/*     </span> */}
-        {/*     <div className="mx-1 h-4 w-px bg-neutral-200" /> */}
-        {/*     <Lucide.Users className="size-3.5 stroke-neutral-700" /> */}
-        {/*     <span className="text-xs leading-none font-bold text-neutral-700"> */}
-        {/*       $5,300 */}
-        {/*     </span> */}
-        {/*   </button> */}
-        {/* </div> */}
+        <div className="absolute top-2 right-2 flex flex-row items-center justify-center gap-0.5">
+          {isSelected ? (
+            <button
+              onClick={() => toggleDestination(destination)}
+              className="flex flex-row items-center gap-1 rounded-s-full rounded-e-full border border-accent bg-accent px-3 py-2 transition-all active:scale-95"
+            >
+              <Lucide.Check className="size-3.5 stroke-white" />
+              <span className="text-xs leading-none font-bold text-white">
+                Compare
+              </span>
+            </button>
+          ) : (
+            <button
+              onClick={() => toggleDestination(destination)}
+              className="flex flex-row items-center gap-1 rounded-s-full rounded-e-full border border-neutral-400 bg-white px-3 py-2 transition-all hover:bg-neutral-50 active:scale-95"
+            >
+              <Icons.Compare className="size-3.5 fill-neutral-700 stroke-neutral-700" />
+              <span className="text-xs leading-none font-bold text-neutral-700">
+                Compare
+              </span>
+            </button>
+          )}
 
-        <div className="absolute top-2 right-2 flex flex-row items-center justify-center gap-1.5">
-          <button className="flex flex-row items-center gap-1 rounded-s-full rounded-e-full border border-neutral-400 bg-white px-3 py-2">
-            <Icons.Compare className="size-3.5 stroke-neutral-700" />
-            <span className="text-xs leading-none font-bold text-neutral-700">
-              Compare
-            </span>
+          <button
+            onClick={toggleSave}
+            className="flex size-8 items-center justify-center rounded-full border border-neutral-400 bg-white transition-all hover:bg-neutral-50 active:scale-95"
+            aria-label={isSaved ? "Remove from saved" : "Save destination"}
+          >
+            <Lucide.Heart
+              className={`size-5 transition-colors ${
+                isSaved
+                  ? "fill-red-500 stroke-neutral-700"
+                  : "fill-none stroke-neutral-700"
+              }`}
+            />
           </button>
         </div>
       </div>
 
       <header className="px-2 py-4">
-        {/* <div className="mb-2 flex flex-row flex-wrap items-center justify-start gap-1 gap-y-0.5"> */}
-        {/*   <div className="flex flex-row items-center justify-center gap-1 rounded-s-full rounded-e-full border border-neutral-200 px-3 py-1 whitespace-nowrap"> */}
-        {/*     <Lucide.MapPinned className="size-3.5 text-neutral-700" /> */}
-        {/*     <span className="text-xs font-semibold text-neutral-700"> */}
-        {/*       {destination.region} */}
-        {/*     </span> */}
-        {/*   </div> */}
-        {/**/}
-        {/*   <div className="flex flex-row items-center justify-center gap-1 rounded-s-full rounded-e-full border border-neutral-200 px-3 py-1 whitespace-nowrap"> */}
-        {/*     <Lucide.Snowflake className="size-3.5 text-neutral-700" /> */}
-        {/*     <span className="text-xs font-semibold text-neutral-700"> */}
-        {/*       {destination.climate} */}
-        {/*     </span> */}
-        {/*   </div> */}
-        {/* </div> */}
-
         <div className="mb-1 flex flex-row items-center justify-between gap-2">
           <h2 className="text-2xl leading-none font-bold text-neutral-800">
             {destination.name}
           </h2>
-          {/**/}
-          {/* <button */}
-          {/*   type="button" */}
-          {/*   onClick={() => {}} */}
-          {/*   className="flex flex-row items-center gap-1 rounded-s-full rounded-e-full border border-neutral-200 bg-white px-2 py-1" */}
-          {/* > */}
-          {/*   <Icons.Compare className="size-4 fill-white stroke-neutral-600 stroke-2" /> */}
-          {/*   <span className="text-xs leading-none font-medium text-neutral-600"> */}
-          {/*     Compare */}
-          {/*   </span> */}
-          {/* </button> */}
         </div>
 
-        <div className="mb-2 flex flex-row flex-wrap items-center justify-start gap-1">
-          <div className="flex flex-row items-center justify-center gap-1 rounded-s-full rounded-e-full border-0 border-neutral-200 whitespace-nowrap">
-            {/* <Lucide.MapPinned className="size-4 text-neutral-700" /> */}
+        <div className="mb-2 flex flex-row flex-wrap items-center justify-start gap-2">
+          <div className="flex flex-row items-center justify-center gap-0.5 rounded-s-full rounded-e-full border-0 border-neutral-200 whitespace-nowrap">
+            <Lucide.Globe className="size-4 text-neutral-700" />
             <span className="text-sm font-semibold text-neutral-800">
               {destination.region}
             </span>
           </div>
 
-          <Lucide.CircleSmall className="size-3 text-neutral-700" />
+          <Lucide.CircleSmall className="size-2 text-neutral-700" />
 
-          <div className="flex flex-row items-center justify-center gap-1 rounded-s-full rounded-e-full border-0 border-neutral-200 whitespace-nowrap">
-            {/* <Lucide.Snowflake className="size-4 text-neutral-700" /> */}
+          <div className="flex flex-row items-center justify-center gap-0.5 rounded-s-full rounded-e-full border-0 border-neutral-200 whitespace-nowrap">
+            <ClimateIcon className="size-4 text-neutral-700" />
             <span className="text-sm font-semibold text-neutral-700">
               {destination.climate}
             </span>
           </div>
         </div>
 
-        <p className="mb-4 line-clamp-3 text-sm leading-relaxed font-medium text-neutral-600">
+        <p className="mb-4 line-clamp-3 text-sm leading-relaxed font-normal text-neutral-600">
           {destination.description}
         </p>
 
-        <div className="mb-4 flex flex-row items-center justify-between gap-4 rounded-xl border border-neutral-200 p-3">
-          <div className="flex flex-col gap-0.5">
-            <div className="flex items-center gap-1.5 text-neutral-400">
-              <Lucide.User className="size-3.5" />
-              <span className="text-[10px] font-bold tracking-wider uppercase">
-                Single
+        <div className="group/calculator relative mb-4 flex flex-col gap-3 rounded-xl border border-neutral-200 p-3 transition-all hover:border-primary/30 hover:bg-primary/5">
+          <Wouter.Link
+            href={`/${destination.id}/calculator`}
+            className="absolute inset-0 z-10"
+          />
+
+          <div className="flex flex-row items-center justify-between gap-4">
+            <div className="flex flex-col gap-0.5">
+              <div className="flex items-center gap-1 text-neutral-400">
+                <Lucide.UserRound className="size-3.5" />
+                <span className="text-[10px] font-bold tracking-wider uppercase">
+                  Single
+                </span>
+              </div>
+              <span className="text-lg font-bold text-neutral-800">
+                {new Intl.NumberFormat("en-US", {
+                  style: "currency",
+                  currency: "USD",
+                  maximumFractionDigits: 0,
+                }).format(destination.expenditure.single.amount)}
+                <span className="text-xs font-medium text-neutral-400">
+                  /mo
+                </span>
               </span>
             </div>
-            <span className="text-lg font-bold text-neutral-700">
-              {new Intl.NumberFormat("en-US", {
-                style: "currency",
-                currency: "USD",
-                maximumFractionDigits: 0,
-              }).format(destination.expenditure.single.amount)}
-              <span className="text-xs font-medium text-neutral-400">/mo</span>
-            </span>
+
+            <div className="h-8 w-px bg-neutral-200" />
+
+            <div className="flex flex-col gap-0.5">
+              <div className="flex items-center gap-1 text-neutral-400">
+                <Lucide.UsersRound className="size-3.5" />
+                <span className="text-[10px] font-bold tracking-wider uppercase">
+                  Couple
+                </span>
+              </div>
+              <span className="text-lg font-bold text-neutral-800">
+                {new Intl.NumberFormat("en-US", {
+                  style: "currency",
+                  currency: "USD",
+                  maximumFractionDigits: 0,
+                }).format(destination.expenditure.couple.amount)}
+                <span className="text-xs font-medium text-neutral-400">
+                  /mo
+                </span>
+              </span>
+            </div>
           </div>
 
-          <div className="h-8 w-px bg-neutral-200" />
-
-          <div className="flex flex-col gap-0.5">
-            <div className="flex items-center gap-1.5 text-neutral-400">
-              <Lucide.Users className="size-3.5" />
-              <span className="text-[10px] font-bold tracking-wider uppercase">
-                Couple
-              </span>
-            </div>
-            <span className="text-lg font-bold text-neutral-700">
-              {new Intl.NumberFormat("en-US", {
-                style: "currency",
-                currency: "USD",
-                maximumFractionDigits: 0,
-              }).format(destination.expenditure.couple.amount)}
-              <span className="text-xs font-medium text-neutral-400">/mo</span>
+          <div className="flex items-center justify-center gap-1.5 border-t border-neutral-200/60 pt-2">
+            <Lucide.Calculator className="size-3.5" />
+            <span className="text-xs font-medium text-neutral-800">
+              Find your retirement costs
             </span>
+            <Lucide.MoveRight className="ml-auto size-4 opacity-100" />
           </div>
         </div>
-
-        {/* <ul className="flex flex-col gap-1 px-2"> */}
-        {/*   {destination.tags.slice(0, 4).map((tag) => { */}
-        {/*     return ( */}
-        {/*       <li key={tag} className="flex items-center gap-2"> */}
-        {/*         <Lucide.Check className="size-4 shrink-0 stroke-neutral-800" /> */}
-        {/*         <span className="text-sm font-medium text-neutral-600 first-letter:uppercase"> */}
-        {/*           {tag} */}
-        {/*         </span> */}
-        {/*       </li> */}
-        {/*     ); */}
-        {/*   })} */}
-        {/* </ul> */}
-        {/**/}
-
-        {/* <ul className="flex flex-row flex-wrap gap-x-1 gap-y-2"> */}
-        {/*   {destination.tags.slice(0, 4).map((tag) => { */}
-        {/*     return ( */}
-        {/*       <li key={tag}> */}
-        {/*         <div className="flex flex-row items-center justify-center gap-1 rounded-s-full rounded-e-full border border-neutral-700 bg-white px-2 py-1.5"> */}
-        {/* <Lucide.Check className="size-4 stroke-neutral-600" /> */}
-        {/*           <span className="text-xs font-bold text-neutral-600"> */}
-        {/*             {tag} */}
-        {/*           </span> */}
-        {/*         </div> */}
-        {/*       </li> */}
-        {/*     ); */}
-        {/*   })} */}
-        {/* </ul> */}
-
-        {/* <div className="bg-neutral h-48 rounded-xl border border-neutral-200 bg-neutral-50"></div> */}
 
         <div className="bg-neutral grid grid-cols-2 gap-x-8 gap-y-4 rounded-xl border border-neutral-200 bg-neutral-50 p-4">
           {Object.entries(destination.ratings).map(([key, value]) => {
@@ -438,7 +296,7 @@ export function DestinationCard({ destination }: { destination: Destination }) {
                   </span>
                 </div>
                 <span
-                  className={`text-sm font-black ${gradeToColor(value.grade).text}`}
+                  className={`text-sm font-black text-neutral-800! ${gradeToColor(value.grade).text}`}
                 >
                   {value.grade}
                 </span>
@@ -448,18 +306,11 @@ export function DestinationCard({ destination }: { destination: Destination }) {
         </div>
       </header>
 
-      <div className="grid grid-cols-2 gap-1 p-2">
+      <div className="grid grid-cols-1 gap-1 p-2">
         <Wouter.Link href={`/${destination.id}/overview`}>
           <div className="flex items-center justify-center rounded-full bg-black p-3 text-sm font-semibold whitespace-nowrap text-white transition-all hover:bg-primary hover:shadow-lg active:scale-95">
             View Details
           </div>
-        </Wouter.Link>
-
-        <Wouter.Link
-          href={`/${destination.id}/calculator`}
-          className="flex items-center justify-center rounded-full border border-neutral-200 bg-white p-3 text-sm font-semibold whitespace-nowrap text-neutral-600"
-        >
-          Calculator
         </Wouter.Link>
       </div>
     </article>
