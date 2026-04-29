@@ -12,6 +12,7 @@ import { ComparisonPage } from "./pages/compare";
 import { Home } from "./pages/home";
 import * as Matchmaker from "./pages/matchmaker";
 import { Discover } from "./pages/discover";
+import { LoginPage, SignupPage } from "./pages/auth";
 
 export function App() {
   return (
@@ -21,6 +22,14 @@ export function App() {
           <Wouter.Switch>
             <Wouter.Route path="/">
               <Home />
+            </Wouter.Route>
+
+            <Wouter.Route path="/login">
+              <LoginPage />
+            </Wouter.Route>
+
+            <Wouter.Route path="/signup">
+              <SignupPage />
             </Wouter.Route>
 
             <Wouter.Route path="/explore">
