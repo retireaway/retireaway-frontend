@@ -24,15 +24,17 @@ export function Results() {
   }, [selectedAnswers]);
 
   const selectedCriteriaSlugs = React.useMemo(() => {
-    return Object.values(selectedAnswers).flatMap(
-      (answerSlug) =>
-        (
-          answersToCriterion as Record<
-            string,
-            { criteria: string[]; weight: number }
-          >
-        )[answerSlug] || [],
-    );
+    return Object.values(selectedAnswers)
+      .flat()
+      .flatMap(
+        (answerSlug) =>
+          (
+            answersToCriterion as Record<
+              string,
+              { criteria: string[]; weight: number }
+            >
+          )[answerSlug] || [],
+      );
   }, [selectedAnswers]);
 
   return (

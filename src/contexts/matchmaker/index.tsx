@@ -1,8 +1,9 @@
 import * as React from "react";
 
 interface MatchmakerContextType {
-  selectedAnswers: Record<string, string>;
-  setAnswer: (questionSlug: string, answerSlug: string) => void;
+  selectedAnswers: Record<string, string | string[]>;
+  setAnswer: (questionSlug: string, answerSlug: string | string[]) => void;
+  toggleAnswer: (questionSlug: string, answerSlug: string) => void;
   resetAnswers: () => void;
 }
 
@@ -12,15 +13,37 @@ const MatchmakerContext = React.createContext<
 
 export function MatchmakerProvider({ children }: React.PropsWithChildren<{}>) {
   const [selectedAnswers, setSelectedAnswers] = React.useState<
-    Record<string, string>
+    Record<string, string | string[]>
   >({});
 
   const setAnswer = React.useCallback(
-    (questionSlug: string, answerSlug: string) => {
+    (questionSlug: string, answerSlug: string | string[]) => {
       setSelectedAnswers((prev) => ({
         ...prev,
         [questionSlug]: answerSlug,
       }));
+    },
+    [],
+  );
+
+  const toggleAnswer = React.useCallback(
+    (questionSlug: string, answerSlug: string) => {
+      setSelectedAnswers((prev) => {
+        const current = prev[questionSlug];
+        const currentArray = Array.isArray(current) ? current : [];
+
+        if (currentArray.includes(answerSlug)) {
+          return {
+            ...prev,
+            [questionSlug]: currentArray.filter((id) => id !== answerSlug),
+          };
+        } else {
+          return {
+            ...prev,
+            [questionSlug]: [...currentArray, answerSlug],
+          };
+        }
+      });
     },
     [],
   );
@@ -31,7 +54,7 @@ export function MatchmakerProvider({ children }: React.PropsWithChildren<{}>) {
 
   return (
     <MatchmakerContext.Provider
-      value={{ selectedAnswers, setAnswer, resetAnswers }}
+      value={{ selectedAnswers, setAnswer, toggleAnswer, resetAnswers }}
     >
       {children}
     </MatchmakerContext.Provider>

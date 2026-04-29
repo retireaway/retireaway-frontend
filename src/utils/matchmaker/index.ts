@@ -95,10 +95,11 @@ interface AnswerConfig {
  */
 export function rankDestinations(
   destinations: readonly Destination[],
-  selectedAnswers: Record<string, string>
+  selectedAnswers: Record<string, string | string[]>,
 ): MatchResult[] {
   // 1. Get configurations for selected answers
   const answerConfigs = Object.values(selectedAnswers)
+    .flat()
     .map((slug) => (answersToCriterion as Record<string, AnswerConfig>)[slug])
     .filter((config): config is AnswerConfig => config !== undefined);
 

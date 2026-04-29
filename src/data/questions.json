@@ -63,6 +63,7 @@
     "slug": "preferred-region",
     "title": "Is there a specific part of the world that you're particularly drawn to for your retirement?",
     "description": "While many factors contribute to the perfect retirement, you might already have a preference for a certain region based on proximity to family, cultural interest, or previous travel experiences. If you have a favorite area, we can prioritize destinations there, or if you're open to exploring possibilities across the globe, we'll look for the best matches worldwide.",
+    "multiselect": true,
     "answers": [
       "region-americas",
       "region-europe",

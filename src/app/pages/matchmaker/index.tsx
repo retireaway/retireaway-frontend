@@ -12,13 +12,33 @@ export { Results } from "./results";
 export function Questionnaire() {
   const [, setLocation] = Wouter.useLocation();
   const [currentStep, setCurrentStep] = React.useState(0);
-  const { selectedAnswers, setAnswer } = useMatchmaker();
+  const { selectedAnswers, setAnswer, toggleAnswer } = useMatchmaker();
 
-  const question = questions[currentStep]!;
+  const question = questions[currentStep]! as (typeof questions)[0] & {
+    multiselect?: boolean;
+  };
   const progress = ((currentStep + 1) / questions.length) * 100;
 
   const handleAnswerSelect = (answerSlug: string) => {
-    setAnswer(question.slug, answerSlug);
+    if (question.multiselect) {
+      // if it's region-flexible and being selected, clear others
+      if (answerSlug === "region-flexible") {
+        setAnswer(question.slug, [answerSlug]);
+      } else {
+        // if another is selected, remove region-flexible
+        const current = selectedAnswers[question.slug];
+        const currentArray = Array.isArray(current) ? current : [];
+        if (currentArray.includes("region-flexible")) {
+          setAnswer(
+            question.slug,
+            currentArray.filter((id) => id !== "region-flexible"),
+          );
+        }
+        toggleAnswer(question.slug, answerSlug);
+      }
+    } else {
+      setAnswer(question.slug, answerSlug);
+    }
   };
 
   const nextStep = () => {
@@ -36,6 +56,11 @@ export function Questionnaire() {
       history.back();
     }
   };
+
+  const currentSelection = selectedAnswers[question.slug];
+  const isAnswered = Array.isArray(currentSelection)
+    ? currentSelection.length > 0
+    : !!currentSelection;
 
   return (
     <div className="flex h-svh flex-col bg-white text-neutral-900">
@@ -77,6 +102,11 @@ export function Questionnaire() {
             <h1 className="mb-4 text-3xl font-bold tracking-tight text-neutral-900 md:text-4xl">
               {question.title}
             </h1>
+            {question.multiselect && (
+              <p className="text-sm font-medium text-neutral-400">
+                Select all that apply
+              </p>
+            )}
           </header>
 
           <div className="grid grid-cols-1 gap-4">
@@ -84,23 +114,29 @@ export function Questionnaire() {
               const answer = answers.find((a) => a.slug === answerSlug);
               if (!answer) return null;
 
-              const isSelected = selectedAnswers[question.slug] === answerSlug;
+              const selection = selectedAnswers[question.slug];
+              const isSelected = Array.isArray(selection)
+                ? selection.includes(answerSlug)
+                : selection === answerSlug;
 
               return (
                 <button
                   key={answerSlug}
                   onClick={() => handleAnswerSelect(answerSlug)}
-                  className={`flex items-center justify-between rounded-s-full rounded-e-full border-2 py-4 pr-4 pl-6 text-left outline-3 transition-all ${
+                  className={`flex items-center justify-between rounded-s-full rounded-e-full border-2 py-4 pr-4 pl-6 text-left transition-all ${
                     isSelected
-                      ? "border-white bg-primary outline-primary/10"
-                      : "border-neutral-100 bg-white outline-transparent hover:border-neutral-200"
+                      ? "border-primary bg-primary/5"
+                      : "border-neutral-100 bg-white hover:border-neutral-200"
                   }`}
                 >
                   <span
-                    className={`text-base font-medium ${isSelected ? "font-semibold text-white" : "text-neutral-500"}`}
+                    className={`text-base font-medium ${isSelected ? "font-bold text-primary" : "text-neutral-600"}`}
                   >
                     {answer.title}
                   </span>
+                  {isSelected && (
+                    <Lucide.Check className="size-5 text-primary" />
+                  )}
                 </button>
               );
             })}
@@ -113,9 +149,9 @@ export function Questionnaire() {
         <footer className="flex flex-col gap-2">
           <button
             onClick={nextStep}
-            disabled={!selectedAnswers[question.slug]}
+            disabled={!isAnswered}
             className={`flex h-14 w-full items-center justify-center rounded-full px-8 font-bold transition-all ${
-              selectedAnswers[question.slug]
+              isAnswered
                 ? "bg-neutral-900 text-white shadow-md hover:bg-neutral-800 active:scale-95"
                 : "pointer-events-none bg-neutral-50 text-neutral-300"
             }`}
