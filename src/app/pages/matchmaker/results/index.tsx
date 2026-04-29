@@ -121,7 +121,6 @@ function Hero() {
 
 export function CardX({
   destination,
-  score,
   cons,
 }: {
   destination: Destination;
@@ -131,6 +130,34 @@ export function CardX({
 }) {
   const { toggleDestination, isDestinationSelected } = useComparison();
   const isSelected = isDestinationSelected(destination.id);
+
+  const [isSaved, setIsSaved] = React.useState(() => {
+    try {
+      const saved = JSON.parse(
+        localStorage.getItem("saved_destinations") || "[]",
+      );
+      return Array.isArray(saved) && saved.includes(destination.id);
+    } catch {
+      return false;
+    }
+  });
+
+  const toggleSave = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    try {
+      const savedRaw = localStorage.getItem("saved_destinations");
+      const saved = JSON.parse(savedRaw || "[]");
+      const nextSaved = isSaved
+        ? saved.filter((id: string) => id !== destination.id)
+        : [...(Array.isArray(saved) ? saved : []), destination.id];
+
+      localStorage.setItem("saved_destinations", JSON.stringify(nextSaved));
+      setIsSaved(!isSaved);
+    } catch (err) {
+      console.error("Failed to save destination", err);
+    }
+  };
 
   const ClimateIcon = climateToIcon(destination.climate);
 
@@ -173,10 +200,17 @@ export function CardX({
           )}
 
           <button
-            onClick={() => {}}
-            className="px- flex size-8 flex-row items-center justify-center gap-1 rounded-s-full rounded-e-full border border-neutral-400 bg-white transition-all hover:bg-neutral-50 active:scale-95"
+            onClick={toggleSave}
+            className="flex size-8 items-center justify-center rounded-full border border-neutral-400 bg-white transition-all hover:bg-neutral-50 active:scale-95"
+            aria-label={isSaved ? "Remove from saved" : "Save destination"}
           >
-            <Lucide.Heart className="size-5 fill-red-500 stroke-neutral-700" />
+            <Lucide.Heart
+              className={`size-5 transition-colors ${
+                isSaved
+                  ? "fill-red-500 stroke-neutral-700"
+                  : "fill-none stroke-neutral-700"
+              }`}
+            />
           </button>
         </div>
       </div>

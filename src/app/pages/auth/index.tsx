@@ -200,12 +200,6 @@ export function SignupPage() {
             </Wouter.Link>
             to return to RetireAway
           </p>
-
-          <p className="mt-8 text-center text-[10px] leading-relaxed text-neutral-400">
-            By creating an account, you agree to our <br />
-            <span className="underline">Terms of Service</span> and{" "}
-            <span className="underline">Privacy Policy</span>
-          </p>
         </div>
       </main>
       <Footer />
