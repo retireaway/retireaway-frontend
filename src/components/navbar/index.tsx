@@ -1,8 +1,19 @@
 import * as Wouter from "wouter";
 import * as Lucide from "lucide-react";
 import { Menu } from "@base-ui/react/menu";
+import * as WouterHash from "wouter/use-hash-location";
+import { useComparison } from "@/contexts/comparison";
 
 export function Navbar() {
+  const [location] = WouterHash.useHashLocation();
+  const { selectedDestinations, setIsDrawerOpen } = useComparison();
+
+  const showComparisonToggle =
+    selectedDestinations.length > 0 &&
+    location !== "/" &&
+    location !== "/compare" &&
+    location !== "/matchmaker";
+
   return (
     <nav className="sticky top-0 z-50 flex w-full items-center justify-between border-b border-neutral-200 bg-white px-6 py-4">
       <Wouter.Link href="/">
@@ -11,7 +22,20 @@ export function Navbar() {
         </div>
       </Wouter.Link>
 
-      <div className="flex items-center gap-4 lg:gap-4">
+      <div className="flex items-center gap-4 lg:gap-6">
+        {showComparisonToggle && (
+          <button
+            onClick={() => setIsDrawerOpen(true)}
+            className="relative flex cursor-pointer items-center justify-center p-1 text-neutral-500 transition-colors hover:text-neutral-900 outline-none"
+            aria-label="Open comparison"
+          >
+            <Lucide.GitCompareArrows className="size-5" />
+            <span className="absolute -top-1 -right-1 flex size-4 items-center justify-center rounded-full bg-accent text-[8px] font-bold text-white ring-2 ring-white">
+              {selectedDestinations.length}
+            </span>
+          </button>
+        )}
+
         <Wouter.Link href="/matchmaker">
           <div className="flex items-center gap-1">
             <Lucide.Sparkles className="hidden size-4 stroke-neutral-900 lg:inline" />

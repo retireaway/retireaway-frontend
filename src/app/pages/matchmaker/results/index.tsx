@@ -191,7 +191,7 @@ export function CardX({
               onClick={() => toggleDestination(destination)}
               className="flex flex-row items-center gap-1 rounded-s-full rounded-e-full border border-neutral-400 bg-white px-3 py-2 transition-all hover:bg-neutral-50 active:scale-95"
             >
-              <Icons.Compare className="size-3.5 fill-neutral-700 stroke-neutral-700" />
+              <Lucide.GitCompareArrows className="size-3.5 text-neutral-700" />
               <span className="text-xs leading-none font-bold text-neutral-700">
                 Compare
               </span>

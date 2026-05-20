@@ -15,6 +15,8 @@ import { climateToIcon, gradeToColor } from "@/utils/mappings";
 import type { Cost, Destination } from "@/types/destination";
 import type { City } from "@/types/city";
 import type { Provider, ProviderCategoryInfo } from "@/types/provider";
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 import { useComparison } from "@/contexts/comparison";
 import { useUser } from "@/contexts/user";
 import * as UserUtils from "@/utils/user";
@@ -80,10 +82,13 @@ export function DestinationProfile() {
   );
 
   return (
-    <section className="relative m-auto flex min-h-svh max-w-425 flex-col xl:flex-row xl:gap-4">
-      <div className="flex basis-3/5 flex-col xl:sticky xl:top-0 xl:left-0 xl:h-svh xl:gap-4 xl:p-8 xl:pr-0">
-        <Hero destination={destination} />
-        <ul className="grid grid-cols-2 gap-4 border-b border-neutral-100 bg-neutral-50/50 px-4 py-6 xl:grid-cols-4 xl:rounded-xl xl:border">
+    <div className="flex min-h-svh flex-col bg-white">
+      <Navbar />
+      <main className="flex-1">
+        <section className="relative m-auto flex max-w-425 flex-col xl:flex-row xl:gap-4">
+          <div className="flex basis-3/5 flex-col xl:sticky xl:top-16 xl:left-0 xl:h-[calc(100svh-64px)] xl:gap-4 xl:p-8 xl:pr-0">
+            <Hero destination={destination} />
+            <ul className="grid grid-cols-2 gap-4 border-b border-neutral-100 bg-neutral-50/50 px-4 py-6 xl:grid-cols-4 xl:rounded-xl xl:border">
           <li className="">
             <div className="flex flex-col items-center justify-center gap-1 rounded-xl">
               <span className="text-xs font-medium text-neutral-400 capitalize">
@@ -213,13 +218,30 @@ export function DestinationProfile() {
         )}
       </div>
     </section>
+    </main>
+    <Footer />
+    </div>
   );
 }
 
 function Hero({ destination }: { destination: Destination }) {
   const ClimateIcon = climateToIcon(destination.climate);
   const { toggleDestination, isDestinationSelected } = useComparison();
+  const [user, setUser] = useUser();
+
   const isSelected = isDestinationSelected(destination.id);
+  const isSaved = UserUtils.isDestinationSaved(user, destination.id);
+
+  const toggleSave = () => {
+    if (isSaved) {
+      const savedItem = UserUtils.getSavedDestination(user, destination.id);
+      if (savedItem) {
+        setUser((prev) => UserUtils.removeSavedItem(prev, savedItem.id));
+      }
+    } else {
+      setUser((prev) => UserUtils.saveDestination(prev, destination));
+    }
+  };
 
   return (
     <div className="relative h-72 bg-black xl:h-100 xl:grow xl:rounded-xl">
@@ -233,26 +255,48 @@ function Hero({ destination }: { destination: Destination }) {
 
       <button
         onClick={() => history.back()}
-        className="absolute top-0 left-0 flex w-min items-center justify-start gap-2 p-4"
+        className="absolute top-0 left-0 flex w-min cursor-pointer items-center justify-start gap-2 p-4"
       >
         <Lucide.ArrowLeft className="size-6 text-white" />
       </button>
 
-      <button
-        onClick={() => toggleDestination(destination)}
-        className={`absolute top-4 right-4 z-10 flex h-10 items-center justify-center gap-2 rounded-full border px-4 transition-all ${
-          isSelected
-            ? "border-primary bg-primary text-white"
-            : "border-white/20 bg-black/20 text-white backdrop-blur-sm hover:bg-black/40"
-        }`}
-      >
-        <Lucide.Plus
-          className={`size-5 transition-transform ${isSelected ? "rotate-45" : ""}`}
-        />
-        <span className="text-sm font-medium">
-          {isSelected ? "Comparing" : "Compare"}
-        </span>
-      </button>
+      <div className="absolute top-4 right-4 z-10 flex items-center gap-2">
+        {isSelected ? (
+          <button
+            onClick={() => toggleDestination(destination)}
+            className="flex flex-row items-center gap-1 rounded-s-full rounded-e-full border border-accent bg-accent px-3 py-2 transition-all active:scale-95"
+          >
+            <Lucide.Check className="size-3.5 stroke-white" />
+            <span className="text-xs leading-none font-bold text-white">
+              Compare
+            </span>
+          </button>
+        ) : (
+          <button
+            onClick={() => toggleDestination(destination)}
+            className="flex flex-row items-center gap-1 rounded-s-full rounded-e-full border border-neutral-400 bg-white px-3 py-2 transition-all hover:bg-neutral-50 active:scale-95"
+          >
+            <Lucide.GitCompareArrows className="size-3.5 text-neutral-700" />
+            <span className="text-xs leading-none font-bold text-neutral-700">
+              Compare
+            </span>
+          </button>
+        )}
+
+        <button
+          onClick={toggleSave}
+          className="flex size-8 cursor-pointer items-center justify-center rounded-full border border-neutral-400 bg-white transition-all hover:bg-neutral-50 active:scale-95"
+          aria-label={isSaved ? "Remove from saved" : "Save destination"}
+        >
+          <Lucide.Heart
+            className={`size-5 transition-colors ${
+              isSaved
+                ? "fill-red-500 stroke-neutral-700"
+                : "fill-none stroke-neutral-700"
+            }`}
+          />
+        </button>
+      </div>
 
       <div className="absolute bottom-0 w-full p-4">
         <header>

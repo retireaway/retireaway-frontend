@@ -6,12 +6,16 @@ import { useComparison } from "@/contexts/comparison";
 
 export function ComparisonBar() {
   const [location] = WouterHash.useHashLocation();
-  const { selectedDestinations, clearDestinations, toggleDestination } =
-    useComparison();
-  const [isOpen, setIsOpen] = React.useState(false);
+  const {
+    selectedDestinations,
+    clearDestinations,
+    toggleDestination,
+    isDrawerOpen,
+    setIsDrawerOpen,
+  } = useComparison();
 
   React.useEffect(() => {
-    if (isOpen) {
+    if (isDrawerOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "unset";
@@ -19,7 +23,7 @@ export function ComparisonBar() {
     return () => {
       document.body.style.overflow = "unset";
     };
-  }, [isOpen]);
+  }, [isDrawerOpen]);
 
   if (
     selectedDestinations.length === 0 ||
@@ -32,27 +36,11 @@ export function ComparisonBar() {
 
   return (
     <>
-      {/* Floating Toggle Button */}
-      <div className="fixed right-6 bottom-6 z-50">
-        <button
-          onClick={() => setIsOpen(true)}
-          className="relative flex size-14 items-center justify-center rounded-full bg-primary text-white shadow-2xl transition-all hover:scale-110 active:scale-95"
-          aria-label="Open comparison"
-        >
-          <Lucide.ArrowRightLeft className="size-6" />
-          {selectedDestinations.length > 0 && (
-            <span className="absolute -top-1 -right-1 flex size-6 items-center justify-center rounded-full bg-accent text-[10px] font-bold text-white ring-2 ring-white">
-              {selectedDestinations.length}
-            </span>
-          )}
-        </button>
-      </div>
-
       {/* Modal Overlay */}
-      {isOpen && (
+      {isDrawerOpen && (
         <div
           className="animate-in fade-in fixed inset-0 z-100 flex items-center justify-center bg-black/40 p-4 backdrop-blur-sm duration-200"
-          onClick={() => setIsOpen(false)}
+          onClick={() => setIsDrawerOpen(false)}
         >
           {/* Modal Content */}
           <div
@@ -64,7 +52,7 @@ export function ComparisonBar() {
                 Compare Destinations
               </h2>
               <button
-                onClick={() => setIsOpen(false)}
+                onClick={() => setIsDrawerOpen(false)}
                 className="rounded-full p-2 text-neutral-400 transition-colors hover:bg-neutral-100 hover:text-neutral-600"
               >
                 <Lucide.X className="size-5" />

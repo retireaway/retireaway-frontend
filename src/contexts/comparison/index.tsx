@@ -8,6 +8,8 @@ interface ComparisonContextType {
   toggleDestination: (destination: Destination) => void;
   clearDestinations: () => void;
   isDestinationSelected: (id: string) => boolean;
+  isDrawerOpen: boolean;
+  setIsDrawerOpen: (isOpen: boolean) => void;
 }
 
 const ComparisonContext = createContext<ComparisonContextType | undefined>(
@@ -20,6 +22,7 @@ export function ComparisonProvider({
   children: React.ReactNode;
 }) {
   const [hidden, setHidden] = React.useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
   const [selectedDestinations, setSelectedDestinations] = useState<
     Destination[]
   >([]);
@@ -65,6 +68,8 @@ export function ComparisonProvider({
         toggleDestination,
         clearDestinations,
         isDestinationSelected,
+        isDrawerOpen,
+        setIsDrawerOpen,
       }}
     >
       {children}
