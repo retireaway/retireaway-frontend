@@ -43,6 +43,13 @@ export function Navbar() {
                   <Lucide.Compass className="size-4" />
                   Explore
                 </Menu.Item>
+                <Menu.Item
+                  render={<Wouter.Link href="/home" />}
+                  className="flex cursor-pointer items-center gap-2 rounded-lg px-3 py-2.5 text-sm font-medium text-neutral-600 transition-colors outline-none select-none hover:bg-neutral-50 hover:text-neutral-900 focus:bg-neutral-50 focus:text-neutral-900"
+                >
+                  <Lucide.House className="size-4" />
+                  Home
+                </Menu.Item>
                 <Menu.Separator className="my-1 h-px bg-neutral-100" />
                 <Menu.Item
                   render={<Wouter.Link href="/login" />}

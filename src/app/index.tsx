@@ -14,6 +14,7 @@ import { Home } from "./pages/home";
 import * as Matchmaker from "./pages/matchmaker";
 import { Discover } from "./pages/discover";
 import { LoginPage, SignupPage } from "./pages/auth";
+import { UserHome } from "./pages/user";
 
 export function App() {
   return (
@@ -32,6 +33,10 @@ export function App() {
 
             <Wouter.Route path="/signup">
               <SignupPage />
+            </Wouter.Route>
+
+            <Wouter.Route path="/home">
+              <UserHome />
             </Wouter.Route>
 
             <Wouter.Route path="/explore">
