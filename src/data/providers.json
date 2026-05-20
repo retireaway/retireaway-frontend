@@ -1,0 +1,114 @@
+[
+  {
+    "id": "newland-chase",
+    "destination": "thailand",
+    "name": "Newland Chase",
+    "website": "https://newlandchase.com/",
+    "contact": "+66 2 105 4032",
+    "description": "A premier global immigration firm specializing in complex residency pathways and high-level permits. They provide full-spectrum support for the Long-Term Resident (LTR) visa and the Destination Thailand Visa (DTV), catering specifically to high-net-worth retirees and professionals.",
+    "category": "Visa / Immigration"
+  },
+  {
+    "id": "thai-visa-centre",
+    "destination": "thailand",
+    "name": "Thai Visa Centre",
+    "website": "https://thaivisacentre.com/",
+    "contact": "+66 2 331 4509 / +66 2 508 8428",
+    "address": "Building 91/11, Bangkok, Thailand",
+    "description": "A highly-rated agency known for transparent pricing and simplifying the bureaucracy of Thai immigration. They specialize in standard Non-O (Retirement) and Marriage visas, offering in-person assistance at immigration offices and managing 90-day reporting.",
+    "category": "Visa / Immigration"
+  },
+  {
+    "id": "kbank",
+    "destination": "thailand",
+    "name": "Kasikorn Bank (KBank)",
+    "website": "https://www.kasikornbank.com/",
+    "contact": "+66 2 888 8888",
+    "description": "The leading choice for tech-savvy expats due to its superior English-language mobile interface (K-PLUS app). They offer specialized services like \"The Wisdom\" priority banking and are generally flexible with documentation for foreigners holding long-term visas.",
+    "category": "Banking"
+  },
+  {
+    "id": "bangkok-bank",
+    "destination": "thailand",
+    "name": "Bangkok Bank (BBL)",
+    "website": "https://www.bangkokbank.com/",
+    "contact": "+66 2 645 5555",
+    "description": "The most established bank for international transfers and the preferred choice for those receiving pensions from abroad. It features a large international branch network and specialized Foreign Currency Deposit (FCD) accounts to help manage exchange rate risks.",
+    "category": "Banking"
+  },
+  {
+    "id": "expat-tax-thailand",
+    "destination": "thailand",
+    "name": "Expat Tax Thailand",
+    "website": "https://www.expattaxthailand.com/",
+    "contact": "+66 6 1264 9339 / +66 9 9150 5569",
+    "address": "No. 1 Park Silom Tower, 29th Floor, Convent Road, Silom, Bang Rak, Bangkok 10500",
+    "description": "Specialist firm focusing on Thai tax residency and recent tax law changes. They assist expats in obtaining a Tax Identification Number (TIN), providing education on legal reporting of foreign-sourced income, and offering support for succession planning and Thai wills.",
+    "category": "Tax & Financial Planning"
+  },
+  {
+    "id": "mazars-thailand",
+    "destination": "thailand",
+    "name": "Mazars Thailand",
+    "website": "https://www.mazars.co.th/",
+    "contact": "+66 2 670 1100",
+    "description": "A global accounting and advisory firm with a dedicated international desk for complex financial planning. Ideal for retirees with global assets who need to navigate Double Tax Agreements (DTA) to ensure they are not over-taxed.",
+    "category": "Tax & Financial Planning"
+  },
+  {
+    "id": "worldwide-relocations",
+    "destination": "thailand",
+    "name": "Worldwide Relocations (Thailand)",
+    "website": "https://worldwide-relocations.asia/",
+    "contact": "+66 2 240 2200",
+    "description": "A boutique relocation agency providing a \"soft landing\" for expats. They offer door-to-door shipping, pet relocation services, and personalized home-finding assistance to ensure a smooth transition to life in Thailand.",
+    "category": "Relocation Services"
+  },
+  {
+    "id": "santa-fe-relocation",
+    "destination": "thailand",
+    "name": "Santa Fe Relocation",
+    "website": "https://www.santaferelo.com/",
+    "contact": "+66 2 722 7027",
+    "description": "A global logistics giant with decades of experience navigating Thai customs and shipping regulations. They are known for professional packing services and dedicated coordinators who manage the entire logistical move from the origin country.",
+    "category": "Relocation Services"
+  },
+  {
+    "id": "bumrungrad-hospital",
+    "destination": "thailand",
+    "name": "Bumrungrad International Hospital",
+    "website": "https://www.bumrungrad.com/",
+    "contact": "+66 2 066 8888",
+    "address": "33 Sukhumvit 3, Wattana, Bangkok 10110, Thailand",
+    "description": "One of the most famous private hospitals in the world, serving as a primary medical hub for expats. It features a dedicated Expatriate Liaison Center and world-class geriatric care units tailored for retirees.",
+    "category": "Healthcare"
+  },
+  {
+    "id": "samitivej-hospital",
+    "destination": "thailand",
+    "name": "Samitivej Sukhumvit Hospital",
+    "website": "https://www.samitivejhospitals.com/",
+    "contact": "+66 2 022 2222",
+    "description": "A premium facility in the heart of Bangkok’s expat district, known for its personalized healthcare approach. It offers specialized \"Life Centers\" for anti-aging and wellness, as well as comprehensive preventative health packages.",
+    "category": "Healthcare"
+  },
+  {
+    "id": "pacific-prime-thailand",
+    "destination": "thailand",
+    "name": "Pacific Prime Thailand",
+    "website": "https://www.pacificprime.co.th/",
+    "contact": "+66 2 038 5818",
+    "address": "548 One City Centre Building 25th floor, Ploenchit Road, Lumpini, Pathumwan, Bangkok, 10330 Thailand",
+    "description": "A leading international insurance broker that compares all major local and global health plans. They help retirees find plans that meet strict coverage requirements often needed for Thai long-term visas.",
+    "category": "Health Insurance"
+  },
+  {
+    "id": "luma-health",
+    "destination": "thailand",
+    "name": "Luma Health",
+    "website": "https://www.lumahealth.com/",
+    "contact": "+66 2 494 3700",
+    "description": "A Thailand-based insurer designed specifically to provide seamless coverage for Southeast Asian expats. Provides direct billing at top hospitals like Bumrungrad and Samitivej, minimizing out-of-pocket expenses for inpatient care.",
+    "category": "Health Insurance"
+  }
+]

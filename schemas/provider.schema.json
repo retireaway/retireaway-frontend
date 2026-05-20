@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://retireaway.com/schemas/provider.schema.json",
+  "title": "Provider",
+  "description": "An organization providing services for expats and retirees in a specific destination.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "The unique identifier for the provider.",
+      "examples": ["newland-chase", "kbank", "bumrungrad-hospital"]
+    },
+    "destination": {
+      "type": "string",
+      "description": "The id of the destination this provider operates in.",
+      "examples": ["thailand", "portugal", "greece"]
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of the provider organization.",
+      "examples": ["Newland Chase", "Kasikorn Bank (KBank)"]
+    },
+    "website": {
+      "type": "string",
+      "format": "uri",
+      "description": "The official website URL of the provider.",
+      "examples": ["https://newlandchase.com/"]
+    },
+    "contact": {
+      "type": "string",
+      "description": "Contact information such as phone number or email address.",
+      "examples": ["+66 2 105 4032"]
+    },
+    "address": {
+      "type": "string",
+      "description": "The physical address of the provider (optional).",
+      "examples": ["33 Sukhumvit 3, Wattana, Bangkok 10110, Thailand"]
+    },
+    "description": {
+      "type": "string",
+      "description": "A detailed description of the services offered by the provider.",
+      "examples": [
+        "A premier global immigration firm specializing in complex residency pathways and high-level permits."
+      ]
+    },
+    "category": {
+      "type": "string",
+      "description": "The service category of the provider.",
+      "enum": [
+        "Visa / Immigration",
+        "Banking",
+        "Tax & Financial Planning",
+        "Relocation Services",
+        "Healthcare",
+        "Health Insurance"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "destination",
+    "name",
+    "website",
+    "contact",
+    "description",
+    "category"
+  ],
+  "additionalProperties": false
+}
