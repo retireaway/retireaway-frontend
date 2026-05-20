@@ -6,8 +6,6 @@ import destinations from "@/data/destinations.json" with { type: "json" };
 import criteria from "@/data/criteria.json" with { type: "json" };
 import answersToCriterion from "@/data/answers_to_criterion.json" with { type: "json" };
 
-import * as Icons from "@/assets/icons";
-
 import type { Destination } from "@/types/destination";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";

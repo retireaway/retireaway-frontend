@@ -1,4 +1,3 @@
-import React from "react";
 import * as Wouter from "wouter";
 import * as Lucide from "lucide-react";
 import { useUser } from "@/contexts/user";
@@ -89,7 +88,11 @@ export function UserHome() {
                       {s.type === "Resource" && (
                         <ResourceCard
                           resource={s.data}
-                          onRemove={() => setUser((prev) => UserUtils.removeSavedItem(prev, s.id))}
+                          onRemove={() =>
+                            setUser((prev) =>
+                              UserUtils.removeSavedItem(prev, s.id),
+                            )
+                          }
                         />
                       )}
                     </li>
@@ -114,7 +117,11 @@ export function UserHome() {
                       {s.type === "Provider" && (
                         <ProviderCard
                           provider={s.data}
-                          onRemove={() => setUser((prev) => UserUtils.removeSavedItem(prev, s.id))}
+                          onRemove={() =>
+                            setUser((prev) =>
+                              UserUtils.removeSavedItem(prev, s.id),
+                            )
+                          }
                         />
                       )}
                     </li>
@@ -211,10 +218,8 @@ function ProviderCard({
       </div>
 
       <header className="flex flex-col gap-1">
-        <h4 className="text-lg font-bold text-neutral-800">
-          {provider.name}
-        </h4>
-        <span className="text-xs font-bold text-neutral-400 uppercase tracking-tighter">
+        <h4 className="text-lg font-bold text-neutral-800">{provider.name}</h4>
+        <span className="text-xs font-bold tracking-tighter text-neutral-400 uppercase">
           {provider.category}
         </span>
       </header>

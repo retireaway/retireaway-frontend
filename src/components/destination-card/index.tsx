@@ -8,8 +8,6 @@ import { useComparison } from "@/contexts/comparison";
 import { useUser } from "@/contexts/user";
 import * as UserUtils from "@/utils/user";
 
-import * as Icons from "@/assets/icons";
-
 export function DestinationCardList({
   destinations,
 }: {

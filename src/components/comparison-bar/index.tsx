@@ -108,7 +108,7 @@ export function ComparisonBar() {
             <div className="flex flex-col gap-2">
               <Wouter.Link
                 href="/compare"
-                onClick={() => setIsOpen(false)}
+                onClick={() => setIsDrawerOpen(false)}
                 className={`flex w-full items-center justify-center rounded-2xl py-4 text-sm font-bold text-white shadow-lg transition-all active:scale-[0.98] ${
                   selectedDestinations.length >= 2
                     ? "bg-primary hover:bg-primary/90 hover:shadow-primary/20"
