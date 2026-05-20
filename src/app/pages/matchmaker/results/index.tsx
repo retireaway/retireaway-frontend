@@ -122,6 +122,7 @@ function Hero() {
 export function CardX({
   destination,
   cons,
+  score,
 }: {
   destination: Destination;
   score: number;
@@ -176,6 +177,13 @@ export function CardX({
           className={`absolute top-0 right-0 size-full object-cover object-center`}
           alt={`scenic image of ${destination.name}`}
         />
+        <div className="absolute bottom-2 left-2 flex flex-row items-center justify-center gap-0.5">
+          <div className="flex flex-row items-center gap-1 rounded-s-full rounded-e-full border border-neutral-400 bg-white px-3 py-2 transition-all hover:bg-neutral-50 active:scale-95">
+            <span className="text-xs leading-none font-bold text-neutral-700">
+              {score}% match
+            </span>
+          </div>
+        </div>
         <div className="absolute top-2 right-2 flex flex-row items-center justify-center gap-0.5">
           {isSelected ? (
             <button
