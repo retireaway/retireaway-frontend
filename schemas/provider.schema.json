@@ -54,6 +54,11 @@
         "Healthcare",
         "Health Insurance"
       ]
+    },
+    "partnered": {
+      "type": "boolean",
+      "description": "Whether the provider is an official partner of the platform.",
+      "default": false
     }
   },
   "required": [
@@ -63,7 +68,8 @@
     "website",
     "contact",
     "description",
-    "category"
+    "category",
+    "partnered"
   ],
   "additionalProperties": false
 }

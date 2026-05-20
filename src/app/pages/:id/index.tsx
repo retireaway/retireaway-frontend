@@ -1323,9 +1323,14 @@ function Providers({ destination }: { destination: Destination }) {
                             </div>
 
                             <header className="flex flex-col gap-1">
-                              <h4 className="text-lg font-bold text-neutral-800">
-                                {provider.name}
-                              </h4>
+                              <div className="flex items-center gap-2">
+                                <h4 className="text-lg font-bold text-neutral-800">
+                                  {provider.name}
+                                </h4>
+                                {provider.partnered && (
+                                  <Lucide.BadgeCheck className="size-5 fill-primary/10 text-primary" />
+                                )}
+                              </div>
                             </header>
 
                             <p className="text-sm leading-relaxed text-neutral-500">

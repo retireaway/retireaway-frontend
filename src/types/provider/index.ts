@@ -15,6 +15,7 @@ export type Provider = Readonly<{
   address?: string;
   description: string;
   category: ProviderCategory;
+  partnered: boolean;
 }>;
 
 export type ProviderCategoryInfo = Readonly<{

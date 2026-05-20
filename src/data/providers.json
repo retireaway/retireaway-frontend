@@ -6,7 +6,8 @@
     "website": "https://newlandchase.com/",
     "contact": "+66 2 105 4032",
     "description": "A premier global immigration firm specializing in complex residency pathways and high-level permits. They provide full-spectrum support for the Long-Term Resident (LTR) visa and the Destination Thailand Visa (DTV), catering specifically to high-net-worth retirees and professionals.",
-    "category": "Visa / Immigration"
+    "category": "Visa / Immigration",
+    "partnered": true
   },
   {
     "id": "thai-visa-centre",
@@ -16,7 +17,8 @@
     "contact": "+66 2 331 4509 / +66 2 508 8428",
     "address": "Building 91/11, Bangkok, Thailand",
     "description": "A highly-rated agency known for transparent pricing and simplifying the bureaucracy of Thai immigration. They specialize in standard Non-O (Retirement) and Marriage visas, offering in-person assistance at immigration offices and managing 90-day reporting.",
-    "category": "Visa / Immigration"
+    "category": "Visa / Immigration",
+    "partnered": false
   },
   {
     "id": "kbank",
@@ -25,7 +27,8 @@
     "website": "https://www.kasikornbank.com/",
     "contact": "+66 2 888 8888",
     "description": "The leading choice for tech-savvy expats due to its superior English-language mobile interface (K-PLUS app). They offer specialized services like \"The Wisdom\" priority banking and are generally flexible with documentation for foreigners holding long-term visas.",
-    "category": "Banking"
+    "category": "Banking",
+    "partnered": true
   },
   {
     "id": "bangkok-bank",
@@ -34,7 +37,8 @@
     "website": "https://www.bangkokbank.com/",
     "contact": "+66 2 645 5555",
     "description": "The most established bank for international transfers and the preferred choice for those receiving pensions from abroad. It features a large international branch network and specialized Foreign Currency Deposit (FCD) accounts to help manage exchange rate risks.",
-    "category": "Banking"
+    "category": "Banking",
+    "partnered": false
   },
   {
     "id": "expat-tax-thailand",
@@ -44,7 +48,8 @@
     "contact": "+66 6 1264 9339 / +66 9 9150 5569",
     "address": "No. 1 Park Silom Tower, 29th Floor, Convent Road, Silom, Bang Rak, Bangkok 10500",
     "description": "Specialist firm focusing on Thai tax residency and recent tax law changes. They assist expats in obtaining a Tax Identification Number (TIN), providing education on legal reporting of foreign-sourced income, and offering support for succession planning and Thai wills.",
-    "category": "Tax & Financial Planning"
+    "category": "Tax & Financial Planning",
+    "partnered": false
   },
   {
     "id": "mazars-thailand",
@@ -53,7 +58,8 @@
     "website": "https://www.mazars.co.th/",
     "contact": "+66 2 670 1100",
     "description": "A global accounting and advisory firm with a dedicated international desk for complex financial planning. Ideal for retirees with global assets who need to navigate Double Tax Agreements (DTA) to ensure they are not over-taxed.",
-    "category": "Tax & Financial Planning"
+    "category": "Tax & Financial Planning",
+    "partnered": false
   },
   {
     "id": "worldwide-relocations",
@@ -62,7 +68,8 @@
     "website": "https://worldwide-relocations.asia/",
     "contact": "+66 2 240 2200",
     "description": "A boutique relocation agency providing a \"soft landing\" for expats. They offer door-to-door shipping, pet relocation services, and personalized home-finding assistance to ensure a smooth transition to life in Thailand.",
-    "category": "Relocation Services"
+    "category": "Relocation Services",
+    "partnered": false
   },
   {
     "id": "santa-fe-relocation",
@@ -71,7 +78,8 @@
     "website": "https://www.santaferelo.com/",
     "contact": "+66 2 722 7027",
     "description": "A global logistics giant with decades of experience navigating Thai customs and shipping regulations. They are known for professional packing services and dedicated coordinators who manage the entire logistical move from the origin country.",
-    "category": "Relocation Services"
+    "category": "Relocation Services",
+    "partnered": false
   },
   {
     "id": "bumrungrad-hospital",
@@ -81,7 +89,8 @@
     "contact": "+66 2 066 8888",
     "address": "33 Sukhumvit 3, Wattana, Bangkok 10110, Thailand",
     "description": "One of the most famous private hospitals in the world, serving as a primary medical hub for expats. It features a dedicated Expatriate Liaison Center and world-class geriatric care units tailored for retirees.",
-    "category": "Healthcare"
+    "category": "Healthcare",
+    "partnered": false
   },
   {
     "id": "samitivej-hospital",
@@ -90,7 +99,8 @@
     "website": "https://www.samitivejhospitals.com/",
     "contact": "+66 2 022 2222",
     "description": "A premium facility in the heart of Bangkok’s expat district, known for its personalized healthcare approach. It offers specialized \"Life Centers\" for anti-aging and wellness, as well as comprehensive preventative health packages.",
-    "category": "Healthcare"
+    "category": "Healthcare",
+    "partnered": false
   },
   {
     "id": "pacific-prime-thailand",
@@ -100,7 +110,8 @@
     "contact": "+66 2 038 5818",
     "address": "548 One City Centre Building 25th floor, Ploenchit Road, Lumpini, Pathumwan, Bangkok, 10330 Thailand",
     "description": "A leading international insurance broker that compares all major local and global health plans. They help retirees find plans that meet strict coverage requirements often needed for Thai long-term visas.",
-    "category": "Health Insurance"
+    "category": "Health Insurance",
+    "partnered": false
   },
   {
     "id": "luma-health",
@@ -109,7 +120,8 @@
     "website": "https://www.lumahealth.com/",
     "contact": "+66 2 494 3700",
     "description": "A Thailand-based insurer designed specifically to provide seamless coverage for Southeast Asian expats. Provides direct billing at top hospitals like Bumrungrad and Samitivej, minimizing out-of-pocket expenses for inpatient care.",
-    "category": "Health Insurance"
+    "category": "Health Insurance",
+    "partnered": false
   },
   {
     "id": "varnavas-law-firm",
@@ -118,7 +130,8 @@
     "website": "https://varnavas.gr/",
     "contact": "+30 210 361 5750",
     "description": "A premier, Athens-based law firm with over 45 years of experience in property and real estate investment. They are specialists in the Greek Golden Visa program and legal tax-incentive planning.",
-    "category": "Visa / Immigration"
+    "category": "Visa / Immigration",
+    "partnered": true
   },
   {
     "id": "kg-law-firm",
@@ -127,7 +140,8 @@
     "website": "https://kglawfirm.gr/",
     "contact": "+30 210 817 1500",
     "description": "A leading independent law firm providing full-scale representation for international relocation. They specialize in securing the Financially Independent Person (FIP) and Digital Nomad visas.",
-    "category": "Visa / Immigration"
+    "category": "Visa / Immigration",
+    "partnered": false
   },
   {
     "id": "alpha-bank-greece",
@@ -136,7 +150,8 @@
     "website": "https://www.alpha.gr/en/",
     "contact": "+30 210 326 0000",
     "description": "One of Greece's major financial institutions, widely used by international clients for wealth management. They offer non-resident checking options and a robust English digital platform.",
-    "category": "Banking"
+    "category": "Banking",
+    "partnered": true
   },
   {
     "id": "eurobank-greece",
@@ -145,7 +160,8 @@
     "website": "https://www.eurobank.gr/en/",
     "contact": "+30 210 955 5000",
     "description": "A premier retail banking pillar in Greece, known for its efficient digital onboarding for international customers. Their mobile banking provides comprehensive English-language assistance.",
-    "category": "Banking"
+    "category": "Banking",
+    "partnered": false
   },
   {
     "id": "kpmg-greece",
@@ -154,7 +170,8 @@
     "website": "https://kpmg.com/gr/en/home.html",
     "contact": "+30 210 606 2100",
     "description": "Top-tier international advisory brand providing comprehensive financial planning. They help foreigners navigate Greece's non-domiciled (Non-Dom) tax programs and optimize income tax liability.",
-    "category": "Tax & Financial Planning"
+    "category": "Tax & Financial Planning",
+    "partnered": false
   },
   {
     "id": "andersen-greece",
@@ -163,7 +180,8 @@
     "website": "https://gr.andersen.com/",
     "contact": "+30 213 031 1131",
     "description": "Elite tax and legal advisory firm specialized in cross-border wealth management. They focus on international inheritance frameworks and double-taxation treaty alignment.",
-    "category": "Tax & Financial Planning"
+    "category": "Tax & Financial Planning",
+    "partnered": false
   },
   {
     "id": "hellenic-relocation",
@@ -172,7 +190,8 @@
     "website": "https://www.hellenicrelocation.com/",
     "contact": "Via website booking portal",
     "description": "Dedicated end-to-end destination management provider. They handle home hunting, school selection, and utility synchronization for families moving to Greece.",
-    "category": "Relocation Services"
+    "category": "Relocation Services",
+    "partnered": false
   },
   {
     "id": "ob-logistics",
@@ -181,7 +200,8 @@
     "website": "https://www.ob.gr/",
     "contact": "+30 210 606 6000",
     "description": "The premier transport and corporate relocation logistics corporation in Greece. They handle global household shipping, customs clearance, and secure warehouse storage.",
-    "category": "Relocation Services"
+    "category": "Relocation Services",
+    "partnered": false
   },
   {
     "id": "hygeia-hospital",
@@ -190,7 +210,8 @@
     "website": "https://www.hygeia.gr/en/",
     "contact": "+30 210 686 7000",
     "description": "A world-class private medical facility in Athens, internationally acclaimed for clinical excellence. They operate a fully customized International Patient Department with medical translation services.",
-    "category": "Healthcare"
+    "category": "Healthcare",
+    "partnered": false
   },
   {
     "id": "interbalkan-medical",
@@ -199,7 +220,8 @@
     "website": "https://www.iatriko.gr/en/hospital/thessaloniki-medical-center",
     "contact": "+30 2310 400 000",
     "description": "A comprehensive private hospital group in Northern Greece (Thessaloniki). Renowned for specialized cardiac programs and preventative geriatric monitoring networks.",
-    "category": "Healthcare"
+    "category": "Healthcare",
+    "partnered": false
   },
   {
     "id": "generali-greece",
@@ -208,7 +230,8 @@
     "website": "https://www.generali.gr/en/",
     "contact": "+30 210 809 6100",
     "description": "A major global insurance giant with a dominant market footprint in Greece. They offer health insurance plans that align with legal immigration requirements for non-EU citizens.",
-    "category": "Health Insurance"
+    "category": "Health Insurance",
+    "partnered": false
   },
   {
     "id": "ethniki-asfalistiki",
@@ -217,7 +240,8 @@
     "website": "https://www.ethniki-asfalistiki.gr/",
     "contact": "+30 210 909 9000",
     "description": "The oldest and most expansive historical insurance provider in Greece. They offer tiered medical insurance packages that mesh cleanly with local private clinic systems.",
-    "category": "Health Insurance"
+    "category": "Health Insurance",
+    "partnered": false
   },
   {
     "id": "laca-portugal",
@@ -226,7 +250,8 @@
     "website": "https://www.lamarescapela.pt/",
     "contact": "+351 211 622 190",
     "description": "A leading law firm specializing in nationality, immigration, and digital nomad residency. Highly regarded for their client-first approach to D7 and D8 visa processes.",
-    "category": "Visa / Immigration"
+    "category": "Visa / Immigration",
+    "partnered": true
   },
   {
     "id": "gfdl-advogados",
@@ -235,7 +260,8 @@
     "website": "https://gfdl.legal/",
     "contact": "+351 211 608 940",
     "description": "A full-service independent law firm with a dedicated team for international investors. They handle complex business visas and provide rigorous legal solutions for high-net-worth relocations.",
-    "category": "Visa / Immigration"
+    "category": "Visa / Immigration",
+    "partnered": false
   },
   {
     "id": "millennium-bcp",
@@ -244,7 +270,8 @@
     "website": "https://www.millenniumbcp.pt/",
     "contact": "+351 211 131 080",
     "description": "One of the largest private banks in Portugal with a dedicated international desk. Known for a user-friendly English app and personal account managers for expat clients.",
-    "category": "Banking"
+    "category": "Banking",
+    "partnered": true
   },
   {
     "id": "activobank",
@@ -253,7 +280,8 @@
     "website": "https://www.activobank.pt/",
     "contact": "+351 210 030 700",
     "description": "A modern, digital-first bank highly popular for its low fees and streamlined English interface. Often the easiest bank for expats to open an account with quickly.",
-    "category": "Banking"
+    "category": "Banking",
+    "partnered": false
   },
   {
     "id": "fresh-portugal",
@@ -262,7 +290,8 @@
     "website": "https://fresh-legal.com/",
     "contact": "+351 300 509 095",
     "description": "The largest expat legal and tax advisory in Portugal. They specialize in optimizing tax for US/UK expats and navigating the NHR 2.0 tax regimes.",
-    "category": "Tax & Financial Planning"
+    "category": "Tax & Financial Planning",
+    "partnered": false
   },
   {
     "id": "chase-buchanan-portugal",
@@ -271,7 +300,8 @@
     "website": "https://chasebuchanan.com/offices/portugal/",
     "contact": "+351 289 012 110",
     "description": "A regulated global wealth management firm with a strong presence in Portugal. Provides independent advice on pensions and investment portfolios for global expats.",
-    "category": "Tax & Financial Planning"
+    "category": "Tax & Financial Planning",
+    "partnered": false
   },
   {
     "id": "moviinn",
@@ -280,7 +310,8 @@
     "website": "https://moviinn.com/",
     "contact": "Via website",
     "description": "A specialized relocation concierge focusing on the human side of moving. They provide full-service support from region selection to settling-in services like utilities.",
-    "category": "Relocation Services"
+    "category": "Relocation Services",
+    "partnered": false
   },
   {
     "id": "global-relocation-portugal",
@@ -289,7 +320,8 @@
     "website": "https://www.globalrelocation.pt/",
     "contact": "+351 219 236 550",
     "description": "A premier logistics and moving company based in Portugal. Experts in moving household goods and pets, offering door-to-door service with full customs management.",
-    "category": "Relocation Services"
+    "category": "Relocation Services",
+    "partnered": false
   },
   {
     "id": "hospital-da-luz",
@@ -298,7 +330,8 @@
     "website": "https://www.hospitaldaluz.pt/",
     "contact": "+351 217 104 400",
     "description": "Portugal's most technologically advanced private healthcare network. They offer an English-speaking International Patient wing and a robust app for booking appointments.",
-    "category": "Healthcare"
+    "category": "Healthcare",
+    "partnered": false
   },
   {
     "id": "cuf-health",
@@ -307,7 +340,8 @@
     "website": "https://www.cuf.pt/",
     "contact": "+351 210 025 200",
     "description": "The oldest and most established private healthcare provider in Portugal. Known for excellence in oncology and complex surgeries across all major regions.",
-    "category": "Healthcare"
+    "category": "Healthcare",
+    "partnered": false
   },
   {
     "id": "mgen-portugal",
@@ -316,7 +350,8 @@
     "website": "https://www.mgen.pt/",
     "contact": "Via website",
     "description": "A non-profit mutual insurer known for having no age limit and no medical questionnaires. Highly recommended for older retirees (70+).",
-    "category": "Health Insurance"
+    "category": "Health Insurance",
+    "partnered": false
   },
   {
     "id": "allianz-portugal",
@@ -325,6 +360,7 @@
     "website": "https://www.allianz.pt/",
     "contact": "Via website",
     "description": "A global leader in insurance with a massive direct-billing network in Portugal. Provides comprehensive plans that meet all D7 visa requirements.",
-    "category": "Health Insurance"
+    "category": "Health Insurance",
+    "partnered": false
   }
 ]

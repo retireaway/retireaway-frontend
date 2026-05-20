@@ -218,7 +218,12 @@ function ProviderCard({
       </div>
 
       <header className="flex flex-col gap-1">
-        <h4 className="text-lg font-bold text-neutral-800">{provider.name}</h4>
+        <div className="flex items-center gap-2">
+          <h4 className="text-lg font-bold text-neutral-800">{provider.name}</h4>
+          {provider.partnered && (
+            <Lucide.BadgeCheck className="size-5 fill-primary/10 text-primary" />
+          )}
+        </div>
         <span className="text-xs font-bold tracking-tighter text-neutral-400 uppercase">
           {provider.category}
         </span>
