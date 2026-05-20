@@ -4,7 +4,7 @@ import type { Provider } from "@/types/provider";
 
 export type SaveType = "Destination" | "Resource" | "Provider" | "Comparison";
 
-export type SaveData =
+export type SavedData =
   | {
       id: string;
       type: "Destination";
@@ -30,6 +30,6 @@ export type SaveData =
       data: readonly Destination[];
     };
 
-export type UserProfile = Readonly<{
-  saved: readonly SaveData[];
+export type User = Readonly<{
+  saved: readonly SavedData[];
 }>;

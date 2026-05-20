@@ -16,6 +16,8 @@ import type { Cost, Destination } from "@/types/destination";
 import type { City } from "@/types/city";
 import type { Provider, ProviderCategoryInfo } from "@/types/provider";
 import { useComparison } from "@/contexts/comparison";
+import { useUser } from "@/contexts/user";
+import * as UserUtils from "@/utils/user";
 
 import InternationalLivingLogo from "@/assets/svg/international-living-logo.svg?react";
 
@@ -678,6 +680,7 @@ function Cost({ cost, inflationRate }: { cost: Cost; inflationRate: number }) {
 }
 
 function Resources({ destination }: { destination: Destination }) {
+  const [user, setUser] = useUser();
   const destinationResources = resources.filter(
     (r) => r.destination === destination.id,
   );
@@ -693,52 +696,113 @@ function Resources({ destination }: { destination: Destination }) {
         </div>
       ) : (
         <ul className="flex flex-col gap-6">
-          {destinationResources.map((resource, index) => (
-            <li key={`${resource.url}-${index}`}>
-              <a
-                href={resource.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex flex-col gap-3 rounded-2xl border border-neutral-100 bg-white p-6 transition-all hover:border-primary/20 hover:shadow-md"
-              >
-                <header className="flex items-start justify-between gap-4">
-                  <div className="flex flex-col gap-2">
-                    <div className="flex items-center gap-2">
+          {destinationResources.map((resource, index) => {
+            const isSaved = UserUtils.isResourceSaved(user, resource.url);
+
+            const toggleSave = (e: React.MouseEvent) => {
+              e.preventDefault();
+              e.stopPropagation();
+              if (isSaved) {
+                const savedItem = UserUtils.getSavedResource(user, resource.url);
+                if (savedItem) {
+                  setUser((prev) => UserUtils.removeSavedItem(prev, savedItem.id));
+                }
+              } else {
+                setUser((prev) => UserUtils.saveResource(prev, resource));
+              }
+            };
+
+            return (
+              <li key={`${resource.url}-${index}`}>
+                <article className="group flex flex-col gap-3 rounded-2xl border border-neutral-100 bg-white p-6 transition-all hover:border-primary/20 hover:shadow-md">
+                  <div className="flex items-center justify-between gap-4">
+                    <a
+                      href={resource.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5"
+                    >
                       <span className="text-[10px] font-bold tracking-widest text-primary uppercase">
                         {resource.platform}
                       </span>
-                    </div>
-
-                    <h3 className="text-lg font-semibold text-neutral-700 transition-colors group-hover:text-primary">
-                      {resource.title}
-                    </h3>
-
-                    <p className="text-xs font-semibold text-neutral-500 capitalize">
-                      {resource.author}
-                    </p>
-                  </div>
-                  <Lucide.ExternalLink className="size-5 shrink-0 text-neutral-300 transition-colors group-hover:text-primary" />
-                </header>
-
-                <p className="line-clamp-10 text-sm leading-relaxed text-neutral-500">
-                  {resource.description}
-                </p>
-
-                <footer className="mt-2 flex-col items-start justify-between">
-                  <div className="flex flex-wrap gap-2">
-                    {resource.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-full bg-neutral-100 px-2.5 py-0.5 text-xs font-medium text-neutral-500 capitalize"
+                      <Lucide.ExternalLink className="size-3 text-primary" />
+                    </a>
+                    <div className="flex items-center gap-2">
+                      <button
+                        className="flex size-8 shrink-0 cursor-pointer items-center justify-center rounded-full border border-neutral-100 bg-white transition-all hover:bg-neutral-50 active:scale-95"
+                        aria-label="Share resource"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          if (navigator.share) {
+                            navigator.share({
+                              title: resource.title,
+                              url: resource.url,
+                            });
+                          } else {
+                            navigator.clipboard.writeText(resource.url);
+                          }
+                        }}
                       >
-                        {tag}
-                      </span>
-                    ))}
+                        <Lucide.Share2 className="size-4 text-neutral-400" />
+                      </button>
+                      <button
+                        onClick={toggleSave}
+                        className="flex size-8 shrink-0 cursor-pointer items-center justify-center rounded-full border border-neutral-100 bg-white transition-all hover:bg-neutral-50 active:scale-95"
+                        aria-label={
+                          isSaved ? "Remove from saved" : "Save resource"
+                        }
+                      >
+                        <Lucide.Heart
+                          className={`size-5 transition-colors ${
+                            isSaved
+                              ? "fill-red-500 stroke-red-500"
+                              : "fill-none stroke-neutral-300"
+                          }`}
+                        />
+                      </button>
+                    </div>
                   </div>
-                </footer>
-              </a>
-            </li>
-          ))}
+
+                  <a
+                    href={resource.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col gap-3"
+                  >
+                    <header className="flex items-start justify-between gap-4">
+                      <div className="flex flex-col gap-2">
+                        <h3 className="text-lg font-semibold text-neutral-700 transition-colors group-hover:text-primary">
+                          {resource.title}
+                        </h3>
+
+                        <p className="text-xs font-semibold text-neutral-500 capitalize">
+                          {resource.author}
+                        </p>
+                      </div>
+                    </header>
+
+                    <p className="line-clamp-10 text-sm leading-relaxed text-neutral-500">
+                      {resource.description}
+                    </p>
+
+                    <footer className="mt-2 flex-col items-start justify-between">
+                      <div className="flex flex-wrap gap-2">
+                        {resource.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="rounded-full bg-neutral-100 px-2.5 py-0.5 text-xs font-medium text-neutral-500 capitalize"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </footer>
+                  </a>
+                </article>
+              </li>
+            );
+          })}
         </ul>
       )}
     </section>
@@ -1091,6 +1155,8 @@ function CalculatorResults({
 }
 
 function Providers({ destination }: { destination: Destination }) {
+  const [user, setUser] = useUser();
+
   const destinationProviders = (providers as Provider[]).filter(
     (p) => p.destination === destination.id,
   );
@@ -1148,14 +1214,24 @@ function Providers({ destination }: { destination: Destination }) {
                 <ul className="flex flex-col gap-6">
                   {destinationProviders
                     .filter((p) => p.category === category)
-                    .map((provider) => (
-                      <li key={provider.id}>
-                        <article className="flex flex-col gap-4 rounded-2xl border border-neutral-100 bg-white p-6 shadow-sm transition-all hover:border-primary/20">
-                          <header className="flex items-start justify-between gap-4">
-                            <div className="flex flex-col gap-1">
-                              <h4 className="text-lg font-bold text-neutral-800">
-                                {provider.name}
-                              </h4>
+                    .map((provider) => {
+                      const isSaved = UserUtils.isProviderSaved(user, provider.id);
+
+                      const toggleSave = () => {
+                        if (isSaved) {
+                          const savedItem = UserUtils.getSavedProvider(user, provider.id);
+                          if (savedItem) {
+                            setUser((prev) => UserUtils.removeSavedItem(prev, savedItem.id));
+                          }
+                        } else {
+                          setUser((prev) => UserUtils.saveProvider(prev, provider));
+                        }
+                      };
+
+                      return (
+                        <li key={provider.id}>
+                          <article className="flex flex-col gap-4 rounded-2xl border border-neutral-100 bg-white p-6 shadow-sm transition-all hover:border-primary/20">
+                            <div className="flex items-center justify-between gap-4">
                               <a
                                 href={provider.website}
                                 target="_blank"
@@ -1165,28 +1241,69 @@ function Providers({ destination }: { destination: Destination }) {
                                 {new URL(provider.website).hostname}
                                 <Lucide.ExternalLink className="size-3" />
                               </a>
-                            </div>
-                          </header>
-
-                          <p className="text-sm leading-relaxed text-neutral-500">
-                            {provider.description}
-                          </p>
-
-                          <footer className="mt-2 flex flex-col gap-2 border-t border-neutral-50 pt-4">
-                            <div className="flex items-center gap-2 text-xs text-neutral-400">
-                              <Lucide.Phone className="size-3 shrink-0" />
-                              <span>{provider.contact}</span>
-                            </div>
-                            {provider.address && (
-                              <div className="flex items-start gap-2 text-xs text-neutral-400">
-                                <Lucide.MapPin className="mt-0.5 size-3 shrink-0" />
-                                <span>{provider.address}</span>
+                              <div className="flex items-center gap-2">
+                                <button
+                                  className="flex size-8 shrink-0 cursor-pointer items-center justify-center rounded-full border border-neutral-100 bg-white transition-all hover:bg-neutral-50 active:scale-95"
+                                  aria-label="Share provider"
+                                  onClick={() => {
+                                    if (navigator.share) {
+                                      navigator.share({
+                                        title: provider.name,
+                                        url: provider.website,
+                                      });
+                                    } else {
+                                      navigator.clipboard.writeText(
+                                        provider.website,
+                                      );
+                                    }
+                                  }}
+                                >
+                                  <Lucide.Share2 className="size-4 text-neutral-400" />
+                                </button>
+                                <button
+                                  onClick={toggleSave}
+                                  className="flex size-8 shrink-0 cursor-pointer items-center justify-center rounded-full border border-neutral-100 bg-white transition-all hover:bg-neutral-50 active:scale-95"
+                                  aria-label={
+                                    isSaved ? "Remove from saved" : "Save provider"
+                                  }
+                                >
+                                  <Lucide.Heart
+                                    className={`size-5 transition-colors ${
+                                      isSaved
+                                        ? "fill-red-500 stroke-red-500"
+                                        : "fill-none stroke-neutral-300"
+                                    }`}
+                                  />
+                                </button>
                               </div>
-                            )}
-                          </footer>
-                        </article>
-                      </li>
-                    ))}
+                            </div>
+
+                            <header className="flex flex-col gap-1">
+                              <h4 className="text-lg font-bold text-neutral-800">
+                                {provider.name}
+                              </h4>
+                            </header>
+
+                            <p className="text-sm leading-relaxed text-neutral-500">
+                              {provider.description}
+                            </p>
+
+                            <footer className="mt-2 flex flex-col gap-2 border-t border-neutral-50 pt-4">
+                              <div className="flex items-center gap-2 text-xs text-neutral-400">
+                                <Lucide.Phone className="size-3 shrink-0" />
+                                <span>{provider.contact}</span>
+                              </div>
+                              {provider.address && (
+                                <div className="flex items-start gap-2 text-xs text-neutral-400">
+                                  <Lucide.MapPin className="mt-0.5 size-3 shrink-0" />
+                                  <span>{provider.address}</span>
+                                </div>
+                              )}
+                            </footer>
+                          </article>
+                        </li>
+                      );
+                    })}
                 </ul>
               </div>
             );

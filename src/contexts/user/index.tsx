@@ -1,20 +1,9 @@
-import React, {
-  createContext,
-  useContext,
-  useState,
-  useEffect,
-  useCallback,
-} from "react";
-import type { UserProfile, SaveData } from "@/types/user";
-import type { Destination } from "@/types/destination";
-
-import { Temporal } from "temporal-polyfill";
+import React, { createContext, useContext, useState, useEffect } from "react";
+import type { User } from "@/types/user";
 
 interface UserContextType {
-  profile: UserProfile;
-  saveDestination: (destination: Destination) => void;
-  removeSavedItem: (id: string) => void;
-  isDestinationSaved: (id: string) => boolean;
+  profile: User;
+  setProfile: React.Dispatch<React.SetStateAction<User>>;
 }
 
 const UserContext = createContext<UserContextType | undefined>(undefined);
@@ -22,9 +11,8 @@ const UserContext = createContext<UserContextType | undefined>(undefined);
 const LOCAL_STORAGE_KEY = "retireaway_user_profile";
 
 export function UserProvider({ children }: { children: React.ReactNode }) {
-  const [profile, setProfile] = useState<UserProfile>(() => {
+  const [profile, setProfile] = useState<User>(() => {
     const saved = localStorage.getItem(LOCAL_STORAGE_KEY);
-
     if (saved) {
       try {
         return JSON.parse(saved);
@@ -32,7 +20,6 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
         console.error("Failed to parse user profile", e);
       }
     }
-
     return { saved: [] };
   });
 
@@ -40,54 +27,11 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(profile));
   }, [profile]);
 
-  const saveDestination = useCallback((destination: Destination) => {
-    setProfile((prev) => {
-      // Check if already saved
-      if (
-        prev.saved.some(
-          (s) => s.type === "Destination" && s.data.id === destination.id,
-        )
-      ) {
-        return prev;
-      }
-
-      const newSave: SaveData = {
-        id: crypto.randomUUID(),
-        type: "Destination",
-        timestamp: Temporal.Now.instant().toString(),
-        data: destination,
-      };
-
-      return {
-        ...prev,
-        saved: [newSave, ...prev.saved],
-      };
-    });
-  }, []);
-
-  const removeSavedItem = useCallback((id: string) => {
-    setProfile((prev) => ({
-      ...prev,
-      saved: prev.saved.filter((s) => s.id !== id),
-    }));
-  }, []);
-
-  const isDestinationSaved = useCallback(
-    (destinationId: string) => {
-      return profile.saved.some(
-        (s) => s.type === "Destination" && s.data.id === destinationId,
-      );
-    },
-    [profile.saved],
-  );
-
   return (
     <UserContext.Provider
       value={{
         profile,
-        saveDestination,
-        removeSavedItem,
-        isDestinationSaved,
+        setProfile,
       }}
     >
       {children}
@@ -100,5 +44,5 @@ export function useUser() {
   if (context === undefined) {
     throw new Error("useUser must be used within a UserProvider");
   }
-  return context;
+  return [context.profile, context.setProfile] as const;
 }

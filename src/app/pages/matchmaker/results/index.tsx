@@ -15,6 +15,7 @@ import { useMatchmaker } from "@/contexts/matchmaker";
 import { rankDestinations } from "@/utils/matchmaker";
 import { useComparison } from "@/contexts/comparison";
 import { useUser } from "@/contexts/user";
+import * as UserUtils from "@/utils/user";
 import { climateToIcon } from "@/utils/mappings";
 
 export function Results() {
@@ -131,25 +132,22 @@ export function CardX({
   cons: readonly string[];
 }) {
   const { toggleDestination, isDestinationSelected } = useComparison();
-  const { isDestinationSaved, saveDestination, removeSavedItem, profile } =
-    useUser();
+  const [user, setUser] = useUser();
 
   const isSelected = isDestinationSelected(destination.id);
-  const isSaved = isDestinationSaved(destination.id);
+  const isSaved = UserUtils.isDestinationSaved(user, destination.id);
 
   const toggleSave = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
 
     if (isSaved) {
-      const savedItem = profile.saved.find(
-        (s) => s.type === "Destination" && s.data.id === destination.id,
-      );
+      const savedItem = UserUtils.getSavedDestination(user, destination.id);
       if (savedItem) {
-        removeSavedItem(savedItem.id);
+        setUser((prev) => UserUtils.removeSavedItem(prev, savedItem.id));
       }
     } else {
-      saveDestination(destination);
+      setUser((prev) => UserUtils.saveDestination(prev, destination));
     }
   };
 
