@@ -5,6 +5,7 @@ import * as Lucide from "lucide-react";
 import { climateToIcon, gradeToColor } from "@/utils/mappings";
 import type { Destination } from "@/types/destination";
 import { useComparison } from "@/contexts/comparison";
+import { useUser } from "@/contexts/user";
 
 import * as Icons from "@/assets/icons";
 
@@ -38,33 +39,25 @@ export function DestinationCardList({
 
 export function DestinationCard({ destination }: { destination: Destination }) {
   const { toggleDestination, isDestinationSelected } = useComparison();
-  const isSelected = isDestinationSelected(destination.id);
+  const { isDestinationSaved, saveDestination, removeSavedItem, profile } =
+    useUser();
 
-  const [isSaved, setIsSaved] = React.useState(() => {
-    try {
-      const saved = JSON.parse(
-        localStorage.getItem("saved_destinations") || "[]",
-      );
-      return Array.isArray(saved) && saved.includes(destination.id);
-    } catch {
-      return false;
-    }
-  });
+  const isSelected = isDestinationSelected(destination.id);
+  const isSaved = isDestinationSaved(destination.id);
 
   const toggleSave = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    try {
-      const savedRaw = localStorage.getItem("saved_destinations");
-      const saved = JSON.parse(savedRaw || "[]");
-      const nextSaved = isSaved
-        ? saved.filter((id: string) => id !== destination.id)
-        : [...(Array.isArray(saved) ? saved : []), destination.id];
 
-      localStorage.setItem("saved_destinations", JSON.stringify(nextSaved));
-      setIsSaved(!isSaved);
-    } catch (err) {
-      console.error("Failed to save destination", err);
+    if (isSaved) {
+      const savedItem = profile.saved.find(
+        (s) => s.type === "Destination" && s.data.id === destination.id,
+      );
+      if (savedItem) {
+        removeSavedItem(savedItem.id);
+      }
+    } else {
+      saveDestination(destination);
     }
   };
 

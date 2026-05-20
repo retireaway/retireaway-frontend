@@ -1,6 +1,7 @@
 import React from "react";
 import * as Wouter from "wouter";
 import * as Lucide from "lucide-react";
+import { Dialog } from "@base-ui/react/dialog";
 
 import pros from "@/data/pros.json" with { type: "json" };
 import cons from "@/data/cons.json" with { type: "json" };
@@ -77,10 +78,10 @@ export function DestinationProfile() {
   );
 
   return (
-    <section className="relative m-auto flex min-h-svh max-w-[1700px] flex-col xl:flex-row xl:gap-4">
+    <section className="relative m-auto flex min-h-svh max-w-425 flex-col xl:flex-row xl:gap-4">
       <div className="flex basis-3/5 flex-col xl:sticky xl:top-0 xl:left-0 xl:h-svh xl:gap-4 xl:p-8 xl:pr-0">
         <Hero destination={destination} />
-        <ul className="grid grid-cols-2 gap-4 border-b-1 border-neutral-100 bg-neutral-50/50 px-4 py-6 xl:grid-cols-4 xl:rounded-xl xl:border-1">
+        <ul className="grid grid-cols-2 gap-4 border-b border-neutral-100 bg-neutral-50/50 px-4 py-6 xl:grid-cols-4 xl:rounded-xl xl:border">
           <li className="">
             <div className="flex flex-col items-center justify-center gap-1 rounded-xl">
               <span className="text-xs font-medium text-neutral-400 capitalize">
@@ -150,7 +151,7 @@ export function DestinationProfile() {
       </div>
 
       <div className="flex basis-2/5 flex-col gap-8 xl:p-8 xl:pl-0">
-        <ul className="grid grid-cols-4 border-b-1 border-neutral-100">
+        <ul className="grid grid-cols-4 border-b border-neutral-100">
           <li className="flex grow">
             <Wouter.Link
               replace={true}
@@ -237,7 +238,7 @@ function Hero({ destination }: { destination: Destination }) {
 
       <button
         onClick={() => toggleDestination(destination)}
-        className={`absolute top-4 right-4 z-10 flex h-10 items-center justify-center gap-2 rounded-full border-1 px-4 transition-all ${
+        className={`absolute top-4 right-4 z-10 flex h-10 items-center justify-center gap-2 rounded-full border px-4 transition-all ${
           isSelected
             ? "border-primary bg-primary text-white"
             : "border-white/20 bg-black/20 text-white backdrop-blur-sm hover:bg-black/40"
@@ -460,7 +461,7 @@ function Overview({
       </div>
 
       <div>
-        <section className="flex flex-col gap-8 border-t-1 border-b-1 border-primary bg-bg px-4 py-8 xl:rounded-2xl xl:border-1">
+        <section className="flex flex-col gap-8 border-t border-b border-primary bg-bg px-4 py-8 xl:rounded-2xl xl:border">
           <header className="flex flex-col gap-2">
             <h3 className="flex flex-row items-center justify-center gap-2 text-center text-lg font-medium text-neutral-600">
               <Lucide.Calculator className="size-5 stroke-primary" />
@@ -530,7 +531,7 @@ function Overview({
           {topCities.map((city) => {
             return (
               <li className="" key={city.id}>
-                <article className="flex flex-col gap-2 rounded-xl border-1 border-neutral-200 p-4">
+                <article className="flex flex-col gap-2 rounded-xl border border-neutral-200 p-4">
                   <h3 className="text-base font-medium text-neutral-600">
                     {city.name}
                   </h3>
@@ -553,7 +554,7 @@ function Overview({
               return (
                 <li key={destination.id}>
                   <Wouter.Link href={`/${destination.id}/overview`}>
-                    <article className="rounded-xl border-1 border-neutral-100 bg-white">
+                    <article className="rounded-xl border border-neutral-100 bg-white">
                       <div className="relative h-40 rounded-xl bg-black">
                         <img
                           src={`/images/destinations/${destination.id}/${destination.id}.webp`}
@@ -637,7 +638,7 @@ function Cost({ cost, inflationRate }: { cost: Cost; inflationRate: number }) {
   return (
     <ul className="flex flex-col gap-2">
       <li>
-        <article className="flex flex-col gap-2 rounded-xl border-1 border-neutral-100 bg-white p-4">
+        <article className="flex flex-col gap-2 rounded-xl border border-neutral-100 bg-white p-4">
           <h3 className="text-xs text-neutral-500">Monthly</h3>
           <p className="text-xl font-semibold text-neutral-600">
             {currency}
@@ -646,7 +647,7 @@ function Cost({ cost, inflationRate }: { cost: Cost; inflationRate: number }) {
         </article>
       </li>
       <li>
-        <article className="flex flex-col gap-2 rounded-xl border-1 border-neutral-100 bg-white p-4">
+        <article className="flex flex-col gap-2 rounded-xl border border-neutral-100 bg-white p-4">
           <h3 className="text-xs text-neutral-500">Yearly</h3>
           <p className="text-xl font-semibold text-neutral-600">
             {currency}
@@ -655,7 +656,7 @@ function Cost({ cost, inflationRate }: { cost: Cost; inflationRate: number }) {
         </article>
       </li>
       <li>
-        <article className="flex flex-col gap-2 rounded-xl border-1 border-primary bg-primary p-4">
+        <article className="flex flex-col gap-2 rounded-xl border border-primary bg-primary p-4">
           <h3 className="text-xs text-white">30 Years Without Inflation</h3>
           <p className="text-xl font-semibold text-white">
             {currency}
@@ -664,7 +665,7 @@ function Cost({ cost, inflationRate }: { cost: Cost; inflationRate: number }) {
         </article>
       </li>
       <li>
-        <article className="flex flex-col gap-2 rounded-xl border-1 border-primary bg-primary p-4">
+        <article className="flex flex-col gap-2 rounded-xl border border-primary bg-primary p-4">
           <h3 className="text-xs text-white">30 Years With Inflation</h3>
           <p className="text-xl font-semibold text-white">
             {currency}
@@ -885,7 +886,7 @@ function Calculator({ destination }: { destination: Destination }) {
               Inflation Rate (%)
             </span>
             <input
-              className="w-12 rounded-xl border-1 border-neutral-100 p-2 text-center text-base font-semibold text-neutral-600 outline-none placeholder:font-normal placeholder:text-neutral-400 user-invalid:border-red-400 focus:border-primary"
+              className="w-12 rounded-xl border border-neutral-100 p-2 text-center text-base font-semibold text-neutral-600 outline-none placeholder:font-normal placeholder:text-neutral-400 user-invalid:border-red-400 focus:border-primary"
               id="inflationRate"
               min={0}
               name="inflationRate"
@@ -905,7 +906,7 @@ function Calculator({ destination }: { destination: Destination }) {
               current age
             </span>
             <input
-              className="w-12 rounded-xl border-1 border-neutral-100 p-2 text-center text-base font-semibold text-neutral-600 outline-none placeholder:font-normal placeholder:text-neutral-400 user-invalid:border-red-400 focus:border-primary"
+              className="w-12 rounded-xl border border-neutral-100 p-2 text-center text-base font-semibold text-neutral-600 outline-none placeholder:font-normal placeholder:text-neutral-400 user-invalid:border-red-400 focus:border-primary"
               id="currentAge"
               min={0}
               name="currentAge"
@@ -924,7 +925,7 @@ function Calculator({ destination }: { destination: Destination }) {
               retirement age
             </span>
             <input
-              className="w-12 rounded-xl border-1 border-neutral-100 p-2 text-center text-base font-semibold text-neutral-600 outline-none placeholder:font-normal placeholder:text-neutral-400 user-invalid:border-red-400 focus:border-primary"
+              className="w-12 rounded-xl border border-neutral-100 p-2 text-center text-base font-semibold text-neutral-600 outline-none placeholder:font-normal placeholder:text-neutral-400 user-invalid:border-red-400 focus:border-primary"
               id="retirementAge"
               min={0}
               name="retirementAge"
@@ -943,7 +944,7 @@ function Calculator({ destination }: { destination: Destination }) {
               retirement duration
             </span>
             <input
-              className="w-12 rounded-xl border-1 border-neutral-100 p-2 text-center text-base font-semibold text-neutral-600 outline-none placeholder:font-normal placeholder:text-neutral-400 user-invalid:border-red-400 focus:border-primary"
+              className="w-12 rounded-xl border border-neutral-100 p-2 text-center text-base font-semibold text-neutral-600 outline-none placeholder:font-normal placeholder:text-neutral-400 user-invalid:border-red-400 focus:border-primary"
               id="retirementDuration"
               min={0}
               name="retirementDuration"
@@ -1116,14 +1117,32 @@ function Providers({ destination }: { destination: Destination }) {
 
             return (
               <div key={category} className="flex flex-col gap-6">
-                <header className="flex flex-col gap-2">
+                <header className="flex flex-row items-center justify-between gap-2">
                   <h3 className="border-l-4 border-primary pl-4 text-xl font-semibold text-neutral-700">
                     {category}
                   </h3>
                   {categoryInfo && (
-                    <p className="pl-5 text-sm leading-relaxed text-neutral-600">
-                      {categoryInfo.description}
-                    </p>
+                    <Dialog.Root>
+                      <Dialog.Trigger className="flex cursor-pointer items-center justify-center rounded-full p-1 text-neutral-400 transition-colors hover:bg-neutral-100 hover:text-primary">
+                        <Lucide.Info className="size-5" />
+                      </Dialog.Trigger>
+                      <Dialog.Portal>
+                        <Dialog.Backdrop className="fixed inset-0 z-50 bg-black/40 backdrop-blur-xs transition-all data-[ending-style]:opacity-0 data-[starting-style]:opacity-0" />
+                        <Dialog.Popup className="fixed top-1/2 left-1/2 z-50 w-[90%] max-w-lg -translate-x-1/2 -translate-y-1/2 rounded-2xl bg-white p-8 shadow-2xl transition-all data-[ending-style]:scale-95 data-[ending-style]:opacity-0 data-[starting-style]:scale-95 data-[starting-style]:opacity-0">
+                          <Dialog.Title className="text-xl font-bold text-neutral-800">
+                            {category}
+                          </Dialog.Title>
+                          <Dialog.Description className="mt-4 text-base leading-relaxed text-neutral-600">
+                            {categoryInfo.description}
+                          </Dialog.Description>
+                          <div className="mt-8 flex justify-end">
+                            <Dialog.Close className="cursor-pointer rounded-lg bg-primary px-6 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary/90">
+                              Got it
+                            </Dialog.Close>
+                          </div>
+                        </Dialog.Popup>
+                      </Dialog.Portal>
+                    </Dialog.Root>
                   )}
                 </header>
                 <ul className="flex flex-col gap-6">

@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://retireaway.com/schemas/destination.schema.json",
+  "title": "Destination",
+  "description": "A retirement destination with various metrics and ratings.",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "description": { "type": "string" },
+    "region": { "type": "string" },
+    "subregion": { "type": "string" },
+    "topCities": { "type": "array", "items": { "type": "string" } },
+    "similarDestinations": { "type": "array", "items": { "type": "string" } },
+    "climate": { "type": "string" },
+    "expenditure": {
+      "type": "object",
+      "properties": {
+        "single": { "$ref": "#/$defs/cost" },
+        "couple": { "$ref": "#/$defs/cost" }
+      },
+      "required": ["single", "couple"]
+    },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "inflationRate": { "type": "number" },
+    "lifeExpectancy": { "type": "number" },
+    "lifeExpectancyAfter65": { "type": "number" },
+    "populationDensity": { "type": "string" },
+    "retirementCommunity": { "type": "string" },
+    "englishUsage": { "type": "string" },
+    "crowds": { "type": "string" },
+    "ratings": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/$defs/rating" }
+    },
+    "grade": { "type": "string" },
+    "pros": { "type": "array", "items": { "type": "string" } },
+    "cons": { "type": "array", "items": { "type": "string" } },
+    "internationalLiving": { "type": "boolean" }
+  },
+  "required": [
+    "id",
+    "name",
+    "description",
+    "region",
+    "subregion",
+    "topCities",
+    "similarDestinations",
+    "climate",
+    "expenditure",
+    "tags",
+    "inflationRate",
+    "lifeExpectancy",
+    "lifeExpectancyAfter65",
+    "populationDensity",
+    "retirementCommunity",
+    "englishUsage",
+    "crowds",
+    "ratings",
+    "grade",
+    "pros",
+    "cons",
+    "internationalLiving"
+  ],
+  "$defs": {
+    "cost": {
+      "type": "object",
+      "properties": {
+        "amount": { "type": "number" },
+        "currency": { "type": "string" }
+      },
+      "required": ["amount", "currency"]
+    },
+    "rating": {
+      "type": "object",
+      "properties": {
+        "label": { "type": "string" },
+        "grade": { "type": "string" }
+      },
+      "required": ["label", "grade"]
+    }
+  }
+}

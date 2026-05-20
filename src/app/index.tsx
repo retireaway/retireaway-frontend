@@ -4,6 +4,7 @@ import { useHashLocation } from "wouter/use-hash-location";
 import { NotFound } from "@/components/not-found";
 import { ComparisonProvider } from "@/contexts/comparison";
 import { MatchmakerProvider } from "@/contexts/matchmaker";
+import { UserProvider } from "@/contexts/user";
 import { ComparisonBar } from "@/components/comparison-bar";
 
 import { Explore } from "./pages/explore";
@@ -16,10 +17,11 @@ import { LoginPage, SignupPage } from "./pages/auth";
 
 export function App() {
   return (
-    <ComparisonProvider>
-      <MatchmakerProvider>
-        <Wouter.Router base="/" hook={useHashLocation}>
-          <Wouter.Switch>
+    <UserProvider>
+      <ComparisonProvider>
+        <MatchmakerProvider>
+          <Wouter.Router base="/" hook={useHashLocation}>
+            <Wouter.Switch>
             <Wouter.Route path="/">
               <Home />
             </Wouter.Route>
@@ -65,5 +67,6 @@ export function App() {
         </Wouter.Router>
       </MatchmakerProvider>
     </ComparisonProvider>
+    </UserProvider>
   );
 }
