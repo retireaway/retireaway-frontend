@@ -1,0 +1,26 @@
+[
+  {
+    "id": "Visa / Immigration",
+    "description": "Legal experts and specialized agencies that manage residency permits, long-term visas, and citizenship applications. Navigating foreign bureaucracy is often complex and high-stakes; these experts ensure your paperwork is compliant with current laws to avoid delays or rejections. You should ideally engage these services 6-12 months before your intended move date."
+  },
+  {
+    "id": "Banking",
+    "description": "Local and international financial institutions providing accounts for residents and non-residents. A local bank account is essential for managing day-to-day expenses, receiving pension payments, and is often a mandatory requirement for securing certain types of residency visas. It is best to research and open an account as soon as you have your initial residency documents."
+  },
+  {
+    "id": "Tax & Financial Planning",
+    "description": "Advisors specializing in cross-border taxation, wealth management, and retirement income optimization. They help you avoid double taxation, utilize local tax incentives for retirees, and ensure your assets are structured efficiently. It is highly recommended to consult a tax advisor before officially changing your residency to optimize your exit from your home country."
+  },
+  {
+    "id": "Relocation Services",
+    "description": "Logistical experts who manage the physical move of your household goods, pets, and vehicles across borders. They handle customs clearance, international shipping, and provide 'soft landing' services like finding initial housing or setting up utilities. You should typically begin booking these services 3-4 months prior to your departure."
+  },
+  {
+    "id": "Healthcare",
+    "description": "Private hospitals, multi-specialty clinics, and wellness centers providing high-quality medical care. For most retirees, access to English-speaking medical professionals and modern diagnostic infrastructure is a top priority. It is wise to research local facilities near your chosen neighborhood and schedule initial check-ups shortly after arrival."
+  },
+  {
+    "id": "Health Insurance",
+    "description": "Providers of comprehensive medical insurance plans designed for expats and international residents. Private insurance is often a mandatory legal requirement for long-term visa approval and ensures you have access to premium private healthcare without high out-of-pocket costs. Coverage should be secured before you submit your visa application."
+  }
+]

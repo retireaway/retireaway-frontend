@@ -110,5 +110,221 @@
     "contact": "+66 2 494 3700",
     "description": "A Thailand-based insurer designed specifically to provide seamless coverage for Southeast Asian expats. Provides direct billing at top hospitals like Bumrungrad and Samitivej, minimizing out-of-pocket expenses for inpatient care.",
     "category": "Health Insurance"
+  },
+  {
+    "id": "varnavas-law-firm",
+    "destination": "greece",
+    "name": "Varnavas Law Firm",
+    "website": "https://varnavas.gr/",
+    "contact": "+30 210 361 5750",
+    "description": "A premier, Athens-based law firm with over 45 years of experience in property and real estate investment. They are specialists in the Greek Golden Visa program and legal tax-incentive planning.",
+    "category": "Visa / Immigration"
+  },
+  {
+    "id": "kg-law-firm",
+    "destination": "greece",
+    "name": "Kyriakides Georgopoulos (KG) Law Firm",
+    "website": "https://kglawfirm.gr/",
+    "contact": "+30 210 817 1500",
+    "description": "A leading independent law firm providing full-scale representation for international relocation. They specialize in securing the Financially Independent Person (FIP) and Digital Nomad visas.",
+    "category": "Visa / Immigration"
+  },
+  {
+    "id": "alpha-bank-greece",
+    "destination": "greece",
+    "name": "Alpha Bank",
+    "website": "https://www.alpha.gr/en/",
+    "contact": "+30 210 326 0000",
+    "description": "One of Greece's major financial institutions, widely used by international clients for wealth management. They offer non-resident checking options and a robust English digital platform.",
+    "category": "Banking"
+  },
+  {
+    "id": "eurobank-greece",
+    "destination": "greece",
+    "name": "Eurobank Greece",
+    "website": "https://www.eurobank.gr/en/",
+    "contact": "+30 210 955 5000",
+    "description": "A premier retail banking pillar in Greece, known for its efficient digital onboarding for international customers. Their mobile banking provides comprehensive English-language assistance.",
+    "category": "Banking"
+  },
+  {
+    "id": "kpmg-greece",
+    "destination": "greece",
+    "name": "KPMG Greece",
+    "website": "https://kpmg.com/gr/en/home.html",
+    "contact": "+30 210 606 2100",
+    "description": "Top-tier international advisory brand providing comprehensive financial planning. They help foreigners navigate Greece's non-domiciled (Non-Dom) tax programs and optimize income tax liability.",
+    "category": "Tax & Financial Planning"
+  },
+  {
+    "id": "andersen-greece",
+    "destination": "greece",
+    "name": "Andersen in Greece",
+    "website": "https://gr.andersen.com/",
+    "contact": "+30 213 031 1131",
+    "description": "Elite tax and legal advisory firm specialized in cross-border wealth management. They focus on international inheritance frameworks and double-taxation treaty alignment.",
+    "category": "Tax & Financial Planning"
+  },
+  {
+    "id": "hellenic-relocation",
+    "destination": "greece",
+    "name": "Hellenic Relocation",
+    "website": "https://www.hellenicrelocation.com/",
+    "contact": "Via website booking portal",
+    "description": "Dedicated end-to-end destination management provider. They handle home hunting, school selection, and utility synchronization for families moving to Greece.",
+    "category": "Relocation Services"
+  },
+  {
+    "id": "ob-logistics",
+    "destination": "greece",
+    "name": "Orphee Beinoglou (OB) Logistics",
+    "website": "https://www.ob.gr/",
+    "contact": "+30 210 606 6000",
+    "description": "The premier transport and corporate relocation logistics corporation in Greece. They handle global household shipping, customs clearance, and secure warehouse storage.",
+    "category": "Relocation Services"
+  },
+  {
+    "id": "hygeia-hospital",
+    "destination": "greece",
+    "name": "Hygeia Hospital",
+    "website": "https://www.hygeia.gr/en/",
+    "contact": "+30 210 686 7000",
+    "description": "A world-class private medical facility in Athens, internationally acclaimed for clinical excellence. They operate a fully customized International Patient Department with medical translation services.",
+    "category": "Healthcare"
+  },
+  {
+    "id": "interbalkan-medical",
+    "destination": "greece",
+    "name": "European Interbalkan Medical Center",
+    "website": "https://www.iatriko.gr/en/hospital/thessaloniki-medical-center",
+    "contact": "+30 2310 400 000",
+    "description": "A comprehensive private hospital group in Northern Greece (Thessaloniki). Renowned for specialized cardiac programs and preventative geriatric monitoring networks.",
+    "category": "Healthcare"
+  },
+  {
+    "id": "generali-greece",
+    "destination": "greece",
+    "name": "Generali Hellas",
+    "website": "https://www.generali.gr/en/",
+    "contact": "+30 210 809 6100",
+    "description": "A major global insurance giant with a dominant market footprint in Greece. They offer health insurance plans that align with legal immigration requirements for non-EU citizens.",
+    "category": "Health Insurance"
+  },
+  {
+    "id": "ethniki-asfalistiki",
+    "destination": "greece",
+    "name": "National Insurance Company (Ethniki Asfalistiki)",
+    "website": "https://www.ethniki-asfalistiki.gr/",
+    "contact": "+30 210 909 9000",
+    "description": "The oldest and most expansive historical insurance provider in Greece. They offer tiered medical insurance packages that mesh cleanly with local private clinic systems.",
+    "category": "Health Insurance"
+  },
+  {
+    "id": "laca-portugal",
+    "destination": "portugal",
+    "name": "Lamares, Capela e Associados (LACA)",
+    "website": "https://www.lamarescapela.pt/",
+    "contact": "+351 211 622 190",
+    "description": "A leading law firm specializing in nationality, immigration, and digital nomad residency. Highly regarded for their client-first approach to D7 and D8 visa processes.",
+    "category": "Visa / Immigration"
+  },
+  {
+    "id": "gfdl-advogados",
+    "destination": "portugal",
+    "name": "GFDL Advogados",
+    "website": "https://gfdl.legal/",
+    "contact": "+351 211 608 940",
+    "description": "A full-service independent law firm with a dedicated team for international investors. They handle complex business visas and provide rigorous legal solutions for high-net-worth relocations.",
+    "category": "Visa / Immigration"
+  },
+  {
+    "id": "millennium-bcp",
+    "destination": "portugal",
+    "name": "Millennium BCP",
+    "website": "https://www.millenniumbcp.pt/",
+    "contact": "+351 211 131 080",
+    "description": "One of the largest private banks in Portugal with a dedicated international desk. Known for a user-friendly English app and personal account managers for expat clients.",
+    "category": "Banking"
+  },
+  {
+    "id": "activobank",
+    "destination": "portugal",
+    "name": "ActivoBank",
+    "website": "https://www.activobank.pt/",
+    "contact": "+351 210 030 700",
+    "description": "A modern, digital-first bank highly popular for its low fees and streamlined English interface. Often the easiest bank for expats to open an account with quickly.",
+    "category": "Banking"
+  },
+  {
+    "id": "fresh-portugal",
+    "destination": "portugal",
+    "name": "FRESH Portugal",
+    "website": "https://fresh-legal.com/",
+    "contact": "+351 300 509 095",
+    "description": "The largest expat legal and tax advisory in Portugal. They specialize in optimizing tax for US/UK expats and navigating the NHR 2.0 tax regimes.",
+    "category": "Tax & Financial Planning"
+  },
+  {
+    "id": "chase-buchanan-portugal",
+    "destination": "portugal",
+    "name": "Chase Buchanan",
+    "website": "https://chasebuchanan.com/offices/portugal/",
+    "contact": "+351 289 012 110",
+    "description": "A regulated global wealth management firm with a strong presence in Portugal. Provides independent advice on pensions and investment portfolios for global expats.",
+    "category": "Tax & Financial Planning"
+  },
+  {
+    "id": "moviinn",
+    "destination": "portugal",
+    "name": "Moviinn",
+    "website": "https://moviinn.com/",
+    "contact": "Via website",
+    "description": "A specialized relocation concierge focusing on the human side of moving. They provide full-service support from region selection to settling-in services like utilities.",
+    "category": "Relocation Services"
+  },
+  {
+    "id": "global-relocation-portugal",
+    "destination": "portugal",
+    "name": "Global International Relocation",
+    "website": "https://www.globalrelocation.pt/",
+    "contact": "+351 219 236 550",
+    "description": "A premier logistics and moving company based in Portugal. Experts in moving household goods and pets, offering door-to-door service with full customs management.",
+    "category": "Relocation Services"
+  },
+  {
+    "id": "hospital-da-luz",
+    "destination": "portugal",
+    "name": "Hospital da Luz Network",
+    "website": "https://www.hospitaldaluz.pt/",
+    "contact": "+351 217 104 400",
+    "description": "Portugal's most technologically advanced private healthcare network. They offer an English-speaking International Patient wing and a robust app for booking appointments.",
+    "category": "Healthcare"
+  },
+  {
+    "id": "cuf-health",
+    "destination": "portugal",
+    "name": "CUF Health Network",
+    "website": "https://www.cuf.pt/",
+    "contact": "+351 210 025 200",
+    "description": "The oldest and most established private healthcare provider in Portugal. Known for excellence in oncology and complex surgeries across all major regions.",
+    "category": "Healthcare"
+  },
+  {
+    "id": "mgen-portugal",
+    "destination": "portugal",
+    "name": "MGEN",
+    "website": "https://www.mgen.pt/",
+    "contact": "Via website",
+    "description": "A non-profit mutual insurer known for having no age limit and no medical questionnaires. Highly recommended for older retirees (70+).",
+    "category": "Health Insurance"
+  },
+  {
+    "id": "allianz-portugal",
+    "destination": "portugal",
+    "name": "Allianz",
+    "website": "https://www.allianz.pt/",
+    "contact": "Via website",
+    "description": "A global leader in insurance with a massive direct-billing network in Portugal. Provides comprehensive plans that meet all D7 visa requirements.",
+    "category": "Health Insurance"
   }
 ]

@@ -8,11 +8,12 @@ import cities from "@/data/cities.json" with { type: "json" };
 import destinations from "@/data/destinations.json" with { type: "json" };
 import resources from "@/data/resources.json" with { type: "json" };
 import providers from "@/data/providers.json" with { type: "json" };
+import providerCategories from "@/data/provider_categories.json" with { type: "json" };
 
 import { climateToIcon, gradeToColor } from "@/utils/mappings";
 import type { Cost, Destination } from "@/types/destination";
 import type { City } from "@/types/city";
-import type { Provider } from "@/types/provider";
+import type { Provider, ProviderCategoryInfo } from "@/types/provider";
 import { useComparison } from "@/contexts/comparison";
 
 import InternationalLivingLogo from "@/assets/svg/international-living-logo.svg?react";
@@ -1108,56 +1109,69 @@ function Providers({ destination }: { destination: Destination }) {
         </div>
       ) : (
         <div className="flex flex-col gap-12">
-          {categories.map((category) => (
-            <div key={category} className="flex flex-col gap-6">
-              <h3 className="border-l-4 border-primary pl-4 text-xl font-semibold text-neutral-700">
-                {category}
-              </h3>
-              <ul className="flex flex-col gap-6">
-                {destinationProviders
-                  .filter((p) => p.category === category)
-                  .map((provider) => (
-                    <li key={provider.id}>
-                      <article className="flex flex-col gap-4 rounded-2xl border border-neutral-100 bg-white p-6 shadow-sm transition-all hover:border-primary/20">
-                        <header className="flex items-start justify-between gap-4">
-                          <div className="flex flex-col gap-1">
-                            <h4 className="text-lg font-bold text-neutral-800">
-                              {provider.name}
-                            </h4>
-                            <a
-                              href={provider.website}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="flex items-center gap-1 text-sm font-medium text-primary hover:underline"
-                            >
-                              {new URL(provider.website).hostname}
-                              <Lucide.ExternalLink className="size-3" />
-                            </a>
-                          </div>
-                        </header>
+          {categories.map((category) => {
+            const categoryInfo = (
+              providerCategories as ProviderCategoryInfo[]
+            ).find((c) => c.id === category);
 
-                        <p className="text-sm leading-relaxed text-neutral-500">
-                          {provider.description}
-                        </p>
-
-                        <footer className="mt-2 flex flex-col gap-2 border-t border-neutral-50 pt-4">
-                          <div className="flex items-center gap-2 text-xs text-neutral-400">
-                            <Lucide.Phone className="size-3 shrink-0" />
-                            <span>{provider.contact}</span>
-                          </div>
-                          {provider.address && (
-                            <div className="flex items-start gap-2 text-xs text-neutral-400">
-                              <Lucide.MapPin className="mt-0.5 size-3 shrink-0" />
-                              <span>{provider.address}</span>
+            return (
+              <div key={category} className="flex flex-col gap-6">
+                <header className="flex flex-col gap-2">
+                  <h3 className="border-l-4 border-primary pl-4 text-xl font-semibold text-neutral-700">
+                    {category}
+                  </h3>
+                  {categoryInfo && (
+                    <p className="pl-5 text-sm leading-relaxed text-neutral-600">
+                      {categoryInfo.description}
+                    </p>
+                  )}
+                </header>
+                <ul className="flex flex-col gap-6">
+                  {destinationProviders
+                    .filter((p) => p.category === category)
+                    .map((provider) => (
+                      <li key={provider.id}>
+                        <article className="flex flex-col gap-4 rounded-2xl border border-neutral-100 bg-white p-6 shadow-sm transition-all hover:border-primary/20">
+                          <header className="flex items-start justify-between gap-4">
+                            <div className="flex flex-col gap-1">
+                              <h4 className="text-lg font-bold text-neutral-800">
+                                {provider.name}
+                              </h4>
+                              <a
+                                href={provider.website}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+                              >
+                                {new URL(provider.website).hostname}
+                                <Lucide.ExternalLink className="size-3" />
+                              </a>
                             </div>
-                          )}
-                        </footer>
-                      </article>
-                    </li>
-                  ))}
-              </ul>
-            </div>
-          ))}
+                          </header>
+
+                          <p className="text-sm leading-relaxed text-neutral-500">
+                            {provider.description}
+                          </p>
+
+                          <footer className="mt-2 flex flex-col gap-2 border-t border-neutral-50 pt-4">
+                            <div className="flex items-center gap-2 text-xs text-neutral-400">
+                              <Lucide.Phone className="size-3 shrink-0" />
+                              <span>{provider.contact}</span>
+                            </div>
+                            {provider.address && (
+                              <div className="flex items-start gap-2 text-xs text-neutral-400">
+                                <Lucide.MapPin className="mt-0.5 size-3 shrink-0" />
+                                <span>{provider.address}</span>
+                              </div>
+                            )}
+                          </footer>
+                        </article>
+                      </li>
+                    ))}
+                </ul>
+              </div>
+            );
+          })}
         </div>
       )}
     </section>

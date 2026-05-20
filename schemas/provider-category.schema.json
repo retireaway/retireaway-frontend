@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://retireaway.com/schemas/provider-category.schema.json",
+  "title": "Provider Category",
+  "description": "Metadata for a retirement provider category, including its description.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "The name of the category.",
+      "enum": [
+        "Visa / Immigration",
+        "Banking",
+        "Tax & Financial Planning",
+        "Relocation Services",
+        "Healthcare",
+        "Health Insurance"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "description": "An explanation of what the category is, why it's helpful, and when it might be needed.",
+      "examples": [
+        "Legal experts and specialized agencies that manage residency permits, long-term visas, and citizenship applications."
+      ]
+    }
+  },
+  "required": ["id", "description"],
+  "additionalProperties": false
+}

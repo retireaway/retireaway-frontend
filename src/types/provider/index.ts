@@ -16,3 +16,8 @@ export type Provider = Readonly<{
   description: string;
   category: ProviderCategory;
 }>;
+
+export type ProviderCategoryInfo = Readonly<{
+  id: ProviderCategory;
+  description: string;
+}>;

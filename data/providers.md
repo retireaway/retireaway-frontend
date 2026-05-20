@@ -85,3 +85,159 @@ This document lists organizations providing services for expats and retirees.
   - **Contact**: +66 2 494 3700
   - **Description**: A Thailand-based insurer designed specifically to provide seamless coverage for Southeast Asian expats. Provides direct billing at top hospitals like Bumrungrad and Samitivej, minimizing out-of-pocket expenses for inpatient care.
   - **Category**: Health Insurance
+
+## Greece
+
+### Visa / Immigration
+- **Varnavas Law Firm**
+  - **Website**: [https://varnavas.gr/](https://varnavas.gr/)
+  - **Contact**: +30 210 361 5750
+  - **Description**: A premier, Athens-based law firm with over 45 years of experience in property and real estate investment. They are specialists in the Greek Golden Visa program and legal tax-incentive planning.
+  - **Category**: Visa / Immigration
+
+- **Kyriakides Georgopoulos (KG) Law Firm**
+  - **Website**: [https://kglawfirm.gr/](https://kglawfirm.gr/)
+  - **Contact**: +30 210 817 1500
+  - **Description**: A leading independent law firm providing full-scale representation for international relocation. They specialize in securing the Financially Independent Person (FIP) and Digital Nomad visas.
+  - **Category**: Visa / Immigration
+
+### Banking
+- **Alpha Bank**
+  - **Website**: [https://www.alpha.gr/en/](https://www.alpha.gr/en/)
+  - **Contact**: +30 210 326 0000
+  - **Description**: One of Greece's major financial institutions, widely used by international clients for wealth management. They offer non-resident checking options and a robust English digital platform.
+  - **Category**: Banking
+
+- **Eurobank Greece**
+  - **Website**: [https://www.eurobank.gr/en/](https://www.eurobank.gr/en/)
+  - **Contact**: +30 210 955 5000
+  - **Description**: A premier retail banking pillar in Greece, known for its efficient digital onboarding for international customers. Their mobile banking provides comprehensive English-language assistance.
+  - **Category**: Banking
+
+### Tax & Financial Planning
+- **KPMG Greece (International Tax Desk)**
+  - **Website**: [https://kpmg.com/gr/en/home.html](https://kpmg.com/gr/en/home.html)
+  - **Contact**: +30 210 606 2100
+  - **Description**: Top-tier international advisory brand providing comprehensive financial planning. They help foreigners navigate Greece's non-domiciled (Non-Dom) tax programs and optimize income tax liability.
+  - **Category**: Tax & Financial Planning
+
+- **Andersen in Greece**
+  - **Website**: [https://gr.andersen.com/](https://gr.andersen.com/)
+  - **Contact**: +30 213 031 1131
+  - **Description**: Elite tax and legal advisory firm specialized in cross-border wealth management. They focus on international inheritance frameworks and double-taxation treaty alignment.
+  - **Category**: Tax & Financial Planning
+
+### Relocation Services
+- **Hellenic Relocation**
+  - **Website**: [https://www.hellenicrelocation.com/](https://www.hellenicrelocation.com/)
+  - **Description**: Dedicated end-to-end destination management provider. They handle home hunting, school selection, and utility synchronization for families moving to Greece.
+  - **Category**: Relocation Services
+
+- **Orphee Beinoglou (OB) Logistics**
+  - **Website**: [https://www.ob.gr/](https://www.ob.gr/)
+  - **Contact**: +30 210 606 6000
+  - **Description**: The premier transport and corporate relocation logistics corporation in Greece. They handle global household shipping, customs clearance, and secure warehouse storage.
+  - **Category**: Relocation Services
+
+### Healthcare
+- **Hygeia Hospital**
+  - **Website**: [https://www.hygeia.gr/en/](https://www.hygeia.gr/en/)
+  - **Contact**: +30 210 686 7000
+  - **Description**: A world-class private medical facility in Athens, internationally acclaimed for clinical excellence. They operate a fully customized International Patient Department with medical translation services.
+  - **Category**: Healthcare
+
+- **European Interbalkan Medical Center**
+  - **Website**: [https://www.iatriko.gr/en/hospital/thessaloniki-medical-center](https://www.iatriko.gr/en/hospital/thessaloniki-medical-center)
+  - **Contact**: +30 2310 400 000
+  - **Description**: A comprehensive private hospital group in Northern Greece (Thessaloniki). Renowned for specialized cardiac programs and preventative geriatric monitoring networks.
+  - **Category**: Healthcare
+
+### Health Insurance
+- **Generali Hellas**
+  - **Website**: [https://www.generali.gr/en/](https://www.generali.gr/en/)
+  - **Contact**: +30 210 809 6100
+  - **Description**: A major global insurance giant with a dominant market footprint in Greece. They offer health insurance plans that align with legal immigration requirements for non-EU citizens.
+  - **Category**: Health Insurance
+
+- **National Insurance Company (Ethniki Asfalistiki)**
+  - **Website**: [https://www.ethniki-asfalistiki.gr/](https://www.ethniki-asfalistiki.gr/)
+  - **Contact**: +30 210 909 9000
+  - **Description**: The oldest and most expansive historical insurance provider in Greece. They offer tiered medical insurance packages that mesh cleanly with local private clinic systems.
+  - **Category**: Health Insurance
+
+## Portugal
+
+### Visa / Immigration
+- **Lamares, Capela e Associados (LACA)**
+  - **Website**: [https://www.lamarescapela.pt/](https://www.lamarescapela.pt/)
+  - **Contact**: +351 211 622 190
+  - **Description**: A leading law firm specializing in nationality, immigration, and digital nomad residency. Highly regarded for their client-first approach to D7 and D8 visa processes.
+  - **Category**: Visa / Immigration
+
+- **GFDL Advogados**
+  - **Website**: [https://gfdl.legal/](https://gfdl.legal/)
+  - **Contact**: +351 211 608 940
+  - **Description**: A full-service independent law firm with a dedicated team for international investors. They handle complex business visas and provide rigorous legal solutions for high-net-worth relocations.
+  - **Category**: Visa / Immigration
+
+### Banking
+- **Millennium BCP**
+  - **Website**: [https://www.millenniumbcp.pt/](https://www.millenniumbcp.pt/)
+  - **Contact**: +351 211 131 080
+  - **Description**: One of the largest private banks in Portugal with a dedicated international desk. Known for a user-friendly English app and personal account managers for expat clients.
+  - **Category**: Banking
+
+- **ActivoBank**
+  - **Website**: [https://www.activobank.pt/](https://www.activobank.pt/)
+  - **Contact**: +351 210 030 700
+  - **Description**: A modern, digital-first bank highly popular for its low fees and streamlined English interface. Often the easiest bank for expats to open an account with quickly.
+  - **Category**: Banking
+
+### Tax & Financial Planning
+- **FRESH Portugal (Fisher & Associados)**
+  - **Website**: [https://fresh-legal.com/](https://fresh-legal.com/)
+  - **Contact**: +351 300 509 095
+  - **Description**: The largest expat legal and tax advisory in Portugal. They specialize in optimizing tax for US/UK expats and navigating the NHR 2.0 tax regimes.
+  - **Category**: Tax & Financial Planning
+
+- **Chase Buchanan**
+  - **Website**: [https://chasebuchanan.com/offices/portugal/](https://chasebuchanan.com/offices/portugal/)
+  - **Contact**: +351 289 012 110
+  - **Description**: A regulated global wealth management firm with a strong presence in Portugal. Provides independent advice on pensions and investment portfolios for global expats.
+  - **Category**: Tax & Financial Planning
+
+### Relocation Services
+- **Moviinn**
+  - **Website**: [https://moviinn.com/](https://moviinn.com/)
+  - **Description**: A specialized relocation concierge focusing on the human side of moving. They provide full-service support from region selection to settling-in services like utilities.
+  - **Category**: Relocation Services
+
+- **Global International Relocation**
+  - **Website**: [https://www.globalrelocation.pt/](https://www.globalrelocation.pt/)
+  - **Contact**: +351 219 236 550
+  - **Description**: A premier logistics and moving company based in Portugal. Experts in moving household goods and pets, offering door-to-door service with full customs management.
+  - **Category**: Relocation Services
+
+### Healthcare
+- **Hospital da Luz Network**
+  - **Website**: [https://www.hospitaldaluz.pt/](https://www.hospitaldaluz.pt/)
+  - **Contact**: +351 217 104 400
+  - **Description**: Portugal's most technologically advanced private healthcare network. They offer an English-speaking International Patient wing and a robust app for booking appointments.
+  - **Category**: Healthcare
+
+- **CUF Health Network**
+  - **Website**: [https://www.cuf.pt/](https://www.cuf.pt/)
+  - **Contact**: +351 210 025 200
+  - **Description**: The oldest and most established private healthcare provider in Portugal. Known for excellence in oncology and complex surgeries across all major regions.
+  - **Category**: Healthcare
+
+### Health Insurance
+- **MGEN**
+  - **Website**: [https://www.mgen.pt/](https://www.mgen.pt/)
+  - **Description**: A non-profit mutual insurer known for having no age limit and no medical questionnaires. Highly recommended for older retirees (70+).
+  - **Category**: Health Insurance
+
+- **Allianz Care / Allianz Portugal**
+  - **Website**: [https://www.allianz.pt/](https://www.allianz.pt/)
+  - **Description**: A global leader in insurance with a massive direct-billing network in Portugal. Provides comprehensive plans that meet all D7 visa requirements.
+  - **Category**: Health Insurance
