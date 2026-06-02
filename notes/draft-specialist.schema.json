@@ -1,0 +1,267 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://retireaway.com/schemas/specialist.schema.json",
+  "title": "Specialist",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "The unique version 4 UUID identifier for the specialist."
+    },
+    "url": {
+      "type": "string",
+      "format": "url",
+      "description": "The official website URL of the specialist."
+    },
+    "slug": {
+      "type": "string",
+      "description": "A unique, URL-friendly string representation of the specialist's name."
+    },
+    "name": {
+      "type": "string",
+      "description": "The official name of the specialist or organization."
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "The primary contact email address for the specialist."
+    },
+    "telephone": {
+      "type": "string",
+      "description": "The contact phone number of the specialist in international E.164 format."
+    },
+    "description": {
+      "type": "string",
+      "description": "A high-level summary or tagline for the specialist."
+    },
+    "image": {
+      "type": "object",
+      "description": "Metadata for the primary cover image representing the specialist.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "description": "The unique version 4 UUID for the image record."
+        },
+        "slug": {
+          "type": "string",
+          "description": "A URL-friendly representation of the image title or name."
+        },
+        "name": {
+          "type": "string",
+          "description": "The display name or title of the image."
+        },
+        "description": {
+          "type": "string",
+          "description": "Alt text or a detailed description of the image content."
+        }
+      },
+      "required": ["id", "slug", "name"]
+    },
+    "partnered": {
+      "type": "boolean",
+      "default": false,
+      "description": "Indicates if the specialist is an official partner of the platform."
+    },
+    "languages": {
+      "type": "array",
+      "description": "An array of ISO 639-1 two-letter codes representing the languages supported by the specialist.",
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 2
+      }
+    },
+    "coverage": {
+      "type": "array",
+      "description": "An array of geographic flows indicating where services originate from and their target destination. Use 'global' for non-specific origin/target.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "from": {
+            "type": "string",
+            "description": "The slug of the source country or 'global'."
+          },
+          "to": {
+            "type": "string",
+            "description": "The slug of the target country or 'global'."
+          }
+        },
+        "required": ["from", "to"]
+      }
+    },
+    "services": {
+      "type": "array",
+      "description": "A list of specific services offered by the specialist.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "A unique version 4 UUID for the specific service."
+          },
+          "slug": {
+            "type": "string",
+            "description": "A URL-friendly representation of the service name."
+          },
+          "name": {
+            "type": "string",
+            "description": "the display name of the service."
+          },
+          "description": {
+            "type": "string",
+            "description": "A detailed description of what the service entails."
+          },
+          "category": {
+            "type": "object",
+            "description": "The standardized category the service falls under.",
+            "enum": [
+              {
+                "id": "e68b191c-79a0-4352-94de-8ec1562b3252",
+                "slug": "legal-immigration",
+                "name": "Legal & Immigration",
+                "description": "Visa processing, residency applications, citizenship by investment, and general legal counsel."
+              },
+              {
+                "id": "3c448bb9-3733-4f24-9b1d-bb6209bb2a0a",
+                "slug": "tax-finance",
+                "name": "Tax & Financial Planning",
+                "description": "Cross-border tax optimization, filing tax returns, pension transfers, and international wealth management."
+              },
+              {
+                "id": "8b67cc11-88f5-46ba-bde2-d35505e6bfae",
+                "slug": "real-estate",
+                "name": "Real Estate & Housing",
+                "description": "Buyer's agents, property management, rental scouting, and real estate legal support."
+              },
+              {
+                "id": "a6d82046-652f-48d8-b57f-1d428c9497e7",
+                "slug": "healthcare-insurance",
+                "name": "Healthcare & Insurance",
+                "description": "International private medical insurance brokers, local health system enrollment, and medical tourism facilitators."
+              },
+              {
+                "id": "c844440c-6e6b-4e08-96bd-581b94b7e8de",
+                "slug": "relocation-logistics",
+                "name": "Relocation & Logistics",
+                "description": "International moving companies, pet relocation services, and vehicle importation."
+              },
+              {
+                "id": "b57022de-de32-4753-90d2-9705a6e8b4bb",
+                "slug": "banking-currency",
+                "name": "Banking & Currency",
+                "description": "Foreign exchange brokers, assistance opening local bank accounts, and cross-border payment solutions."
+              },
+              {
+                "id": "d7b22a00-1c19-4dc3-8ff6-3be3a4ce43d7",
+                "slug": "settling-in",
+                "name": "Settling In & Integration",
+                "description": "Utility setup, driver's license conversion, language schools, and destination management."
+              }
+            ]
+          }
+        },
+        "required": ["id", "slug", "name", "category"]
+      }
+    },
+    "overview": {
+      "type": "object",
+      "description": "A synthesized research write-up about the specialist, including source materials.",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The main title of the overview."
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "A descriptive subtitle for the overview."
+        },
+        "summary": {
+          "type": "string",
+          "description": "A brief executive summary of the research findings."
+        },
+        "created": {
+          "type": "string",
+          "format": "date",
+          "description": "The date the overview was last updated (YYYY-MM-DD)."
+        },
+        "contents": {
+          "type": "array",
+          "description": "The narrative paragraphs of the overview.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "description": "The heading for this section of the overview."
+              },
+              "subtitle": {
+                "type": "string",
+                "description": "An optional subheading for this section."
+              },
+              "body": {
+                "type": "string",
+                "description": "The text content of the paragraph."
+              },
+              "sourceId": {
+                "type": "string",
+                "format": "uuid",
+                "description": "Optional UUID reference to a specific source in the sources array."
+              }
+            },
+            "required": ["body"]
+          }
+        },
+        "sources": {
+          "type": "array",
+          "description": "An array of external resources used to compile this overview.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uuid",
+                "description": "The unique version 4 UUID for the source."
+              },
+              "url": {
+                "type": "string",
+                "format": "url",
+                "description": "The direct link to the external source."
+              },
+              "slug": {
+                "type": "string",
+                "description": "A URL-friendly identifier for the source."
+              },
+              "name": {
+                "type": "string",
+                "description": "The name or title of the source."
+              },
+              "description": {
+                "type": "string",
+                "description": "A summary of the source's content."
+              },
+              "copy": {
+                "type": "string",
+                "description": "An exact text excerpt or data point retrieved from the source."
+              },
+              "platform": {
+                "type": "string",
+                "description": "The hostname or platform name (e.g., 'www.youtube.com').",
+                "examples": [
+                  "www.youtube.com",
+                  "www.reddit.com",
+                  "www.trustpilot.com"
+                ]
+              }
+            },
+            "required": ["id", "url", "name", "platform"]
+          }
+        }
+      },
+      "required": ["title", "contents", "sources"]
+    }
+  },
+  "required": ["id", "slug", "name", "url", "services", "overview"]
+}

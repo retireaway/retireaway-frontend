@@ -1,0 +1,48 @@
+{
+  "type": "object",
+  "description": "The category of the service.",
+  "enum": [
+    {
+      "id": "e68b191c-79a0-4352-94de-8ec1562b3252",
+      "slug": "legal-immigration",
+      "name": "Legal & Immigration",
+      "description": "Visa processing, residency applications, citizenship by investment, and general legal counsel."
+    },
+    {
+      "id": "3c448bb9-3733-4f24-9b1d-bb6209bb2a0a",
+      "slug": "tax-finance",
+      "name": "Tax & Financial Planning",
+      "description": "Cross-border tax optimization, filing tax returns, pension transfers, and international wealth management."
+    },
+    {
+      "id": "8b67cc11-88f5-46ba-bde2-d35505e6bfae",
+      "slug": "real-estate",
+      "name": "Real Estate & Housing",
+      "description": "Buyer's agents, property management, rental scouting, and real estate legal support."
+    },
+    {
+      "id": "a6d82046-652f-48d8-b57f-1d428c9497e7",
+      "slug": "healthcare-insurance",
+      "name": "Healthcare & Insurance",
+      "description": "International private medical insurance brokers, local health system enrollment, and medical tourism facilitators."
+    },
+    {
+      "id": "c844440c-6e6b-4e08-96bd-581b94b7e8de",
+      "slug": "relocation-logistics",
+      "name": "Relocation & Logistics",
+      "description": "International moving companies, pet relocation services, and vehicle importation."
+    },
+    {
+      "id": "b57022de-de32-4753-90d2-9705a6e8b4bb",
+      "slug": "banking-currency",
+      "name": "Banking & Currency",
+      "description": "Foreign exchange brokers, assistance opening local bank accounts, and cross-border payment solutions."
+    },
+    {
+      "id": "d7b22a00-1c19-4dc3-8ff6-3be3a4ce43d7",
+      "slug": "settling-in",
+      "name": "Settling In & Integration",
+      "description": "Utility setup, driver's license conversion, language schools, and destination management."
+    }
+  ]
+}

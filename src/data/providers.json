@@ -362,5 +362,125 @@
     "description": "A global leader in insurance with a massive direct-billing network in Portugal. Provides comprehensive plans that meet all D7 visa requirements.",
     "category": "Health Insurance",
     "partnered": false
+  },
+  {
+    "id": "balcells-group",
+    "destination": "spain",
+    "name": "Balcells Group",
+    "website": "https://balcellsgroup.com/",
+    "contact": "+351 934 683 454 (International intake)",
+    "description": "A prominent international law firm specializing in Non-Lucrative Visas, Digital Nomad Visas, and Golden Visas for retirees in Spain.",
+    "category": "Visa / Immigration",
+    "partnered": true
+  },
+  {
+    "id": "bureaucracy-spain",
+    "destination": "spain",
+    "name": "Bureaucracy Spain",
+    "website": "https://www.bureaucracy.es/",
+    "contact": "Via web consultation portal",
+    "description": "Dedicated legal and administrative agency focused on smoothing out complex Spanish immigration and residency procedures, including NIE and document localization.",
+    "category": "Visa / Immigration",
+    "partnered": false
+  },
+  {
+    "id": "santander-spain",
+    "destination": "spain",
+    "name": "Banco Santander",
+    "website": "https://www.bancosantander.es/",
+    "contact": "+34 915 123 123",
+    "description": "The largest banking institution in Spain, offering dedicated non-resident accounts and comprehensive English-language support.",
+    "category": "Banking",
+    "partnered": false
+  },
+  {
+    "id": "bbva-spain",
+    "destination": "spain",
+    "name": "BBVA",
+    "website": "https://www.bbva.es/",
+    "contact": "+34 912 249 426",
+    "description": "A leading Spanish banking group known for its market-leading digital application and paperless account creation.",
+    "category": "Banking",
+    "partnered": false
+  },
+  {
+    "id": "abante-asesores",
+    "destination": "spain",
+    "name": "Abante Asesores",
+    "website": "https://www.abanteasesores.com/",
+    "contact": "+34 917 815 750",
+    "description": "Independent financial advisory firm specializing in retirement income structuring and navigating progressive autonomous tax rates in Spain.",
+    "category": "Tax & Financial Planning",
+    "partnered": false
+  },
+  {
+    "id": "blevins-franks-spain",
+    "destination": "spain",
+    "name": "Blevins Franks",
+    "website": "https://www.blevinsfranks.com/",
+    "contact": "+34 971 719 181",
+    "description": "Cross-border tax and wealth preservation experts optimizing pension transfers and structuring investments for Spanish tax compliance.",
+    "category": "Tax & Financial Planning",
+    "partnered": false
+  },
+  {
+    "id": "moving2spain",
+    "destination": "spain",
+    "name": "Moving2Spain",
+    "website": "https://moving2madrid.com/",
+    "contact": "Via website booking",
+    "description": "Boutique relocation agency managing full-scale transitions, including home hunting, school selection, and utility setup for international retirees.",
+    "category": "Relocation Services",
+    "partnered": false
+  },
+  {
+    "id": "sit-spain",
+    "destination": "spain",
+    "name": "SIT Spain",
+    "website": "https://www.sitgroup.es/",
+    "contact": "+34 916 783 000",
+    "description": "Premier international relocation firm specializing in cross-border household transport, customs clearance, and pet relocation protocols.",
+    "category": "Relocation Services",
+    "partnered": false
+  },
+  {
+    "id": "quironsalud-spain",
+    "destination": "spain",
+    "name": "Quirónsalud",
+    "website": "https://www.quironsalud.com/",
+    "contact": "+34 915 174 600",
+    "description": "The largest private healthcare network in Spain, featuring international patient departments and advanced medical technology.",
+    "category": "Healthcare",
+    "partnered": false
+  },
+  {
+    "id": "hm-hospitales-spain",
+    "destination": "spain",
+    "name": "HM Hospitales",
+    "website": "https://www.hmhospitales.com/",
+    "contact": "+34 900 102 808",
+    "description": "Leading private hospital network offering personalized medical coordinators and care entirely in English or other native languages.",
+    "category": "Healthcare",
+    "partnered": false
+  },
+  {
+    "id": "sanitas-spain",
+    "destination": "spain",
+    "name": "Sanitas",
+    "website": "https://www.sanitas.es/",
+    "contact": "+34 917 586 702",
+    "description": "Leading medical insurance provider in Spain offering plans optimized specifically for immigration approval with zero copays and no waiting periods.",
+    "category": "Health Insurance",
+    "partnered": true
+  },
+  {
+    "id": "adeslas-spain",
+    "destination": "spain",
+    "name": "Adeslas",
+    "website": "https://www.segurcaixaadeslas.es/",
+    "contact": "+34 919 191 898",
+    "description": "The largest health insurance company in Spain with an expansive network of private doctors and direct billing to top hospitals.",
+    "category": "Health Insurance",
+    "partnered": false
   }
 ]

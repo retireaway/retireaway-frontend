@@ -241,3 +241,83 @@ This document lists organizations providing services for expats and retirees.
   - **Website**: [https://www.allianz.pt/](https://www.allianz.pt/)
   - **Description**: A global leader in insurance with a massive direct-billing network in Portugal. Provides comprehensive plans that meet all D7 visa requirements.
   - **Category**: Health Insurance
+
+## Spain
+
+### Visa / Immigration
+- **Balcells Group**
+  - **Website**: [https://balcellsgroup.com/](https://balcellsgroup.com/)
+  - **Contact**: +351 934 683 454 (International intake)
+  - **Description**: A prominent international law firm specializing in Non-Lucrative Visas, Digital Nomad Visas, and Golden Visas for retirees in Spain.
+  - **Category**: Visa / Immigration
+
+- **Bureaucracy Spain**
+  - **Website**: [https://www.bureaucracy.es/](https://www.bureaucracy.es/)
+  - **Contact**: Via web consultation portal
+  - **Description**: Dedicated legal and administrative agency focused on smoothing out complex Spanish immigration and residency procedures, including NIE and document localization.
+  - **Category**: Visa / Immigration
+
+### Banking
+- **Banco Santander**
+  - **Website**: [https://www.bancosantander.es/](https://www.bancosantander.es/)
+  - **Contact**: +34 915 123 123
+  - **Description**: The largest banking institution in Spain, offering dedicated non-resident accounts and comprehensive English-language support.
+  - **Category**: Banking
+
+- **BBVA Spain**
+  - **Website**: [https://www.bbva.es/](https://www.bbva.es/)
+  - **Contact**: +34 912 249 426
+  - **Description**: A leading Spanish banking group known for its market-leading digital application and paperless account creation.
+  - **Category**: Banking
+
+### Tax & Financial Planning
+- **Abante Asesores**
+  - **Website**: [https://www.abanteasesores.com/](https://www.abanteasesores.com/)
+  - **Contact**: +34 917 815 750
+  - **Description**: Independent financial advisory firm specializing in retirement income structuring and navigating progressive autonomous tax rates in Spain.
+  - **Category**: Tax & Financial Planning
+
+- **Blevins Franks Spain**
+  - **Website**: [https://www.blevinsfranks.com/](https://www.blevinsfranks.com/)
+  - **Contact**: +34 971 719 181
+  - **Description**: Cross-border tax and wealth preservation experts optimizing pension transfers and structuring investments for Spanish tax compliance.
+  - **Category**: Tax & Financial Planning
+
+### Relocation Services
+- **Moving2Spain**
+  - **Website**: [https://moving2madrid.com/](https://moving2madrid.com/)
+  - **Contact**: Via website booking
+  - **Description**: Boutique relocation agency managing full-scale transitions, including home hunting, school selection, and utility setup for international retirees.
+  - **Category**: Relocation Services
+
+- **SIT Spain**
+  - **Website**: [https://www.sitgroup.es/](https://www.sitgroup.es/)
+  - **Contact**: +34 916 783 000
+  - **Description**: Premier international relocation firm specializing in cross-border household transport, customs clearance, and pet relocation protocols.
+  - **Category**: Relocation Services
+
+### Healthcare
+- **Quirónsalud Hospital Group**
+  - **Website**: [https://www.quironsalud.com/](https://www.quironsalud.com/)
+  - **Contact**: +34 915 174 600
+  - **Description**: The largest private healthcare network in Spain, featuring international patient departments and advanced medical technology.
+  - **Category**: Healthcare
+
+- **HM Hospitales Network**
+  - **Website**: [https://www.hmhospitales.com/](https://www.hmhospitales.com/)
+  - **Contact**: +34 900 102 808
+  - **Description**: Leading private hospital network offering personalized medical coordinators and care entirely in English or other native languages.
+  - **Category**: Healthcare
+
+### Health Insurance
+- **Sanitas**
+  - **Website**: [https://www.sanitas.es/](https://www.sanitas.es/)
+  - **Contact**: +34 917 586 702
+  - **Description**: Leading medical insurance provider in Spain offering plans optimized specifically for immigration approval with zero copays and no waiting periods.
+  - **Category**: Health Insurance
+
+- **Adeslas**
+  - **Website**: [https://www.segurcaixaadeslas.es/](https://www.segurcaixaadeslas.es/)
+  - **Contact**: +34 919 191 898
+  - **Description**: The largest health insurance company in Spain with an expansive network of private doctors and direct billing to top hospitals.
+  - **Category**: Health Insurance
