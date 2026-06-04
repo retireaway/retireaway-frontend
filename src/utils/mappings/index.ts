@@ -34,7 +34,7 @@ export function gradeToColor(grade: string) {
 export function climateToIcon(climate: string) {
   switch (climate) {
     case "Mediterranean":
-      return Lucide.Sun;
+      return Lucide.SunDim;
     case "Temperate":
       return Lucide.SunSnow;
     case "Tropical":
@@ -42,8 +42,9 @@ export function climateToIcon(climate: string) {
       return Lucide.TreePalm;
     case "Cold":
       return Lucide.Snowflake;
-    case "Mixed":
     case "Arid":
+      return Lucide.Sun;
+    case "Mixed":
     default:
       return Lucide.Globe;
   }

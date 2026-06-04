@@ -16,6 +16,9 @@ import { Discover } from "./pages/discover";
 import { LoginPage, SignupPage } from "./pages/auth";
 import { UserHome } from "./pages/user";
 
+import { Country } from "@/app/pages/country/:id";
+import SidebarDialog from "@/components/sidebar";
+
 export function App() {
   return (
     <UserProvider>
@@ -23,55 +26,60 @@ export function App() {
         <MatchmakerProvider>
           <Wouter.Router base="/" hook={useHashLocation}>
             <Wouter.Switch>
-            <Wouter.Route path="/">
-              <Home />
-            </Wouter.Route>
+              <Wouter.Route path="/">
+                <Home />
+              </Wouter.Route>
 
-            <Wouter.Route path="/login">
-              <LoginPage />
-            </Wouter.Route>
+              <Wouter.Route path="/login">
+                <LoginPage />
+              </Wouter.Route>
 
-            <Wouter.Route path="/signup">
-              <SignupPage />
-            </Wouter.Route>
+              <Wouter.Route path="/signup">
+                <SignupPage />
+              </Wouter.Route>
 
-            <Wouter.Route path="/home">
-              <UserHome />
-            </Wouter.Route>
+              <Wouter.Route path="/home">
+                <UserHome />
+              </Wouter.Route>
 
-            <Wouter.Route path="/explore">
-              <Explore />
-            </Wouter.Route>
+              <Wouter.Route path="/explore">
+                <Explore />
+              </Wouter.Route>
 
-            <Wouter.Route path="/discover">
-              <Discover />
-            </Wouter.Route>
+              <Wouter.Route path="/discover">
+                <Discover />
+              </Wouter.Route>
 
-            <Wouter.Route path="/matchmaker">
-              <Matchmaker.Questionnaire />
-            </Wouter.Route>
+              <Wouter.Route path="/matchmaker">
+                <Matchmaker.Questionnaire />
+              </Wouter.Route>
 
-            <Wouter.Route path="/matchmaker/results">
-              <Matchmaker.Results />
-            </Wouter.Route>
+              <Wouter.Route path="/matchmaker/results">
+                <Matchmaker.Results />
+              </Wouter.Route>
 
-            <Wouter.Route path="/compare">
-              <ComparisonPage />
-            </Wouter.Route>
+              <Wouter.Route path="/compare">
+                <ComparisonPage />
+              </Wouter.Route>
 
-            <Wouter.Route path="/:id/:tab">
-              <DestinationProfile />
-            </Wouter.Route>
+              <Wouter.Route path="/country/:id">
+                <Country />
+              </Wouter.Route>
 
-            <Wouter.Route>
-              <NotFound />
-            </Wouter.Route>
-          </Wouter.Switch>
+              <Wouter.Route path="/:id/:tab">
+                <DestinationProfile />
+              </Wouter.Route>
 
-          <ComparisonBar />
-        </Wouter.Router>
-      </MatchmakerProvider>
-    </ComparisonProvider>
+              <Wouter.Route>
+                <NotFound />
+              </Wouter.Route>
+            </Wouter.Switch>
+
+            <ComparisonBar />
+            <SidebarDialog />
+          </Wouter.Router>
+        </MatchmakerProvider>
+      </ComparisonProvider>
     </UserProvider>
   );
 }

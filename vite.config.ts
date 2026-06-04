@@ -10,8 +10,11 @@ import basicSsl from "@vitejs/plugin-basic-ssl";
 export default defineConfig({
   server: {
     host: "0.0.0.0",
-    port: 5174,
+    port: 6001,
     strictPort: true,
+    fs: {
+      strict: false,
+    },
   },
   plugins: [svgr(), react(), tailwindcss(), basicSsl()],
   resolve: {
