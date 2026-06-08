@@ -13,46 +13,95 @@ export function Topbar({}: TopbarProps) {
     <>
       <div className="h-14" />
 
-      <nav className="fixed top-0 left-0 z-1 grid h-14 w-full grid-cols-3 border-b border-neutral-200 bg-white px-6">
-        <Wouter.Link href="/" className="contents">
-          <div className="flex items-center justify-start">
-            <div className="flex items-center">
-              <div className="text-lg font-bold tracking-tight text-neutral-900">
-                Retire<span className="text-primary">Away</span>
+      <nav className="fixed top-0 left-0 z-1 h-14 w-full border-b border-neutral-300 bg-[#f2f7f6] lg:h-16">
+        <div className="grid h-full max-w-280 grid-cols-[min-content_auto_min-content] gap-8 px-6 lg:mx-auto">
+          <Wouter.Link href="/" className="contents">
+            <div className="flex items-center justify-start">
+              <div className="lg:gap-0.i flex items-center gap-0.5">
+                <Lucide.Bird className="size-5 stroke-neutral-900 lg:size-6.5" />
+                <div className="text-lg leading-none font-bold tracking-tight text-neutral-900 lg:text-2xl">
+                  Retire<span className="text-primary">Away</span>
+                </div>
               </div>
             </div>
-          </div>
-        </Wouter.Link>
-
-        <div></div>
-
-        <div className="flex items-center justify-end gap-4">
-          {0 < compare.selectedDestinations.length && (
-            <button
-              type="button"
-              onClick={() => {
-                console.log("open compare modal");
-              }}
-            >
-              <div className="relative rounded-full bg-primary p-1.5">
-                <Lucide.GitCompareArrows className="size-5 stroke-white" />
-                <span className="text-xxs absolute top-0 right-0 flex size-4 translate-x-1/3 -translate-y-1/3 items-center justify-center rounded-full border border-primary bg-white font-bold text-primary">
-                  {compare.selectedDestinations.length}
-                </span>
-              </div>
-            </button>
-          )}
-
-          <Wouter.Link href="/matchmaker">
-            <Lucide.Astroid className="size-5 stroke-neutral-600" />
           </Wouter.Link>
 
-          <Dialog.Trigger
-            handle={sidebarDialogHandle}
-            className="flex items-center justify-center gap-1"
-          >
-            <Lucide.TextAlignJustify className="size-5 text-neutral-600" />
-          </Dialog.Trigger>
+          <div className="flex items-center">
+            <div className="hidden h-10 w-full items-center gap-2 rounded-s-full rounded-e-full border border-neutral-500 bg-white px-4 shadow-sm lg:flex">
+              <Lucide.Search className="size-5 text-neutral-900" />
+              <span className="text-sm text-neutral-500">Search</span>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-end gap-4 lg:hidden">
+            {0 < compare.selectedDestinations.length && (
+              <button
+                type="button"
+                onClick={() => {
+                  console.log("open compare modal");
+                }}
+              >
+                <div className="relative rounded-full bg-primary p-1.5">
+                  <Lucide.GitCompareArrows className="size-5 stroke-white" />
+                  <span className="text-xxs absolute top-0 right-0 flex size-4 translate-x-1/3 -translate-y-1/3 items-center justify-center rounded-full border border-primary bg-white font-bold text-primary">
+                    {compare.selectedDestinations.length}
+                  </span>
+                </div>
+              </button>
+            )}
+
+            <Wouter.Link href="/matchmaker">
+              <Lucide.Sparkles className="size-5 stroke-neutral-900" />
+            </Wouter.Link>
+
+            <Dialog.Trigger
+              handle={sidebarDialogHandle}
+              className="flex items-center justify-center gap-1 lg:hidden"
+            >
+              <Lucide.TextAlignJustify className="size-5 text-neutral-900" />
+            </Dialog.Trigger>
+          </div>
+
+          <div className="hidden items-center justify-end gap-10 lg:flex">
+            <div className="flex items-center gap-1">
+              <Lucide.Birdhouse className="size-4 stroke-neutral-900" />
+              <span className="text-sm leading-none font-semibold tracking-tight text-neutral-900">
+                Home
+              </span>
+            </div>
+
+            <div className="flex items-center gap-1">
+              <Lucide.Telescope className="size-4 stroke-neutral-900" />
+              <span className="text-sm leading-none font-semibold tracking-tight text-neutral-900">
+                Explore
+              </span>
+            </div>
+
+            <div className="flex items-center gap-1">
+              <Lucide.GitCompareArrows className="size-4 stroke-neutral-900" />
+              <span className="text-sm leading-none font-semibold tracking-tight text-neutral-900">
+                Compare
+              </span>
+            </div>
+
+            <div className="flex items-center gap-1">
+              <Lucide.Sparkles className="size-4 stroke-neutral-900" />
+              <span className="text-sm leading-none font-semibold tracking-tight text-neutral-900">
+                Match<span className="text-primary">maker</span>
+              </span>
+            </div>
+
+            <div className="flex items-center gap-1">
+              <Lucide.Banknote className="size-4 stroke-neutral-900" />
+              <span className="border-b text-sm leading-none font-semibold tracking-tight text-neutral-900">
+                USD
+              </span>
+            </div>
+
+            <div className="flex size-8 items-center justify-center rounded-full border border-neutral-600 bg-white shadow-md">
+              <Lucide.UserRound className="size-4 stroke-neutral-900" />
+            </div>
+          </div>
         </div>
       </nav>
     </>

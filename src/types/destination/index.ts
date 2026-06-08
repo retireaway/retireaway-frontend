@@ -33,7 +33,7 @@ export type Rating = Readonly<{
   grade: string;
 }>;
 
-type RatingKey =
+export type RatingKey =
   | "affordability"
   | "healthcareQuality"
   | "personalSafety"

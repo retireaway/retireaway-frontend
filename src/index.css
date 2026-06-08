@@ -1,8 +1,12 @@
 @import "tailwindcss";
 @import "@fontsource-variable/sora";
+@import "@fontsource-variable/roboto/wght.css";
+@import "@fontsource-variable/roboto-mono/wght.css";
 
 @theme {
   --font-sora: "Sora Variable", sans-serif;
+  --font-roboto: "Roboto Variable", sans-serif;
+  --font-roboto-mono: "Roboto Mono Variable", monospace;
   --color-primary: #005f55;
   --color-active: #004a42;
   --color-accent: #e74c3c;
