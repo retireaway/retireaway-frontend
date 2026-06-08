@@ -11,9 +11,9 @@ export function Topbar({}: TopbarProps) {
 
   return (
     <>
-      <div className="h-14" />
+      <div className="h-14 lg:h-16" />
 
-      <nav className="fixed top-0 left-0 z-1 h-14 w-full border-b border-neutral-300 bg-[#f2f7f6] lg:h-16">
+      <nav className="_bg-[#f2f7f6] fixed top-0 left-0 z-1 h-14 w-full border-b border-neutral-200 bg-white lg:h-16">
         <div className="grid h-full max-w-280 grid-cols-[min-content_auto_min-content] gap-8 px-6 lg:mx-auto">
           <Wouter.Link href="/" className="contents">
             <div className="flex items-center justify-start">
@@ -62,7 +62,7 @@ export function Topbar({}: TopbarProps) {
             </Dialog.Trigger>
           </div>
 
-          <div className="hidden items-center justify-end gap-10 lg:flex">
+          <div className="hidden items-center justify-end gap-8 lg:flex">
             <div className="flex items-center gap-1">
               <Lucide.Birdhouse className="size-4 stroke-neutral-900" />
               <span className="text-sm leading-none font-semibold tracking-tight text-neutral-900">
@@ -91,9 +91,9 @@ export function Topbar({}: TopbarProps) {
               </span>
             </div>
 
-            <div className="flex items-center gap-1">
-              <Lucide.Banknote className="size-4 stroke-neutral-900" />
-              <span className="border-b text-sm leading-none font-semibold tracking-tight text-neutral-900">
+            <div className="flex items-center gap-1 rounded-sm border border-neutral-400 bg-neutral-100 p-1">
+              <Lucide.Wallet className="size-3.5 stroke-neutral-900" />
+              <span className="text-xs leading-none font-semibold tracking-tight text-neutral-900">
                 USD
               </span>
             </div>

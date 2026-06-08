@@ -50,9 +50,31 @@ export function Country() {
 
   return (
     <Page>
-      <div className="h-4 lg:h-8" />
+      <div className="h-6" />
 
       <div className="px-6">
+        <div className="flex flex-wrap items-center gap-x-1 gap-y-0">
+          <p className="">
+            <span className="border-b-0 border-neutral-800 text-xs font-medium text-neutral-800 underline">
+              #{destination.region}
+            </span>
+          </p>
+          <Lucide.ChevronRight className="mt-1 size-3.5" />
+          <p className="">
+            <span className="border-b-0 border-neutral-800 text-xs font-medium text-neutral-800 underline">
+              #{destination.subregion}
+            </span>
+          </p>
+          <Lucide.ChevronRight className="mt-1 size-3.5" />
+          <p className="">
+            <span className="border-b-0 border-neutral-800 text-xs font-medium text-neutral-800 underline">
+              #{destination.name}
+            </span>
+          </p>
+        </div>
+
+        <div className="h-4" />
+
         <div className="flex items-center justify-between">
           <div>
             <header>
@@ -231,7 +253,7 @@ export function Country() {
 
       <Similar destination={destination} />
 
-      <div className="h-400" />
+      <div className="h-16" />
     </Page>
   );
 }
@@ -264,8 +286,8 @@ function ChipA({
     <div className="flex flex-row items-center justify-start gap-1 lg:gap-1.5">
       <Icon className="size-4 shrink-0 stroke-neutral-800" />
 
-      <div className="flex w-min items-center gap-1 border-b border-neutral-600">
-        <span className="text-sm font-medium whitespace-nowrap text-neutral-700">
+      <div className="flex w-min items-center gap-1 border-b border-neutral-800">
+        <span className="text-sm font-medium whitespace-nowrap text-neutral-800">
           {text}
         </span>
       </div>
