@@ -55,19 +55,19 @@ export function Country() {
       <div className="px-6">
         <div className="flex flex-wrap items-center gap-x-1 gap-y-0">
           <p className="">
-            <span className="border-b-0 border-neutral-800 text-xs font-medium text-neutral-800 underline">
+            <span className="border-b-0 border-neutral-800 text-xs font-medium text-neutral-800">
               #{destination.region}
             </span>
           </p>
           <Lucide.ChevronRight className="mt-1 size-3.5" />
           <p className="">
-            <span className="border-b-0 border-neutral-800 text-xs font-medium text-neutral-800 underline">
+            <span className="border-b-0 border-neutral-800 text-xs font-medium text-neutral-800">
               #{destination.subregion}
             </span>
           </p>
           <Lucide.ChevronRight className="mt-1 size-3.5" />
           <p className="">
-            <span className="border-b-0 border-neutral-800 text-xs font-medium text-neutral-800 underline">
+            <span className="border-b-0 border-neutral-800 text-xs font-medium text-neutral-800">
               #{destination.name}
             </span>
           </p>
@@ -1422,3 +1422,13 @@ function Similar({ destination }: { destination: Destination }) {
     </div>
   );
 }
+
+// function ChipC({ text }: { text: string }) {
+//   return (
+//     <div className="rounded-sm border-0 border-neutral-200 bg-primary/10 px-1.5 py-1">
+//       <p className="text-xs font-medium whitespace-nowrap text-neutral-900">
+//         {text}
+//       </p>
+//     </div>
+//   );
+// }
