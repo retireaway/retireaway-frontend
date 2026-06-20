@@ -1147,7 +1147,7 @@ function InternationalLivingCard({
     >
       <div className="grid grid-cols-[6fr_4fr] gap-4 rounded-lg border border-neutral-400 p-4 shadow-md">
         <div>
-          <p className="text-xl leading-none font-black tracking-tight text-neutral-900">
+          <p className="text-xl leading-none font-bold tracking-tight text-neutral-900">
             Learn more <br /> about{" "}
             <span className="text-il-blue"> {destination.name}</span>!
           </p>
@@ -1186,7 +1186,7 @@ function InternationalLivingCard({
 function MatchmakerCard({ destination }: { destination: Destination }) {
   return (
     <Wouter.Link href={"/matchmaker"} className="contents">
-      <article className="grid grid-cols-[4fr_6fr] gap-6 overflow-hidden rounded-md bg-primary/10 p-4 lg:bg-neutral-200/50">
+      <article className="grid grid-cols-[4fr_6fr] gap-6 overflow-hidden rounded-md bg-primary/10 p-4">
         <div className="relative">
           <img
             className="absolute top-0 left-0 size-full -rotate-3 rounded-md object-cover object-center shadow-lg"
@@ -1194,7 +1194,7 @@ function MatchmakerCard({ destination }: { destination: Destination }) {
           />
         </div>
         <div className="py-2">
-          <p className="text-xl leading-none font-black tracking-tight text-neutral-900">
+          <p className="text-xl leading-none font-bold tracking-tight text-neutral-900">
             Find your <br />
             perfect match
           </p>

@@ -1,0 +1,35 @@
+[
+  {
+    "destination": "united-kingdom",
+    "title": "St. James's Place plc",
+    "description": "A comprehensive encyclopedic overview of St. James's Place plc, detailing its corporate history, founding by Sir Mark Weinberg, Mike Wilson, and Lord Jacob Rothschild in 1991, its status as a FTSE 100 wealth management business, and its operational footprint across the UK.",
+    "url": "https://en.wikipedia.org/wiki/St._James%27s_Place_plc",
+    "author": "Wikipedia Contributors",
+    "image": "wikipedia-sjp",
+    "platform": "Wikipedia",
+    "date": "2026-06-17",
+    "tags": ["overview", "history", "finance"]
+  },
+  {
+    "destination": "united-kingdom",
+    "title": "St. James's Place UK wealth management review",
+    "description": "An in-depth review analyzing the benefits and potential drawbacks of St. James's Place wealth management. It highlights SJP's strong customer service rating (4.5/5 on Trustpilot), its relationship-focused advisory model, and its transition to a modernized, exit-fee-free fee structure under FCA Consumer Duty rules.",
+    "url": "https://www.unbiased.co.uk/discover/personal-finance/savings-investing/st-jamess-place-uk-wealth-management-review-what-are-the-pros-and-cons",
+    "author": "Unbiased Editorial Team",
+    "image": "unbiased-sjp",
+    "platform": "Unbiased",
+    "date": "2026-05-26",
+    "tags": ["finance", "pros-cons", "review"]
+  },
+  {
+    "destination": "united-kingdom",
+    "title": "St. James's Place Pension Review 2026: The Cost of Comfort",
+    "description": "An analytical review of St. James's Place's pension offerings and investment performance. It details the breakdown of SJP's modernized fee structure introduced in August 2025, compares restricted advice costs with self-directed SIPP alternatives, and examines fund performance metrics.",
+    "url": "https://www.campaignforamillion.com/post/st-james-s-place-pension-review-2026-the-cost-of-comfort",
+    "author": "Alpesh Patel OBE",
+    "image": "campainforamillion-sjp",
+    "platform": "Campaign for a Million",
+    "date": "2026-03-21",
+    "tags": ["pension", "finance", "fees", "review"]
+  }
+]

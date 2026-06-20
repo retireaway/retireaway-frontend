@@ -18,7 +18,7 @@ import { UserHome } from "./pages/user";
 
 import { Country } from "@/app/pages/country/:id";
 import SidebarDialog from "@/components/sidebar";
-import { StJamesPlace } from "./pages/specialist/StJamesPlace";
+import { SJP } from "./pages/specialist/SJP";
 
 export function App() {
   return (
@@ -68,7 +68,7 @@ export function App() {
               </Wouter.Route>
 
               <Wouter.Route path="/specialist/sjp">
-                <StJamesPlace />
+                <SJP />
               </Wouter.Route>
 
               <Wouter.Route path="/:id/:tab">

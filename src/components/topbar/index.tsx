@@ -27,10 +27,10 @@ export function Topbar({}: TopbarProps) {
           </Wouter.Link>
 
           <div className="flex items-center">
-            <div className="hidden h-10 w-full items-center gap-2 rounded-s-full rounded-e-full border border-neutral-500 bg-white px-4 shadow-sm lg:flex">
-              <Lucide.Search className="size-5 text-neutral-900" />
-              <span className="text-sm text-neutral-500">Search</span>
-            </div>
+            {/* <div className="hidden h-10 w-full items-center gap-2 rounded-s-full rounded-e-full border border-neutral-500 bg-white px-4 shadow-sm lg:flex"> */}
+            {/*   <Lucide.Search className="size-5 text-neutral-900" /> */}
+            {/*   <span className="text-sm text-neutral-500">Search</span> */}
+            {/* </div> */}
           </div>
 
           <div className="flex items-center justify-end gap-4 lg:hidden">
@@ -91,10 +91,11 @@ export function Topbar({}: TopbarProps) {
               </span>
             </div>
 
-            <div className="flex items-center gap-1 rounded-sm border border-neutral-400 bg-neutral-100 p-1">
-              <Lucide.Wallet className="size-3.5 stroke-neutral-900" />
-              <span className="text-xs leading-none font-semibold tracking-tight text-neutral-900">
-                USD
+            <div className="flex items-center gap-1 rounded-sm border border-neutral-400 bg-neutral-100 px-1.5 py-1">
+              <Lucide.Earth className="size-3.5 stroke-neutral-900" />
+
+              <span className="text-xs leading-none font-semibold tracking-tight whitespace-nowrap text-neutral-900">
+                UK
               </span>
             </div>
 
